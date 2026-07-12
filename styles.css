@@ -177,6 +177,36 @@ body {
 .stat-l { font-size: 9.5px; letter-spacing: 1.4px; color: var(--ink-3); }
 .stat-v { font-size: 14px; font-weight: 600; margin-top: 2px; font-variant-numeric: tabular-nums; }
 
+/* drawing tools */
+.draw-layer {
+  position: absolute; inset: 0; z-index: 5; pointer-events: none;
+}
+.draw-layer canvas { display: block; }
+.draw-toolbar {
+  position: absolute; top: 10px; left: 10px; z-index: 6;
+  display: flex; flex-direction: column; gap: 4px;
+  background: rgba(16,21,31,.92); border: 1px solid var(--line); border-radius: 10px;
+  padding: 6px; backdrop-filter: blur(6px);
+}
+.dt-btn {
+  width: 30px; height: 30px; border: 1px solid transparent; border-radius: 7px;
+  background: transparent; color: var(--ink-2); font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.dt-btn:hover { background: var(--panel-2); color: var(--ink); }
+.dt-btn.active { background: rgba(212,168,75,.15); border-color: rgba(212,168,75,.5); color: var(--gold-2); }
+.dt-color {
+  width: 30px; height: 22px; border-radius: 6px; cursor: pointer;
+  border: 1px solid transparent; background: transparent;
+  display: flex; align-items: center; justify-content: center;
+}
+.dt-color::after {
+  content: ""; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c); box-shadow: 0 0 8px var(--c);
+}
+.dt-color.active { border-color: var(--c); background: var(--panel-2); }
+.dt-sep { height: 1px; background: var(--line); margin: 2px 4px; }
+
 /* footer */
 .foot {
   display: flex; justify-content: space-between; gap: 20px;

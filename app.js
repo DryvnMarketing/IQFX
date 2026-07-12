@@ -44,6 +44,8 @@
   const ema50Series = chart.addLineSeries({ color: 'rgba(61,143,232,.55)', lineWidth: 1, priceLineVisible: false, lastValueVisible: false });
   let levelLines = [];
   new ResizeObserver(() => chart.applyOptions({ width: chartEl.clientWidth, height: chartEl.clientHeight })).observe(chartEl);
+  // expose for the drawing-tools overlay (draw.js)
+  window.IQFXChart = { chart, candles, container: chartEl, getBars: () => S.bars15 };
 
   function setLevels(day) {
     levelLines.forEach((l) => candles.removePriceLine(l));
