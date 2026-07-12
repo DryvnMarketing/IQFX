@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dryvn IQFX — XAUUSD Session Intelligence</title>
+<meta name="description" content="Personal XAUUSD trading mentor: live chart, session levels, bias, news intelligence.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥇</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">IQ<span>FX</span></div>
+    <div class="brand-text">
+      <div class="brand-name">DRYVN <b>IQFX</b></div>
+      <div class="brand-sub">XAUUSD Session Intelligence</div>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-price" id="tickerPrice">—</div>
+    <div class="ticker-meta">
+      <span id="tickerChange" class="delta">—</span>
+      <span class="ticker-label">XAU/USD</span>
+    </div>
+  </div>
+  <div class="market-state">
+    <div class="pill" id="marketPill"><span class="dot"></span><span id="marketText">connecting…</span></div>
+    <div class="session-phase" id="sessionPhase">—</div>
+  </div>
+</header>
+
+<!-- KPI row -->
+<section class="kpis">
+  <div class="kpi kpi-bias" id="kpiBias">
+    <div class="kpi-label">TODAY'S BIAS</div>
+    <div class="kpi-value" id="biasValue">—</div>
+    <div class="kpi-foot" id="biasConf">—</div>
+  </div>
+  <div class="kpi" id="kpiEntry">
+    <div class="kpi-label"><span class="swatch sw-entry"></span>ENTRY</div>
+    <div class="kpi-value" id="entryValue">—</div>
+    <div class="kpi-foot" id="entryFoot">no setup yet</div>
+  </div>
+  <div class="kpi" id="kpiTp1">
+    <div class="kpi-label"><span class="swatch sw-tp"></span>TP1</div>
+    <div class="kpi-value" id="tp1Value">—</div>
+    <div class="kpi-foot">close 50–70% · SL → breakeven</div>
+  </div>
+  <div class="kpi" id="kpiTp2">
+    <div class="kpi-label"><span class="swatch sw-tp"></span>TP2</div>
+    <div class="kpi-value" id="tp2Value">—</div>
+    <div class="kpi-foot">runner target</div>
+  </div>
+  <div class="kpi" id="kpiSl">
+    <div class="kpi-label"><span class="swatch sw-sl"></span>STOP LOSS</div>
+    <div class="kpi-value" id="slValue">—</div>
+    <div class="kpi-foot" id="slFoot">never widened</div>
+  </div>
+</section>
+
+<main class="layout">
+  <!-- LEFT: mentor column -->
+  <aside class="sidebar">
+    <div class="panel" id="takePanel">
+      <div class="panel-title">🧭 Agent's Take</div>
+      <div class="take-verdict" id="takeVerdict">Analyzing…</div>
+      <div class="take-body" id="takeBody"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">📊 Weekly Bias — XAUUSD</div>
+      <div class="bias-bar" role="img" aria-label="weekly buy/sell pressure">
+        <div class="bias-buy" id="biasBuyBar" style="width:50%"><span id="biasBuyPct">50% BUY</span></div>
+        <div class="bias-sell" id="biasSellBar" style="width:50%"><span id="biasSellPct">50% SELL</span></div>
+      </div>
+      <div class="bias-votes" id="biasVotes"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">📅 Today's Events <span class="panel-badge" id="newsBadge"></span></div>
+      <div id="calendarList" class="cal-list"><div class="muted">Loading calendar…</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">📰 Live Headlines</div>
+      <div id="newsList" class="news-list"><div class="muted">Loading headlines…</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">💡 Session Tip</div>
+      <div id="tipBox" class="tip">—</div>
+    </div>
+  </aside>
+
+  <!-- CENTER: chart -->
+  <section class="chart-zone">
+    <div class="chart-head">
+      <div class="chart-title">GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M</div>
+      <div class="chart-legend">
+        <span><i class="lg lg-entry"></i>Entry</span>
+        <span><i class="lg lg-sl"></i>SL</span>
+        <span><i class="lg lg-tp"></i>TP1/TP2</span>
+        <span><i class="lg lg-asia"></i>Asian range</span>
+      </div>
+      <div class="chart-src" id="chartSrc">calibrating feed…</div>
+    </div>
+    <div id="chart"></div>
+    <div class="stats-strip">
+      <div class="stat"><div class="stat-l">SESSION</div><div class="stat-v" id="stSession">—</div></div>
+      <div class="stat"><div class="stat-l">ASIAN RANGE</div><div class="stat-v" id="stAsia">—</div></div>
+      <div class="stat"><div class="stat-l">ATR 14</div><div class="stat-v" id="stAtr">—</div></div>
+      <div class="stat"><div class="stat-l">RSI 14</div><div class="stat-v" id="stRsi">—</div></div>
+      <div class="stat"><div class="stat-l">DAY RANGE</div><div class="stat-v" id="stDay">—</div></div>
+      <div class="stat"><div class="stat-l">NEXT</div><div class="stat-v" id="stNext">—</div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>DRYVN IQFX — personal decision-support for XAUUSD. Signals are rule-based analysis, not financial advice; you execute on your own broker (RCG Markets / MT5) at your own risk.</span>
+  <span id="footFeed"></span>
+</footer>
+
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
