@@ -207,16 +207,80 @@
       const after = todays.filter((b) => b.time > fired.barTime);
       const isLong = fired.dir === 'LONG';
       let state = 'open', tp1Done = false, sl = fired.sl;
+      let tp1At = null, tp2At = null, endAt = null, lastClose = fired.entry;
       for (const b of after) {
+        lastClose = b.close;
         const hitTp1 = !tp1Done && (isLong ? b.high >= fired.tp1 : b.low <= fired.tp1);
-        if (hitTp1) { tp1Done = true; sl = fired.entry; }
-        if (isLong ? b.low <= sl : b.high >= sl) { state = tp1Done ? 'closed-be' : 'stopped'; break; }
-        if (isLong ? b.high >= fired.tp2 : b.low <= fired.tp2) { state = 'tp2'; break; }
+        if (hitTp1) { tp1Done = true; sl = fired.entry; tp1At = b.time; }
+        if (isLong ? b.low <= sl : b.high >= sl) { state = tp1Done ? 'closed-be' : 'stopped'; endAt = b.time; break; }
+        if (isLong ? b.high >= fired.tp2 : b.low <= fired.tp2) { state = 'tp2'; tp2At = b.time; endAt = b.time; break; }
       }
       if (state === 'open' && now.min >= P.flatAt) state = 'flat-time';
-      res.signalState = state; res.signal.tp1Done = tp1Done; res.signal.liveSl = sl;
+      // realized R: 50% banked at TP1 (+2R), runner to TP2 / BE / day close
+      const dirSign = isLong ? 1 : -1;
+      const closeR = (lastClose - fired.entry) * dirSign / fired.risk;
+      const tp2R = Math.abs(fired.tp2 - fired.entry) / fired.risk;
+      let netR = null;
+      if (state === 'stopped') netR = -1;
+      else if (state === 'closed-be') netR = 0.5 * P.rrTp1;
+      else if (state === 'tp2') netR = 0.5 * P.rrTp1 + 0.5 * tp2R;
+      else if (state === 'flat-time') netR = tp1Done ? 0.5 * P.rrTp1 + 0.5 * closeR : closeR;
+      res.signalState = state;
+      Object.assign(res.signal, { tp1Done, liveSl: sl, tp1At, tp2At, endAt, netR });
     }
     return res;
+  }
+
+  // ── historical replay: run the day engine over each past trading day ──
+  function backtest(bars15, bars4h) {
+    const dates = [];
+    const seen = new Set();
+    for (const b of bars15) {
+      const p = ukParts(b.time * 1000);
+      if (!seen.has(p.date) && !['Sat', 'Sun'].includes(p.dow)) { seen.add(p.date); dates.push(p.date); }
+    }
+    const trades = [];
+    for (const date of dates) {
+      const dayBars = bars15.filter((b) => ukParts(b.time * 1000).date === date);
+      if (dayBars.length < 40) continue; // partial day (history edge)
+      const dayStartMs = dayBars[0].time * 1000;
+      const biasCutoffMs = dayStartMs + 460 * 60 * 1000; // 07:40 UK
+      const hist4h = bars4h.filter((b) => b.time * 1000 < biasCutoffMs);
+      if (hist4h.length < 60) continue;
+      const bias = biasReport(hist4h);
+      // end-of-day instant: after the last bar closes but still within the same UK date
+      const endMs = (dayBars[dayBars.length - 1].time + 899) * 1000;
+      const upTo = bars15.filter((b) => b.time * 1000 <= endMs);
+      const day = analyzeDay(upTo, bias, endMs);
+      if (day.signal) trades.push({ date, ...day.signal, state: day.signalState });
+    }
+
+    function agg(list) {
+      const done = list.filter((t) => t.state !== 'open');
+      const tp1 = done.filter((t) => t.tp1At != null);
+      const tp2 = done.filter((t) => t.state === 'tp2');
+      const sl = done.filter((t) => t.state === 'stopped');
+      const be = done.filter((t) => t.state === 'closed-be');
+      const mins = (arr, key) => {
+        const v = arr.filter((t) => t[key] != null).map((t) => (t[key] - t.barTime) / 60 + 15);
+        return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
+      };
+      return {
+        signals: done.length,
+        tp1: tp1.length, tp2: tp2.length, sl: sl.length, be: be.length,
+        flat: done.filter((t) => t.state === 'flat-time').length,
+        tp1Pct: done.length ? Math.round(tp1.length / done.length * 100) : null,
+        avgToTp1: mins(tp1, 'tp1At'),
+        avgToTp2: mins(tp2, 'tp2At'),
+        netR: done.reduce((a, t) => a + (t.netR || 0), 0),
+      };
+    }
+    return {
+      days: dates.length, trades,
+      uk: agg(trades.filter((t) => t.setup === 'A')),
+      ny: agg(trades.filter((t) => t.setup === 'B')),
+      all: agg(trades),
+    };
   }
 
   function mkSignal(setup, dir, b, gi, ctx) {
@@ -267,5 +331,5 @@
     return { open, phase, next, dow, ukMin: min };
   }
 
-  global.IQFX = { P, ema, rsi, atr, macd, biasReport, weeklyBias, analyzeDay, sessionInfo, ukParts, ukHm };
+  global.IQFX = { P, ema, rsi, atr, macd, biasReport, weeklyBias, analyzeDay, backtest, sessionInfo, ukParts, ukHm };
 })(typeof window !== 'undefined' ? window : globalThis);

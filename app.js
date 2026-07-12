@@ -345,6 +345,57 @@
     } catch (e) { /* transient */ }
   }, 12_000);
 
+  // ── track record: replay the rules over ~30 days of history ──
+  function fmtDur(min) {
+    if (min == null) return '—';
+    const h = Math.floor(min / 60), m = Math.round(min % 60);
+    return h ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
+  }
+  async function loadTrackRecord() {
+    try {
+      let raw = [];
+      let endTime;
+      for (let i = 0; i < 3; i++) {
+        const url = 'https://api.binance.com/api/v3/klines?symbol=PAXGUSDT&interval=15m&limit=1000' + (endTime ? `&endTime=${endTime}` : '');
+        const k = await jget(url);
+        if (!k.length) break;
+        raw = k.concat(raw);
+        endTime = k[0][0] - 1;
+      }
+      const hist15 = raw.map(mapK).filter((b) => !isWeekendBar(b.time)).map(adj);
+      const k4 = await jget('https://api.binance.com/api/v3/klines?symbol=PAXGUSDT&interval=4h&limit=1000');
+      const hist4h = k4.map(mapK).filter((b) => !isWeekendBar(b.time)).map(adj);
+      const bt = window.IQFX.backtest(hist15, hist4h);
+      renderTrack(bt);
+    } catch (e) {
+      $('trackBadge').textContent = 'unavailable';
+      $('trackBody').innerHTML = '<div class="muted">Could not load history for the replay.</div>';
+    }
+  }
+  function renderTrack(bt) {
+    $('trackBadge').textContent = `${bt.days} trading days`;
+    const col = (label, a) => `
+      <div class="tr-col">
+        <div class="tr-head">${label}</div>
+        <div class="tr-row"><span>Signals</span><b>${a.signals}</b></div>
+        <div class="tr-row"><span>TP1 hit</span><b class="tr-good">${a.tp1}${a.tp1Pct != null ? ` (${a.tp1Pct}%)` : ''}</b></div>
+        <div class="tr-row"><span>TP2 hit</span><b class="tr-good">${a.tp2}</b></div>
+        <div class="tr-row"><span>Stopped</span><b class="tr-bad">${a.sl}</b></div>
+        <div class="tr-row"><span>Breakeven</span><b>${a.be}</b></div>
+        <div class="tr-row"><span>⌀ → TP1</span><b>${fmtDur(a.avgToTp1)}</b></div>
+        <div class="tr-row"><span>⌀ → TP2</span><b>${fmtDur(a.avgToTp2)}</b></div>
+        <div class="tr-row tr-net"><span>Net result</span><b class="${a.netR >= 0 ? 'tr-good' : 'tr-bad'}">${a.netR >= 0 ? '+' : ''}${a.netR.toFixed(1)}R</b></div>
+      </div>`;
+    const recent = bt.trades.slice(-4).reverse().map((t) => {
+      const icon = { tp2: '🟢', 'closed-be': '🟡', stopped: '🔴', 'flat-time': '⏰', open: '▶' }[t.state] || '·';
+      return `<div class="tr-trade">${icon} ${t.date.slice(5)} · ${t.setup} ${t.dir} → ${t.state === 'tp2' ? 'TP2' : t.state === 'closed-be' ? 'BE (TP1 banked)' : t.state === 'stopped' ? 'SL' : t.state}${t.netR != null ? ` (${t.netR >= 0 ? '+' : ''}${t.netR.toFixed(1)}R)` : ''}</div>`;
+    }).join('');
+    $('trackBody').innerHTML = `
+      <div class="tr-grid">${col('UK · Setup A', bt.uk)}${col('NY · Setup B', bt.ny)}</div>
+      <div class="tr-trades">${recent || '<div class="muted">No signals in the window.</div>'}</div>
+      <div class="tr-note">Rule replay on the calibrated feed — first signal/day, no spread/slippage. Validation, not a promise.</div>`;
+  }
+
   async function refreshCalendar() {
     try { S.calendar = (await jget('/api/calendar')).events; renderCalendar(); } catch (e) { /* keep old */ }
   }
@@ -363,6 +414,8 @@
     runEngine();
     connectWs();
     refreshCalendar(); refreshNews();
+    loadTrackRecord();
+    setInterval(loadTrackRecord, 60 * 60_000);
     setInterval(calibrateBasis, 60_000);
     setInterval(refreshCalendar, 10 * 60_000);
     setInterval(refreshNews, 3 * 60_000);
