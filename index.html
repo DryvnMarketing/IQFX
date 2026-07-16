@@ -102,14 +102,23 @@
   <!-- CENTER: chart -->
   <section class="chart-zone">
     <div class="chart-head">
-      <div class="chart-title">GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M</div>
-      <div class="chart-legend">
+      <div class="sym-tabs">
+        <button class="sym-tab active" data-sym="XAUUSD">XAU/USD</button>
+        <button class="sym-tab" data-sym="US30">US30</button>
+      </div>
+      <div class="chart-title" id="chartTitle">GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M</div>
+      <div class="chart-legend" id="chartLegend">
         <span><i class="lg lg-entry"></i>Entry</span>
         <span><i class="lg lg-sl"></i>SL</span>
         <span><i class="lg lg-tp"></i>TP1/TP2</span>
         <span><i class="lg lg-asia"></i>Asian range</span>
       </div>
       <div class="chart-src" id="chartSrc">calibrating feed…</div>
+    </div>
+    <div id="ctxBanner" class="ctx-banner" hidden>
+      ⚠️ <b>CONTEXT ONLY — no validated edge on US30.</b> No signals, no entry/SL/TP levels.
+      Gold's rules tested on US30: <b>−0.042R (failed)</b>. A US30-native cash-open strategy was built and tested: <b>failed holdout (+0.003R = breakeven)</b>.
+      This tab is market awareness only — trade it and you're on your own read, not the system's.
     </div>
     <div id="chart"></div>
     <div class="stats-strip">

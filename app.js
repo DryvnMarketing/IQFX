@@ -12,6 +12,8 @@
   const BLACKOUT_MIN = 15;
 
   const S = {
+    sym: 'XAUUSD',        // active tab: 'XAUUSD' (full strategy) | 'US30' (context only)
+    us30: null,
     basis: null,          // XAUUSD spot mid − PAXG last (EMA-smoothed)
     paxgLast: null,
     bars15: [],           // adjusted bars (sec timestamps)
@@ -118,6 +120,7 @@
     ]);
     S.bars15 = k15.map(mapK).filter((b) => !isWeekendBar(b.time)).map(adj);
     S.bars4h = k4.map(mapK).filter((b) => !isWeekendBar(b.time)).map(adj);
+    if (S.sym !== 'XAUUSD') return;   // don't clobber the US30 chart on the periodic refresh
     candles.setData(S.bars15);
     const closes = S.bars15.map((b) => b.close);
     const e = window.IQFX.ema(closes, 50);
@@ -131,9 +134,11 @@
     S.bias = biasReport(S.bars4h);
     S.weekly = weeklyBias(S.bars4h);
     S.day = analyzeDay(S.bars15, S.bias, Date.now());
-    renderKpis(); renderBiasPanel(); renderTake(); renderStats(); renderTip();
+    renderBiasPanel(); renderCalendar();
+    // Gold-only rendering — never paint gold signals/levels onto the US30 context view
+    if (S.sym !== 'XAUUSD') return;
+    renderKpis(); renderTake(); renderStats(); renderTip();
     setLevels(S.day);
-    renderCalendar();
   }
 
   // ── renderers ──
@@ -298,6 +303,7 @@
   function showPrice(price) {
     S.prevPrice = S.paxgLast;
     S.paxgLast = price;
+    if (S.sym !== 'XAUUSD') return;   // US30 tab owns the ticker while active
     const el = $('tickerPrice');
     el.textContent = price.toFixed(2);
     el.classList.remove('tick-up', 'tick-down');
@@ -318,8 +324,9 @@
     if (isWeekendBar(barSec)) return; // market closed — never append weekend bars
     const bar = { time: barSec, open: +k.o + S.basis, high: +k.h + S.basis, low: +k.l + S.basis, close: +k.c + S.basis };
     const last = S.bars15[S.bars15.length - 1];
-    if (last && barSec === last.time) { S.bars15[S.bars15.length - 1] = bar; candles.update(bar); }
-    else if (!last || barSec > last.time) { S.bars15.push(bar); candles.update(bar); }
+    const onGold = S.sym === 'XAUUSD';   // only touch the chart when the gold tab is showing
+    if (last && barSec === last.time) { S.bars15[S.bars15.length - 1] = bar; if (onGold) candles.update(bar); }
+    else if (!last || barSec > last.time) { S.bars15.push(bar); if (onGold) candles.update(bar); }
     if (k.x) runEngine(); // bar just closed — re-evaluate signals
   }
 
@@ -396,6 +403,93 @@
       <div class="tr-note">Rule replay on the calibrated feed — first signal/day, no spread/slippage. Validation, not a promise.</div>`;
   }
 
+  // ── symbol tabs: XAUUSD (full strategy) ⇄ US30 (context only) ──
+  document.querySelectorAll('.sym-tab').forEach((b) => b.addEventListener('click', () => {
+    if (S.sym === b.dataset.sym) return;
+    document.querySelectorAll('.sym-tab').forEach((x) => x.classList.toggle('active', x === b));
+    S.sym = b.dataset.sym;
+    switchSymbol();
+  }));
+
+  async function switchSymbol() {
+    const gold = S.sym === 'XAUUSD';
+    $('ctxBanner').hidden = gold;
+    $('chartLegend').style.display = gold ? '' : 'none';
+    $('chartTitle').innerHTML = gold
+      ? 'GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M'
+      : 'US30 <span>·</span> DOW JONES <span>·</span> 15M <span>·</span> context';
+    if (gold) {
+      candles.setData(S.bars15);
+      const e = window.IQFX.ema(S.bars15.map((b) => b.close), 50);
+      ema50Series.setData(S.bars15.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
+      document.querySelector('.ticker-label').textContent = 'XAU/USD';
+      runEngine();
+    } else {
+      await loadUs30();
+    }
+    chart.timeScale().scrollToRealTime();
+  }
+
+  async function loadUs30() {
+    try {
+      const j = await jget('/api/us30');
+      S.us30 = j;
+      candles.setData(j.bars);
+      const e = window.IQFX.ema(j.bars.map((b) => b.close), 50);
+      ema50Series.setData(j.bars.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
+      levelLines.forEach((l) => candles.removePriceLine(l)); levelLines = [];  // no signal levels on US30
+      candles.setMarkers([]);
+      renderUs30(j);
+      $('chartSrc').textContent = `US30 (^DJI) 15m · context feed · ${new Date(j.fetched).toLocaleTimeString()}`;
+    } catch (e) {
+      $('chartSrc').textContent = 'US30 context feed unavailable';
+    }
+  }
+
+  function renderUs30(j) {
+    // KPIs: US30 has no validated edge — never show entry/TP/SL
+    for (const id of ['entryValue', 'tp1Value', 'tp2Value', 'slValue']) {
+      $(id).textContent = '—'; $(id).closest('.kpi').classList.remove('active');
+    }
+    $('biasValue').textContent = 'n/a'; $('biasValue').className = 'kpi-value';
+    $('biasConf').textContent = 'context only — no validated edge';
+    $('entryFoot').textContent = 'no signals on US30'; $('slFoot').textContent = '—';
+
+    const bars = j.bars, last = bars[bars.length - 1];
+    const px = j.price ?? last.close, ch = px - j.prevClose;
+    $('tickerPrice').textContent = px.toFixed(0);
+    $('tickerChange').textContent = `${ch >= 0 ? '+' : ''}${ch.toFixed(0)} (${(ch / j.prevClose * 100).toFixed(2)}%)`;
+    $('tickerChange').className = 'delta ' + (ch >= 0 ? 'up' : 'down');
+    document.querySelector('.ticker-label').textContent = 'US30';
+
+    const today = ukParts(Date.now()).date;
+    const td = bars.filter((b) => ukParts(b.time * 1000).date === today);
+    const dHi = td.length ? Math.max(...td.map((b) => b.high)) : null;
+    const dLo = td.length ? Math.min(...td.map((b) => b.low)) : null;
+    const a = window.IQFX.atr(bars, 14), r = window.IQFX.rsi(bars.map((b) => b.close), 14);
+    const mins = ukParts(Date.now()).min;
+    const active = mins >= 840 && mins < 1020;   // 14:00–17:00 UK
+    $('stSession').textContent = active ? 'US CASH — active' : 'outside active window';
+    $('stAsia').textContent = 'n/a (US30)';
+    $('stAtr').textContent = a[a.length - 1] ? `${a[a.length - 1].toFixed(0)} pts` : '—';
+    $('stRsi').textContent = r[r.length - 1] ? r[r.length - 1].toFixed(0) : '—';
+    $('stDay').textContent = (dHi && dLo) ? `${(dHi - dLo).toFixed(0)} pts` : '—';
+    $('stNext').textContent = active ? 'Peak activity 14:00-16:00 UK' : 'Quiet — US30 moves 14:00-16:00 UK';
+
+    $('takeVerdict').textContent = '📊 US30 — context only, no signals';
+    $('takeVerdict').className = 'take-verdict';
+    $('takeBody').innerHTML = `
+      <p><b>This system has no validated edge on US30.</b> Gold's rules tested <b>−0.042R</b> on it; a purpose-built US30 cash-open strategy passed development but <b>failed its holdout (+0.003R = breakeven)</b>. So: no entries, no levels, no bias here — awareness only.</p>
+      <p><b>What the 2-year data says about US30:</b></p>
+      <p>• It moves <b>almost only 14:00–16:00 UK</b> (~105 pts per 15m bar vs 34 the rest of the day). Outside that it's noise.</p>
+      <p>• It <b>trends</b>: the first hour of US cash direction persists to the close <b>66%</b> of days — it rewards continuation, not the pullback logic gold uses.</p>
+      <p>• <b>No overnight gaps</b> and a dead Asian session, so sweep setups can't form.</p>
+      <p>• Cost is worse: RCG's spread ≈ <b>4.7 pts ≈ 14%</b> of a typical 15m bar (gold ≈ 9%).</p>
+      <p>• Counterintuitive: US30 is <b>less</b> volatile than gold in % terms (1.00% vs 1.39% daily range).</p>
+      <p>Anything you trade here is your own read — the agent is not backing it.</p>`;
+    $('tipBox').textContent = 'US30 discipline: if you trade it manually, respect the 14:00–16:00 UK window and the fact that it trends — fading it is how this instrument punishes gold habits.';
+  }
+
   async function refreshCalendar() {
     try { S.calendar = (await jget('/api/calendar')).events; renderCalendar(); } catch (e) { /* keep old */ }
   }
@@ -421,5 +515,6 @@
     setInterval(refreshNews, 3 * 60_000);
     setInterval(runEngine, 60_000);           // clock-driven re-render (sessions, countdowns)
     setInterval(loadBars, 30 * 60_000);       // periodic full refresh to heal any drift
+    setInterval(() => { if (S.sym === 'US30') loadUs30(); }, 60_000);  // US30 context refresh
   })();
 })();
