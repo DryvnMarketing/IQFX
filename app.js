@@ -137,7 +137,7 @@
     renderBiasPanel(); renderCalendar();
     // Gold-only rendering — never paint gold signals/levels onto the US30 context view
     if (S.sym !== 'XAUUSD') return;
-    renderKpis(); renderTake(); renderStats(); renderTip();
+    renderKpis(); renderIdea(); renderTake(); renderStats(); renderTip();
     setLevels(S.day);
   }
 
@@ -237,6 +237,80 @@
         <span class="news-src">${n.source}</span><a href="${n.link}" target="_blank" rel="noopener">${n.hot ? '🔥 ' : ''}${n.title}</a>
         <span class="news-time">${n.ts ? ukHm(n.ts) : ''}</span>
       </div>`).join('');
+  }
+
+  // ── TRADE IDEA: continuous mentor read 07:00-17:00 UK, honestly graded ──
+  // A = validated setup fired · B = forming (not yet an edge) · C = no validated edge.
+  // Risk is the user's; never imply B/C carry the measured +0.168R edge.
+  function buildIdea() {
+    const uk = ukParts(Date.now()), ses = sessionInfo(Date.now());
+    const d = S.day, b = S.bias;
+    const price = S.paxgLast ?? (S.bars15.length ? S.bars15[S.bars15.length - 1].close : null);
+    const mk = (grade, dir, headline, body, edge) => ({ grade, dir, headline, body, edge });
+    if (!d || !b) return mk('C', null, 'Analyzing…', '', '');
+
+    if (d.signal) {
+      const s = d.signal;
+      return mk('A', s.dir, `LIVE ${s.dir} — Setup ${s.setup}`,
+        `Entry <b>${f1(s.entry)}</b> · SL <b>${f1(s.tp1Done ? s.entry : s.sl)}</b> · TP1 <b>${f1(s.tp1)}</b> · TP2 <b>${f1(s.tp2)}</b>\nStatus: ${stateText(d.signalState)}`,
+        'VALIDATED setup — +0.168R/trade, 50% win, PF 1.42 across 2 years. The agent takes this one.');
+    }
+    if (!ses.open) return mk('C', null, 'Market closed', ses.next, 'No read until the session opens.');
+    if (uk.min < 420 || uk.min >= 1020) return mk('C', null, 'Outside the 07:00–17:00 UK read window',
+      'Windows: London 08:00–11:30 · NY 13:15–17:00 UK.', 'No new entries — review, don\'t trade.');
+
+    const dir = b.long ? 'LONG' : b.short ? 'SHORT' : null;
+    if (!dir || !b.tradeable) return mk('C', null, 'STAND ASIDE — 4H bias mixed',
+      `Only <b>${b.confidence}%</b> of the 4H checks agree (60% needed).\n15m 50 EMA <b>${f1(d.ema50)}</b> · ATR <b>${f1(d.atr)}</b> · RSI <b>${f1(d.rsi)}</b>`,
+      'Mixed bias is the system\'s single biggest filter — it stands aside for a reason.');
+
+    const a = d.asia;
+    if (uk.min < 480) return mk('C', dir, `PREPARING — bias ${dir}, London opens 08:00 UK`,
+      a ? `Asian range <b>${f1(a.lo)} – ${f1(a.hi)}</b> (${f1(a.range)} pts)${!a.ok ? ' — TOO SMALL, Setup A off' : ''}\nWatch: ${dir === 'SHORT' ? `a sweep ABOVE <b>${f1(a.hi)}</b> that fails` : `a sweep BELOW <b>${f1(a.lo)}</b> that reclaims`}` : 'Asian range still forming.',
+      'Preparation only — no trade before the London window.');
+
+    if (uk.min < 690 && a && a.ok) {
+      if (dir === 'SHORT' && d.sweep.hi) {
+        const sl = price + Math.max(2.5, 0.75 * d.atr), risk = sl - price;
+        return mk('B', 'SHORT', 'SETUP A FORMING — liquidity taken above',
+          `Asian high <b>${f1(a.hi)}</b> was swept. Need a 15m candle to CLOSE back inside.\nIF it closes below <b>${f1(a.hi)}</b> (above ~${f1(a.hi - a.range / 3)}):\n➡️ SHORT ~<b>${f1(price)}</b> · 🛑 SL <b>${f1(sl)}</b> · 🎯 TP1 <b>${f1(price - 2 * risk)}</b> · TP2 <b>${f1(a.lo)}</b>`,
+          'Becomes the validated setup ONLY when that candle closes. Not an edge yet.');
+      }
+      if (dir === 'LONG' && d.sweep.lo) {
+        const sl = price - Math.max(2.5, 0.75 * d.atr), risk = price - sl;
+        return mk('B', 'LONG', 'SETUP A FORMING — liquidity taken below',
+          `Asian low <b>${f1(a.lo)}</b> was swept. Need a 15m candle to CLOSE back inside.\nIF it closes above <b>${f1(a.lo)}</b> (below ~${f1(a.lo + a.range / 3)}):\n➡️ LONG ~<b>${f1(price)}</b> · 🛑 SL <b>${f1(sl)}</b> · 🎯 TP1 <b>${f1(price + 2 * risk)}</b> · TP2 <b>${f1(a.hi)}</b>`,
+          'Becomes the validated setup ONLY when that candle closes. Not an edge yet.');
+      }
+      return mk('C', dir, `WAITING — London, bias ${dir}, no sweep yet`,
+        `Asian range <b>${f1(a.lo)} – ${f1(a.hi)}</b> · price <b>${f1(price)}</b>\nTrigger: ${dir === 'SHORT' ? `sweep ABOVE <b>${f1(a.hi)}</b> then close back inside` : `sweep BELOW <b>${f1(a.lo)}</b> then close back inside`}`,
+        'No liquidity grab = no Setup A. Chasing here is how the edge gets given back.');
+    }
+    if (uk.min < 795) return mk('C', dir, 'STAND ASIDE — lunch chop (11:30–13:15 UK)',
+      `Bias <b>${dir}</b>. NY opens 13:15 UK.\n15m 50 EMA <b>${f1(d.ema50)}</b> · ATR <b>${f1(d.atr)}</b> · RSI <b>${f1(d.rsi)}</b>`,
+      'Dead zone — the validated system takes nothing here.');
+
+    const gap = price - d.ema50, near = Math.abs(gap) <= 1.2 * d.atr;
+    const sl = dir === 'SHORT' ? price + Math.max(2.5, 0.75 * d.atr) : price - Math.max(2.5, 0.75 * d.atr);
+    const risk = Math.abs(sl - price);
+    return mk(near ? 'B' : 'C', dir, near ? 'SETUP B FORMING — at the 50 EMA' : 'WAITING — NY, price away from the 50 EMA',
+      `Price <b>${f1(price)}</b> is <b>${f1(Math.abs(gap))}</b> pts ${gap > 0 ? 'above' : 'below'} the 15m 50 EMA (<b>${f1(d.ema50)}</b>) · RSI <b>${f1(d.rsi)}</b>\n`
+      + `Trigger: pull back ${dir === 'SHORT' ? 'UP' : 'DOWN'} to ~<b>${f1(d.ema50)}</b>, then a ${dir === 'SHORT' ? 'bearish candle CLOSES below' : 'bullish candle HOLDS above'} it with RSI 40–60.\n`
+      + `IF it fires: ➡️ ${dir} ~<b>${f1(d.ema50)}</b> · 🛑 SL ~<b>${f1(sl)}</b> · 🎯 TP1 ~<b>${f1(dir === 'SHORT' ? price - 2 * risk : price + 2 * risk)}</b>`,
+      near ? 'Close to the trigger — still needs the confirming close.' : 'Not a trade until price returns to the EMA and confirms.');
+  }
+
+  function renderIdea() {
+    const idea = buildIdea();
+    if (!idea) return;
+    const g = $('ideaGrade');
+    g.textContent = idea.grade === 'A' ? 'A · VALIDATED' : idea.grade === 'B' ? 'B · FORMING' : 'C · NO EDGE';
+    g.className = 'idea-grade ' + idea.grade.toLowerCase();
+    const h = $('ideaHeadline');
+    h.textContent = idea.headline;
+    h.className = 'idea-headline' + (idea.grade === 'A' && idea.dir ? ' ' + idea.dir.toLowerCase() : '');
+    $('ideaBody').innerHTML = idea.body;
+    $('ideaEdge').textContent = idea.edge ? '📌 ' + idea.edge : '';
   }
 
   function renderTake() {
@@ -425,9 +499,34 @@
       document.querySelector('.ticker-label').textContent = 'XAU/USD';
       runEngine();
     } else {
+      neutralizeForUs30();   // clear gold panels FIRST — must not survive a feed failure
       await loadUs30();
     }
     chart.timeScale().scrollToRealTime();
+  }
+
+  // Wipe every gold-specific readout the moment we leave the gold tab. Runs even if
+  // the US30 feed dies, so a stale gold idea/price can never sit under a US30 header.
+  function neutralizeForUs30() {
+    for (const id of ['entryValue', 'tp1Value', 'tp2Value', 'slValue']) {
+      $(id).textContent = '—'; $(id).closest('.kpi').classList.remove('active');
+    }
+    $('biasValue').textContent = 'n/a'; $('biasValue').className = 'kpi-value';
+    $('biasConf').textContent = 'context only — no validated edge';
+    $('entryFoot').textContent = 'no signals on US30'; $('slFoot').textContent = '—';
+    $('tickerPrice').textContent = '—'; $('tickerChange').textContent = '—';
+    $('tickerChange').className = 'delta';
+    document.querySelector('.ticker-label').textContent = 'US30';
+    for (const id of ['stSession', 'stAtr', 'stRsi', 'stDay', 'stNext']) $(id).textContent = '—';
+    $('stAsia').textContent = 'n/a (US30)';
+    $('ideaGrade').textContent = 'N/A'; $('ideaGrade').className = 'idea-grade c';
+    $('ideaHeadline').textContent = 'No trade ideas for US30';
+    $('ideaHeadline').className = 'idea-headline';
+    $('ideaBody').innerHTML = 'Trade Ideas are only generated for XAUUSD, where the strategy is validated. US30 failed both tests (gold rules −0.042R; US30-native strategy failed its holdout), so any US30 idea would be an opinion dressed as a signal.';
+    $('ideaEdge').textContent = '📌 Switch to the XAU/USD tab for graded trade ideas.';
+    $('takeVerdict').textContent = '📊 US30 — context only, no signals';
+    $('takeVerdict').className = 'take-verdict';
+    $('tipBox').textContent = 'US30 discipline: if you trade it manually, respect the 14:00–16:00 UK window and the fact that it trends — fading it is how this instrument punishes gold habits.';
   }
 
   async function loadUs30() {
@@ -442,19 +541,11 @@
       renderUs30(j);
       $('chartSrc').textContent = `US30 (^DJI) 15m · context feed · ${new Date(j.fetched).toLocaleTimeString()}`;
     } catch (e) {
-      $('chartSrc').textContent = 'US30 context feed unavailable';
+      $('chartSrc').textContent = 'US30 context feed unavailable — no data shown (gold panels cleared)';
     }
   }
 
   function renderUs30(j) {
-    // KPIs: US30 has no validated edge — never show entry/TP/SL
-    for (const id of ['entryValue', 'tp1Value', 'tp2Value', 'slValue']) {
-      $(id).textContent = '—'; $(id).closest('.kpi').classList.remove('active');
-    }
-    $('biasValue').textContent = 'n/a'; $('biasValue').className = 'kpi-value';
-    $('biasConf').textContent = 'context only — no validated edge';
-    $('entryFoot').textContent = 'no signals on US30'; $('slFoot').textContent = '—';
-
     const bars = j.bars, last = bars[bars.length - 1];
     const px = j.price ?? last.close, ch = px - j.prevClose;
     $('tickerPrice').textContent = px.toFixed(0);
@@ -476,8 +567,6 @@
     $('stDay').textContent = (dHi && dLo) ? `${(dHi - dLo).toFixed(0)} pts` : '—';
     $('stNext').textContent = active ? 'Peak activity 14:00-16:00 UK' : 'Quiet — US30 moves 14:00-16:00 UK';
 
-    $('takeVerdict').textContent = '📊 US30 — context only, no signals';
-    $('takeVerdict').className = 'take-verdict';
     $('takeBody').innerHTML = `
       <p><b>This system has no validated edge on US30.</b> Gold's rules tested <b>−0.042R</b> on it; a purpose-built US30 cash-open strategy passed development but <b>failed its holdout (+0.003R = breakeven)</b>. So: no entries, no levels, no bias here — awareness only.</p>
       <p><b>What the 2-year data says about US30:</b></p>
@@ -487,7 +576,6 @@
       <p>• Cost is worse: RCG's spread ≈ <b>4.7 pts ≈ 14%</b> of a typical 15m bar (gold ≈ 9%).</p>
       <p>• Counterintuitive: US30 is <b>less</b> volatile than gold in % terms (1.00% vs 1.39% daily range).</p>
       <p>Anything you trade here is your own read — the agent is not backing it.</p>`;
-    $('tipBox').textContent = 'US30 discipline: if you trade it manually, respect the 14:00–16:00 UK window and the fact that it trends — fading it is how this instrument punishes gold habits.';
   }
 
   async function refreshCalendar() {

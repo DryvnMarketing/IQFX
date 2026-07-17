@@ -177,6 +177,18 @@ body {
 .stat-l { font-size: 9.5px; letter-spacing: 1.4px; color: var(--ink-3); }
 .stat-v { font-size: 14px; font-weight: 600; margin-top: 2px; font-variant-numeric: tabular-nums; }
 
+/* trade idea */
+.panel-idea { border-color: rgba(212,168,75,.35); background: linear-gradient(180deg, rgba(212,168,75,.06), var(--panel)); }
+.idea-grade { margin-left: auto; font-size: 10px; letter-spacing: .8px; padding: 3px 9px; border-radius: 999px; font-weight: 700; border: 1px solid var(--line); color: var(--ink-2); }
+.idea-grade.a { background: rgba(38,166,138,.18); border-color: var(--tp); color: #6ee7c0; }
+.idea-grade.b { background: rgba(184,129,27,.18); border-color: var(--asia); color: var(--gold-2); }
+.idea-grade.c { background: var(--panel-2); border-color: var(--line); color: var(--ink-2); }
+.idea-headline { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.idea-headline.long { color: var(--tp); } .idea-headline.short { color: var(--sl); }
+.idea-body { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; white-space: pre-line; }
+.idea-body b { color: var(--ink); }
+.idea-edge { margin-top: 9px; font-size: 11px; color: var(--gold-2); font-style: italic; border-top: 1px solid var(--line); padding-top: 7px; }
+
 /* symbol tabs + context banner */
 .sym-tabs { display: flex; gap: 4px; margin-right: 14px; }
 .sym-tab {
