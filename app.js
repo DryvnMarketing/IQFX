@@ -487,10 +487,16 @@
 
   async function switchSymbol() {
     const gold = S.sym === 'XAUUSD';
-    $('ctxBanner').hidden = gold;
+    const homework = S.sym === 'HOMEWORK';
+    $('ctxBanner').hidden = gold || homework;
     $('chartLegend').style.display = gold ? '' : 'none';
+    $('chart').hidden = homework;
+    document.querySelector('.stats-strip').hidden = homework;
+    $('homeworkView').hidden = !homework;
     $('chartTitle').innerHTML = gold
       ? 'GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M'
+      : homework
+      ? 'WEEKEND HOMEWORK <span>·</span> XAU/USD <span>·</span> week in review'
       : 'US30 <span>·</span> DOW JONES <span>·</span> 15M <span>·</span> context';
     if (gold) {
       candles.setData(S.bars15);
@@ -498,35 +504,162 @@
       ema50Series.setData(S.bars15.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
       document.querySelector('.ticker-label').textContent = 'XAU/USD';
       runEngine();
+    } else if (homework) {
+      neutralizeForHomework();   // clear gold panels FIRST — must not survive a fetch failure
+      await loadHomework();
+      return;                    // no chart on this tab
     } else {
-      neutralizeForUs30();   // clear gold panels FIRST — must not survive a feed failure
+      neutralizeForUs30();
       await loadUs30();
     }
     chart.timeScale().scrollToRealTime();
   }
 
+  // ── Weekend Homework: the weekly review the agent publishes every Saturday ──
+  async function loadHomework() {
+    const box = $('homeworkView');
+    box.innerHTML = '<div class="muted">Loading the weekly review…</div>';
+    let j;
+    try {
+      const res = await fetch(`/data/weekly-brief.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(String(res.status));
+      j = await res.json();
+    } catch (e) {
+      box.innerHTML = `<div class="hw-empty"><h3>No weekly review published yet</h3>
+        <p>The agent writes this every <b>Saturday at 09:00</b> from the week that just closed. If it's mid-week, you're seeing the gap before the next one — that's expected.</p>
+        <p class="muted">If it's Saturday afternoon and this is still empty, the agent didn't run: check that the laptop was awake and that <code>XAU Weekly Brief</code> fired.</p></div>`;
+      return;
+    }
+    renderHomework(j);
+    $('chartSrc').textContent = `weekly review · published ${new Date(j.generatedAt).toLocaleString()}`;
+  }
+
+  function renderHomework(r) {
+    const w = r.week;
+    const f1 = (n) => Number(n).toFixed(1);
+    const sgn = (n) => `${n >= 0 ? '+' : ''}${f1(n)}`;
+    const ageDays = (Date.now() - Date.parse(r.generatedAt)) / 86400000;
+    const stale = ageDays > 8
+      ? `<div class="hw-stale">⚠️ This review is ${Math.floor(ageDays)} days old — it covers the week of ${r.weekOf.monday}, not the current one. The agent has not published since.</div>`
+      : '';
+
+    const dayRows = r.days.map((d) => d.traded
+      ? `<tr><td>${d.dow}</td><td>${f1(d.low)}–${f1(d.high)}</td><td>${f1(d.range)}</td>
+         <td class="${d.net >= 0 ? 'up' : 'down'}">${sgn(d.net)}</td></tr>`
+      : `<tr class="muted"><td>${d.dow}</td><td colspan="3">no data</td></tr>`).join('');
+
+    const lvlRow = (l, dir) => `<tr><td class="hw-arrow ${dir}">${dir === 'up' ? '▲' : '▼'}</td>
+      <td class="hw-px">${f1(l.price)}</td><td>${f1(l.dist)} pts away</td>
+      <td class="muted">left ${l.dow} ${l.date.slice(8)}/${l.date.slice(5, 7)}${l.thisWeek ? '' : ' · earlier week'}</td></tr>`;
+    const above = r.untested.above.length
+      ? r.untested.above.map((l) => lvlRow(l, 'up')).join('')
+      : '<tr><td colspan="4" class="muted">Nothing untested above — the week closed at its own highs.</td></tr>';
+    const below = r.untested.below.length
+      ? r.untested.below.map((l) => lvlRow(l, 'down')).join('')
+      : '<tr><td colspan="4" class="muted">Nothing untested below — the week closed at its own lows.</td></tr>';
+
+    const cal = r.calendar.published
+      ? `<ul class="hw-cal">${r.calendar.events.slice(0, 10).map((e) =>
+          `<li><b>${e.dow} ${e.uk}</b> ${e.title}${e.forecast ? ` <span class="muted">f/c ${e.forecast}</span>` : ''}</li>`).join('')}</ul>`
+      : `<p class="hw-warn">⚠️ Next week's calendar isn't published yet. The feed only ever carries one week and still shows the week just gone — Sunday's gap check will have it. Treat the schedule as unknown until then.</p>`;
+
+    const acc = r.accounts.length
+      ? `<table class="hw-table"><tr><th>Account</th><th>Signals</th><th>Closed</th><th>W/L</th><th>Net</th></tr>${
+          r.accounts.map((a) => `<tr><td>${a.data.label}</td><td>${a.data.signals_opened}</td>
+            <td>${a.data.summary.legs_closed}</td><td>${a.data.summary.wins}W/${a.data.summary.losses}L</td>
+            <td class="${a.data.summary.net_profit >= 0 ? 'up' : 'down'}">${sgn(a.data.summary.net_profit)} ${a.data.currency}</td></tr>`).join('')
+        }</table>`
+      : '<p class="muted">No account history available for that week.</p>';
+
+    $('homeworkView').innerHTML = `
+      ${stale}
+      <div class="hw-head">
+        <h2>Week of ${r.weekOf.monday} → ${r.weekOf.friday}</h2>
+        <div class="hw-verdict ${w.direction}">${w.direction === 'up' ? '📈' : w.direction === 'down' ? '📉' : '➖'} ${w.direction.toUpperCase()} ${sgn(w.net)} pts (${sgn(w.netPct)}%)</div>
+      </div>
+
+      <div class="hw-grid">
+        <div class="hw-stat"><span>WEEK OPEN</span><b>${f1(w.open)}</b></div>
+        <div class="hw-stat"><span>HIGH</span><b>${f1(w.high)}</b></div>
+        <div class="hw-stat"><span>LOW</span><b>${f1(w.low)}</b></div>
+        <div class="hw-stat hw-hi"><span>FRIDAY CLOSE</span><b>${f1(w.close)}</b></div>
+        <div class="hw-stat"><span>RANGE</span><b>${f1(w.range)} pts</b></div>
+        <div class="hw-stat"><span>CLOSED AT</span><b>${f1(w.closePosPct)}% of range</b></div>
+      </div>
+      <p class="hw-note">${w.closePosPct > 70 ? 'Buyers held control into the close.' : w.closePosPct < 30 ? 'Sellers held control into the close.' : 'Mid-range close — neither side finished in control.'}
+        ${r.rangeVsTypical ? ` The week spanned <b>${f1(r.rangeVsTypical)}%</b> of a typical week (~${f1(r.typicalRange)} pts over the last ${r.pastRangeWeeks}) — ${r.rangeVsTypical < 75 ? 'a quiet one' : r.rangeVsTypical > 125 ? 'a busy one' : 'about average'}.` : ''}
+        Structure: price is <b>${r.trend.label}</b>.</p>
+
+      <h3>Day by day <span class="muted">(UK dates)</span></h3>
+      <table class="hw-table"><tr><th>Day</th><th>Range</th><th>Pts</th><th>Net</th></tr>${dayRows}</table>
+      <p class="hw-note">Busiest ${r.biggestDay.dow} (${f1(r.biggestDay.range)} pts) · quietest ${r.quietestDay.dow} (${f1(r.quietestDay.range)} pts).</p>
+
+      <h3>Untested levels</h3>
+      <p class="hw-note">Swing highs and lows price walked away from and never came back to challenge. Distances are from Friday's close ${f1(w.close)} — apply them as <b>point-distances from your own broker's fill</b>, not as absolute prices.</p>
+      <table class="hw-table hw-levels">${above}${below}</table>
+      <p class="hw-note">${r.prior ? `Prior week ranged ${f1(r.prior.low)}–${f1(r.prior.high)}. ` : ''}Round numbers either side: ${f1(r.round50[1])} / ${f1(r.round50[0])}.</p>
+
+      <h3>The week ahead <span class="hw-grade">GRADE C</span></h3>
+      <div class="hw-warnbox">No validated weekly edge exists in this system — no pre-trade feature tested here predicts outcome. What follows is context to watch, <b>not a signal and not a forecast</b>. The only validated edge remains Setup A and Setup B.</div>
+      ${cal}
+      <div class="hw-grid">
+        <div class="hw-stat"><span>1H 50 EMA</span><b>${f1(r.emas.h1_50)}</b></div>
+        <div class="hw-stat"><span>1H 200 EMA</span><b>${f1(r.emas.h1_200)}</b></div>
+        <div class="hw-stat"><span>DAILY 20 EMA</span><b>${f1(r.emas.d_20)}</b></div>
+        <div class="hw-stat"><span>DAILY 50 EMA</span><b>${f1(r.emas.d_50)}</b></div>
+      </div>
+      ${r.typicalRange ? `<p class="hw-note">If next week is ordinary (~${f1(r.typicalRange)} pts), that's roughly <b>${f1(w.close - r.typicalRange / 2)}–${f1(w.close + r.typicalRange / 2)}</b> around Friday's close. That is an envelope of likely <b>size</b> — it says nothing about direction.</p>` : ''}
+      <p class="hw-note">Untested levels are where reactions are most likely, simply because nobody has traded them yet. A clean break through one is information; a rejection off it is information. Neither is an entry on its own.</p>
+
+      <h3>Your agent's week</h3>
+      ${acc}
+      <p class="hw-note">Base rates: the validated edge is <b>+0.168R</b> per trade at ~50% win, about <b>1.56 trades a week</b> — only 28% of days produce a trade at all. A quiet week is the system working, not the system broken.</p>
+      <p class="muted hw-foot">Published ${new Date(r.generatedAt).toLocaleString()} by the XAU Session Agent.</p>`;
+  }
+
   // Wipe every gold-specific readout the moment we leave the gold tab. Runs even if
-  // the US30 feed dies, so a stale gold idea/price can never sit under a US30 header.
-  function neutralizeForUs30() {
+  // the destination feed dies, so a stale gold idea/price can never sit under another
+  // symbol's header. Shared by the US30 and Homework tabs.
+  function clearGoldReadouts(tickerLabel) {
     for (const id of ['entryValue', 'tp1Value', 'tp2Value', 'slValue']) {
       $(id).textContent = '—'; $(id).closest('.kpi').classList.remove('active');
     }
     $('biasValue').textContent = 'n/a'; $('biasValue').className = 'kpi-value';
-    $('biasConf').textContent = 'context only — no validated edge';
-    $('entryFoot').textContent = 'no signals on US30'; $('slFoot').textContent = '—';
+    $('entryFoot').textContent = '—'; $('slFoot').textContent = '—';
     $('tickerPrice').textContent = '—'; $('tickerChange').textContent = '—';
     $('tickerChange').className = 'delta';
-    document.querySelector('.ticker-label').textContent = 'US30';
+    document.querySelector('.ticker-label').textContent = tickerLabel;
     for (const id of ['stSession', 'stAtr', 'stRsi', 'stDay', 'stNext']) $(id).textContent = '—';
+    $('ideaHeadline').className = 'idea-headline';
+    $('takeVerdict').className = 'take-verdict';
+  }
+
+  function neutralizeForUs30() {
+    clearGoldReadouts('US30');
+    $('biasConf').textContent = 'context only — no validated edge';
+    $('entryFoot').textContent = 'no signals on US30';
     $('stAsia').textContent = 'n/a (US30)';
     $('ideaGrade').textContent = 'N/A'; $('ideaGrade').className = 'idea-grade c';
     $('ideaHeadline').textContent = 'No trade ideas for US30';
-    $('ideaHeadline').className = 'idea-headline';
     $('ideaBody').innerHTML = 'Trade Ideas are only generated for XAUUSD, where the strategy is validated. US30 failed both tests (gold rules −0.042R; US30-native strategy failed its holdout), so any US30 idea would be an opinion dressed as a signal.';
     $('ideaEdge').textContent = '📌 Switch to the XAU/USD tab for graded trade ideas.';
     $('takeVerdict').textContent = '📊 US30 — context only, no signals';
-    $('takeVerdict').className = 'take-verdict';
     $('tipBox').textContent = 'US30 discipline: if you trade it manually, respect the 14:00–16:00 UK window and the fact that it trends — fading it is how this instrument punishes gold habits.';
+  }
+
+  function neutralizeForHomework() {
+    clearGoldReadouts('XAU/USD');
+    $('biasConf').textContent = 'review of the week just gone';
+    $('entryFoot').textContent = 'no live signals on this tab';
+    $('stAsia').textContent = '—';
+    $('ideaGrade').textContent = 'C'; $('ideaGrade').className = 'idea-grade c';
+    $('ideaHeadline').textContent = 'Weekend review — not a live signal';
+    $('ideaBody').innerHTML = 'This tab is a retrospective on the week that just closed, plus the levels it left untested. Nothing here is a graded setup. Live A/B ideas resume on the XAU/USD tab when London opens.';
+    $('ideaEdge').textContent = '📌 Switch to XAU/USD for live graded ideas.';
+    $('takeVerdict').textContent = '📚 Weekend homework';
+    $('takeBody').innerHTML = '<p>The week that just closed, reviewed on the right — what it did, and which levels it walked away from without testing.</p>'
+      + '<p>No live chart or signals on this tab. Market reopens <b>Sunday 23:00 UK</b>; the London brief lands ~07:55 UK Monday.</p>';
+    $('tipBox').textContent = 'Weekend work is about preparation, not prediction. Mark the untested levels, know which economic events land, then let the setups come to you.';
   }
 
   async function loadUs30() {
