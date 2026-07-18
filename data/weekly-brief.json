@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-07-18T21:26:22.751Z",
+  "weekOf": {
+    "monday": "2026-07-13",
+    "friday": "2026-07-17"
+  },
+  "week": {
+    "open": 4076.795,
+    "close": 4017.315,
+    "high": 4104.05,
+    "low": 3959.8,
+    "range": 144.25,
+    "net": -59.48000000000002,
+    "netPct": -1.4589892305107326,
+    "closePosPct": 39.87175043327548,
+    "direction": "down"
+  },
+  "days": [
+    {
+      "date": "2026-07-13",
+      "dow": "Mon",
+      "traded": true,
+      "open": 4076.795,
+      "close": 4001.075,
+      "high": 4091.295,
+      "low": 3986.58,
+      "range": 104.71500000000015,
+      "net": -75.72000000000025
+    },
+    {
+      "date": "2026-07-14",
+      "dow": "Tue",
+      "traded": true,
+      "open": 4001.12,
+      "close": 4049.05,
+      "high": 4104.05,
+      "low": 3983.545,
+      "range": 120.50500000000011,
+      "net": 47.93000000000029
+    },
+    {
+      "date": "2026-07-15",
+      "dow": "Wed",
+      "traded": true,
+      "open": 4049.11,
+      "close": 4059.68,
+      "high": 4081.52,
+      "low": 4017.475,
+      "range": 64.04500000000007,
+      "net": 10.569999999999709
+    },
+    {
+      "date": "2026-07-16",
+      "dow": "Thu",
+      "traded": true,
+      "open": 4059.57,
+      "close": 3978.445,
+      "high": 4062.075,
+      "low": 3969.345,
+      "range": 92.73000000000002,
+      "net": -81.125
+    },
+    {
+      "date": "2026-07-17",
+      "dow": "Fri",
+      "traded": true,
+      "open": 3978.455,
+      "close": 4017.315,
+      "high": 4023.835,
+      "low": 3959.8,
+      "range": 64.03499999999985,
+      "net": 38.86000000000013
+    }
+  ],
+  "biggestDay": {
+    "dow": "Tue",
+    "range": 120.50500000000011
+  },
+  "quietestDay": {
+    "dow": "Fri",
+    "range": 64.03499999999985
+  },
+  "untested": {
+    "above": [
+      {
+        "type": "high",
+        "price": 4023.835,
+        "time": 1784304000,
+        "date": "2026-07-17",
+        "dow": "Fri",
+        "thisWeek": true,
+        "dist": 6.519999999999982
+      },
+      {
+        "type": "high",
+        "price": 4043.36,
+        "time": 1784203200,
+        "date": "2026-07-16",
+        "dow": "Thu",
+        "thisWeek": true,
+        "dist": 26.045000000000073
+      },
+      {
+        "type": "high",
+        "price": 4081.52,
+        "time": 1784138400,
+        "date": "2026-07-15",
+        "dow": "Wed",
+        "thisWeek": true,
+        "dist": 64.20499999999993
+      },
+      {
+        "type": "high",
+        "price": 4104.05,
+        "time": 1784030400,
+        "date": "2026-07-14",
+        "dow": "Tue",
+        "thisWeek": true,
+        "dist": 86.73500000000013
+      },
+      {
+        "type": "high",
+        "price": 4121.375,
+        "time": 1783713600,
+        "date": "2026-07-10",
+        "dow": "Fri",
+        "thisWeek": false,
+        "dist": 104.05999999999995
+      }
+    ],
+    "below": [
+      {
+        "type": "low",
+        "price": 3959.8,
+        "time": 1784293200,
+        "date": "2026-07-17",
+        "dow": "Fri",
+        "thisWeek": true,
+        "dist": 57.51499999999987
+      }
+    ]
+  },
+  "prior": {
+    "high": 4202.705,
+    "low": 4021.815
+  },
+  "typicalRange": 243.87500000000023,
+  "pastRangeWeeks": 12,
+  "rangeVsTypical": 59.14915427985643,
+  "emas": {
+    "h1_50": 4009.7465172550183,
+    "h1_200": 4049.47862913595,
+    "d_20": 4100.21339803484,
+    "d_50": 4257.718675677192
+  },
+  "round50": [
+    4050,
+    4000
+  ],
+  "trend": {
+    "vsD20": -82.89839803483983,
+    "vsD50": -240.4036756771916,
+    "label": "below both daily EMAs — downtrend structure"
+  },
+  "calendar": {
+    "published": false,
+    "events": []
+  },
+  "accounts": [
+    {
+      "key": "demo",
+      "label": "Exness demo",
+      "data": {
+        "success": true,
+        "label": "Exness demo",
+        "demo": true,
+        "currency": "USD",
+        "days": 7,
+        "legs_opened": 3,
+        "signals_opened": 3,
+        "closed": [
+          {
+            "time": 1783932053,
+            "symbol": "XAUUSD",
+            "leg": "?",
+            "reason": "manual/other",
+            "price": 4075.4460000000004,
+            "profit": -0.23,
+            "volume": 0.01,
+            "position_id": 2952480091
+          },
+          {
+            "time": 1783945515,
+            "symbol": "XAUUSD",
+            "leg": "?",
+            "reason": "manual/other",
+            "price": 4062.422,
+            "profit": 0.71,
+            "volume": 0.03,
+            "position_id": 2953501858
+          },
+          {
+            "time": 1783945515,
+            "symbol": "XAUUSD",
+            "leg": "?",
+            "reason": "manual/other",
+            "price": 4062.422,
+            "profit": 0.24,
+            "volume": 0.01,
+            "position_id": 2953501860
+          }
+        ],
+        "summary": {
+          "legs_closed": 3,
+          "wins": 2,
+          "losses": 1,
+          "net_profit": 0.72,
+          "gross_win": 0.95,
+          "gross_loss": -0.23
+        }
+      }
+    },
+    {
+      "key": "live",
+      "label": "RCG live (cent)",
+      "data": {
+        "success": true,
+        "label": "RCG live (cent)",
+        "demo": false,
+        "currency": "ZAR",
+        "days": 7,
+        "legs_opened": 1,
+        "signals_opened": 1,
+        "closed": [
+          {
+            "time": 1783956668,
+            "symbol": "XAUUSD.cent",
+            "leg": "?",
+            "reason": "manual/other",
+            "price": 4059.61,
+            "profit": -1.15,
+            "volume": 0.01,
+            "position_id": 55213789
+          }
+        ],
+        "summary": {
+          "legs_closed": 1,
+          "wins": 0,
+          "losses": 1,
+          "net_profit": -1.15,
+          "gross_win": 0,
+          "gross_loss": -1.15
+        }
+      }
+    }
+  ]
+}
