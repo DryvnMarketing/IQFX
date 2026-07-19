@@ -1,0 +1,88 @@
+{
+ "generatedAt": "2026-07-19T21:56:38.515813+00:00",
+ "agents": [
+  {
+   "key": "gold",
+   "label": "XAU Session Agent",
+   "live": true,
+   "pid": 38452,
+   "running": true,
+   "logAgeMin": 2.4,
+   "stateAgeMin": 2913.1,
+   "heartbeatMin": 2.4,
+   "lastLog": "[2026-07-19T21:54:17.443Z] publish: wrote C:\\Users\\info\\IQFX\\data\\sunday-brief.json (push skipped)",
+   "account": {
+    "equity": 575.15,
+    "currency": "ZAR",
+    "demo": false,
+    "algoTrading": true,
+    "spread": 1.39,
+    "tickAgeSec": 166000,
+    "openPositions": 0,
+    "week": {
+     "closed": 1,
+     "net": -1.15,
+     "wins": 0
+    }
+   },
+   "stale": false
+  },
+  {
+   "key": "btc",
+   "label": "BTC Trend Agent",
+   "live": false,
+   "pid": 10764,
+   "running": true,
+   "logAgeMin": 4.3,
+   "stateAgeMin": 114.3,
+   "heartbeatMin": 4.3,
+   "lastLog": "[2026-07-19 21:52:24Z] no new H4 bar (last 07-19 16:00Z), pos=0",
+   "account": {
+    "equity": 668.94,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "spread": 7.0,
+    "tickAgeSec": 32,
+    "openPositions": 0,
+    "week": {
+     "closed": 0,
+     "net": 0,
+     "wins": 0
+    }
+   },
+   "stale": false
+  },
+  {
+   "key": "gko",
+   "label": "GKO Follower",
+   "live": false,
+   "pid": 33436,
+   "running": true,
+   "logAgeMin": 56.3,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-19 21:00:25Z] idle \u2014 weekend (Sun)",
+   "account": {
+    "equity": 668.94,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "spread": 0.168,
+    "tickAgeSec": 176323,
+    "openPositions": 0,
+    "week": {
+     "closed": 0,
+     "net": 0,
+     "wins": 0
+    }
+   },
+   "stale": false
+  }
+ ],
+ "calendar": {
+  "events": 83,
+  "forwardDated": 83,
+  "highForward": 11
+ }
+}

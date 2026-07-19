@@ -1,0 +1,28 @@
+{
+ "generatedAt": "2026-07-19T21:56:42.004049+00:00",
+ "benchmark": {
+  "dev": 0.328,
+  "holdout": 0.164,
+  "goldAgent": 0.168,
+  "note": "holdout 95% CI [-0.050,+0.374] crosses zero; not validated"
+ },
+ "trades": [],
+ "skips": [],
+ "seenSignals": 11,
+ "dayTrades": 0,
+ "halted": false,
+ "account": {
+  "equity": 668.94,
+  "currency": "USD",
+  "demo": true,
+  "algoTrading": true,
+  "spread": 0.168,
+  "tickAgeSec": 176324,
+  "openPositions": 0,
+  "week": {
+   "closed": 0,
+   "net": 0,
+   "wins": 0
+  }
+ }
+}
