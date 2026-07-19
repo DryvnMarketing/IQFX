@@ -1,23 +1,35 @@
 {
- "generatedAt": "2026-07-19T21:56:42.004049+00:00",
+ "generatedAt": "2026-07-19T22:14:39.606555+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
   "goldAgent": 0.168,
   "note": "holdout 95% CI [-0.050,+0.374] crosses zero; not validated"
  },
- "trades": [],
- "skips": [],
+ "journal": [],
  "seenSignals": 11,
  "dayTrades": 0,
  "halted": false,
+ "stats": {
+  "signals": 0,
+  "taken": 0,
+  "skipped": 0,
+  "open": 0,
+  "closed": 0,
+  "wins": 0,
+  "winRate": null,
+  "expectancy": null,
+  "totalR": null,
+  "netCash": 0
+ },
+ "skipReasons": [],
  "account": {
   "equity": 668.94,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
-  "tickAgeSec": 176324,
+  "tickAgeSec": 31,
   "openPositions": 0,
   "week": {
    "closed": 0,
