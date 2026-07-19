@@ -589,7 +589,7 @@
       <p class="hw-note">Read these as two competing channels: <b>safe-haven demand</b> pushes gold up; <b>inflation → hawkish Fed → higher real rates</b> pushes it down. Whichever the tape obeyed is the one in control.</p>
       <h3>The week ahead</h3>
       ${b.calendar && b.calendar.partial ? `<div class="hw-warn">⚠️ Calendar feed was incomplete: ${b.calendar.partial}</div>` : ''}
-      ${ev.length ? `<div style="overflow-x:auto"><table class="hw-table">${evRows}</table></div>` : '<p class="muted">No forward-dated events.</p>'}
+      ${ev.length ? `<div class="hw-scroll"><table class="hw-table">${evRows}</table></div>` : '<p class="muted">No forward-dated events.</p>'}
       <p class="muted hw-foot">Published ${new Date(b.generatedAt).toLocaleString()} · ${ageStr(b.generatedAt)}</p>`;
   }
 
@@ -745,7 +745,7 @@
     const g = await getJson('gko-scoreboard.json', 'gkoView', 'The follower publishes its scoreboard alongside the agent status snapshot.');
     if (!g) return;
     const a = g.account || {}, b = g.benchmark || {};
-    const trades = g.trades || [], skips = g.skips || [];
+    const s = g.stats || {};
     const wk = a.week || {};
     $('gkoView').innerHTML = `
       <div class="hw-head"><h2>GKO follower — forward test</h2>
@@ -755,13 +755,17 @@
         BUY/SELL choice is <b>not reproducible</b> — a classifier scored 49.4% against a 61.4% majority baseline.
         Running on <b>demo</b> to build tamper-proof evidence that scraped history can't provide.</div>
       <div class="hw-grid">
-        <div class="hw-stat"><span>SIGNALS SEEN</span><b>${g.seenSignals ?? 0}</b></div>
-        <div class="hw-stat"><span>TRADES PLACED</span><b>${trades.length}</b></div>
-        <div class="hw-stat"><span>SKIPPED</span><b>${skips.length}</b></div>
+        <div class="hw-stat"><span>SIGNALS JOURNALLED</span><b>${s.signals ?? 0}</b></div>
+        <div class="hw-stat"><span>TAKEN</span><b>${s.taken ?? 0}</b></div>
+        <div class="hw-stat"><span>DECLINED</span><b>${s.skipped ?? 0}</b></div>
+        <div class="hw-stat"><span>CLOSED</span><b>${s.closed ?? 0}${s.winRate != null ? ` · ${s.winRate}% win` : ''}</b></div>
+        <div class="hw-stat hw-hi"><span>LIVE EXPECTANCY</span><b>${s.expectancy != null ? SGN(s.expectancy) + 'R' : '—'}</b></div>
+        <div class="hw-stat"><span>TOTAL R</span><b class="${(s.totalR ?? 0) >= 0 ? 'up' : 'down'}">${s.totalR != null ? SGN(s.totalR) : '—'}</b></div>
         <div class="hw-stat"><span>OPEN NOW</span><b>${a.openPositions ?? '—'}</b></div>
-        <div class="hw-stat"><span>7-DAY NET</span><b class="${(wk.net ?? 0) >= 0 ? 'up' : 'down'}">${wk.net != null ? SGN(wk.net) + ' ' + (a.currency || '') : '—'}</b></div>
-        <div class="hw-stat hw-hi"><span>EQUITY</span><b>${a.equity != null ? a.equity + ' ' + (a.currency || '') : '—'}</b></div>
+        <div class="hw-stat"><span>EQUITY</span><b>${a.equity != null ? a.equity + ' ' + (a.currency || '') : '—'}</b></div>
       </div>
+      ${s.closed ? `<p class="hw-note">Live expectancy is over <b>${s.closed}</b> closed trade${s.closed === 1 ? '' : 's'} —
+        far too few to mean anything yet. The holdout ran to 83 and still couldn't separate itself from zero.</p>` : ''}
       <h3>What it's being measured against</h3>
       <table class="hw-table">
         <tr><th>Sample</th><th>Expectancy</th><th>Meaning</th></tr>
@@ -770,15 +774,49 @@
         <tr><td>Your gold agent</td><td class="up">+${b.goldAgent}R</td><td class="muted">validated over 662 days</td></tr>
       </table>
       <p class="hw-note">⚠️ ${b.note}</p>
-      <h3>Placements</h3>
-      ${trades.length ? `<ul class="hw-cal">${trades.slice().reverse().map((t) => `<li><code>${t}</code></li>`).join('')}</ul>`
-        : '<p class="muted">No trades yet. It only acts 07:00–17:00 UK on weekdays, and skips anything older than 8 minutes.</p>'}
-      <h3>Skipped — and why</h3>
-      ${skips.length ? `<ul class="hw-cal">${skips.slice().reverse().map((t) => `<li class="muted"><code>${t}</code></li>`).join('')}</ul>`
-        : '<p class="muted">None yet.</p>'}
+      <h3>Trade journal <span class="muted">every signal, taken or not</span></h3>
+      ${journalTable(g.journal || [])}
+      ${(g.skipReasons || []).length ? `<h3>Why signals were declined</h3>
+        <table class="hw-table"><tr><th>Reason</th><th>Count</th></tr>
+        ${g.skipReasons.map(([k, n]) => `<tr><td>${k}</td><td>${n}</td></tr>`).join('')}</table>` : ''}
       <p class="hw-note">Skips matter as much as fills: his TP1 is often reached within minutes of posting, so a signal
         that arrives stale is one a human would likely have chased at a worse price. Quantifying that gap is part of the test.</p>
       <p class="muted hw-foot">Published ${new Date(g.generatedAt).toLocaleString()} · ${ageStr(g.generatedAt)}</p>`;
+  }
+
+  // Full journal table. Newest first, because that is what you check.
+  function journalTable(rows) {
+    if (!rows.length) {
+      return `<p class="muted">No signals journalled yet. The follower only acts 07:00–17:00 UK on weekdays,
+        and records every signal it sees — including ones it declines.</p>`;
+    }
+    const badge = (s) => {
+      const map = { CLOSED: 'up', PLACED: 'warn', SKIPPED: '', DRY_RUN: '', ERROR: 'down' };
+      return `<span class="hlt-pill hlt-${map[s] ?? ''}">${s || '—'}</span>`;
+    };
+    const body = rows.slice().reverse().map((r) => {
+      const t = r.ts ? new Date(r.ts) : null;
+      const when = t ? t.toLocaleString('en-GB', { day: '2-digit', month: 'short',
+        hour: '2-digit', minute: '2-digit' }) : '—';
+      const rcell = r.r != null
+        ? `<b class="${r.r >= 0 ? 'up' : 'down'}">${SGN(r.r)}R</b>`
+        : (r.status === 'PLACED' ? '<span class="muted">open</span>' : '<span class="muted">—</span>');
+      const cash = r.profit != null ? `<span class="${r.profit >= 0 ? 'up' : 'down'}">${SGN(r.profit)}</span>` : '';
+      const detail = r.status === 'SKIPPED' ? `<span class="muted">${r.reason || ''}</span>`
+        : r.fill != null ? `filled ${F1(r.fill)}${r.exit != null ? ` → ${F1(r.exit)}` : ''} ${cash}`
+        : r.intended_entry != null ? `<span class="muted">@${F1(r.intended_entry)} · ${r.lots ?? '—'} lots</span>` : '';
+      return `<tr>
+        <td>${when}</td>
+        <td><b class="${r.dir === 'BUY' ? 'up' : 'down'}">${r.dir || '—'}</b></td>
+        <td>${r.zone_lo != null ? `${F1(r.zone_lo)}–${F1(r.zone_hi)}` : '—'}</td>
+        <td class="muted">${r.tp1 != null ? F1(r.tp1) : '—'} / ${r.sl != null ? F1(r.sl) : '—'}</td>
+        <td>${badge(r.status)}</td>
+        <td>${rcell}</td>
+        <td>${detail}</td></tr>`;
+    }).join('');
+    return `<div class="hw-scroll"><table class="hw-table hw-journal">
+      <tr><th>When</th><th>Dir</th><th>Zone</th><th>TP1/SL</th><th>Status</th><th>R</th><th>Detail</th></tr>
+      ${body}</table></div>`;
   }
 
   // ── 🩺 Agent health ──

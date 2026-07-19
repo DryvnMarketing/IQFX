@@ -154,6 +154,7 @@ body {
 .chart-zone { display: flex; flex-direction: column; gap: 0; min-width: 0; }
 .chart-head {
   display: flex; align-items: center; gap: 18px;
+  flex-wrap: wrap;                 /* without this the header forced the whole page wide */
   background: var(--panel); border: 1px solid var(--line); border-bottom: 0;
   border-radius: 12px 12px 0 0; padding: 10px 16px;
 }
@@ -164,6 +165,13 @@ body {
 .lg-entry { background: var(--entry); } .lg-sl { background: var(--sl); }
 .lg-tp { background: var(--tp); } .lg-asia { background: var(--asia); }
 .chart-src { margin-left: auto; font-size: 11px; color: var(--ink-3); }
+/* narrow screens: let the header stack instead of pushing the page sideways */
+@media (max-width: 900px) {
+  .chart-head { gap: 8px 12px; }
+  .chart-src { margin-left: 0; }
+  .chart-legend { display: none !important; }
+  .sym-tabs { flex-wrap: wrap; margin-right: 0; }
+}
 #chart {
   height: 520px; border: 1px solid var(--line); border-top: 0; border-bottom: 0;
   background: var(--panel);
@@ -285,6 +293,12 @@ body {
   font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--ink-3);
   white-space: nowrap; overflow-x: auto;
 }
+/* wide content scrolls INSIDE its own box; max-width is what actually stops it
+   pushing the page, overflow-x alone does not */
+.hw-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.hw-journal { font-size: 11.5px; min-width: 560px; }
+.hw-journal td { padding: 5px 7px; vertical-align: middle; }
+.hw-journal .hlt-pill { font-size: 8.5px; padding: 1px 5px; }
 .hw-clash { color: #ff9b98; font-size: 9.5px; letter-spacing: .6px; margin-left: 5px; }
 .hw-hi { color: var(--gold-2); }
 .homework code { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--ink-2); }
