@@ -485,18 +485,26 @@
     switchSymbol();
   }));
 
+  // Tabs that replace the chart with a data panel. Each has a view div, a title,
+  // and a loader. Treated uniformly so adding one can't half-wire the guards.
+  const PANELS = {
+    HOMEWORK: { view: 'homeworkView', title: 'WEEKEND HOMEWORK <span>·</span> XAU/USD <span>·</span> week in review', load: () => loadHomework() },
+    SUNDAY:   { view: 'sundayView',   title: 'SUNDAY BRIEF <span>·</span> XAU/USD <span>·</span> fundamentals',       load: () => loadSunday() },
+    GKO:      { view: 'gkoView',      title: 'GKO FOLLOWER <span>·</span> forward-test scoreboard',                   load: () => loadGko() },
+    HEALTH:   { view: 'healthView',   title: 'AGENT HEALTH <span>·</span> last published snapshot',                   load: () => loadHealth() },
+  };
+
   async function switchSymbol() {
     const gold = S.sym === 'XAUUSD';
-    const homework = S.sym === 'HOMEWORK';
-    $('ctxBanner').hidden = gold || homework;
+    const panel = PANELS[S.sym] || null;
+    $('ctxBanner').hidden = gold || !!panel;
     $('chartLegend').style.display = gold ? '' : 'none';
-    $('chart').hidden = homework;
-    document.querySelector('.stats-strip').hidden = homework;
-    $('homeworkView').hidden = !homework;
+    $('chart').hidden = !!panel;
+    document.querySelector('.stats-strip').hidden = !!panel;
+    for (const p of Object.values(PANELS)) $(p.view).hidden = true;
     $('chartTitle').innerHTML = gold
       ? 'GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M'
-      : homework
-      ? 'WEEKEND HOMEWORK <span>·</span> XAU/USD <span>·</span> week in review'
+      : panel ? panel.title
       : 'US30 <span>·</span> DOW JONES <span>·</span> 15M <span>·</span> context';
     if (gold) {
       candles.setData(S.bars15);
@@ -504,15 +512,85 @@
       ema50Series.setData(S.bars15.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
       document.querySelector('.ticker-label').textContent = 'XAU/USD';
       runEngine();
-    } else if (homework) {
+    } else if (panel) {
       neutralizeForHomework();   // clear gold panels FIRST — must not survive a fetch failure
-      await loadHomework();
-      return;                    // no chart on this tab
+      $(panel.view).hidden = false;
+      await panel.load();
+      return;                    // no chart on these tabs
     } else {
       neutralizeForUs30();
       await loadUs30();
     }
     chart.timeScale().scrollToRealTime();
+  }
+
+  // ── shared helpers for the data panels ──
+  const F1 = (n) => Number(n).toFixed(1);
+  const SGN = (n) => `${n >= 0 ? '+' : ''}${Number(n).toFixed(1)}`;
+  function ageStr(iso) {
+    const m = (Date.now() - Date.parse(iso)) / 60000;
+    if (!isFinite(m)) return 'unknown';
+    if (m < 60) return `${Math.round(m)} min ago`;
+    if (m < 48 * 60) return `${(m / 60).toFixed(1)} h ago`;
+    return `${Math.round(m / 1440)} days ago`;
+  }
+  async function getJson(name, box, whatIsIt) {
+    $(box).innerHTML = '<div class="muted">Loading…</div>';
+    try {
+      const r = await fetch(`/data/${name}?t=${Date.now()}`);
+      if (!r.ok) throw new Error(String(r.status));
+      return await r.json();
+    } catch (e) {
+      $(box).innerHTML = `<div class="hw-empty"><h3>Nothing published yet</h3>
+        <p>${whatIsIt}</p>
+        <p class="muted">The dashboard is static — it can't reach the laptop. It shows the last snapshot the agents pushed.</p></div>`;
+      return null;
+    }
+  }
+
+  // ── 🌍 Sunday fundamental brief ──
+  async function loadSunday() {
+    const b = await getJson('sunday-brief.json', 'sundayView', 'The agent publishes this every Sunday at 20:30 SA, before the 23:00 UK open.');
+    if (!b) return;
+    const w = b.week, g = b.gap;
+    const stale = (Date.now() - Date.parse(b.generatedAt)) / 86400000 > 7
+      ? `<div class="hw-stale">⚠️ This brief is from ${b.today} — the agent hasn't published since.</div>` : '';
+    const heads = (b.headlines || []);
+    const hot = heads.filter((h) => h.hot).slice(0, 6), rest = heads.filter((h) => !h.hot).slice(0, 8);
+    const ev = (b.calendar && b.calendar.events) || [];
+    const evRows = ev.slice(0, 14).map((e) => {
+      const d = new Date(e.ms);
+      const uk = d.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+      const sa = d.toLocaleTimeString('en-GB', { timeZone: 'Africa/Johannesburg', hour: '2-digit', minute: '2-digit' });
+      const day = d.toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'short' });
+      const m = +uk.slice(0, 2) * 60 + +uk.slice(3);
+      const clash = (m >= 465 && m < 690) ? '<b class="hw-clash">SETUP A</b>'
+        : (m >= 780 && m < 1020) ? '<b class="hw-clash">SETUP B</b>' : '';
+      return `<tr><td>${day} ${uk}</td><td class="muted">${sa} SA</td><td>${e.country}</td>
+        <td>${e.title}</td><td>${e.impact === 'High' ? '<b class="hw-hi">HIGH</b>' : 'med'} ${clash}</td></tr>`;
+    }).join('');
+    $('sundayView').innerHTML = `${stale}
+      <div class="hw-head"><h2>Sunday brief — ${b.today}</h2>
+        <div class="hw-verdict ${w.net >= 0 ? 'up' : 'down'}">${w.net >= 0 ? '📈' : '📉'} ${SGN(w.net)} pts last week</div></div>
+      <div class="hw-warnbox">GRADE C — balance of risks, not a signal. No weekly directional edge is validated in this system.</div>
+      <div class="hw-grid">
+        <div class="hw-stat hw-hi"><span>PROJECTED OPEN</span><b>${g ? F1(g.projected) : '—'}</b></div>
+        <div class="hw-stat"><span>WEEKEND GAP</span><b>${g ? SGN(g.pts) + ' pts' : '—'}</b></div>
+        <div class="hw-stat"><span>FRI CLOSE</span><b>${g ? F1(g.friClose) : F1(w.close)}</b></div>
+        <div class="hw-stat"><span>WEEK RANGE</span><b>${F1(w.range)} pts</b></div>
+        <div class="hw-stat"><span>DAILY 20 EMA</span><b>${F1(b.emas.d20)}</b></div>
+        <div class="hw-stat"><span>DAILY 50 EMA</span><b>${F1(b.emas.d50)}</b></div>
+      </div>
+      <p class="hw-note">Last week ${w.monday} → ${w.friday}: ${F1(w.open)} → ${F1(w.close)}, range ${F1(w.low)}–${F1(w.high)}.
+        Structure: <b>${b.structure}</b>.</p>
+      <h3>What moved it</h3>
+      ${hot.length ? `<ul class="hw-cal">${hot.map((h) => `<li>🔥 ${h.title} <span class="muted">${h.src}</span></li>`).join('')}</ul>` : ''}
+      ${rest.length ? `<ul class="hw-cal">${rest.map((h) => `<li>${h.title} <span class="muted">${h.src}</span></li>`).join('')}</ul>` : '<p class="muted">No headlines captured.</p>'}
+      <p class="hw-note">Read these as two competing channels: <b>safe-haven demand</b> pushes gold up; <b>inflation → hawkish Fed → higher real rates</b> pushes it down. Whichever the tape obeyed is the one in control.</p>
+      <h3>The week ahead</h3>
+      ${b.calendar && b.calendar.partial ? `<div class="hw-warn">⚠️ Calendar feed was incomplete: ${b.calendar.partial}</div>` : ''}
+      ${ev.length ? `<div style="overflow-x:auto"><table class="hw-table">${evRows}</table></div>` : '<p class="muted">No forward-dated events.</p>'}
+      <p class="muted hw-foot">Published ${new Date(b.generatedAt).toLocaleString()} · ${ageStr(b.generatedAt)}</p>`;
   }
 
   // ── Weekend Homework: the weekly review the agent publishes every Saturday ──
@@ -660,6 +738,94 @@
     $('takeBody').innerHTML = '<p>The week that just closed, reviewed on the right — what it did, and which levels it walked away from without testing.</p>'
       + '<p>No live chart or signals on this tab. Market reopens <b>Sunday 23:00 UK</b>; the London brief lands ~07:55 UK Monday.</p>';
     $('tipBox').textContent = 'Weekend work is about preparation, not prediction. Mark the untested levels, know which economic events land, then let the setups come to you.';
+  }
+
+  // ── 📡 GKO follower forward-test scoreboard ──
+  async function loadGko() {
+    const g = await getJson('gko-scoreboard.json', 'gkoView', 'The follower publishes its scoreboard alongside the agent status snapshot.');
+    if (!g) return;
+    const a = g.account || {}, b = g.benchmark || {};
+    const trades = g.trades || [], skips = g.skips || [];
+    const wk = a.week || {};
+    $('gkoView').innerHTML = `
+      <div class="hw-head"><h2>GKO follower — forward test</h2>
+        <div class="hw-verdict ${g.halted ? 'down' : 'up'}">${g.halted ? '🛑 HALTED' : '▶️ running'}</div></div>
+      <div class="hw-warnbox"><b>This is not a validated strategy.</b> It mirrors a third party's discretionary calls.
+        Reverse-engineering showed his zone placement is mechanical (spot snapped to the nearest round-5) but his
+        BUY/SELL choice is <b>not reproducible</b> — a classifier scored 49.4% against a 61.4% majority baseline.
+        Running on <b>demo</b> to build tamper-proof evidence that scraped history can't provide.</div>
+      <div class="hw-grid">
+        <div class="hw-stat"><span>SIGNALS SEEN</span><b>${g.seenSignals ?? 0}</b></div>
+        <div class="hw-stat"><span>TRADES PLACED</span><b>${trades.length}</b></div>
+        <div class="hw-stat"><span>SKIPPED</span><b>${skips.length}</b></div>
+        <div class="hw-stat"><span>OPEN NOW</span><b>${a.openPositions ?? '—'}</b></div>
+        <div class="hw-stat"><span>7-DAY NET</span><b class="${(wk.net ?? 0) >= 0 ? 'up' : 'down'}">${wk.net != null ? SGN(wk.net) + ' ' + (a.currency || '') : '—'}</b></div>
+        <div class="hw-stat hw-hi"><span>EQUITY</span><b>${a.equity != null ? a.equity + ' ' + (a.currency || '') : '—'}</b></div>
+      </div>
+      <h3>What it's being measured against</h3>
+      <table class="hw-table">
+        <tr><th>Sample</th><th>Expectancy</th><th>Meaning</th></tr>
+        <tr><td>Dev (53 signals, in-sample)</td><td class="up">+${b.dev}R</td><td class="muted">where the model was built — expect regression</td></tr>
+        <tr><td><b>Holdout (83, out-of-sample)</b></td><td class="up">+${b.holdout}R</td><td class="muted">the honest number</td></tr>
+        <tr><td>Your gold agent</td><td class="up">+${b.goldAgent}R</td><td class="muted">validated over 662 days</td></tr>
+      </table>
+      <p class="hw-note">⚠️ ${b.note}</p>
+      <h3>Placements</h3>
+      ${trades.length ? `<ul class="hw-cal">${trades.slice().reverse().map((t) => `<li><code>${t}</code></li>`).join('')}</ul>`
+        : '<p class="muted">No trades yet. It only acts 07:00–17:00 UK on weekdays, and skips anything older than 8 minutes.</p>'}
+      <h3>Skipped — and why</h3>
+      ${skips.length ? `<ul class="hw-cal">${skips.slice().reverse().map((t) => `<li class="muted"><code>${t}</code></li>`).join('')}</ul>`
+        : '<p class="muted">None yet.</p>'}
+      <p class="hw-note">Skips matter as much as fills: his TP1 is often reached within minutes of posting, so a signal
+        that arrives stale is one a human would likely have chased at a worse price. Quantifying that gap is part of the test.</p>
+      <p class="muted hw-foot">Published ${new Date(g.generatedAt).toLocaleString()} · ${ageStr(g.generatedAt)}</p>`;
+  }
+
+  // ── 🩺 Agent health ──
+  async function loadHealth() {
+    const h = await getJson('agent-status.json', 'healthView', 'The publisher pushes a snapshot every 30 minutes while the laptop is on.');
+    if (!h) return;
+    const age = (Date.now() - Date.parse(h.generatedAt)) / 60000;
+    const snapStale = age > 90;
+    const cards = (h.agents || []).map((a) => {
+      const ac = a.account || {};
+      const bad = !a.running || a.stale || ac.error || ac.algoTrading === false;
+      const state = !a.running ? 'DOWN' : a.stale ? 'QUIET' : 'OK';
+      const cls = !a.running ? 'down' : a.stale ? 'warn' : 'up';
+      return `<div class="hlt-card ${bad ? 'hlt-bad' : ''}">
+        <div class="hlt-top"><b>${a.label}</b>
+          <span class="hlt-pill hlt-${cls}">${state}</span>
+          ${a.live ? '<span class="hlt-pill hlt-live">REAL MONEY</span>' : '<span class="hlt-pill">demo</span>'}</div>
+        <div class="hlt-rows">
+          <div><span>heartbeat</span><b>${a.heartbeatMin != null ? a.heartbeatMin + ' min' : '—'}</b></div>
+          <div><span>pid</span><b>${a.pid ?? '—'}</b></div>
+          <div><span>equity</span><b>${ac.equity != null ? ac.equity + ' ' + (ac.currency || '') : (ac.error || '—')}</b></div>
+          <div><span>algo trading</span><b class="${ac.algoTrading === false ? 'down' : ''}">${ac.algoTrading == null ? '—' : ac.algoTrading ? 'on' : 'OFF'}</b></div>
+          <div><span>spread</span><b>${ac.spread ?? '—'}</b></div>
+          <div><span>open</span><b>${ac.openPositions ?? '—'}</b></div>
+        </div>
+        <div class="hlt-log">${a.lastLog ? a.lastLog.replace(/[<>]/g, '') : 'no log'}</div>
+      </div>`;
+    }).join('');
+    const cal = h.calendar || {};
+    $('healthView').innerHTML = `
+      ${snapStale ? `<div class="hw-stale">⚠️ This snapshot is ${ageStr(h.generatedAt)} — the laptop may be asleep or the publisher stopped. Everything below is that old.</div>` : ''}
+      <div class="hw-head"><h2>Agent health</h2>
+        <div class="hw-verdict ${snapStale ? 'down' : 'up'}">${ageStr(h.generatedAt)}</div></div>
+      <p class="hw-note">A process being <b>up</b> is not the same as it <b>working</b> — three silent failures on 2026-07-19
+        all looked like normal operation. "QUIET" means the process is alive but hasn't written a heartbeat recently.</p>
+      <div class="hlt-grid">${cards}</div>
+      <h3>Calendar feed</h3>
+      ${cal.error ? `<div class="hw-warn">⚠️ ${cal.error}</div>` :
+        `<div class="hw-grid">
+          <div class="hw-stat"><span>EVENTS CACHED</span><b>${cal.events}</b></div>
+          <div class="hw-stat"><span>FORWARD-DATED</span><b>${cal.forwardDated}</b></div>
+          <div class="hw-stat ${cal.highForward ? '' : 'hw-hi'}"><span>HIGH IMPACT AHEAD</span><b>${cal.highForward}</b></div>
+        </div>
+        <p class="hw-note">A low forward count can mean a genuinely quiet week — or a partial feed. The blackout only
+          protects against events it can actually see.</p>`}
+      <p class="muted hw-foot">Snapshot ${new Date(h.generatedAt).toLocaleString()}. The dashboard is static and cannot
+        poll the laptop; this is the last state the agents published.</p>`;
   }
 
   async function loadUs30() {

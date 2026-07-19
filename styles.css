@@ -261,6 +261,34 @@ body {
 .hw-empty code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; color: var(--gold-2); }
 .hw-foot { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
 
+/* ── agent health cards ── */
+.hlt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; margin: 14px 0; }
+.hlt-card { background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px; padding: 12px 14px; }
+.hlt-card.hlt-bad { border-color: rgba(239,83,80,.5); background: rgba(239,83,80,.07); }
+.hlt-top { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 9px; }
+.hlt-top b { color: var(--ink); font-size: 13px; }
+.hlt-pill {
+  font-size: 9px; letter-spacing: .8px; font-weight: 700; padding: 2px 7px; border-radius: 5px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--ink-2);
+}
+.hlt-pill.hlt-up { background: rgba(38,166,138,.16); border-color: rgba(38,166,138,.5); color: #6fe0c2; }
+.hlt-pill.hlt-warn { background: rgba(184,129,27,.18); border-color: rgba(184,129,27,.55); color: #ffd98a; }
+.hlt-pill.hlt-down { background: rgba(239,83,80,.18); border-color: rgba(239,83,80,.55); color: #ff9b98; }
+.hlt-pill.hlt-live { background: rgba(239,83,80,.14); border-color: rgba(239,83,80,.5); color: #ff9b98; }
+.hlt-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; font-size: 11.5px; }
+.hlt-rows > div { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; }
+.hlt-rows span { color: var(--ink-3); }
+.hlt-rows b { color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; }
+.hlt-rows b.down { color: var(--down); }
+.hlt-log {
+  margin-top: 9px; padding-top: 8px; border-top: 1px solid var(--line);
+  font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--ink-3);
+  white-space: nowrap; overflow-x: auto;
+}
+.hw-clash { color: #ff9b98; font-size: 9.5px; letter-spacing: .6px; margin-left: 5px; }
+.hw-hi { color: var(--gold-2); }
+.homework code { font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--ink-2); }
+
 /* track record */
 .tr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .tr-head { font-size: 10.5px; letter-spacing: 1.2px; color: var(--gold); margin-bottom: 6px; font-weight: 700; }
