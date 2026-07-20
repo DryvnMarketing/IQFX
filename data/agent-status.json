@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T07:53:28.352145+00:00",
+ "generatedAt": "2026-07-20T08:03:10.953829+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 38452,
    "running": true,
-   "logAgeMin": 5.6,
-   "stateAgeMin": 1.2,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-07-20T07:47:59.069Z] headlines FXStreet failed: ",
+   "logAgeMin": 4.1,
+   "stateAgeMin": 0.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-07-20T07:59:06.206Z] headlines Fed failed: ",
    "account": {
     "equity": 575.15,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.36,
-    "tickAgeSec": -10764,
+    "spread": 0.41,
+    "tickAgeSec": -10765,
     "openPositions": 0,
     "week": {
      "closed": 1,
@@ -33,12 +33,12 @@
    "live": false,
    "pid": 10764,
    "running": true,
-   "logAgeMin": 4.0,
-   "stateAgeMin": 229.1,
-   "heartbeatMin": 4.0,
-   "lastLog": "[2026-07-20 07:49:37Z] no new H4 bar (last 07-20 00:00Z), pos=0",
+   "logAgeMin": 3.6,
+   "stateAgeMin": 238.7,
+   "heartbeatMin": 3.6,
+   "lastLog": "[2026-07-20 07:59:38Z] no new H4 bar (last 07-20 00:00Z), pos=0",
    "account": {
-    "equity": 666.35,
+    "equity": 681.9,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -57,24 +57,24 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 36920,
+   "pid": 38044,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-20 07:53:11Z]   whatsapp -> no output (exit 2)",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 2.6,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-07-20 08:02:57Z]   whatsapp -> 200 (attempt 2)",
    "account": {
-    "equity": 666.48,
+    "equity": 681.9,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
     "tickAgeSec": 33,
-    "openPositions": 1,
+    "openPositions": 0,
     "week": {
-     "closed": 0,
-     "net": 0,
-     "wins": 0
+     "closed": 1,
+     "net": 12.96,
+     "wins": 1
     }
    },
    "stale": false
