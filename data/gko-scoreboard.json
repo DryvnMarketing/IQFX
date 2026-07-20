@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T20:02:06.343677+00:00",
+ "generatedAt": "2026-07-20T20:32:06.875993+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -96,12 +96,12 @@
  },
  "skipReasons": [],
  "account": {
-  "equity": 667.27,
+  "equity": 675.9,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
-  "tickAgeSec": 34,
+  "tickAgeSec": 3,
   "openPositions": 0,
   "week": {
    "closed": 1,
