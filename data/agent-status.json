@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T04:23:28.052635+00:00",
+ "generatedAt": "2026-07-20T04:53:29.463078+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 38452,
    "running": true,
-   "logAgeMin": 3.0,
-   "stateAgeMin": 3.0,
-   "heartbeatMin": 3.0,
-   "lastLog": "[2026-07-20T04:20:31.184Z] headlines Investing failed: timeout for https://www.investing.com/rss/news_11.rss",
+   "logAgeMin": 12.1,
+   "stateAgeMin": 1.7,
+   "heartbeatMin": 1.7,
+   "lastLog": "[2026-07-20T04:41:28.160Z] headlines FXStreet failed: timeout for https://www.fxstreet.com/rss/news",
    "account": {
     "equity": 575.15,
     "currency": "ZAR",
@@ -34,9 +34,9 @@
    "pid": 10764,
    "running": true,
    "logAgeMin": 4.1,
-   "stateAgeMin": 19.1,
+   "stateAgeMin": 49.1,
    "heartbeatMin": 4.1,
-   "lastLog": "[2026-07-20 04:19:30Z] no new H4 bar (last 07-20 00:00Z), pos=0",
+   "lastLog": "[2026-07-20 04:49:31Z] no new H4 bar (last 07-20 00:00Z), pos=0",
    "account": {
     "equity": 668.94,
     "currency": "USD",
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 37220,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 1.5,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-20 04:23:13Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 3.5,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-07-20 04:53:26Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
     "equity": 668.94,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 34,
+    "tickAgeSec": 33,
     "openPositions": 0,
     "week": {
      "closed": 0,
