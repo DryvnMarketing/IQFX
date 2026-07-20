@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T02:53:29.279321+00:00",
+ "generatedAt": "2026-07-20T03:23:27.938466+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,16 +7,16 @@
    "live": true,
    "pid": 38452,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 1.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-07-20T02:51:45.990Z] headlines FXStreet failed: ",
+   "logAgeMin": 5.7,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-20T03:17:50.910Z] headlines FXStreet failed: timeout for https://www.fxstreet.com/rss/news",
    "account": {
     "equity": 575.15,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.41,
+    "spread": 0.45,
     "tickAgeSec": -10765,
     "openPositions": 0,
     "week": {
@@ -33,10 +33,10 @@
    "live": false,
    "pid": 10764,
    "running": true,
-   "logAgeMin": 4.2,
-   "stateAgeMin": 169.2,
-   "heartbeatMin": 4.2,
-   "lastLog": "[2026-07-20 02:49:26Z] no new H4 bar (last 07-19 20:00Z), pos=0",
+   "logAgeMin": 4.1,
+   "stateAgeMin": 199.2,
+   "heartbeatMin": 4.1,
+   "lastLog": "[2026-07-20 03:19:28Z] no new H4 bar (last 07-19 20:00Z), pos=0",
    "account": {
     "equity": 668.94,
     "currency": "USD",
@@ -59,10 +59,10 @@
    "live": false,
    "pid": 37220,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 5.8,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-20 02:53:20Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-07-20 03:22:21Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
     "equity": 668.94,
     "currency": "USD",
