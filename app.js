@@ -186,9 +186,18 @@
     $('biasSellBar').style.width = w.sell + '%';
     $('biasBuyPct').textContent = w.buy >= 12 ? `${w.buy}% BUY` : '';
     $('biasSellPct').textContent = w.sell >= 12 ? `${w.sell}% SELL` : '';
-    $('biasVotes').innerHTML = S.bias.votes.map((v) =>
+    const b = S.bias;
+    // Surface the divergence rather than hiding it. The votes are a useful read
+    // of the wider picture, but only the agent's EMA50+MACD rule is validated,
+    // and only it may license a trade. When they disagree, say so plainly —
+    // otherwise the page looks like the agent should have fired when it shouldn't.
+    const banner = b.mixed
+      ? `<div class="bias-note bias-mixed">⚖️ <b>Agent bias: MIXED — standing aside.</b><br>${b.agentDetail || ''}
+         ${b.voteDisagrees ? `<br><span class="muted">The ${b.voteShort >= 4 ? b.voteShort : b.voteLong}/5 vote read says ${b.voteDir}, but the validated rule needs price-vs-EMA50 and MACD to agree. Votes are context; only the agent's rule trades.</span>` : ''}</div>`
+      : `<div class="bias-note bias-ok">✅ <b>Agent bias: ${b.long ? 'LONG' : 'SHORT'}</b> — setups armed.<br><span class="muted">${b.agentDetail || ''}</span></div>`;
+    $('biasVotes').innerHTML = banner + b.votes.map((v) =>
       `<div class="vote"><span>${v.name}</span><i class="${v.long ? 'v-long' : 'v-short'}">${v.long ? 'LONG' : 'SHORT'}</i></div>`
-    ).join('');
+    ).join('') + `<div class="bias-foot muted">Vote tally ${b.voteLong}L/${b.voteShort}S is context only — it does not gate signals.</div>`;
   }
 
   function calAnalysis(ev) {
@@ -261,8 +270,10 @@
 
     const dir = b.long ? 'LONG' : b.short ? 'SHORT' : null;
     if (!dir || !b.tradeable) return mk('C', null, 'STAND ASIDE — 4H bias mixed',
-      `Only <b>${b.confidence}%</b> of the 4H checks agree (60% needed).\n15m 50 EMA <b>${f1(d.ema50)}</b> · ATR <b>${f1(d.atr)}</b> · RSI <b>${f1(d.rsi)}</b>`,
-      'Mixed bias is the system\'s single biggest filter — it stands aside for a reason.');
+      `${b.agentDetail || ''}\nThe validated rule needs price-vs-EMA50 <b>and</b> MACD to agree; they don't.`
+      + (b.voteDisagrees ? `\n<b>Note:</b> the 5-check tally reads ${b.voteDir} ${Math.max(b.voteLong, b.voteShort)}/5, but that tally is context only — it was never the validated filter.` : '')
+      + `\n15m 50 EMA <b>${f1(d.ema50)}</b> · ATR <b>${f1(d.atr)}</b> · RSI <b>${f1(d.rsi)}</b>`,
+      'Mixed bias is the system\'s single biggest filter — the agent is standing aside, and so should the page.');
 
     const a = d.asia;
     if (uk.min < 480) return mk('C', dir, `PREPARING — bias ${dir}, London opens 08:00 UK`,

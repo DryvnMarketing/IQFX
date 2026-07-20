@@ -269,6 +269,14 @@ body {
 .hw-empty code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; color: var(--gold-2); }
 .hw-foot { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
 
+/* bias: agent rule vs the vote tally */
+.bias-note { font-size: 11.5px; line-height: 1.5; padding: 8px 10px; border-radius: 7px; margin: 8px 0 10px; }
+.bias-note b { color: var(--ink); }
+.bias-mixed { background: rgba(184,129,27,.12); border: 1px solid rgba(184,129,27,.45); color: var(--gold-2); }
+.bias-mixed b { color: #ffd98a; }
+.bias-ok { background: rgba(38,166,138,.10); border: 1px solid rgba(38,166,138,.4); color: #8fe3ca; }
+.bias-foot { margin-top: 8px; font-size: 10.5px; font-style: italic; }
+
 /* ── agent health cards ── */
 .hlt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 10px; margin: 14px 0; }
 .hlt-card { background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px; padding: 12px 14px; }

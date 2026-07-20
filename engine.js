@@ -105,10 +105,32 @@
     const shortVotes = votes.length - longVotes;
     const dir = longVotes > shortVotes ? 'LONG' : 'SHORT';
     const confidence = Math.round(Math.max(longVotes, shortVotes) / votes.length * 100);
+
+    // THE VALIDATED RULE, and the only thing allowed to license a signal.
+    // monitor.cjs fetch4hBias(): long = price>EMA50 AND macdBull; short = the
+    // inverse; anything else is MIXED and both setups stand down. The +0.168R
+    // backtest is a faithful port of THAT, not of the vote count.
+    //
+    // The "votes >= 4" version used to drive this and was commented
+    // "agent-equivalent strict filter". It is not equivalent. On 2026-07-20 the
+    // votes read 4-1 SHORT (80%) while MACD was bullish, so the page graded a
+    // Setup B "A - VALIDATED" while the agent correctly stood aside on a mixed
+    // bias. A grade that implies "the agent is trading this" must be derived
+    // from the agent's own rule.
+    const aboveEma = c[i] > e50[i];
+    const macdBull = m.line[i] > m.signal[i];
+    const agentLong = aboveEma && macdBull;
+    const agentShort = !aboveEma && !macdBull;
+
     return {
       dir, confidence, votes,
-      long: longVotes >= 4, short: shortVotes >= 4,   // agent-equivalent strict filter
-      tradeable: confidence >= 60,
+      long: agentLong, short: agentShort,
+      mixed: !agentLong && !agentShort,
+      agentDetail: `close ${c[i].toFixed(1)} ${aboveEma ? '>' : '<'} 4H EMA50 ${e50[i]?.toFixed(1)}, MACD ${macdBull ? 'bull' : 'bear'}`,
+      // votes stay for CONTEXT only - they no longer gate anything
+      voteDir: dir, voteLong: longVotes, voteShort: shortVotes,
+      voteDisagrees: (longVotes >= 4 && !agentLong) || (shortVotes >= 4 && !agentShort),
+      tradeable: agentLong || agentShort,
       ema50: e50[i], ema200: e200[i], rsi: r[i],
     };
   }
