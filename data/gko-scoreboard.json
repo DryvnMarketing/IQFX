@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T03:23:33.728126+00:00",
+ "generatedAt": "2026-07-20T03:53:36.668249+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -7,7 +7,7 @@
   "note": "holdout 95% CI [-0.050,+0.374] crosses zero; not validated"
  },
  "journal": [],
- "seenSignals": 12,
+ "seenSignals": 13,
  "dayTrades": 0,
  "halted": false,
  "stats": {
