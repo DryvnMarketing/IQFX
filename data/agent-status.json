@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T05:53:30.842383+00:00",
+ "generatedAt": "2026-07-20T06:23:28.547205+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,16 +7,16 @@
    "live": true,
    "pid": 38452,
    "running": true,
-   "logAgeMin": 4.7,
-   "stateAgeMin": 4.6,
-   "heartbeatMin": 4.6,
-   "lastLog": "[2026-07-20T05:48:57.406Z] headlines Investing failed: ",
+   "logAgeMin": 3.0,
+   "stateAgeMin": 2.9,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-07-20T06:20:35.475Z] headlines Investing failed: ",
    "account": {
     "equity": 575.15,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.45,
+    "spread": 0.36,
     "tickAgeSec": -10765,
     "openPositions": 0,
     "week": {
@@ -33,10 +33,10 @@
    "live": false,
    "pid": 10764,
    "running": true,
-   "logAgeMin": 4.1,
-   "stateAgeMin": 109.2,
-   "heartbeatMin": 4.1,
-   "lastLog": "[2026-07-20 05:49:33Z] no new H4 bar (last 07-20 00:00Z), pos=0",
+   "logAgeMin": 4.0,
+   "stateAgeMin": 139.1,
+   "heartbeatMin": 4.0,
+   "lastLog": "[2026-07-20 06:19:33Z] no new H4 bar (last 07-20 00:00Z), pos=0",
    "account": {
     "equity": 668.94,
     "currency": "USD",
@@ -60,9 +60,9 @@
    "pid": 37220,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.8,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-20 05:53:08Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "lastLog": "[2026-07-20 06:22:58Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
     "equity": 668.94,
     "currency": "USD",
