@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-20T08:03:13.612523+00:00",
+ "generatedAt": "2026-07-20T08:05:34.978071+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -63,7 +63,7 @@
    "risk_pts": 7.68,
    "in_zone": true,
    "decision": "PLACED BUY 0.03 XAUUSD MKT@4018.68 SL 4011.00 TP 4023.00 | 0.03 lots = 23.04 USD = 3.44% of equity",
-   "status": "PLACED",
+   "status": "CLOSED",
    "lots": 0.03,
    "sizing": "0.03 lots = 23.04 USD = 3.44% of equity",
    "order_type": "MKT",
@@ -71,7 +71,12 @@
    "placed_epoch": 1784533985,
    "ts": "2026-07-20T07:53:05.919519+00:00",
    "position_id": 2980530946,
-   "fill": 4018.68
+   "fill": 4018.68,
+   "exit": 4023.0,
+   "profit": 12.96,
+   "r": 0.563,
+   "outcome": "TP",
+   "closed_at": "2026-07-20T08:01:00+00:00"
   }
  ],
  "seenSignals": 17,
@@ -81,13 +86,13 @@
   "signals": 3,
   "taken": 1,
   "skipped": 0,
-  "open": 1,
-  "closed": 0,
-  "wins": 0,
-  "winRate": null,
-  "expectancy": null,
-  "totalR": null,
-  "netCash": 0
+  "open": 0,
+  "closed": 1,
+  "wins": 1,
+  "winRate": 100.0,
+  "expectancy": 0.563,
+  "totalR": 0.56,
+  "netCash": 12.96
  },
  "skipReasons": [],
  "account": {
