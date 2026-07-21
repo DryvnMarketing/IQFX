@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-21T16:02:02.092702+00:00",
+ "generatedAt": "2026-07-21T16:32:02.015790+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 19968,
    "running": true,
-   "logAgeMin": 12.9,
-   "stateAgeMin": 1.7,
-   "heartbeatMin": 1.7,
-   "lastLog": "[2026-07-21T15:49:05.981Z] headlines FXStreet failed: ",
+   "logAgeMin": 5.3,
+   "stateAgeMin": 5.2,
+   "heartbeatMin": 5.2,
+   "lastLog": "[2026-07-21T16:26:46.130Z] headlines Investing failed: timeout for https://www.investing.com/rss/news_11.rss",
    "account": {
-    "equity": 673.54,
+    "equity": 677.65,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.36,
-    "tickAgeSec": -10796,
+    "spread": 0.37,
+    "tickAgeSec": -10795,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,11 +34,11 @@
    "pid": 6680,
    "running": true,
    "logAgeMin": 1.0,
-   "stateAgeMin": 1.0,
+   "stateAgeMin": 31.0,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-07-21 16:01:05Z] bar 07-21 12:00Z close 66,649 | don20 63,702-66,381 | ema20 65,135 | atr 646 | none",
+   "lastLog": "[2026-07-21 16:31:05Z] no new H4 bar (last 07-21 12:00Z), pos=1",
    "account": {
-    "equity": 670.53,
+    "equity": 668.84,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -62,9 +62,9 @@
    "logAgeMin": 0.4,
    "stateAgeMin": 2.1,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-21 16:01:40Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "lastLog": "[2026-07-21 16:31:40Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
-    "equity": 670.56,
+    "equity": 668.94,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
