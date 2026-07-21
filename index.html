@@ -77,7 +77,7 @@
     </div>
 
     <div class="panel">
-      <div class="panel-title">📊 Weekly Bias — XAUUSD</div>
+      <div class="panel-title" id="biasPanelTitle">📊 Weekly Bias — XAUUSD</div>
       <div class="bias-bar" role="img" aria-label="weekly buy/sell pressure">
         <div class="bias-buy" id="biasBuyBar" style="width:50%"><span id="biasBuyPct">50% BUY</span></div>
         <div class="bias-sell" id="biasSellBar" style="width:50%"><span id="biasSellPct">50% SELL</span></div>
@@ -85,7 +85,7 @@
       <div class="bias-votes" id="biasVotes"></div>
     </div>
 
-    <div class="panel">
+    <div class="panel" id="trackPanel">
       <div class="panel-title">🎯 Track Record <span class="panel-badge" id="trackBadge">loading…</span></div>
       <div id="trackBody" class="track"><div class="muted">Replaying strategy over recent history…</div></div>
     </div>
@@ -127,9 +127,7 @@
       <div class="chart-src" id="chartSrc">calibrating feed…</div>
     </div>
     <div id="ctxBanner" class="ctx-banner" hidden>
-      ⚠️ <b>CONTEXT ONLY — no validated edge on US30.</b> No signals, no entry/SL/TP levels.
-      Gold's rules tested on US30: <b>−0.042R (failed)</b>. A US30-native cash-open strategy was built and tested: <b>failed holdout (+0.003R = breakeven)</b>.
-      This tab is market awareness only — trade it and you're on your own read, not the system's.
+      📊 <b>US30 — discretionary analysis.</b> A reasoned technical &amp; fundamental read with a directional lean, key levels marked on the chart, and probability-weighted scenarios. This is analysis for your own decision-making, <b>not a mechanically back-tested auto-signal</b> — you size and manage every trade yourself.
     </div>
     <div id="chart"></div>
     <div id="homeworkView" class="homework" hidden></div>

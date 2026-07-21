@@ -124,7 +124,7 @@ body {
 .bias-votes { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
 .vote { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--ink-2); }
 .vote i { font-style: normal; }
-.vote .v-long { color: var(--tp); } .vote .v-short { color: var(--sl); }
+.vote .v-long { color: var(--tp); } .vote .v-short { color: var(--sl); } .vote .v-flat { color: var(--ink-3); }
 
 /* calendar */
 .cal-list { display: flex; flex-direction: column; gap: 9px; }
@@ -268,6 +268,11 @@ body {
 .hw-empty p { max-width: 460px; margin: 8px auto; font-size: 12.5px; }
 .hw-empty code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; color: var(--gold-2); }
 .hw-foot { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
+
+/* US30 analysis panel */
+.us30-h { font-size: 10.5px; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 14px 0 5px; }
+.us30-h .muted { font-weight: 400; letter-spacing: 0; text-transform: none; }
+.take-verdict.up { color: var(--up); } .take-verdict.down { color: var(--down); }
 
 /* bias: agent rule vs the vote tally */
 .bias-note { font-size: 11.5px; line-height: 1.5; padding: 8px 10px; border-radius: 7px; margin: 8px 0 10px; }

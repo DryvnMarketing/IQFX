@@ -49,6 +49,34 @@
   // expose for the drawing-tools overlay (draw.js)
   window.IQFXChart = { chart, candles, container: chartEl, getBars: () => S.bars15 };
 
+  // KPI labels are gold-flavoured in the HTML ("ENTRY/TP1/TP2/STOP LOSS"). The
+  // US30 tab repurposes the same tiles, so capture the gold defaults once and
+  // swap them per symbol — a stale "ENTRY" label under US30 was exactly the
+  // gold bleed to avoid.
+  const _kpiDefaults = {}, _kpiFootDefaults = {};
+  document.querySelectorAll('.kpi').forEach((k) => {
+    _kpiDefaults[k.id] = k.querySelector('.kpi-label').innerHTML;
+    const f = k.querySelector('.kpi-foot'); if (f) _kpiFootDefaults[k.id] = f.innerHTML;
+  });
+  function setKpiFoot(id, text) { const f = document.querySelector(`#${id} .kpi-foot`); if (f) f.textContent = text; }
+  const _statAsiaDefault = document.querySelector('#stAsia')?.closest('.stat')?.querySelector('.stat-l')?.textContent;
+  function setKpiLabels(map) {
+    for (const [id, html] of Object.entries(map)) {
+      const el = document.getElementById(id); if (el) el.querySelector('.kpi-label').innerHTML = html;
+    }
+  }
+  function restoreGoldLabels() {
+    const tp = document.getElementById('trackPanel'); if (tp) tp.hidden = false;
+    setKpiLabels(_kpiDefaults);
+    const sl = document.querySelector('#stAsia')?.closest('.stat')?.querySelector('.stat-l');
+    if (sl && _statAsiaDefault) sl.textContent = _statAsiaDefault;
+    const bt = document.getElementById('biasPanelTitle');
+    if (bt) bt.textContent = '📊 Weekly Bias — XAUUSD';
+    for (const [id, html] of Object.entries(_kpiFootDefaults)) {
+      const f = document.querySelector(`#${id} .kpi-foot`); if (f) f.innerHTML = html;
+    }
+  }
+
   function setLevels(day) {
     levelLines.forEach((l) => candles.removePriceLine(l));
     levelLines = [];
@@ -518,6 +546,7 @@
       : panel ? panel.title
       : 'US30 <span>·</span> DOW JONES <span>·</span> 15M <span>·</span> context';
     if (gold) {
+      restoreGoldLabels();
       candles.setData(S.bars15);
       const e = window.IQFX.ema(S.bars15.map((b) => b.close), 50);
       ema50Series.setData(S.bars15.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
@@ -723,21 +752,28 @@
     $('takeVerdict').className = 'take-verdict';
   }
 
+  // Clear the panels to a neutral US30 loading state — NO gold text. renderUs30()
+  // fills everything in a moment; this is only what shows if the feed is slow or
+  // fails, so it must never leave gold copy on screen under the US30 header.
   function neutralizeForUs30() {
     clearGoldReadouts('US30');
-    $('biasConf').textContent = 'context only — no validated edge';
-    $('entryFoot').textContent = 'no signals on US30';
-    $('stAsia').textContent = 'n/a (US30)';
-    $('ideaGrade').textContent = 'N/A'; $('ideaGrade').className = 'idea-grade c';
-    $('ideaHeadline').textContent = 'No trade ideas for US30';
-    $('ideaBody').innerHTML = 'Trade Ideas are only generated for XAUUSD, where the strategy is validated. US30 failed both tests (gold rules −0.042R; US30-native strategy failed its holdout), so any US30 idea would be an opinion dressed as a signal.';
-    $('ideaEdge').textContent = '📌 Switch to the XAU/USD tab for graded trade ideas.';
-    $('takeVerdict').textContent = '📊 US30 — context only, no signals';
-    $('tipBox').textContent = 'US30 discipline: if you trade it manually, respect the 14:00–16:00 UK window and the fact that it trends — fading it is how this instrument punishes gold habits.';
+    const tp = $('trackPanel'); if (tp) tp.hidden = true;   // gold-only replay, hide on US30
+    setKpiLabels({ kpiBias: 'US30 BIAS', kpiEntry: 'RESISTANCE', kpiTp1: 'SUPPORT', kpiTp2: 'PREV CLOSE', kpiSl: 'DAY RANGE' });
+    $('biasConf').textContent = 'analysing…';
+    $('ideaGrade').textContent = 'US30'; $('ideaGrade').className = 'idea-grade c';
+    $('ideaHeadline').textContent = 'Analysing US30…';
+    $('ideaBody').innerHTML = '<span class="muted">Building the technical read from the ^DJI feed.</span>';
+    $('ideaEdge').textContent = '';
+    $('takeVerdict').textContent = '📊 US30 analysis';
+    $('takeBody').innerHTML = '<p class="muted">Loading structure, levels and fundamentals…</p>';
+    $('tipBox').textContent = 'US30 — full technical & fundamental read, US30 only.';
+    const bt = $('biasPanelTitle'); if (bt) bt.textContent = '📊 Directional Checks — US30';
+    $('biasVotes').innerHTML = '';
   }
 
   function neutralizeForHomework() {
     clearGoldReadouts('XAU/USD');
+    const tp = $('trackPanel'); if (tp) tp.hidden = false;
     $('biasConf').textContent = 'review of the week just gone';
     $('entryFoot').textContent = 'no live signals on this tab';
     $('stAsia').textContent = '—';
@@ -879,51 +915,211 @@
 
   async function loadUs30() {
     try {
-      const j = await jget('/api/us30');
+      const [j, cal] = await Promise.all([
+        jget('/api/us30'),
+        jget('/api/calendar').catch(() => ({ events: [] })),
+      ]);
       S.us30 = j;
       candles.setData(j.bars);
+      const a = analyzeUs30(j);
+      // trend line: EMA on 15m ≈ 12.5h swing trend, US30 blue
       const e = window.IQFX.ema(j.bars.map((b) => b.close), 50);
       ema50Series.setData(j.bars.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
-      levelLines.forEach((l) => candles.removePriceLine(l)); levelLines = [];  // no signal levels on US30
-      candles.setMarkers([]);
-      renderUs30(j);
-      $('chartSrc').textContent = `US30 (^DJI) 15m · context feed · ${new Date(j.fetched).toLocaleTimeString()}`;
+      markUs30Chart(a);
+      renderUs30(a, cal.events || []);
+      $('chartSrc').textContent = `US30 (^DJI) · ${a.days.length}-day structure · updated ${new Date(j.fetched).toLocaleTimeString()}`;
     } catch (e) {
-      $('chartSrc').textContent = 'US30 context feed unavailable — no data shown (gold panels cleared)';
+      $('chartSrc').textContent = 'US30 feed unavailable — analysis needs the ^DJI data feed.';
+      $('takeVerdict').textContent = '📊 US30 — feed unavailable';
+      $('takeBody').innerHTML = '<p class="muted">Could not reach the ^DJI data feed. The analysis rebuilds automatically once it returns.</p>';
     }
   }
 
-  function renderUs30(j) {
-    const bars = j.bars, last = bars[bars.length - 1];
-    const px = j.price ?? last.close, ch = px - j.prevClose;
+  // Self-contained US30 technical read, computed entirely from the ^DJI cash feed
+  // so every level sits exactly on the drawn chart. NOTE: Yahoo's meta.prevClose is
+  // unreliable (it read 51,564 vs the true prior-session close 52,159) — the prior
+  // day is taken from grouped sessions instead.
+  function analyzeUs30(j) {
+    const bars = j.bars;
+    const nyDate = (t) => new Date(t * 1000).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    const byDay = new Map();
+    for (const b of bars) { const d = nyDate(b.time); if (!byDay.has(d)) byDay.set(d, []); byDay.get(d).push(b); }
+    const days = [...byDay.entries()].map(([date, bs]) => ({
+      date, open: bs[0].open, close: bs[bs.length - 1].close,
+      high: Math.max(...bs.map((x) => x.high)), low: Math.min(...bs.map((x) => x.low)),
+    }));
+    const today = days[days.length - 1], prev = days[days.length - 2] || today;
+    const px = j.price ?? today.close;
+    const wk = days.slice(-5);
+    const weekHigh = Math.max(...wk.map((d) => d.high)), weekLow = Math.min(...wk.map((d) => d.low));
+
+    const dc = days.map((d) => d.close);
+    const e10 = window.IQFX.ema(dc, 10), e20 = window.IQFX.ema(dc, 20);
+    const dEma10 = e10[e10.length - 1], dEma20 = e20[e20.length - 1];
+    const chg5 = px - (dc[dc.length - 6] ?? dc[0]);
+
+    // H1 aggregation for intraday trend + RSI
+    const h1 = []; let cur = null, key = null;
+    for (const b of bars) { const k = Math.floor(b.time / 3600); if (k !== key) { if (cur) h1.push(cur); cur = { high: b.high, low: b.low, close: b.close }; key = k; } else { cur.high = Math.max(cur.high, b.high); cur.low = Math.min(cur.low, b.low); cur.close = b.close; } }
+    if (cur) h1.push(cur);
+    const h1c = h1.map((x) => x.close);
+    const h1Ema20 = window.IQFX.ema(h1c, 20).slice(-1)[0];
+    const h1Ema50 = window.IQFX.ema(h1c, 50).slice(-1)[0];
+    const rsi = window.IQFX.rsi(h1c, 14).slice(-1)[0];
+
+    // daily ATR14
+    let tr = [];
+    for (let i = 1; i < days.length; i++) tr.push(Math.max(days[i].high - days[i].low, Math.abs(days[i].high - days[i - 1].close), Math.abs(days[i].low - days[i - 1].close)));
+    const atr = tr.slice(-14).reduce((s, v) => s + v, 0) / Math.min(14, tr.length);
+
+    // structure: last two swing highs / lows on the daily series
+    const sh = [], sl = [];
+    for (let i = 2; i < days.length - 2; i++) {
+      const d = days[i];
+      if (d.high > days[i - 1].high && d.high > days[i - 2].high && d.high > days[i + 1].high && d.high > days[i + 2].high) sh.push(d.high);
+      if (d.low < days[i - 1].low && d.low < days[i - 2].low && d.low < days[i + 1].low && d.low < days[i + 2].low) sl.push(d.low);
+    }
+    const hh = sh.length >= 2 && sh[sh.length - 1] > sh[sh.length - 2];
+    const ll = sl.length >= 2 && sl[sl.length - 1] < sl[sl.length - 2];
+    const structure = hh && !ll ? 'higher highs & higher lows (up)' : ll && !hh ? 'lower highs & lower lows (down)' : 'mixed / ranging';
+
+    // untested swing levels on H1
+    const un = [];
+    for (let i = 3; i < h1.length - 3; i++) {
+      const w = h1.slice(i - 3, i + 4);
+      if (h1[i].high === Math.max(...w.map((x) => x.high)) && !h1.slice(i + 1).some((x) => x.high >= h1[i].high)) un.push({ t: 'R', p: h1[i].high });
+      if (h1[i].low === Math.min(...w.map((x) => x.low)) && !h1.slice(i + 1).some((x) => x.low <= h1[i].low)) un.push({ t: 'S', p: h1[i].low });
+    }
+    const resAbove = un.filter((x) => x.t === 'R' && x.p > px).sort((a, b) => a.p - b.p).map((x) => x.p).slice(0, 3);
+    const supBelow = un.filter((x) => x.t === 'S' && x.p < px).sort((a, b) => b.p - a.p).map((x) => x.p).slice(0, 3);
+
+    // directional lean — a weighted read, framed as probability tilt, not a signal.
+    // Each check carries a signed vote (+1 bull / 0 neutral / -1 bear) so a "mixed"
+    // structure counts as neutral, not bearish.
+    const sv = (b) => (b ? 1 : -1);
+    const votes = [
+      { k: 'Price vs 20-day EMA', v: sv(px > dEma20), why: `${px.toFixed(0)} vs ${dEma20.toFixed(0)}` },
+      { k: '20-day EMA slope', v: sv(dEma10 > dEma20), why: dEma10 > dEma20 ? 'rising' : 'rolling over' },
+      { k: '5-day momentum', v: sv(chg5 > 0), why: `${chg5 >= 0 ? '+' : ''}${chg5.toFixed(0)} pts` },
+      { k: 'Intraday (H1 EMA50)', v: sv(px > h1Ema50), why: `${px.toFixed(0)} vs ${h1Ema50.toFixed(0)}` },
+      { k: 'Market structure', v: hh && !ll ? 1 : ll && !hh ? -1 : 0, why: structure },
+    ];
+    const score = votes.reduce((s, x) => s + x.v, 0);
+    const lean = score >= 2 ? 'BULLISH' : score <= -2 ? 'BEARISH' : 'NEUTRAL';
+    const strength = Math.abs(score) >= 4 ? 'strong' : Math.abs(score) >= 2 ? 'moderate' : 'slight';
+    const stretched = rsi <= 32 ? 'oversold' : rsi >= 68 ? 'overbought' : null;
+
+    return {
+      px, prevClose: prev.close, prevHigh: prev.high, prevLow: prev.low,
+      todayHigh: today.high, todayLow: today.low, weekHigh, weekLow,
+      dEma20, dEma10, h1Ema20, h1Ema50, rsi, atr, chg5, structure, days,
+      votes, score, lean, strength, stretched, resAbove, supBelow,
+      dayRange: today.high - today.low,
+    };
+  }
+
+  function markUs30Chart(a) {
+    levelLines.forEach((l) => candles.removePriceLine(l)); levelLines = [];
+    candles.setMarkers([]);
+    const add = (price, color, title, style = 0, width = 1) =>
+      levelLines.push(candles.createPriceLine({ price, color, title, lineStyle: style, lineWidth: width, axisLabelVisible: true }));
+    add(a.prevHigh, COLORS.sl, 'PREV HIGH', 0, 1);
+    add(a.prevClose, COLORS.asia, 'PREV CLOSE', 2, 2);
+    add(a.prevLow, COLORS.tp, 'PREV LOW', 0, 1);
+    add(a.weekHigh, 'rgba(239,83,80,.45)', 'WK HIGH', 3, 1);
+    add(a.weekLow, 'rgba(38,166,138,.45)', 'WK LOW', 3, 1);
+  }
+
+  function renderUs30(a, calEvents) {
+    const px = a.px, ch = px - a.prevClose, pct = (ch / a.prevClose) * 100;
     $('tickerPrice').textContent = px.toFixed(0);
-    $('tickerChange').textContent = `${ch >= 0 ? '+' : ''}${ch.toFixed(0)} (${(ch / j.prevClose * 100).toFixed(2)}%)`;
+    $('tickerChange').textContent = `${ch >= 0 ? '+' : ''}${ch.toFixed(0)} (${pct.toFixed(2)}%)`;
     $('tickerChange').className = 'delta ' + (ch >= 0 ? 'up' : 'down');
     document.querySelector('.ticker-label').textContent = 'US30';
 
-    const today = ukParts(Date.now()).date;
-    const td = bars.filter((b) => ukParts(b.time * 1000).date === today);
-    const dHi = td.length ? Math.max(...td.map((b) => b.high)) : null;
-    const dLo = td.length ? Math.min(...td.map((b) => b.low)) : null;
-    const a = window.IQFX.atr(bars, 14), r = window.IQFX.rsi(bars.map((b) => b.close), 14);
-    const mins = ukParts(Date.now()).min;
-    const active = mins >= 840 && mins < 1020;   // 14:00–17:00 UK
-    $('stSession').textContent = active ? 'US CASH — active' : 'outside active window';
-    $('stAsia').textContent = 'n/a (US30)';
-    $('stAtr').textContent = a[a.length - 1] ? `${a[a.length - 1].toFixed(0)} pts` : '—';
-    $('stRsi').textContent = r[r.length - 1] ? r[r.length - 1].toFixed(0) : '—';
-    $('stDay').textContent = (dHi && dLo) ? `${(dHi - dLo).toFixed(0)} pts` : '—';
-    $('stNext').textContent = active ? 'Peak activity 14:00-16:00 UK' : 'Quiet — US30 moves 14:00-16:00 UK';
+    // KPI row — US30 levels
+    setKpiLabels({ kpiBias: 'US30 BIAS', kpiEntry: 'RESISTANCE', kpiTp1: 'SUPPORT', kpiTp2: 'PREV CLOSE', kpiSl: 'DAY RANGE' });
+    const leanCls = a.lean === 'BULLISH' ? 'up' : a.lean === 'BEARISH' ? 'down' : '';
+    $('biasValue').textContent = a.lean; $('biasValue').className = 'kpi-value ' + leanCls;
+    $('biasConf').textContent = `${a.strength} lean · ${a.score >= 0 ? '+' : ''}${a.score}/5 checks`;
+    $('entryValue').textContent = a.resAbove[0] ? a.resAbove[0].toFixed(0) : '—';
+    $('entryFoot').textContent = a.resAbove[1] ? `then ${a.resAbove[1].toFixed(0)}` : 'no untested level above';
+    $('tp1Value').textContent = a.supBelow[0] ? a.supBelow[0].toFixed(0) : '—';
+    setKpiFoot('kpiTp1', a.supBelow[1] ? `then ${a.supBelow[1].toFixed(0)}` : 'prev low ' + a.prevLow.toFixed(0));
+    $('tp2Value').textContent = a.prevClose.toFixed(0);
+    setKpiFoot('kpiTp2', `prev day ${a.prevLow.toFixed(0)}–${a.prevHigh.toFixed(0)}`);
+    $('slValue').textContent = `${a.dayRange.toFixed(0)} pts`;
+    $('slFoot').textContent = `ATR ${a.atr.toFixed(0)}`;
 
+    // stats strip
+    const mins = ukParts(Date.now()).min;
+    const active = mins >= 840 && mins < 960;   // 14:00–16:00 UK, the active window
+    $('stSession').textContent = active ? 'US CASH — active' : 'outside cash hours';
+    $('stAsia').textContent = `${a.prevLow.toFixed(0)}–${a.prevHigh.toFixed(0)}`;
+    document.querySelector('#stAsia').closest('.stat').querySelector('.stat-l').textContent = 'PREV DAY';
+    $('stAtr').textContent = `${a.atr.toFixed(0)} pts`;
+    $('stRsi').textContent = a.rsi.toFixed(0);
+    $('stDay').textContent = `${a.dayRange.toFixed(0)} pts`;
+    $('stNext').textContent = active ? 'peak 14:00–16:00 UK' : 'active 14:00–16:00 UK';
+
+    // ── left sidebar: US30 bias card (idea panel) ──
+    $('ideaGrade').textContent = 'ANALYSIS'; $('ideaGrade').className = 'idea-grade ' + (leanCls || 'c');
+    $('ideaHeadline').textContent = `${a.lean} — ${a.strength} lean`;
+    $('ideaHeadline').className = 'idea-headline ' + (a.lean === 'BULLISH' ? 'long' : a.lean === 'BEARISH' ? 'short' : '');
+    const votesHtml = a.votes.map((v) => {
+      const tag = v.v > 0 ? 'BULL' : v.v < 0 ? 'BEAR' : 'FLAT';
+      const cls = v.v > 0 ? 'v-long' : v.v < 0 ? 'v-short' : 'v-flat';
+      return `<div class="vote"><span>${v.k}</span><i class="${cls}" title="${v.why}">${tag}</i></div>`;
+    }).join('');
+    $('ideaBody').innerHTML = `Price <b>${px.toFixed(0)}</b> · ${ch >= 0 ? '+' : ''}${ch.toFixed(0)} (${pct.toFixed(2)}%) on the session.\n`
+      + `Structure: <b>${a.structure}</b>.\n${votesHtml}`
+      + (a.stretched ? `<div class="bias-note bias-mixed">⚠️ Momentum is <b>${a.stretched}</b> (H1 RSI ${a.rsi.toFixed(0)}). ${a.stretched === 'oversold' ? 'A relief bounce is elevated risk — the higher-odds short is a retest of resistance, not chasing a breakdown here.' : 'A pullback is elevated risk — chasing strength into resistance is where continuation traps form.'}</div>` : '');
+    $('ideaEdge').textContent = 'Discretionary read — reasoned, not a mechanically back-tested signal. You size and manage it.';
+
+    // ── Agent's Take: the full analysis ──
+    const nearSup = a.supBelow[0], nearRes = a.resAbove[0];
+    const bearPrimary = a.lean === 'BEARISH';
+    const scenarios = a.lean === 'BULLISH'
+      ? `<p><b>Primary — continuation up.</b> Holding above the 20-day EMA (${a.dEma20.toFixed(0)}) keeps momentum higher. A push through <b>${nearRes ? nearRes.toFixed(0) : a.prevHigh.toFixed(0)}</b> opens ${a.resAbove[1] ? a.resAbove[1].toFixed(0) : a.weekHigh.toFixed(0)} → ${a.weekHigh.toFixed(0)}. Invalidated on a close back below <b>${a.prevClose.toFixed(0)}</b>.</p>
+         <p><b>Alternate — failure.</b> Lose ${nearSup ? nearSup.toFixed(0) : a.prevLow.toFixed(0)} and the up-lean is done; ${a.supBelow[1] ? a.supBelow[1].toFixed(0) : a.weekLow.toFixed(0)} comes into play.</p>`
+      : a.lean === 'BEARISH'
+      ? `<p><b>Primary — pressure lower</b>, but price is ${a.stretched === 'oversold' ? '<b>oversold and sitting on support</b>' : 'below its 20-day EMA'}. The higher-probability sell is a <b>bounce into resistance</b> — a retest of ${a.prevClose.toFixed(0)} / the 20-day EMA ${a.dEma20.toFixed(0)} that rejects — rather than chasing a fresh break. A clean break of <b>${nearSup ? nearSup.toFixed(0) : a.prevLow.toFixed(0)}</b> opens ${a.supBelow[1] ? a.supBelow[1].toFixed(0) : a.weekLow.toFixed(0)} → ${a.weekLow.toFixed(0)}.</p>
+         <p><b>Alternate — reclaim.</b> Back above <b>${a.prevClose.toFixed(0)}</b> and holding flips the near-term odds neutral-up toward the 20-day EMA ${a.dEma20.toFixed(0)} and ${nearRes ? nearRes.toFixed(0) : a.prevHigh.toFixed(0)}.</p>`
+      : `<p><b>No clear edge — ranging.</b> Checks are split (${a.score >= 0 ? '+' : ''}${a.score}/5). Trade the edges: fade toward ${nearRes ? nearRes.toFixed(0) : a.prevHigh.toFixed(0)} on the top, ${nearSup ? nearSup.toFixed(0) : a.prevLow.toFixed(0)} on the bottom, and wait for a decisive break of one for direction.</p>`;
+
+    // fundamentals — US events only, computed from the live calendar
+    const usdFwd = (calEvents || []).filter((e) => e.country === 'USD' && e.ts >= Date.now());
+    const usdHigh = usdFwd.filter((e) => e.impact === 'High');
+    const fundText = usdHigh.length === 0
+      ? `<p><b>Light US data week.</b> No high-impact USD releases scheduled ahead. With no macro catalyst on the board, US30 is driven by <b>Q2 earnings and positioning</b> — expect technically-led moves and lower scheduled-event risk.${usdFwd.length ? ` Next US item: ${usdFwd[0].title} (${new Date(usdFwd[0].ts).toLocaleDateString('en-GB', { weekday: 'short' })}, ${usdFwd[0].impact.toLowerCase()}).` : ''}</p>`
+      : `<p><b>${usdHigh.length} high-impact US release${usdHigh.length > 1 ? 's' : ''} ahead</b> — expect volatility around: ${usdHigh.slice(0, 4).map((e) => `${e.title} (${new Date(e.ts).toLocaleDateString('en-GB', { weekday: 'short' })})`).join(', ')}. Index direction can turn on these regardless of the technical picture.</p>`;
+
+    $('takeVerdict').textContent = `📊 US30 — ${a.lean.toLowerCase()} lean, ${a.strength}`;
+    $('takeVerdict').className = 'take-verdict ' + leanCls;
     $('takeBody').innerHTML = `
-      <p><b>This system has no validated edge on US30.</b> Gold's rules tested <b>−0.042R</b> on it; a purpose-built US30 cash-open strategy passed development but <b>failed its holdout (+0.003R = breakeven)</b>. So: no entries, no levels, no bias here — awareness only.</p>
-      <p><b>What the 2-year data says about US30:</b></p>
-      <p>• It moves <b>almost only 14:00–16:00 UK</b> (~105 pts per 15m bar vs 34 the rest of the day). Outside that it's noise.</p>
-      <p>• It <b>trends</b>: the first hour of US cash direction persists to the close <b>66%</b> of days — it rewards continuation, not the pullback logic gold uses.</p>
-      <p>• <b>No overnight gaps</b> and a dead Asian session, so sweep setups can't form.</p>
-      <p>• Cost is worse: RCG's spread ≈ <b>4.7 pts ≈ 14%</b> of a typical 15m bar (gold ≈ 9%).</p>
-      <p>• Counterintuitive: US30 is <b>less</b> volatile than gold in % terms (1.00% vs 1.39% daily range).</p>
-      <p>Anything you trade here is your own read — the agent is not backing it.</p>`;
+      <h4 class="us30-h">Technical read</h4>
+      <p>Price <b>${px.toFixed(0)}</b> is ${px > a.dEma20 ? 'above' : 'below'} the 20-day EMA (${a.dEma20.toFixed(0)}) and ${px > a.h1Ema50 ? 'above' : 'below'} the intraday H1 EMA50 (${a.h1Ema50.toFixed(0)}). 5-day change <b>${a.chg5 >= 0 ? '+' : ''}${a.chg5.toFixed(0)}</b>. Daily ATR ${a.atr.toFixed(0)}.</p>
+      <h4 class="us30-h">Levels on the chart</h4>
+      <p>Prev day <b>${a.prevLow.toFixed(0)}–${a.prevHigh.toFixed(0)}</b>, close <b>${a.prevClose.toFixed(0)}</b>. Week <b>${a.weekLow.toFixed(0)}–${a.weekHigh.toFixed(0)}</b>. Untested above: ${a.resAbove.map((p) => p.toFixed(0)).join(' · ') || 'none'}. Untested below: ${a.supBelow.map((p) => p.toFixed(0)).join(' · ') || 'none'}.</p>
+      <h4 class="us30-h">Scenarios <span class="muted">probability-weighted</span></h4>
+      ${scenarios}
+      <h4 class="us30-h">Fundamentals</h4>
+      ${fundText}
+      <h4 class="us30-h">Know the instrument</h4>
+      <p>US30 is 30 US mega-caps — it moves on <b>earnings, rates and risk sentiment</b>. It's most active <b>14:00–16:00 UK</b> (US cash open); outside that, moves are thin. It tends to <b>trend intraday</b> — the cash-open direction often carries into the close, so it rewards continuation over fading. As a cash index it has no weekend gaps and a quiet pre-open.</p>`;
+
+    // session tip + weekly-pressure bar repurposed for US30
+    $('tipBox').textContent = a.stretched
+      ? `RSI ${a.rsi.toFixed(0)} — ${a.stretched}. Best trades come from the reaction at a level, not from chasing the move into it.`
+      : 'US30 rewards patience at the 14:00–16:00 UK window. Mark the prev day levels, wait for price to react at one.';
+    const nBull = a.votes.filter((v) => v.v > 0).length, nBear = a.votes.filter((v) => v.v < 0).length;
+    const nFlat = a.votes.length - nBull - nBear;
+    const bull = Math.round((nBull / a.votes.length) * 100);
+    $('biasBuyBar').style.width = bull + '%'; $('biasSellBar').style.width = (100 - bull) + '%';
+    $('biasBuyPct').textContent = bull >= 12 ? `${bull}% BULL` : '';
+    $('biasSellPct').textContent = (100 - bull) >= 12 ? `${100 - bull}% BEAR` : '';
+    $('biasVotes').innerHTML = `<div class="bias-foot muted">US30 checks: ${nBull} bullish / ${nBear} bearish${nFlat ? ` / ${nFlat} neutral` : ''}. Discretionary read.</div>`;
+    const bt = $('biasPanelTitle'); if (bt) bt.textContent = '📊 Directional Checks — US30';
   }
 
   async function refreshCalendar() {
