@@ -648,11 +648,174 @@
         <p class="muted">If it's Saturday afternoon and this is still empty, the agent didn't run: check that the laptop was awake and that <code>XAU Weekly Brief</code> fired.</p></div>`;
       return;
     }
-    renderHomework(j);
+    // Optional enrichment — both are best-effort and must never block the review:
+    //  · US30 feed → the parallel weekly recap (client-side, same ^DJI plumbing as the US30 tab)
+    //  · Sunday brief → last week's hot headlines, used as macro BACKDROP (context, not causation),
+    //    and only when it covers the SAME week as this review.
+    const [us30, sunday] = await Promise.all([
+      fetch(`/api/us30`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch(`/data/sunday-brief.json?t=${Date.now()}`).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]);
+    const headlines = (sunday && sunday.week && sunday.week.monday === j.weekOf.monday)
+      ? (sunday.headlines || []) : [];
+    renderHomework(j, { us30, headlines });
     $('chartSrc').textContent = `weekly review · published ${new Date(j.generatedAt).toLocaleString()}`;
   }
 
-  function renderHomework(r) {
+  // ── "The week in words" — a written, plain-English recap generated from the
+  //    numbers the review already carries. Everything here is DESCRIPTIVE (Grade C):
+  //    this system has no validated feature that predicts a weekly move, so the
+  //    summary describes what happened and what each level would MEAN, never a forecast.
+  function goldWeekNarrative(r, headlines) {
+    const w = r.week;
+    const f1 = (n) => Number(n).toFixed(1);
+    const sgn = (n) => `${n >= 0 ? '+' : ''}${f1(n)}`;
+    const traded = r.days.filter((d) => d.traded);
+    const ups = traded.filter((d) => d.net > 0).length;
+    const downs = traded.filter((d) => d.net < 0).length;
+    const decisive = traded.reduce((a, b) => (Math.abs(b.net) > Math.abs(a.net) ? b : a), traded[0]);
+    const control = w.closePosPct > 66 ? 'buyers finished in control'
+      : w.closePosPct < 34 ? 'sellers finished in control'
+      : 'neither side finished in control — a mid-range close';
+    const busy = r.rangeVsTypical == null ? '' : r.rangeVsTypical < 75 ? 'a quiet, tight-range week'
+      : r.rangeVsTypical > 125 ? 'a busy, wide-range week' : 'an about-average week for range';
+    const dirWord = w.direction === 'up' ? 'higher' : w.direction === 'down' ? 'lower' : 'flat';
+
+    let howItMoved = `Gold finished the week <b>${dirWord}</b>`
+      + (w.direction !== 'flat' ? ` — ${w.direction === 'up' ? 'up' : 'down'} <b>${f1(Math.abs(w.net))} pts</b> (${sgn(w.netPct)}%)` : '')
+      + `, opening <b>${f1(w.open)}</b> and closing <b>${f1(w.close)}</b> on a <b>${f1(w.range)}-pt</b> range`
+      + (busy ? ` — ${busy}${r.typicalRange ? ` against a ~${f1(r.typicalRange)}-pt norm` : ''}` : '') + `. `;
+    howItMoved += `It settled at <b>${f1(w.closePosPct)}%</b> of the week's range, so ${control}. `;
+    howItMoved += `The decisive session was <b>${decisive.dow} (${sgn(decisive.net)} pts)</b>`
+      + (r.biggestDay.dow !== decisive.dow ? `, while ${r.biggestDay.dow} carried the widest range at ${f1(r.biggestDay.range)} pts` : ` — also the week's widest range`)
+      + `. ${ups} up ${ups === 1 ? 'day' : 'days'} to ${downs} down set the rhythm.`;
+
+    const relD20 = w.close - r.emas.d_20;
+    let whatDroveIt = `Structurally, price is <b>${r.trend.label}</b>. `;
+    whatDroveIt += `Friday's close sits <b>${f1(Math.abs(relD20))} pts ${relD20 >= 0 ? 'above' : 'below'}</b> the daily 20-EMA (${f1(r.emas.d_20)}) and ${w.close > r.emas.d_50 ? 'above' : 'below'} the 50-EMA (${f1(r.emas.d_50)}), `
+      + `${relD20 >= 0 ? 'keeping the medium-term bias constructive' : 'keeping the medium-term bias heavy'}. `;
+    whatDroveIt += `That's the mechanical read from price itself — no pre-trade feature in this system predicts the weekly move, so treat this as descriptive context, not a cause you can trade.`;
+
+    const nearAbove = r.untested.above[0];
+    const nearBelow = r.untested.below[0];
+    let watchNext = '';
+    if (nearAbove) watchNext += `First untested resistance is <b>${f1(nearAbove.price)}</b> (${f1(nearAbove.dist)} pts up); `;
+    if (nearBelow) watchNext += `first untested support is <b>${f1(nearBelow.price)}</b> (${f1(nearBelow.dist)} pts down). `;
+    watchNext += `Round numbers <b>${f1(r.round50[1])}</b> and <b>${f1(r.round50[0])}</b> bracket the close and tend to draw reactions. `;
+    if (r.calendar && r.calendar.published && r.calendar.events.length) {
+      watchNext += `High-impact events ahead: ${r.calendar.events.slice(0, 3).map((e) => `${e.dow} ${e.uk} ${e.title}`).join('; ')}. `;
+    } else {
+      watchNext += `Next week's high-impact calendar isn't in the feed yet (it only ever carries one week) — confirm the schedule before Monday's open. `;
+    }
+    if (r.typicalRange) {
+      watchNext += `An ordinary week (~${f1(r.typicalRange)} pts) spans roughly <b>${f1(w.close - r.typicalRange / 2)}–${f1(w.close + r.typicalRange / 2)}</b> around Friday's close — a size envelope, not a direction call.`;
+    }
+
+    const down = r.trend.vsD20 < 0 && r.trend.vsD50 < 0;
+    const up = r.trend.vsD20 > 0 && r.trend.vsD50 > 0;
+    const tips = [];
+    if (nearBelow) {
+      tips.push(`<b>Sweep-and-reclaim long:</b> a dip that sweeps <b>${f1(nearBelow.price)}</b> (${f1(nearBelow.dist)} pts below) then reclaims it is a Setup-A-style pattern. It only carries the measured +0.168R edge when it fires <i>in-session</i> on the Asian range with the 4H bias aligned — off-session, size it as discretionary prep, not the validated signal.`);
+    }
+    if (nearAbove) {
+      tips.push(down
+        ? `<b>Rejection short:</b> <b>${f1(nearAbove.price)}</b> (${f1(nearAbove.dist)} pts up) is untested resistance into a downtrend — a rejection wick there is a short cue, not a level to chase longs through.`
+        : `<b>Breakout watch:</b> a clean, held break of <b>${f1(nearAbove.price)}</b> (${f1(nearAbove.dist)} pts up) opens <b>${r.untested.above[1] ? f1(r.untested.above[1].price) : 'the next swing high'}</b> — a rejection off it is equally information.`);
+    }
+    if (down) {
+      tips.push(`<b>Trend bias:</b> favour selling rallies into <b>${f1(r.emas.h1_200)}</b> (1H 200-EMA) / <b>${f1(r.emas.d_20)}</b> (daily 20-EMA) unless price reclaims them on a daily close — chasing shorts at the lows is where the give-back happens.`);
+    } else if (up) {
+      tips.push(`<b>Trend bias:</b> favour buying dips toward <b>${f1(r.emas.h1_200)}</b> (1H 200-EMA) / <b>${f1(r.emas.d_20)}</b> (daily 20-EMA) while they hold — fading strength against an uptrend is the low-percentage trade.`);
+    } else {
+      tips.push(`<b>No clean trend</b> (price sits between the daily EMAs) — treat <b>${f1(w.low)}–${f1(w.high)}</b> as the range and fade the edges rather than forcing a directional bet through the middle.`);
+    }
+    tips.push(`<b>Let the setup come to you:</b> only ~28% of days produce a validated A/B trade. A patient week with two clean entries beats forcing six.`);
+
+    const backdrop = (headlines || []).filter((h) => h && h.title).slice(0, 4).map((h) => h.title);
+    return { howItMoved, whatDroveIt, watchNext, tips, backdrop };
+  }
+
+  // Parallel US30 weekly recap, computed client-side from the ^DJI feed for the SAME
+  // calendar week as the gold review. US30 has NO validated edge in this system — this
+  // is discretionary context you size and manage, never a mechanical signal.
+  function us30WeekRecap(us30, weekOf) {
+    if (!us30 || !us30.bars || !us30.bars.length) return null;
+    const nyDate = (t) => new Date(t * 1000).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    const byDay = new Map();
+    for (const b of us30.bars) { const d = nyDate(b.time); if (!byDay.has(d)) byDay.set(d, []); byDay.get(d).push(b); }
+    const allDays = [...byDay.entries()].map(([date, bs]) => ({
+      date, open: bs[0].open, close: bs[bs.length - 1].close,
+      high: Math.max(...bs.map((x) => x.high)), low: Math.min(...bs.map((x) => x.low)),
+    }));
+    const wk = allDays.filter((d) => d.date >= weekOf.monday && d.date <= weekOf.friday);
+    if (wk.length < 2) return null;
+    const dow = (ds) => new Intl.DateTimeFormat('en-GB', { timeZone: 'America/New_York', weekday: 'short' }).format(new Date(`${ds}T16:00:00Z`));
+    const open = wk[0].open, close = wk[wk.length - 1].close;
+    const high = Math.max(...wk.map((d) => d.high)), low = Math.min(...wk.map((d) => d.low));
+    const range = high - low, net = close - open, netPct = (net / open) * 100;
+    const closePos = range > 0 ? ((close - low) / range) * 100 : 50;
+    const direction = net > 0 ? 'up' : net < 0 ? 'down' : 'flat';
+    const withNet = wk.map((d) => ({ ...d, net: d.close - d.open }));
+    const decisive = withNet.reduce((a, b) => (Math.abs(b.net) > Math.abs(a.net) ? b : a), withNet[0]);
+    const widest = wk.reduce((a, b) => (b.high - b.low > a.high - a.low ? b : a), wk[0]);
+
+    // structure across the trailing daily sessions (up to & incl. this week)
+    const upto = allDays.filter((d) => d.date <= weekOf.friday);
+    const dc = upto.map((d) => d.close);
+    // The ^DJI feed is only ~1 month of bars, so a full 20-day EMA can be short on
+    // history — cap the period to what's available and take the last real value.
+    const emaLen = Math.min(20, dc.length);
+    const e20 = window.IQFX.ema(dc, emaLen);
+    const dEma20 = [...e20].reverse().find((x) => x != null) ?? null;
+    const sh = [], sl = [];
+    for (let i = 2; i < upto.length - 2; i++) {
+      const d = upto[i];
+      if (d.high > upto[i - 1].high && d.high > upto[i - 2].high && d.high > upto[i + 1].high && d.high > upto[i + 2].high) sh.push(d.high);
+      if (d.low < upto[i - 1].low && d.low < upto[i - 2].low && d.low < upto[i + 1].low && d.low < upto[i + 2].low) sl.push(d.low);
+    }
+    const hh = sh.length >= 2 && sh[sh.length - 1] > sh[sh.length - 2];
+    const ll = sl.length >= 2 && sl[sl.length - 1] < sl[sl.length - 2];
+    const structure = hh && !ll ? 'higher highs & higher lows — up structure'
+      : ll && !hh ? 'lower highs & lower lows — down structure' : 'mixed / ranging structure';
+
+    const f0 = (n) => Math.round(Number(n)).toLocaleString('en-US');
+    const sgn0 = (n) => `${n >= 0 ? '+' : ''}${Math.round(n).toLocaleString('en-US')}`;
+    const control = closePos > 66 ? 'buyers held into the close' : closePos < 34 ? 'sellers held into the close' : 'a mid-range close, no side in control';
+    let howItMoved = `The Dow finished the week <b>${direction === 'up' ? 'higher' : direction === 'down' ? 'lower' : 'flat'}</b>`
+      + (direction !== 'flat' ? `, ${sgn0(net)} pts (${netPct >= 0 ? '+' : ''}${netPct.toFixed(1)}%)` : '')
+      + `, <b>${f0(open)} → ${f0(close)}</b> on a <b>${f0(range)}-pt</b> range (${f0(low)}–${f0(high)}). `
+      + `Closed at ${Math.round(closePos)}% of range — ${control}. The decisive session was <b>${dow(decisive.date)} (${sgn0(decisive.net)})</b>, widest range <b>${dow(widest.date)}</b>.`;
+    let whatDroveIt = `Daily structure reads <b>${structure}</b>`
+      + (dEma20 != null ? `, with the weekly close ${close > dEma20 ? 'above' : 'below'} the ${emaLen}-day EMA (${f0(dEma20)})` : '')
+      + `. US30 has <b>no validated edge</b> in this system — this is discretionary read, never a back-tested signal.`;
+
+    const px = close;
+    // untested H1 levels around the weekly close for "what to watch"
+    const h1 = []; let cur = null, key = null;
+    for (const b of us30.bars) { const k = Math.floor(b.time / 3600); if (k !== key) { if (cur) h1.push(cur); cur = { high: b.high, low: b.low }; key = k; } else { cur.high = Math.max(cur.high, b.high); cur.low = Math.min(cur.low, b.low); } }
+    if (cur) h1.push(cur);
+    const un = [];
+    for (let i = 3; i < h1.length - 3; i++) {
+      const wdw = h1.slice(i - 3, i + 4);
+      if (h1[i].high === Math.max(...wdw.map((x) => x.high)) && !h1.slice(i + 1).some((x) => x.high >= h1[i].high)) un.push({ t: 'R', p: h1[i].high });
+      if (h1[i].low === Math.min(...wdw.map((x) => x.low)) && !h1.slice(i + 1).some((x) => x.low <= h1[i].low)) un.push({ t: 'S', p: h1[i].low });
+    }
+    const resAbove = un.filter((x) => x.t === 'R' && x.p > px).sort((a, b) => a.p - b.p).map((x) => x.p);
+    const supBelow = un.filter((x) => x.t === 'S' && x.p < px).sort((a, b) => b.p - a.p).map((x) => x.p);
+    let watchNext = `Week high <b>${f0(high)}</b> and week low <b>${f0(low)}</b> are the outer rails. `;
+    if (resAbove[0]) watchNext += `Nearest untested resistance <b>${f0(resAbove[0])}</b>; `;
+    if (supBelow[0]) watchNext += `nearest untested support <b>${f0(supBelow[0])}</b>. `;
+    watchNext += `The US calendar (CPI, FOMC, NFP, jobless claims) drives the Dow — line those up before taking a directional view.`;
+
+    const tips = [];
+    if (supBelow[0]) tips.push(`<b>${f0(supBelow[0])}</b> is the first untested support beneath the close — a sweep that snaps back is a reversal tell; a clean break opens the week low <b>${f0(low)}</b>.`);
+    if (resAbove[0]) tips.push(`<b>${f0(resAbove[0])}</b> caps the immediate upside — reclaim and hold above it and the week high <b>${f0(high)}</b> is back in play; rejection there favours the downside.`);
+    tips.push(`Discretionary only: <b>no back-tested US30 signal exists here</b>. Size small, define risk before entry, and let US data land before committing to a direction.`);
+
+    return { weekOf, open, close, high, low, range, net, netPct, closePos, direction, howItMoved, whatDroveIt, watchNext, tips };
+  }
+
+  function renderHomework(r, extras = {}) {
     const w = r.week;
     const f1 = (n) => Number(n).toFixed(1);
     const sgn = (n) => `${n >= 0 ? '+' : ''}${f1(n)}`;
@@ -688,6 +851,13 @@
             <td class="${a.data.summary.net_profit >= 0 ? 'up' : 'down'}">${sgn(a.data.summary.net_profit)} ${a.data.currency}</td></tr>`).join('')
         }</table>`
       : '<p class="muted">No account history available for that week.</p>';
+
+    // Written recaps — gold (from this review's own numbers) + parallel US30 (from the ^DJI feed).
+    let goldSummaryHtml = '', us30Html = '';
+    try { goldSummaryHtml = buildGoldSummaryHtml(r, extras.headlines || []); }
+    catch (e) { goldSummaryHtml = `<p class="hw-note">Couldn't build the written gold summary: ${e.message}</p>`; }
+    try { us30Html = buildUs30Html(extras.us30, r.weekOf); }
+    catch (e) { us30Html = `<div class="hw-us30wrap"><p class="hw-note">Couldn't build the US30 recap: ${e.message}</p></div>`; }
 
     $('homeworkView').innerHTML = `
       ${stale}
@@ -732,7 +902,71 @@
       <h3>Your agent's week</h3>
       ${acc}
       <p class="hw-note">Base rates: the validated edge is <b>+0.168R</b> per trade at ~50% win, about <b>1.56 trades a week</b> — only 28% of days produce a trade at all. A quiet week is the system working, not the system broken.</p>
+
+      ${goldSummaryHtml}
+      ${us30Html}
       <p class="muted hw-foot">Published ${new Date(r.generatedAt).toLocaleString()} by the XAU Session Agent.</p>`;
+  }
+
+  // Build the written "week in words" block for gold, and the parallel US30 recap.
+  // Kept as separate builders so a feed miss on US30 can degrade to a short note
+  // without touching the gold summary.
+  function buildGoldSummaryHtml(r, headlines) {
+    const n = goldWeekNarrative(r, headlines);
+    const tips = n.tips.map((t) => `<li>${t}</li>`).join('');
+    const backdrop = n.backdrop.length
+      ? `<div class="hw-sub">Macro backdrop that weekend <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">— context, not attribution</span></div>
+         <ul class="hw-backdrop">${n.backdrop.map((h) => `<li>${h}</li>`).join('')}</ul>`
+      : '';
+    return `
+      <h3>📝 The week in words — Gold <span class="hw-grade">GRADE C · DESCRIPTIVE</span></h3>
+      <div class="hw-summary">
+        <div class="hw-sub">How it moved</div>
+        <p class="hw-prose">${n.howItMoved}</p>
+        <div class="hw-sub">What drove it</div>
+        <p class="hw-prose">${n.whatDroveIt}</p>
+        ${backdrop}
+        <div class="hw-sub">What to watch next week</div>
+        <p class="hw-prose">${n.watchNext}</p>
+        <div class="hw-sub">A+ tips for next week</div>
+        <ul class="hw-tips">${tips}</ul>
+      </div>`;
+  }
+
+  function buildUs30Html(us30, weekOf) {
+    const rec = us30WeekRecap(us30, weekOf);
+    if (!rec) {
+      return `<div class="hw-us30wrap"><h3>📊 US30 — the week in words <span class="hw-us30tag">context only</span></h3>
+        <p class="hw-note">The ^DJI recap couldn't be built for this week — the US30 feed was unavailable or didn't cover ${weekOf.monday}→${weekOf.friday}. It rebuilds automatically once the feed returns.</p></div>`;
+    }
+    const f0 = (x) => Math.round(x).toLocaleString('en-US');
+    const arrow = rec.direction === 'up' ? '📈' : rec.direction === 'down' ? '📉' : '➖';
+    const tips = rec.tips.map((t) => `<li>${t}</li>`).join('');
+    return `
+      <div class="hw-us30wrap">
+        <div class="hw-head">
+          <h3 style="margin-top:0">📊 US30 — the week in words <span class="hw-us30tag">context only · no validated edge</span></h3>
+          <div class="hw-verdict ${rec.direction}">${arrow} ${rec.direction.toUpperCase()} ${rec.net >= 0 ? '+' : ''}${f0(rec.net)} pts (${rec.netPct >= 0 ? '+' : ''}${rec.netPct.toFixed(1)}%)</div>
+        </div>
+        <div class="hw-grid">
+          <div class="hw-stat"><span>WEEK OPEN</span><b>${f0(rec.open)}</b></div>
+          <div class="hw-stat"><span>HIGH</span><b>${f0(rec.high)}</b></div>
+          <div class="hw-stat"><span>LOW</span><b>${f0(rec.low)}</b></div>
+          <div class="hw-stat hw-hi"><span>WEEK CLOSE</span><b>${f0(rec.close)}</b></div>
+          <div class="hw-stat"><span>RANGE</span><b>${f0(rec.range)} pts</b></div>
+          <div class="hw-stat"><span>CLOSED AT</span><b>${Math.round(rec.closePos)}% of range</b></div>
+        </div>
+        <div class="hw-summary">
+          <div class="hw-sub">How it moved</div>
+          <p class="hw-prose">${rec.howItMoved}</p>
+          <div class="hw-sub">Structure &amp; context</div>
+          <p class="hw-prose">${rec.whatDroveIt}</p>
+          <div class="hw-sub">What to watch next week</div>
+          <p class="hw-prose">${rec.watchNext}</p>
+          <div class="hw-sub">Discretionary tips</div>
+          <ul class="hw-tips">${tips}</ul>
+        </div>
+      </div>`;
   }
 
   // Wipe every gold-specific readout the moment we leave the gold tab. Runs even if

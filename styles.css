@@ -269,6 +269,28 @@ body {
 .hw-empty code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; color: var(--gold-2); }
 .hw-foot { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 11px; }
 
+/* ── written weekly summary ("the week in words") + US30 parallel recap ── */
+.hw-summary { margin-top: 8px; }
+.hw-prose { font-size: 12.5px; line-height: 1.62; color: var(--ink-2); margin: 7px 0 4px; }
+.hw-prose b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.hw-sub { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin: 14px 0 4px; }
+.hw-tips { list-style: none; padding: 0; margin: 6px 0 4px; display: grid; gap: 7px; }
+.hw-tips li {
+  position: relative; padding: 9px 12px 9px 30px; font-size: 12px; line-height: 1.5;
+  background: var(--panel-2); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 7px; color: var(--ink-2);
+}
+.hw-tips li::before { content: "A+"; position: absolute; left: 9px; top: 9px; font-size: 8.5px; font-weight: 800; letter-spacing: .5px; color: var(--gold); }
+.hw-tips li b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.hw-backdrop { list-style: none; padding: 0; margin: 4px 0 2px; }
+.hw-backdrop li { font-size: 11.5px; color: var(--ink-2); padding: 3px 0 3px 15px; position: relative; }
+.hw-backdrop li::before { content: "•"; position: absolute; left: 2px; color: var(--ink-3); }
+.hw-us30wrap { margin-top: 26px; padding-top: 18px; border-top: 1px dashed var(--line); }
+.hw-us30wrap .hw-verdict { font-size: 14px; }
+.hw-us30tag {
+  display: inline-block; font-size: 9px; letter-spacing: 1px; margin-left: 8px; padding: 2px 7px; border-radius: 5px;
+  background: rgba(61,143,232,.14); border: 1px solid rgba(61,143,232,.4); color: #8fbdf0; vertical-align: middle;
+}
+
 /* US30 analysis panel */
 .us30-h { font-size: 10.5px; letter-spacing: 1.1px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 14px 0 5px; }
 .us30-h .muted { font-weight: 400; letter-spacing: 0; text-transform: none; }
