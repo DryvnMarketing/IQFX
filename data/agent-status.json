@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-21T06:32:02.120065+00:00",
+ "generatedAt": "2026-07-21T07:02:02.097482+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 3.7,
-   "stateAgeMin": 3.6,
-   "heartbeatMin": 3.6,
-   "lastLog": "[2026-07-21T06:28:22.770Z] headlines Investing failed: ",
+   "logAgeMin": 1.5,
+   "stateAgeMin": 2.1,
+   "heartbeatMin": 1.5,
+   "lastLog": "[2026-07-21T07:00:30.209Z]   !! WhatsApp FAILED after 3 attempts (socket hang up) \u2014 message lost",
    "account": {
     "equity": 607.1,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.41,
-    "tickAgeSec": -10797,
+    "spread": 0.39,
+    "tickAgeSec": -10796,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,11 +34,11 @@
    "pid": 6680,
    "running": true,
    "logAgeMin": 1.0,
-   "stateAgeMin": 151.0,
+   "stateAgeMin": 181.0,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-07-21 06:31:02Z] no new H4 bar (last 07-21 00:00Z), pos=1",
+   "lastLog": "[2026-07-21 07:01:02Z] no new H4 bar (last 07-21 00:00Z), pos=1",
    "account": {
-    "equity": 697.1,
+    "equity": 699.76,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -60,11 +60,11 @@
    "pid": 15196,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 1.6,
+   "stateAgeMin": 2.7,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-07-21 06:31:33Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "lastLog": "[2026-07-21 07:01:37Z] loop error: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
-    "equity": 697.22,
+    "equity": 699.76,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -81,8 +81,8 @@
   }
  ],
  "calendar": {
-  "events": 69,
-  "forwardDated": 55,
+  "events": 83,
+  "forwardDated": 69,
   "highForward": 7
  }
 }
