@@ -268,7 +268,7 @@
 
   function renderNews() {
     const box = $('newsList');
-    if (!S.news.length) { box.innerHTML = '<div class="muted">No headlines loaded.</div>'; return; }
+    if (!S.news.length) { box.innerHTML = '<div class="muted">No gold / US30-relevant headlines right now — the feed is filtered to news that moves XAUUSD or the Dow.</div>'; return; }
     box.innerHTML = S.news.slice(0, 14).map((n) => `
       <div class="news-item ${n.hot ? 'hot' : ''}">
         <span class="news-src">${n.source}</span><a href="${n.link}" target="_blank" rel="noopener">${n.hot ? '🔥 ' : ''}${n.title}</a>
@@ -330,12 +330,17 @@
       'Dead zone — the validated system takes nothing here.');
 
     const gap = price - d.ema50, near = Math.abs(gap) <= 1.2 * d.atr;
-    const sl = dir === 'SHORT' ? price + Math.max(2.5, 0.75 * d.atr) : price - Math.max(2.5, 0.75 * d.atr);
-    const risk = Math.abs(sl - price);
+    // Entry is the pullback to the EMA50 — SL and TP MUST be measured from that entry,
+    // NOT from the current price, or a long's stop lands above its entry (inverted).
+    const entry = d.ema50;
+    const buffer = Math.max(2.5, 0.75 * d.atr);
+    const sl = dir === 'SHORT' ? entry + buffer : entry - buffer;
+    const risk = buffer;
+    const tp1 = dir === 'SHORT' ? entry - 2 * risk : entry + 2 * risk;
     return mk(near ? 'B' : 'C', dir, near ? 'SETUP B FORMING — at the 50 EMA' : 'WAITING — NY, price away from the 50 EMA',
       `Price <b>${f1(price)}</b> is <b>${f1(Math.abs(gap))}</b> pts ${gap > 0 ? 'above' : 'below'} the 15m 50 EMA (<b>${f1(d.ema50)}</b>) · RSI <b>${f1(d.rsi)}</b>\n`
-      + `Trigger: pull back ${dir === 'SHORT' ? 'UP' : 'DOWN'} to ~<b>${f1(d.ema50)}</b>, then a ${dir === 'SHORT' ? 'bearish candle CLOSES below' : 'bullish candle HOLDS above'} it with RSI 40–60.\n`
-      + `IF it fires: ➡️ ${dir} ~<b>${f1(d.ema50)}</b> · 🛑 SL ~<b>${f1(sl)}</b> · 🎯 TP1 ~<b>${f1(dir === 'SHORT' ? price - 2 * risk : price + 2 * risk)}</b>`,
+      + `Trigger: pull back ${dir === 'SHORT' ? 'UP' : 'DOWN'} to ~<b>${f1(entry)}</b>, then a ${dir === 'SHORT' ? 'bearish candle CLOSES below' : 'bullish candle HOLDS above'} it with RSI 40–60.\n`
+      + `IF it fires: ➡️ ${dir} ~<b>${f1(entry)}</b> · 🛑 SL ~<b>${f1(sl)}</b> · 🎯 TP1 ~<b>${f1(tp1)}</b>`,
       near ? 'Close to the trigger — still needs the confirming close.' : 'Not a trade until price returns to the EMA and confirms.');
   }
 
