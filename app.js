@@ -1152,6 +1152,19 @@
         poll the laptop; this is the last state the agents published.</p>`;
   }
 
+  // US cash-index (^DJI) session state, computed in New York time (DST-safe via Intl).
+  // Regular cash hours are Mon–Fri 09:30–16:00 ET; the tab's ^DJI feed only prints then.
+  function usCashState(now = Date.now()) {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US',
+      { timeZone: 'America/New_York', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false })
+      .formatToParts(new Date(now)).map((p) => [p.type, p.value]));
+    const weekday = !['Sat', 'Sun'].includes(parts.weekday);
+    const mins = (parseInt(parts.hour, 10) % 24) * 60 + parseInt(parts.minute, 10);
+    const open = weekday && mins >= 570 && mins < 960;   // 09:30–16:00 ET
+    const phase = !weekday ? 'WEEKEND' : mins < 570 ? 'PRE-MARKET' : mins >= 960 ? 'AFTER HOURS' : 'OPEN';
+    return { open, phase };
+  }
+
   async function loadUs30() {
     try {
       const [j, cal] = await Promise.all([
@@ -1166,7 +1179,24 @@
       ema50Series.setData(j.bars.map((b, i) => ({ time: b.time, value: e[i] })).filter((x) => x.value != null));
       markUs30Chart(a);
       renderUs30(a, cal.events || []);
-      $('chartSrc').textContent = `US30 (^DJI) · ${a.days.length}-day structure · updated ${new Date(j.fetched).toLocaleTimeString()}`;
+      // Honest data-freshness labels: ^DJI cash is Yahoo-delayed ~15min and only prints during
+      // US cash hours, so stamp the real LAST-BAR time + session — never the fetch time.
+      const cash = usCashState();
+      const lastBarMs = (j.bars[j.bars.length - 1]?.time || 0) * 1000;
+      const ageMin = lastBarMs ? Math.round((Date.now() - lastBarMs) / 60000) : null;
+      const barUk = lastBarMs ? new Date(lastBarMs).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : '—';
+      const barDay = lastBarMs ? new Date(lastBarMs).toLocaleDateString('en-GB', { weekday: 'short', day: '2-digit', month: 'short' }) : '';
+      const laggy = cash.open && ageMin != null && ageMin > 25;
+      const freshNote = cash.open
+        ? (laggy ? `⚠️ feed lagging — last print ${barUk} UK (${ageMin}m ago)` : `last print ${barUk} UK (${ageMin}m ago)`)
+        : `${cash.phase} — last cash print ${barDay} ${barUk} UK · opens 09:30 New York`;
+      $('chartSrc').textContent = `US30 (^DJI cash) · Yahoo delayed ~15min · ${freshNote}`;
+      // Market pill reflects US CASH hours on this tab, not the (open) forex session.
+      const pill = $('marketPill');
+      pill.className = 'pill ' + (cash.open ? 'open' : 'closed');
+      $('marketText').textContent = cash.open ? 'US CASH OPEN'
+        : cash.phase === 'PRE-MARKET' ? 'PRE-MARKET' : cash.phase === 'AFTER HOURS' ? 'AFTER HOURS' : 'US CASH CLOSED';
+      $('sessionPhase').textContent = `US CASH ${cash.phase} · ${ukHm(Date.now())} UK`;
     } catch (e) {
       $('chartSrc').textContent = 'US30 feed unavailable — analysis needs the ^DJI data feed.';
       $('takeVerdict').textContent = '📊 US30 — feed unavailable';
