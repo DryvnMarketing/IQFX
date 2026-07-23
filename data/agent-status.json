@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-23T10:32:17.589784+00:00",
+ "generatedAt": "2026-07-23T11:02:07.911731+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 24516,
    "running": true,
-   "logAgeMin": 1.6,
-   "stateAgeMin": 1.9,
-   "heartbeatMin": 1.6,
-   "lastLog": "[2026-07-23T10:30:49.724Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 11.4,
+   "stateAgeMin": 1.1,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-07-23T10:50:51.858Z] heartbeat: tick 288, Thu 11:50 UK, trades 0/2, open=none",
    "account": {
     "equity": 0.86,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
     "spread": 0.37,
-    "tickAgeSec": -10797,
+    "tickAgeSec": -10796,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,16 +34,16 @@
    "pid": 6680,
    "running": true,
    "logAgeMin": 1.1,
-   "stateAgeMin": 151.3,
+   "stateAgeMin": 181.3,
    "heartbeatMin": 1.1,
-   "lastLog": "[2026-07-23 10:31:18Z] no new H4 bar (last 07-23 04:00Z), pos=0",
+   "lastLog": "[2026-07-23 11:01:22Z] no new H4 bar (last 07-23 04:00Z), pos=0",
    "account": {
     "equity": 687.79,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "openPositions": 0,
     "week": {
      "closed": 1,
@@ -59,9 +59,9 @@
    "live": false,
    "pid": 21880,
    "running": true,
-   "logAgeMin": 214.2,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 244.3,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-07-23 06:58:15Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 687.79,
