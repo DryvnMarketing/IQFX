@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-23T06:32:18.667323+00:00",
+ "generatedAt": "2026-07-23T07:02:15.929806+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -125,33 +125,64 @@
    "risk_pts": 8.1,
    "in_zone": true,
    "decision": "PLACED SELL 0.03 XAUUSD MKT@4118.90 SL 4127.00 TP 4115.00 | 0.03 lots = 24.29 USD = 3.66% of equity",
-   "status": "PLACED",
+   "status": "CLOSED",
    "lots": 0.03,
    "sizing": "0.03 lots = 24.29 USD = 3.66% of equity",
    "order_type": "MKT",
    "order_ticket": 2990062266,
    "placed_epoch": 1784702106,
-   "ts": "2026-07-22T06:35:06.789631+00:00"
+   "ts": "2026-07-22T06:35:06.789631+00:00",
+   "position_id": 2995109451,
+   "fill": 4121.53,
+   "exit": 4119.0,
+   "profit": 7.6,
+   "r": 0.463,
+   "outcome": "TP",
+   "closed_at": "2026-07-23T06:58:04+00:00"
+  },
+  {
+   "signal_id": 40109,
+   "posted": "2026-07-23T06:49:25+00:00",
+   "age_min": 0.5,
+   "dir": "SELL",
+   "zone_lo": 4121.0,
+   "zone_hi": 4126.0,
+   "tp1": 4119.0,
+   "sl": 4131.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4121- 4126\n\nTP 1: 4119\nTP 2: 4109\n\nSL: 4131\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4121.61,
+   "spread": 0.168,
+   "intended_entry": 4121.61,
+   "risk_pts": 9.39,
+   "in_zone": true,
+   "decision": "PLACED SELL 0.03 XAUUSD MKT@4121.61 SL 4131.00 TP 4119.00 | 0.03 lots = 28.18 USD = 4.14% of equity",
+   "status": "PLACED",
+   "lots": 0.03,
+   "sizing": "0.03 lots = 28.18 USD = 4.14% of equity",
+   "order_type": "MKT",
+   "order_ticket": 2995109451,
+   "placed_epoch": 1784789393,
+   "ts": "2026-07-23T06:49:53.343523+00:00"
   }
  ],
- "seenSignals": 58,
- "dayTrades": 0,
+ "seenSignals": 61,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 5,
-  "taken": 3,
+  "signals": 6,
+  "taken": 4,
   "skipped": 0,
   "open": 1,
-  "closed": 2,
-  "wins": 1,
-  "winRate": 50.0,
-  "expectancy": 0.253,
-  "totalR": 0.51,
-  "netCash": 24.68
+  "closed": 3,
+  "wins": 2,
+  "winRate": 66.7,
+  "expectancy": 0.323,
+  "totalR": 0.97,
+  "netCash": 32.28
  },
  "skipReasons": [],
  "account": {
-  "equity": 680.19,
+  "equity": 687.79,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -159,9 +190,9 @@
   "tickAgeSec": 1,
   "openPositions": 0,
   "week": {
-   "closed": 2,
-   "net": 24.68,
-   "wins": 2
+   "closed": 3,
+   "net": 32.28,
+   "wins": 3
   }
  }
 }

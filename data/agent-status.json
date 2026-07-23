@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-23T06:32:03.602689+00:00",
+ "generatedAt": "2026-07-23T07:02:05.056847+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 24516,
    "running": true,
-   "logAgeMin": 0.9,
-   "stateAgeMin": 0.8,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-07-23T06:31:16.502Z] news: 3 red event(s) today: 13:15 Main Refinancing Rate; 13:15 Monetary Policy Statement; 13:45 ECB Press Conference",
+   "logAgeMin": 5.1,
+   "stateAgeMin": 5.1,
+   "heartbeatMin": 5.1,
+   "lastLog": "[2026-07-23T06:57:08.837Z]   WhatsApp API status 200",
    "account": {
-    "equity": 638.56,
+    "equity": 643.64,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.37,
-    "tickAgeSec": -10798,
+    "spread": 0.43,
+    "tickAgeSec": -10797,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -33,17 +33,17 @@
    "live": false,
    "pid": 6680,
    "running": true,
-   "logAgeMin": 1.2,
-   "stateAgeMin": 151.3,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-07-23 06:31:06Z] no new H4 bar (last 07-23 00:00Z), pos=0",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 181.2,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-07-23 07:01:07Z] no new H4 bar (last 07-23 00:00Z), pos=0",
    "account": {
-    "equity": 680.19,
+    "equity": 687.79,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "openPositions": 0,
     "week": {
      "closed": 1,
@@ -59,12 +59,12 @@
    "live": false,
    "pid": 21880,
    "running": true,
-   "logAgeMin": 62.2,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-07-23 05:30:05Z] another follower is already running (pid 21880) \u2014 exiting",
+   "logAgeMin": 4.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-07-23 06:58:15Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 680.19,
+    "equity": 687.79,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -72,9 +72,9 @@
     "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
-     "closed": 2,
-     "net": 24.68,
-     "wins": 2
+     "closed": 3,
+     "net": 32.28,
+     "wins": 3
     }
    },
    "stale": false
