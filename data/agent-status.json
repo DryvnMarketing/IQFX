@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-23T14:32:00.912473+00:00",
+ "generatedAt": "2026-07-23T15:02:00.899702+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 6.9,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-23T14:31:40.698Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 6.7,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-23T15:01:56.813Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 0.86,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.39,
-    "tickAgeSec": -10797,
+    "spread": 0.41,
+    "tickAgeSec": -10798,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,9 +34,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 2.2,
-   "stateAgeMin": 150.6,
+   "stateAgeMin": 180.6,
    "heartbeatMin": 2.2,
-   "lastLog": "[2026-07-23 14:29:49Z] no new H4 bar (last 07-23 08:00Z), pos=0",
+   "lastLog": "[2026-07-23 14:59:48Z] no new H4 bar (last 07-23 08:00Z), pos=0",
    "account": {
     "equity": 746.39,
     "currency": "USD",
@@ -59,9 +59,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 42.3,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 72.3,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-07-23 13:49:45Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 746.39,
@@ -69,7 +69,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 3,
