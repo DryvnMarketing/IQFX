@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-23T23:32:02.230849+00:00",
+ "generatedAt": "2026-07-24T00:02:02.090248+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-23T23:31:43.675Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-07-24T00:02:00.667Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 0.86,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.36,
-    "tickAgeSec": -10798,
+    "spread": 0.45,
+    "tickAgeSec": -10797,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,11 +34,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 2.2,
-   "stateAgeMin": 207.2,
+   "stateAgeMin": 237.2,
    "heartbeatMin": 2.2,
-   "lastLog": "[2026-07-23 23:29:50Z] no new H4 bar (last 07-23 16:00Z), pos=0",
+   "lastLog": "[2026-07-23 23:59:50Z] no new H4 bar (last 07-23 16:00Z), pos=0",
    "account": {
-    "equity": 874.45,
+    "equity": 871.41,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 31.6,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-23 23:00:29Z] idle \u2014 00:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-07-24 00:00:17Z] idle \u2014 01:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 873.65,
+    "equity": 871.36,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -82,7 +82,7 @@
  ],
  "calendar": {
   "events": 84,
-  "forwardDated": 42,
-  "highForward": 3
+  "forwardDated": 22,
+  "highForward": 0
  }
 }
