@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-24T18:02:04.878157+00:00",
+ "generatedAt": "2026-07-24T18:32:04.680130+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -202,7 +202,7 @@
   ]
  ],
  "account": {
-  "equity": 796.28,
+  "equity": 796.49,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
