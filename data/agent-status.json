@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-25T06:02:02.268811+00:00",
+ "generatedAt": "2026-07-25T06:32:02.333929+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 422.9,
-   "stateAgeMin": 432.0,
-   "heartbeatMin": 422.9,
+   "logAgeMin": 452.9,
+   "stateAgeMin": 462.0,
+   "heartbeatMin": 452.9,
    "lastLog": "[2026-07-24T22:59:10.896Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 0.86,
@@ -17,7 +17,7 @@
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 22324,
+    "tickAgeSec": 24124,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,11 +34,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.8,
-   "stateAgeMin": 120.8,
+   "stateAgeMin": 150.8,
    "heartbeatMin": 0.8,
-   "lastLog": "[2026-07-25 06:01:19Z] no new H4 bar (last 07-25 00:00Z), pos=1",
+   "lastLog": "[2026-07-25 06:31:19Z] no new H4 bar (last 07-25 00:00Z), pos=1",
    "account": {
-    "equity": 797.77,
+    "equity": 798.16,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-07-25 06:00:14Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 797.77,
+    "equity": 798.16,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 32645,
+    "tickAgeSec": 34446,
     "openPositions": 0,
     "week": {
      "closed": 3,
