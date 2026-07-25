@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-25T06:32:02.333929+00:00",
+ "generatedAt": "2026-07-25T07:02:02.207296+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 452.9,
-   "stateAgeMin": 462.0,
-   "heartbeatMin": 452.9,
-   "lastLog": "[2026-07-24T22:59:10.896Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 492.0,
+   "heartbeatMin": 1.8,
+   "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1755:1)",
    "account": {
     "equity": 0.86,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 24124,
+    "tickAgeSec": 25923,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -25,7 +25,7 @@
      "wins": 0
     }
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -33,12 +33,12 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 0.8,
-   "stateAgeMin": 150.8,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-07-25 06:31:19Z] no new H4 bar (last 07-25 00:00Z), pos=1",
+   "logAgeMin": 0.7,
+   "stateAgeMin": 180.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-07-25 07:01:19Z] no new H4 bar (last 07-25 00:00Z), pos=1",
    "account": {
-    "equity": 798.16,
+    "equity": 798.02,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 31.8,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-25 06:00:14Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-07-25 07:00:08Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 798.16,
+    "equity": 798.02,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 34446,
+    "tickAgeSec": 36245,
     "openPositions": 0,
     "week": {
      "closed": 3,
