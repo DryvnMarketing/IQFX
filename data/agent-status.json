@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-25T17:32:02.142289+00:00",
+ "generatedAt": "2026-07-25T18:02:02.330639+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 631.8,
-   "stateAgeMin": 1122.0,
-   "heartbeatMin": 631.8,
+   "logAgeMin": 661.8,
+   "stateAgeMin": 1152.0,
+   "heartbeatMin": 661.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1755:1)",
    "account": {
     "equity": 0.86,
@@ -17,7 +17,7 @@
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 63724,
+    "tickAgeSec": 65524,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,11 +34,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 90.7,
+   "stateAgeMin": 120.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-07-25 17:31:20Z] no new H4 bar (last 07-25 12:00Z), pos=1",
+   "lastLog": "[2026-07-25 18:01:20Z] no new H4 bar (last 07-25 12:00Z), pos=1",
    "account": {
-    "equity": 795.44,
+    "equity": 794.63,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 31.6,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-07-25 17:00:29Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-25 18:00:02Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 795.44,
+    "equity": 794.61,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 74046,
+    "tickAgeSec": 75846,
     "openPositions": 0,
     "week": {
      "closed": 3,
