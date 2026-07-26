@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-07-26T21:19:26.538327+00:00",
+ "generatedAt": "2026-07-26T21:32:02.300559+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 17028,
+   "pid": 16300,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 2789.4,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-26T21:19:25.227Z]   WhatsApp API status 200",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 2802.0,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-26T21:31:31.040Z] XAU Session Agent starting (dryRun=false)",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -22,10 +22,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 3.1,
-   "stateAgeMin": 78.1,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-07-26 21:16:27Z] no new H4 bar (last 07-26 16:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 90.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-07-26 21:31:27Z] no new H4 bar (last 07-26 16:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
@@ -48,7 +48,7 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 19.2,
+   "logAgeMin": 31.7,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
    "lastLog": "[2026-07-26 21:00:22Z] idle \u2014 weekend (Sun)",
@@ -58,7 +58,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 174094,
+    "tickAgeSec": 174845,
     "openPositions": 0,
     "week": {
      "closed": 3,
