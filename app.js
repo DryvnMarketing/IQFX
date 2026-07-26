@@ -1032,41 +1032,65 @@
     if (!g) return;
     const a = g.account || {}, b = g.benchmark || {};
     const s = g.stats || {};
-    const wk = a.week || {};
+    const r = g.research || null;                       // triggered-only research stats
+    const trig = r && r.triggered;
+    const gap = (r && r.claimedWin != null && trig) ? (r.claimedWin - trig.win) : null;
     $('gkoView').innerHTML = `
-      <div class="hw-head"><h2>GKO follower — forward test</h2>
+      <div class="hw-head"><h2>GKO follower — triggered-trade record</h2>
         <div class="hw-verdict ${g.halted ? 'down' : 'up'}">${g.halted ? '🛑 HALTED' : '▶️ running'}</div></div>
-      <div class="hw-warnbox"><b>This is not a validated strategy.</b> It mirrors a third party's discretionary calls.
-        Reverse-engineering showed his zone placement is mechanical (spot snapped to the nearest round-5) but his
-        BUY/SELL choice is <b>not reproducible</b> — a classifier scored 49.4% against a 61.4% majority baseline.
-        Running on <b>demo</b> to build tamper-proof evidence that scraped history can't provide.</div>
+
+      ${trig ? `
+      <p class="hw-note">Success rate below counts <b>only trades that actually triggered</b> — the ${trig.n} signals whose
+        entry limit filled. The <b>${r.noFill}</b> never-filled orders (of ${r.totalScraped} scraped) are excluded: no fill = no
+        trade = no P&L. This is the realized record of taken trades.</p>
       <div class="hw-grid">
-        <div class="hw-stat"><span>SIGNALS JOURNALLED</span><b>${s.signals ?? 0}</b></div>
-        <div class="hw-stat"><span>TAKEN</span><b>${s.taken ?? 0}</b></div>
-        <div class="hw-stat"><span>DECLINED</span><b>${s.skipped ?? 0}</b></div>
-        <div class="hw-stat"><span>CLOSED</span><b>${s.closed ?? 0}${s.winRate != null ? ` · ${s.winRate}% win` : ''}</b></div>
-        <div class="hw-stat hw-hi"><span>LIVE EXPECTANCY</span><b>${s.expectancy != null ? SGN(s.expectancy) + 'R' : '—'}</b></div>
-        <div class="hw-stat"><span>TOTAL R</span><b class="${(s.totalR ?? 0) >= 0 ? 'up' : 'down'}">${s.totalR != null ? SGN(s.totalR) : '—'}</b></div>
-        <div class="hw-stat"><span>OPEN NOW</span><b>${a.openPositions ?? '—'}</b></div>
-        <div class="hw-stat"><span>EQUITY</span><b>${a.equity != null ? a.equity + ' ' + (a.currency || '') : '—'}</b></div>
-      </div>
-      ${s.closed ? `<p class="hw-note">Live expectancy is over <b>${s.closed}</b> closed trade${s.closed === 1 ? '' : 's'} —
-        far too few to mean anything yet. The holdout ran to 83 and still couldn't separate itself from zero.</p>` : ''}
-      <h3>What it's being measured against</h3>
+        <div class="hw-stat hw-hi"><span>TRIGGERED WIN RATE</span><b>${trig.win}%</b></div>
+        <div class="hw-stat"><span>EXPECTANCY · all filled</span><b>${SGN(trig.exp)}R</b></div>
+        <div class="hw-stat"><span>HOLDOUT · honest</span><b>${SGN(r.holdout.exp)}R · ${r.holdout.win}%</b></div>
+        <div class="hw-stat"><span>FILLED TRADES</span><b>${trig.n}</b></div>
+      </div>` : `<div class="hw-warnbox">Triggered-trade research stats unavailable — publisher couldn't read the scored file.</div>`}
+
+      ${gap != null ? `
+      <div class="hw-warnbox">⚖️ <b>His advertised win rate is inflated.</b> His public channel claims <b>${r.claimedWin}%</b>
+        wins (${r.claimedSLshare}% losses over ${r.claimedN} calls) — but measuring his <i>same</i> public signals gives
+        <b>${trig.win}%</b> (${r.measuredSLshare}% losses). A <b>${gap.toFixed(1)}pp</b> gap: he reports roughly half the
+        losses that actually occur. Trust the measured number, not the marketing.</div>` : ''}
+
+      <div class="hw-warnbox"><b>Not a validated strategy.</b> It mirrors a third party's discretionary calls — his zone
+        placement is mechanical but his BUY/SELL choice isn't reproducible (classifier 49.4% vs 61.4% baseline). Running on
+        <b>demo</b> to build tamper-proof forward evidence.</div>
+
+      <h3>What it's measured against</h3>
       <table class="hw-table">
-        <tr><th>Sample</th><th>Expectancy</th><th>Meaning</th></tr>
-        <tr><td>Dev (53 signals, in-sample)</td><td class="up">+${b.dev}R</td><td class="muted">where the model was built — expect regression</td></tr>
-        <tr><td><b>Holdout (83, out-of-sample)</b></td><td class="up">+${b.holdout}R</td><td class="muted">the honest number</td></tr>
-        <tr><td>Your gold agent</td><td class="up">+${b.goldAgent}R</td><td class="muted">validated over 662 days</td></tr>
+        <tr><th>Sample</th><th>Expectancy</th><th>Win</th><th>Meaning</th></tr>
+        <tr><td>Dev · in-sample${r?.dev ? ` (${r.dev.n})` : ''}</td><td class="up">+${b.dev}R</td><td>${r?.dev ? r.dev.win + '%' : '—'}</td><td class="muted">where the model was built — expect regression</td></tr>
+        <tr><td><b>Holdout · out-of-sample${r?.holdout ? ` (${r.holdout.n})` : ''}</b></td><td class="up">+${b.holdout}R</td><td>${r?.holdout ? r.holdout.win + '%' : '—'}</td><td class="muted">the honest forward number</td></tr>
+        <tr><td>Your gold agent</td><td class="up">+${b.goldAgent}R</td><td class="muted">—</td><td class="muted">validated 662 days</td></tr>
       </table>
-      <p class="hw-note">⚠️ ${b.note}</p>
-      <h3>Trade journal <span class="muted">every signal, taken or not</span></h3>
-      ${journalTable(g.journal || [])}
-      ${(g.skipReasons || []).length ? `<h3>Why signals were declined</h3>
-        <table class="hw-table"><tr><th>Reason</th><th>Count</th></tr>
+      <p class="hw-note">⚠️ ${b.note} — expect the live result to converge toward the <b>holdout</b>, not the dev number.</p>
+
+      <h3>Live forward-test <span class="muted">— tamper-proof evidence, still tiny</span></h3>
+      <div class="hw-grid">
+        <div class="hw-stat"><span>TAKEN</span><b>${s.taken ?? 0}</b></div>
+        <div class="hw-stat"><span>CLOSED</span><b>${s.closed ?? 0}${s.winRate != null ? ` · ${s.winRate}% win` : ''}</b></div>
+        <div class="hw-stat"><span>LIVE EXPECTANCY</span><b>${s.expectancy != null ? SGN(s.expectancy) + 'R' : '—'}</b></div>
+        <div class="hw-stat"><span>OPEN NOW</span><b>${a.openPositions ?? '—'}</b></div>
+      </div>
+      <p class="hw-note">${s.closed ? `Only <b>${s.closed}</b> live trade${s.closed === 1 ? '' : 's'} closed — far too few to mean anything yet.` : 'No live trades closed yet.'}</p>
+
+      <h3>Context — signals <span class="muted">not</span> taken</h3>
+      <div class="hw-grid">
+        <div class="hw-stat"><span>NEVER FILLED · research</span><b>${r?.noFill ?? '—'}</b></div>
+        <div class="hw-stat"><span>DECLINED · live</span><b>${s.skipped ?? 0}</b></div>
+        <div class="hw-stat"><span>SEEN · live</span><b>${g.seenSignals ?? '—'}</b></div>
+      </div>
+      ${(g.skipReasons || []).length ? `<table class="hw-table"><tr><th>Why declined (live)</th><th>Count</th></tr>
         ${g.skipReasons.map(([k, n]) => `<tr><td>${k}</td><td>${n}</td></tr>`).join('')}</table>` : ''}
-      <p class="hw-note">Skips matter as much as fills: his TP1 is often reached within minutes of posting, so a signal
-        that arrives stale is one a human would likely have chased at a worse price. Quantifying that gap is part of the test.</p>
+      <p class="hw-note">Never-filled and declined signals produce no trade — excluded from the success rate above by design,
+        shown here only as context. (A signal that arrives stale is one a human would likely have chased at a worse price.)</p>
+
+      <h3>Trade journal <span class="muted">newest first</span></h3>
+      ${journalTable(g.journal || [])}
       <p class="muted hw-foot">Published ${new Date(g.generatedAt).toLocaleString()} · ${ageStr(g.generatedAt)}</p>`;
   }
 
