@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T22:02:02.298979+00:00",
+ "generatedAt": "2026-07-26T22:32:02.679612+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 30.6,
-   "stateAgeMin": 2832.0,
-   "heartbeatMin": 30.6,
+   "logAgeMin": 60.6,
+   "stateAgeMin": 2862.0,
+   "heartbeatMin": 60.6,
    "lastLog": "[2026-07-26T21:31:31.040Z] XAU Session Agent starting (dryRun=false)",
    "account": {
     "error": "login mismatch or logged out"
@@ -22,17 +22,17 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 120.7,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-07-26 22:01:27Z] no new H4 bar (last 07-26 16:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 150.7,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-07-26 22:31:27Z] no new H4 bar (last 07-26 16:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "openPositions": 0,
     "week": {
      "closed": 2,
@@ -48,17 +48,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-26 22:00:15Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 20.4,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-26 22:11:42Z] journal reconcile skipped: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "equity": 790.3,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
-    "spread": 0.336,
-    "tickAgeSec": 3,
+    "spread": 0.182,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 3,
