@@ -1055,8 +1055,8 @@
       <div class="hw-warnbox">⚖️ <b>Why his ~${r.claimedWin}% claim and this ${trig.win}% differ — it's management, not misreporting.</b>
         He tells followers to move stop to <b>breakeven</b> once in profit and bank early ("set BE to hold", "close all if satisfied").
         ${r.beManaged ? `<b>${r.beManaged.greenFirstPct}%</b> of the trades that hit SL in this <i>set-and-forget</i> model had first gone green —
-        his BE rule scratches those at zero instead of a full loss. Modelled with that rule: <b>~${r.beManaged.nonLoss}% non-loss</b>,
-        expectancy <b>${expR(r.beManaged.exp)}</b> (idealised — real BE has slippage). ` : ''}
+        his BE rule scratches those at zero instead of a full loss. Modelled with that rule: <b>~${r.beManaged.nonLoss}% non-loss</b> (≈ his claimed rate),
+        expectancy <b>${expR(r.beManaged.exp)}</b>. The bigger real-world drag is <b>stop-slippage</b> — ~⅓ of losses spike well past the stop on gold's violent bars, which can cut the edge toward breakeven. ` : ''}
         The <b>${trig.win}%</b> above is what a fire-and-forget follower gets from the posted TP/SL alone; his own wins are real but need
         following his in-trade management. That gap is the whole point of the live forward-test.</div>` : ''}
 

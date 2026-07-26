@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T20:29:19.155247+00:00",
+ "generatedAt": "2026-07-26T20:48:31.638350+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,23 +7,12 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 41.6,
-   "stateAgeMin": 2739.3,
-   "heartbeatMin": 41.6,
+   "logAgeMin": 60.8,
+   "stateAgeMin": 2758.5,
+   "heartbeatMin": 60.8,
    "lastLog": "[2026-07-26T19:47:46.969Z] publish: wrote C:\\Users\\info\\IQFX\\data\\weekly-brief.json (push skipped)",
    "account": {
-    "equity": 0.86,
-    "currency": "ZAR",
-    "demo": false,
-    "algoTrading": true,
-    "spread": 0.87,
-    "tickAgeSec": 160761,
-    "openPositions": 0,
-    "week": {
-     "closed": 0,
-     "net": 0,
-     "wins": 0
-    }
+    "error": "login mismatch or logged out"
    },
    "stale": false
   },
@@ -33,10 +22,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.9,
-   "stateAgeMin": 27.9,
-   "heartbeatMin": 2.9,
-   "lastLog": "[2026-07-26 20:26:26Z] no new H4 bar (last 07-26 16:00Z), pos=0",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 47.1,
+   "heartbeatMin": 2.1,
+   "lastLog": "[2026-07-26 20:46:26Z] no new H4 bar (last 07-26 16:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
@@ -59,9 +48,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 29.2,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 48.4,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-07-26 20:00:10Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 790.3,
@@ -69,7 +58,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 171083,
+    "tickAgeSec": 172235,
     "openPositions": 0,
     "week": {
      "closed": 3,
