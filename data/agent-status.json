@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T20:07:54.872449+00:00",
+ "generatedAt": "2026-07-26T20:29:19.155247+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 20.1,
-   "stateAgeMin": 2717.8,
-   "heartbeatMin": 20.1,
+   "logAgeMin": 41.6,
+   "stateAgeMin": 2739.3,
+   "heartbeatMin": 41.6,
    "lastLog": "[2026-07-26T19:47:46.969Z] publish: wrote C:\\Users\\info\\IQFX\\data\\weekly-brief.json (push skipped)",
    "account": {
     "equity": 0.86,
@@ -17,7 +17,7 @@
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 159477,
+    "tickAgeSec": 160761,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -33,17 +33,17 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 1.5,
-   "stateAgeMin": 6.5,
-   "heartbeatMin": 1.5,
-   "lastLog": "[2026-07-26 20:06:26Z] no new H4 bar (last 07-26 16:00Z), pos=0",
+   "logAgeMin": 2.9,
+   "stateAgeMin": 27.9,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-07-26 20:26:26Z] no new H4 bar (last 07-26 16:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 2,
@@ -59,7 +59,7 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 7.8,
+   "logAgeMin": 29.2,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
    "lastLog": "[2026-07-26 20:00:10Z] idle \u2014 weekend (Sun)",
@@ -69,7 +69,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 169798,
+    "tickAgeSec": 171083,
     "openPositions": 0,
     "week": {
      "closed": 3,

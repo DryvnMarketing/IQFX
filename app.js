@@ -1052,10 +1052,13 @@
       </div>` : `<div class="hw-warnbox">Triggered-trade research stats unavailable — publisher couldn't read the scored file.</div>`}
 
       ${gap != null ? `
-      <div class="hw-warnbox">⚖️ <b>His advertised win rate is inflated.</b> His public channel claims <b>${r.claimedWin}%</b>
-        wins (${r.claimedSLshare}% losses over ${r.claimedN} calls) — but measuring his <i>same</i> public signals gives
-        <b>${trig.win}%</b> (${r.measuredSLshare}% losses). A <b>${gap.toFixed(1)}pp</b> gap: he reports roughly half the
-        losses that actually occur. Trust the measured number, not the marketing.</div>` : ''}
+      <div class="hw-warnbox">⚖️ <b>Why his ~${r.claimedWin}% claim and this ${trig.win}% differ — it's management, not misreporting.</b>
+        He tells followers to move stop to <b>breakeven</b> once in profit and bank early ("set BE to hold", "close all if satisfied").
+        ${r.beManaged ? `<b>${r.beManaged.greenFirstPct}%</b> of the trades that hit SL in this <i>set-and-forget</i> model had first gone green —
+        his BE rule scratches those at zero instead of a full loss. Modelled with that rule: <b>~${r.beManaged.nonLoss}% non-loss</b>,
+        expectancy <b>${expR(r.beManaged.exp)}</b> (idealised — real BE has slippage). ` : ''}
+        The <b>${trig.win}%</b> above is what a fire-and-forget follower gets from the posted TP/SL alone; his own wins are real but need
+        following his in-trade management. That gap is the whole point of the live forward-test.</div>` : ''}
 
       <div class="hw-warnbox"><b>Not a validated strategy.</b> It mirrors a third party's discretionary calls — his zone
         placement is mechanical but his BUY/SELL choice isn't reproducible (classifier 49.4% vs 61.4% baseline). Running on

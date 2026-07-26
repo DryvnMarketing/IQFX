@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T20:07:57.858457+00:00",
+ "generatedAt": "2026-07-26T20:29:22.110517+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -207,7 +207,7 @@
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
-  "tickAgeSec": 169798,
+  "tickAgeSec": 171083,
   "openPositions": 0,
   "week": {
    "closed": 3,
@@ -236,6 +236,14 @@
   "measuredSLshare": 27.9,
   "claimedWin": 85.3,
   "claimedSLshare": 14.7,
-  "claimedN": 184
+  "claimedN": 184,
+  "beManaged": {
+   "beTrigger": 0.5,
+   "greenFirstPct": 89,
+   "nonLoss": 96.3,
+   "slShare": 3.7,
+   "exp": 0.488,
+   "idealised": true
+  }
  }
 }
