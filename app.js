@@ -1035,6 +1035,7 @@
     const r = g.research || null;                       // triggered-only research stats
     const trig = r && r.triggered;
     const gap = (r && r.claimedWin != null && trig) ? (r.claimedWin - trig.win) : null;
+    const expR = (n) => `${n >= 0 ? '+' : ''}${Number(n).toFixed(3)}R`;   // 3dp so +0.228R ≠ +0.164R
     $('gkoView').innerHTML = `
       <div class="hw-head"><h2>GKO follower — triggered-trade record</h2>
         <div class="hw-verdict ${g.halted ? 'down' : 'up'}">${g.halted ? '🛑 HALTED' : '▶️ running'}</div></div>
@@ -1045,8 +1046,8 @@
         trade = no P&L. This is the realized record of taken trades.</p>
       <div class="hw-grid">
         <div class="hw-stat hw-hi"><span>TRIGGERED WIN RATE</span><b>${trig.win}%</b></div>
-        <div class="hw-stat"><span>EXPECTANCY · all filled</span><b>${SGN(trig.exp)}R</b></div>
-        <div class="hw-stat"><span>HOLDOUT · honest</span><b>${SGN(r.holdout.exp)}R · ${r.holdout.win}%</b></div>
+        <div class="hw-stat"><span>EXPECTANCY · all filled</span><b>${expR(trig.exp)}</b></div>
+        <div class="hw-stat"><span>HOLDOUT · honest</span><b>${expR(r.holdout.exp)} · ${r.holdout.win}%</b></div>
         <div class="hw-stat"><span>FILLED TRADES</span><b>${trig.n}</b></div>
       </div>` : `<div class="hw-warnbox">Triggered-trade research stats unavailable — publisher couldn't read the scored file.</div>`}
 
