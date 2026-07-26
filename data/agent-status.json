@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T16:02:02.222582+00:00",
+ "generatedAt": "2026-07-26T16:32:02.605978+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 1981.8,
-   "stateAgeMin": 2472.0,
-   "heartbeatMin": 1981.8,
+   "logAgeMin": 2011.8,
+   "stateAgeMin": 2502.0,
+   "heartbeatMin": 2011.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1755:1)",
    "account": {
     "equity": 0.86,
@@ -17,7 +17,7 @@
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 144724,
+    "tickAgeSec": 146524,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,9 +34,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
+   "stateAgeMin": 30.7,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-26 16:01:25Z] bar 07-26 12:00Z close 64,707 | don20 63,646-65,794 | ema20 64,595 | atr 436 | 07-26 12:00Z closed on trail",
+   "lastLog": "[2026-07-26 16:31:25Z] no new H4 bar (last 07-26 12:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-07-26 16:00:20Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 20.6,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-26 16:11:26Z] journal reconcile skipped: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "equity": 790.3,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 155046,
+    "tickAgeSec": 156846,
     "openPositions": 0,
     "week": {
      "closed": 3,
