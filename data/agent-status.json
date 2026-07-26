@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T04:32:02.270502+00:00",
+ "generatedAt": "2026-07-26T05:02:02.171165+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 10380,
    "running": true,
-   "logAgeMin": 1291.8,
-   "stateAgeMin": 1782.0,
-   "heartbeatMin": 1291.8,
+   "logAgeMin": 1321.8,
+   "stateAgeMin": 1812.0,
+   "heartbeatMin": 1321.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1755:1)",
    "account": {
     "equity": 0.86,
@@ -17,7 +17,7 @@
     "demo": false,
     "algoTrading": true,
     "spread": 0.87,
-    "tickAgeSec": 103324,
+    "tickAgeSec": 105123,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -34,22 +34,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 30.7,
+   "stateAgeMin": 60.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-07-26 04:31:22Z] no new H4 bar (last 07-26 00:00Z), pos=1",
+   "lastLog": "[2026-07-26 05:01:22Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
-    "equity": 792.67,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "spread": 7.0,
-    "tickAgeSec": 2,
-    "openPositions": 1,
-    "week": {
-     "closed": 1,
-     "net": -5.58,
-     "wins": 0
-    }
+    "error": "init -6"
    },
    "stale": false
   },
@@ -59,23 +48,12 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 31.9,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-26 04:00:12Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-26 05:01:35Z] journal reconcile skipped: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
-    "equity": 792.67,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "spread": 0.168,
-    "tickAgeSec": 113645,
-    "openPositions": 0,
-    "week": {
-     "closed": 3,
-     "net": 32.28,
-     "wins": 3
-    }
+    "error": "init -6"
    },
    "stale": false
   }
