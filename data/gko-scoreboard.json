@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T07:32:06.444181+00:00",
+ "generatedAt": "2026-07-27T08:02:06.620718+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -156,13 +156,20 @@
    "risk_pts": 9.39,
    "in_zone": true,
    "decision": "PLACED SELL 0.03 XAUUSD MKT@4121.61 SL 4131.00 TP 4119.00 | 0.03 lots = 28.18 USD = 4.14% of equity",
-   "status": "PLACED",
+   "status": "CLOSED",
    "lots": 0.03,
    "sizing": "0.03 lots = 28.18 USD = 4.14% of equity",
    "order_type": "MKT",
    "order_ticket": 2995109451,
    "placed_epoch": 1784789393,
-   "ts": "2026-07-23T06:49:53.343523+00:00"
+   "ts": "2026-07-23T06:49:53.343523+00:00",
+   "position_id": 3007070084,
+   "fill": 4099.2,
+   "exit": 4089.0,
+   "profit": -30.59,
+   "r": 0.321,
+   "outcome": "SL",
+   "closed_at": "2026-07-27T07:59:53+00:00"
   },
   {
    "signal_id": 40133,
@@ -178,22 +185,46 @@
    "decision": "SKIP: 44 min old",
    "reason": "stale (44 min > 8)",
    "ts": "2026-07-24T08:41:15.394909+00:00"
+  },
+  {
+   "signal_id": 40161,
+   "posted": "2026-07-27T07:40:35+00:00",
+   "age_min": 0.1,
+   "dir": "BUY",
+   "zone_lo": 4094.5,
+   "zone_hi": 4099.5,
+   "tp1": 4101.5,
+   "sl": 4089.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4099.5 \u2013 4094.5\n\nTP 1: 4101.5\nTP 2: 4110.5\n\nSL: 4089\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4099.17,
+   "spread": 0.168,
+   "intended_entry": 4099.17,
+   "risk_pts": 10.17,
+   "in_zone": true,
+   "decision": "PLACED BUY 0.03 XAUUSD MKT@4099.17 SL 4089.00 TP 4101.50 | 0.03 lots = 30.51 USD = 3.86% of equity",
+   "status": "PLACED",
+   "lots": 0.03,
+   "sizing": "0.03 lots = 30.51 USD = 3.86% of equity",
+   "order_type": "MKT",
+   "order_ticket": 3007070084,
+   "placed_epoch": 1785138042,
+   "ts": "2026-07-27T07:40:42.626109+00:00"
   }
  ],
- "seenSignals": 91,
- "dayTrades": 0,
+ "seenSignals": 95,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 7,
-  "taken": 4,
+  "signals": 8,
+  "taken": 5,
   "skipped": 1,
   "open": 1,
-  "closed": 3,
-  "wins": 2,
-  "winRate": 66.7,
+  "closed": 4,
+  "wins": 3,
+  "winRate": 75.0,
   "expectancy": 0.323,
-  "totalR": 0.97,
-  "netCash": 32.28
+  "totalR": 1.29,
+  "netCash": 1.69
  },
  "skipReasons": [
   [
@@ -202,17 +233,17 @@
   ]
  ],
  "account": {
-  "equity": 790.3,
+  "equity": 714.69,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
-  "tickAgeSec": 2,
+  "tickAgeSec": 1,
   "openPositions": 0,
   "week": {
    "closed": 3,
-   "net": 32.28,
-   "wins": 3
+   "net": -11.27,
+   "wins": 2
   }
  },
  "research": {

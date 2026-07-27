@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T07:32:02.383027+00:00",
+ "generatedAt": "2026-07-27T08:02:02.499366+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 12.3,
-   "stateAgeMin": 0.7,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-07-27T07:19:43.784Z]   WhatsApp API status 200",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-27T08:01:58.244Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,16 +23,16 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 210.6,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 07:31:29Z] no new H4 bar (last 07-27 00:00Z), pos=0",
+   "lastLog": "[2026-07-27 08:01:29Z] bar 07-27 04:00Z close 65,166 | don20 63,646-65,764 | ema20 64,766 | atr 473 | none",
    "account": {
-    "equity": 790.3,
+    "equity": 713.17,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "openPositions": 0,
     "week": {
      "closed": 2,
@@ -48,22 +48,22 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 82.6,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-27 06:09:32Z] day guard check failed: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-07-27 07:59:59Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 790.3,
+    "equity": 714.69,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 3,
-     "net": 32.28,
-     "wins": 3
+     "net": -11.27,
+     "wins": 2
     }
    },
    "stale": false
