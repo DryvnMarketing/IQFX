@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T22:02:02.057165+00:00",
+ "generatedAt": "2026-07-27T22:32:02.704474+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 16.1,
-   "stateAgeMin": 0.9,
-   "heartbeatMin": 0.9,
-   "lastLog": "[2026-07-27T21:45:59.618Z]   WhatsApp API status 200",
+   "logAgeMin": 25.9,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-27T22:06:10.967Z] heartbeat: tick 597, Mon 23:06 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,16 +23,16 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 120.6,
+   "stateAgeMin": 150.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 22:01:32Z] no new H4 bar (last 07-27 16:00Z), pos=0",
+   "lastLog": "[2026-07-27 22:31:32Z] no new H4 bar (last 07-27 16:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "openPositions": 0,
     "week": {
      "closed": 2,
@@ -48,16 +48,16 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.7,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-07-27 22:00:22Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
     "equity": 798.83,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
-    "spread": 0.238,
+    "spread": 0.168,
     "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
