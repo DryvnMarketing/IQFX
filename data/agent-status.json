@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T06:02:02.316159+00:00",
+ "generatedAt": "2026-07-27T06:32:02.734787+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 4.6,
-   "stateAgeMin": 4.6,
-   "heartbeatMin": 4.6,
-   "lastLog": "[2026-07-27T05:57:25.857Z] headlines Fed failed: ",
+   "logAgeMin": 14.3,
+   "stateAgeMin": 4.1,
+   "heartbeatMin": 4.1,
+   "lastLog": "[2026-07-27T06:17:49.192Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,9 +23,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 120.6,
+   "stateAgeMin": 150.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 06:01:29Z] no new H4 bar (last 07-27 00:00Z), pos=0",
+   "lastLog": "[2026-07-27 06:31:29Z] no new H4 bar (last 07-27 00:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
@@ -48,10 +48,10 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-27 05:30:03Z] another follower is already running (pid 18060) \u2014 exiting",
+   "logAgeMin": 22.6,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-27 06:09:32Z] day guard check failed: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "equity": 790.3,
     "currency": "USD",
