@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T14:02:02.470333+00:00",
+ "generatedAt": "2026-07-27T14:32:02.259184+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 12.6,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-27T13:49:26.523Z] heartbeat: tick 400, Mon 14:49 UK, trades 0/2, open=none",
+   "logAgeMin": 12.2,
+   "stateAgeMin": 0.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-07-27T14:19:51.019Z] heartbeat: tick 429, Mon 15:19 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,9 +23,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 120.6,
+   "stateAgeMin": 150.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 14:01:30Z] no new H4 bar (last 07-27 08:00Z), pos=0",
+   "lastLog": "[2026-07-27 14:31:30Z] no new H4 bar (last 07-27 08:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
@@ -48,9 +48,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 319.4,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 349.4,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-07-27 08:42:44Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 798.83,
