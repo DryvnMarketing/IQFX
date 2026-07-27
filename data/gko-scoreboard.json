@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T08:02:06.620718+00:00",
+ "generatedAt": "2026-07-27T08:32:05.852787+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -208,17 +208,43 @@
    "order_type": "MKT",
    "order_ticket": 3007070084,
    "placed_epoch": 1785138042,
-   "ts": "2026-07-27T07:40:42.626109+00:00"
+   "ts": "2026-07-27T07:40:42.626109+00:00",
+   "position_id": 3007151845,
+   "fill": 4089.97
+  },
+  {
+   "signal_id": 40165,
+   "posted": "2026-07-27T08:02:05+00:00",
+   "age_min": 0.5,
+   "dir": "BUY",
+   "zone_lo": 4086.0,
+   "zone_hi": 4091.0,
+   "tp1": 4093.0,
+   "sl": 4081.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4091 \u2013 4086\n\nTP 1: 4093\nTP 2: 4103\n\nSL: 4081\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4089.97,
+   "spread": 0.168,
+   "intended_entry": 4089.97,
+   "risk_pts": 8.97,
+   "in_zone": true,
+   "decision": "PLACED BUY 0.03 XAUUSD MKT@4089.97 SL 4081.00 TP 4093.00 | 0.03 lots = 26.90 USD = 3.79% of equity",
+   "status": "PLACED",
+   "lots": 0.03,
+   "sizing": "0.03 lots = 26.90 USD = 3.79% of equity",
+   "order_type": "MKT",
+   "order_ticket": 3007151845,
+   "placed_epoch": 1785139356,
+   "ts": "2026-07-27T08:02:36.866195+00:00"
   }
  ],
- "seenSignals": 95,
- "dayTrades": 1,
+ "seenSignals": 96,
+ "dayTrades": 2,
  "halted": false,
  "stats": {
-  "signals": 8,
-  "taken": 5,
+  "signals": 9,
+  "taken": 6,
   "skipped": 1,
-  "open": 1,
+  "open": 2,
   "closed": 4,
   "wins": 3,
   "winRate": 75.0,
@@ -233,13 +259,13 @@
   ]
  ],
  "account": {
-  "equity": 714.69,
+  "equity": 710.35,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
   "tickAgeSec": 1,
-  "openPositions": 0,
+  "openPositions": 1,
   "week": {
    "closed": 3,
    "net": -11.27,
