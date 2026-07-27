@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T23:02:02.639662+00:00",
+ "generatedAt": "2026-07-27T23:02:05.410236+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,16 +8,16 @@
    "pid": 16300,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-07-27T23:01:57.087Z] heartbeat: tick 1, Tue 0:01 UK, trades 0/2, open=none",
    "account": {
-    "equity": 3083.3,
+    "equity": 3077.77,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
     "spread": 0.45,
-    "tickAgeSec": -10797,
+    "tickAgeSec": -10798,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -33,9 +33,9 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 180.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 0.6,
+   "stateAgeMin": 180.6,
+   "heartbeatMin": 0.6,
    "lastLog": "[2026-07-27 23:01:33Z] no new H4 bar (last 07-27 16:00Z), pos=0",
    "account": {
     "equity": 798.83,
@@ -59,7 +59,7 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.7,
+   "logAgeMin": 1.8,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
    "lastLog": "[2026-07-27 23:00:22Z] idle \u2014 00:00 UK outside 07:00-17:00",
@@ -69,7 +69,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "openPositions": 0,
     "week": {
      "closed": 4,
