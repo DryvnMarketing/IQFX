@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T09:02:03.063709+00:00",
+ "generatedAt": "2026-07-27T09:32:02.544308+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 2.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-07-27T09:00:00.803Z]   WhatsApp API status 200",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-27T09:32:00.706Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,9 +23,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 60.6,
+   "stateAgeMin": 90.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 09:01:30Z] no new H4 bar (last 07-27 04:00Z), pos=0",
+   "lastLog": "[2026-07-27 09:31:30Z] no new H4 bar (last 07-27 04:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
@@ -48,9 +48,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 19.4,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 49.4,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-07-27 08:42:44Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 798.83,
