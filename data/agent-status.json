@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T18:32:03.177296+00:00",
+ "generatedAt": "2026-07-27T19:02:02.315196+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 3.5,
-   "stateAgeMin": 3.5,
-   "heartbeatMin": 3.5,
-   "lastLog": "[2026-07-27T18:28:33.592Z] heartbeat: tick 554, Mon 19:28 UK, trades 0/2, open=none",
+   "logAgeMin": 2.7,
+   "stateAgeMin": 2.7,
+   "heartbeatMin": 2.7,
+   "lastLog": "[2026-07-27T18:59:24.256Z] headlines FXStreet failed: ",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,9 +23,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 150.6,
+   "stateAgeMin": 180.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 18:31:31Z] no new H4 bar (last 07-27 12:00Z), pos=0",
+   "lastLog": "[2026-07-27 19:01:31Z] no new H4 bar (last 07-27 12:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
@@ -48,10 +48,10 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 32.0,
+   "logAgeMin": 1.9,
    "stateAgeMin": 0.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-07-27 18:00:11Z] idle \u2014 19:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-07-27 19:00:09Z] idle \u2014 20:00 UK outside 07:00-17:00",
    "account": {
     "equity": 798.83,
     "currency": "USD",
