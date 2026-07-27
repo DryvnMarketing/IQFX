@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T13:32:02.369409+00:00",
+ "generatedAt": "2026-07-27T14:02:02.470333+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-27T13:31:37.341Z] headlines Investing failed: timeout for https://www.investing.com/rss/news_11.rss",
+   "logAgeMin": 12.6,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-27T13:49:26.523Z] heartbeat: tick 400, Mon 14:49 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,16 +23,16 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 90.6,
+   "stateAgeMin": 120.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 13:31:30Z] no new H4 bar (last 07-27 08:00Z), pos=0",
+   "lastLog": "[2026-07-27 14:01:30Z] no new H4 bar (last 07-27 08:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 2,
@@ -48,9 +48,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 289.4,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 319.4,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-07-27 08:42:44Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 798.83,
@@ -58,7 +58,7 @@
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "openPositions": 0,
     "week": {
      "closed": 4,
