@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T08:32:05.852787+00:00",
+ "generatedAt": "2026-07-27T09:02:07.354972+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -202,7 +202,7 @@
    "risk_pts": 10.17,
    "in_zone": true,
    "decision": "PLACED BUY 0.03 XAUUSD MKT@4099.17 SL 4089.00 TP 4101.50 | 0.03 lots = 30.51 USD = 3.86% of equity",
-   "status": "PLACED",
+   "status": "CLOSED",
    "lots": 0.03,
    "sizing": "0.03 lots = 30.51 USD = 3.86% of equity",
    "order_type": "MKT",
@@ -210,7 +210,12 @@
    "placed_epoch": 1785138042,
    "ts": "2026-07-27T07:40:42.626109+00:00",
    "position_id": 3007151845,
-   "fill": 4089.97
+   "fill": 4089.97,
+   "exit": 4093.0,
+   "profit": 9.1,
+   "r": 3.124,
+   "outcome": "TP",
+   "closed_at": "2026-07-27T08:42:31+00:00"
   },
   {
    "signal_id": 40165,
@@ -244,13 +249,13 @@
   "signals": 9,
   "taken": 6,
   "skipped": 1,
-  "open": 2,
-  "closed": 4,
-  "wins": 3,
-  "winRate": 75.0,
-  "expectancy": 0.323,
-  "totalR": 1.29,
-  "netCash": 1.69
+  "open": 1,
+  "closed": 5,
+  "wins": 4,
+  "winRate": 80.0,
+  "expectancy": 0.883,
+  "totalR": 4.41,
+  "netCash": 10.79
  },
  "skipReasons": [
   [
@@ -259,17 +264,17 @@
   ]
  ],
  "account": {
-  "equity": 710.35,
+  "equity": 798.83,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
   "tickAgeSec": 1,
-  "openPositions": 1,
+  "openPositions": 0,
   "week": {
-   "closed": 3,
-   "net": -11.27,
-   "wins": 2
+   "closed": 4,
+   "net": -2.17,
+   "wins": 3
   }
  },
  "research": {
