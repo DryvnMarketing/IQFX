@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-27T07:02:02.339687+00:00",
+ "generatedAt": "2026-07-27T07:32:02.383027+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 3.4,
-   "stateAgeMin": 3.4,
-   "heartbeatMin": 3.4,
-   "lastLog": "[2026-07-27T06:58:42.169Z]   WhatsApp API status 200",
+   "logAgeMin": 12.3,
+   "stateAgeMin": 0.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-07-27T07:19:43.784Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch or logged out"
    },
@@ -23,9 +23,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 180.6,
+   "stateAgeMin": 210.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-07-27 07:01:29Z] no new H4 bar (last 07-27 00:00Z), pos=0",
+   "lastLog": "[2026-07-27 07:31:29Z] no new H4 bar (last 07-27 00:00Z), pos=0",
    "account": {
     "equity": 790.3,
     "currency": "USD",
@@ -48,9 +48,9 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 52.6,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 82.6,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-07-27 06:09:32Z] day guard check failed: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "equity": 790.3,
