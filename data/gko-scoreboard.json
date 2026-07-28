@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T03:02:06.896748+00:00",
+ "generatedAt": "2026-07-28T03:32:08.021548+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -242,7 +242,7 @@
    "ts": "2026-07-27T08:02:36.866195+00:00"
   }
  ],
- "seenSignals": 105,
+ "seenSignals": 106,
  "dayTrades": 2,
  "halted": false,
  "stats": {
@@ -269,7 +269,7 @@
   "demo": true,
   "algoTrading": true,
   "spread": 0.168,
-  "tickAgeSec": 1,
+  "tickAgeSec": 2,
   "openPositions": 0,
   "week": {
    "closed": 4,
