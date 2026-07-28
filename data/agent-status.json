@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T20:02:03.075479+00:00",
+ "generatedAt": "2026-07-28T20:32:03.066163+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 21.6,
-   "stateAgeMin": 1.2,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-07-28T19:40:32.824Z] heartbeat: tick 314, Tue 20:40 UK, trades 0/2, open=none",
+   "logAgeMin": 16.0,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-07-28T20:16:08.985Z]   WhatsApp API status 200",
    "account": {
     "equity": 399.34,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1669.245
+    "valuePerPointPerLot": 1669.216
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 1.3,
-   "stateAgeMin": 1.3,
+   "stateAgeMin": 31.3,
    "heartbeatMin": 1.3,
-   "lastLog": "[2026-07-28 20:00:50Z] bar 07-28 16:00Z close 63,823 | don20 62,629-65,696 | ema20 64,245 | atr 631 | none",
+   "lastLog": "[2026-07-28 20:30:51Z] no new H4 bar (last 07-28 16:00Z), pos=1",
    "account": {
-    "equity": 793.07,
+    "equity": 792.88,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 2.2,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 32.1,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-07-28 20:00:00Z] idle \u2014 20:59 UK outside 07:00-17:00",
    "account": {
-    "equity": 793.07,
+    "equity": 792.88,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.2 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/28 22:02:01",
-   "nextRun": "2026/07/28 22:32:00",
+   "lastRun": "2026/07/28 22:32:01",
+   "nextRun": "2026/07/28 23:02:00",
    "result": 267009,
    "ok": true
   },
@@ -237,15 +237,15 @@
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 228.69,
+    "amount": 228.68,
     "pct": 57.27,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 479.07,
-    "pct": 119.97,
+    "amount": 479.06,
+    "pct": 119.96,
     "skipped": true
    }
   ],
