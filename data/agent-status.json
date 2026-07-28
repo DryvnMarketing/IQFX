@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T14:32:03.103398+00:00",
+ "generatedAt": "2026-07-28T18:39:51.692289+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,17 +7,17 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 4.4,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-28T14:27:40.358Z] heartbeat: tick 277, Tue 15:27 UK, trades 0/2, open=none",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-07-28T18:39:46.506Z]   WhatsApp API status 200",
    "account": {
     "equity": 399.34,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
     "spread": 0.36,
-    "tickAgeSec": -10798,
+    "tickAgeSec": -10797,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -33,17 +33,17 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 4.5,
-   "stateAgeMin": 147.2,
-   "heartbeatMin": 4.5,
-   "lastLog": "[2026-07-28 14:27:38Z] no new H4 bar (last 07-28 08:00Z), pos=1",
+   "logAgeMin": 35.6,
+   "stateAgeMin": 35.6,
+   "heartbeatMin": 35.6,
+   "lastLog": "[2026-07-28 18:04:45Z] bar 07-28 12:00Z close 63,858 | don20 62,991-65,696 | ema20 64,290 | atr 632 | none",
    "account": {
-    "equity": 799.81,
+    "equity": 794.79,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "openPositions": 1,
     "week": {
      "closed": 2,
@@ -51,7 +51,7 @@
      "wins": 0
     }
    },
-   "stale": false
+   "stale": true
   },
   {
    "key": "gko",
@@ -59,17 +59,17 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 18.2,
+   "logAgeMin": 231.2,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-07-28 14:13:57Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
+   "lastLog": "[2026-07-28 14:49:10Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "equity": 799.81,
+    "equity": 794.72,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "spread": 0.168,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "openPositions": 0,
     "week": {
      "closed": 4,
