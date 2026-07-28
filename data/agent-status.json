@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T18:39:51.692289+00:00",
+ "generatedAt": "2026-07-28T18:43:52.140408+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,23 +7,29 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 4.1,
+   "stateAgeMin": 4.1,
+   "heartbeatMin": 4.1,
    "lastLog": "[2026-07-28T18:39:46.506Z]   WhatsApp API status 200",
    "account": {
     "equity": 399.34,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 454101,
     "spread": 0.36,
-    "tickAgeSec": -10797,
+    "tickAgeSec": 0,
+    "serverOffsetHours": 3,
     "openPositions": 0,
     "week": {
      "closed": 0,
      "net": 0,
      "wins": 0
-    }
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1668.385
    },
    "stale": false
   },
@@ -33,25 +39,31 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 35.6,
-   "stateAgeMin": 35.6,
-   "heartbeatMin": 35.6,
-   "lastLog": "[2026-07-28 18:04:45Z] bar 07-28 12:00Z close 63,858 | don20 62,991-65,696 | ema20 64,290 | atr 632 | none",
+   "logAgeMin": 3.1,
+   "stateAgeMin": 39.1,
+   "heartbeatMin": 3.1,
+   "lastLog": "[2026-07-28 18:40:50Z] no new H4 bar (last 07-28 12:00Z), pos=1",
    "account": {
-    "equity": 794.79,
+    "equity": 794.41,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
+    "connected": true,
+    "symbol": "BTCUSD",
+    "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
+    "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
      "closed": 2,
      "net": -12.99,
      "wins": 0
-    }
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1.0
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "gko",
@@ -59,23 +71,29 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 231.2,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 234.7,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-07-28 14:49:10Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "equity": 794.72,
+    "equity": 794.4,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
+    "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
      "closed": 4,
      "net": -2.17,
      "wins": 3
-    }
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 100.0
    },
    "stale": false
   }
@@ -84,5 +102,148 @@
   "events": 113,
   "forwardDated": 99,
   "highForward": 18
+ },
+ "checks": [
+  {
+   "name": "Gold agent process",
+   "state": "PASS",
+   "detail": "pid 16300",
+   "why": "No process, no trading."
+  },
+  {
+   "name": "Heartbeat fresh",
+   "state": "PASS",
+   "detail": "4.1 min",
+   "why": "Alive but silent is how a hung agent looks."
+  },
+  {
+   "name": "TradingView CDP (port 9222)",
+   "state": "PASS",
+   "detail": "responding",
+   "why": "A dead MSIX app cannot be relaunched by the agent itself."
+  },
+  {
+   "name": "Live broker login matches config",
+   "state": "PASS",
+   "detail": "454101 on XAUUSD",
+   "why": "A mismatch aborts every order, silently, until someone looks."
+  },
+  {
+   "name": "Live terminal connected",
+   "state": "PASS",
+   "detail": "connected",
+   "why": "A disconnected terminal still answers, with a stale book."
+  },
+  {
+   "name": "Algo trading enabled",
+   "state": "PASS",
+   "detail": "on",
+   "why": "Orders are rejected at the terminal with this off."
+  },
+  {
+   "name": "Scheduled tasks",
+   "state": "WARN",
+   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
+   "why": "A failed weekly job produces silence, not an error."
+  }
+ ],
+ "tasks": [
+  {
+   "name": "XAU Session Agent",
+   "lastRun": "2026/07/28 08:35:00",
+   "nextRun": "2026/07/29 08:35:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "Gold Forward-Test",
+   "lastRun": "2026/07/28 08:35:00",
+   "nextRun": "2026/07/29 08:35:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "GKO Follower",
+   "lastRun": "2026/07/28 07:30:00",
+   "nextRun": "2026/07/29 07:30:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "BTC Trend Agent",
+   "lastRun": "2026/07/28 00:05:01",
+   "nextRun": "2026/07/29 00:05:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "XAU Weekly Brief",
+   "lastRun": "2026/07/25 09:00:00",
+   "nextRun": "2026/08/01 09:00:00",
+   "result": 1,
+   "ok": false
+  },
+  {
+   "name": "XAU Sunday Fundamentals",
+   "lastRun": "2026/07/26 20:30:00",
+   "nextRun": "2026/08/02 20:30:00",
+   "result": 1,
+   "ok": false
+  },
+  {
+   "name": "XAU Weekend Gap Check",
+   "lastRun": "2026/07/26 23:19:18",
+   "nextRun": "2026/08/02 22:00:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "Dashboard Publisher",
+   "lastRun": "2026/07/28 20:38:38",
+   "nextRun": "2026/07/28 21:02:00",
+   "result": 0,
+   "ok": true
+  },
+  {
+   "name": "Trading System Backup",
+   "lastRun": "2026/07/27 23:30:01",
+   "nextRun": "2026/07/28 23:30:00",
+   "result": 0,
+   "ok": true
+  }
+ ],
+ "canTrade": true,
+ "risk": {
+  "currency": "ZAR",
+  "equity": 399.34,
+  "minLot": 0.01,
+  "perPoint": 16.68,
+  "configuredPct": 3.0,
+  "capPct": 10.0,
+  "rows": [
+   {
+    "stop": "tight (p10)",
+    "points": 6.2,
+    "amount": 103.44,
+    "pct": 25.9,
+    "skipped": true
+   },
+   {
+    "stop": "typical (median)",
+    "points": 13.7,
+    "amount": 228.57,
+    "pct": 57.24,
+    "skipped": true
+   },
+   {
+    "stop": "wide (p90)",
+    "points": 28.7,
+    "amount": 478.83,
+    "pct": 119.9,
+    "skipped": true
+   }
+  ],
+  "singleLeg": true,
+  "equityForTruePct": 7619.0
  }
 }
