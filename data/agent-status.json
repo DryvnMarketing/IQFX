@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T00:02:02.739031+00:00",
+ "generatedAt": "2026-07-28T00:32:02.880380+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,16 +7,16 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 29.7,
-   "stateAgeMin": 4.3,
-   "heartbeatMin": 4.3,
-   "lastLog": "[2026-07-27T23:32:22.659Z] heartbeat: tick 7, Tue 0:32 UK, trades 0/2, open=none",
+   "logAgeMin": 29.3,
+   "stateAgeMin": 3.8,
+   "heartbeatMin": 3.8,
+   "lastLog": "[2026-07-28T00:02:49.692Z] heartbeat: tick 13, Tue 1:02 UK, trades 0/2, open=none",
    "account": {
-    "equity": 3006.38,
+    "equity": 1407.03,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
-    "spread": 0.46,
+    "spread": 0.4,
     "tickAgeSec": -10797,
     "openPositions": 0,
     "week": {
@@ -34,9 +34,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 0.5,
+   "stateAgeMin": 30.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-07-28 00:01:33Z] bar 07-27 20:00Z close 63,697 | don20 63,646-65,696 | ema20 64,673 | atr 595 | none",
+   "lastLog": "[2026-07-28 00:31:33Z] no new H4 bar (last 07-27 20:00Z), pos=0",
    "account": {
     "equity": 798.83,
     "currency": "USD",
@@ -59,7 +59,7 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 1.9,
+   "logAgeMin": 31.9,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-07-28 00:00:14Z] idle \u2014 01:00 UK outside 07:00-17:00",
