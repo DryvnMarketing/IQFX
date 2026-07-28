@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-28T06:32:08.371057+00:00",
+ "generatedAt": "2026-07-28T08:16:38.080186+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -240,15 +240,30 @@
    "order_ticket": 3007151845,
    "placed_epoch": 1785139356,
    "ts": "2026-07-27T08:02:36.866195+00:00"
+  },
+  {
+   "signal_id": 40189,
+   "posted": "2026-07-28T07:56:06+00:00",
+   "age_min": 18.9,
+   "dir": "SELL",
+   "zone_lo": 4049.0,
+   "zone_hi": 4054.0,
+   "tp1": 4047.0,
+   "sl": 4059.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4049 - 4054\n\nTP 1: 4047\nTP 2: 4037\n\nSL: 4059\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "status": "SKIPPED",
+   "decision": "SKIP: 19 min old",
+   "reason": "stale (19 min > 8)",
+   "ts": "2026-07-28T08:14:58.896169+00:00"
   }
  ],
- "seenSignals": 108,
+ "seenSignals": 112,
  "dayTrades": 0,
  "halted": false,
  "stats": {
-  "signals": 9,
+  "signals": 10,
   "taken": 6,
-  "skipped": 1,
+  "skipped": 2,
   "open": 1,
   "closed": 5,
   "wins": 4,
@@ -261,10 +276,14 @@
   [
    "stale (44 min > 8)",
    1
+  ],
+  [
+   "stale (19 min > 8)",
+   1
   ]
  ],
  "account": {
-  "equity": 796.63,
+  "equity": 797.53,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
