@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T01:02:02.962606+00:00",
+ "generatedAt": "2026-07-29T01:32:02.895185+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 1.9,
-   "heartbeatMin": 1.9,
-   "lastLog": "[2026-07-29T01:00:13.559Z]   WhatsApp API status 200",
+   "logAgeMin": 26.9,
+   "stateAgeMin": 1.4,
+   "heartbeatMin": 1.4,
+   "lastLog": "[2026-07-29T01:05:12.714Z] heartbeat: tick 25, Wed 2:05 UK, trades 0/2, open=none",
    "account": {
     "equity": 399.34,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1670.804
+    "valuePerPointPerLot": 1671.652
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 1.2,
-   "stateAgeMin": 61.2,
+   "stateAgeMin": 91.3,
    "heartbeatMin": 1.2,
-   "lastLog": "[2026-07-29 01:00:52Z] no new H4 bar (last 07-28 20:00Z), pos=1",
+   "lastLog": "[2026-07-29 01:30:52Z] no new H4 bar (last 07-28 20:00Z), pos=1",
    "account": {
-    "equity": 792.43,
+    "equity": 793.46,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-07-29 01:00:07Z] idle \u2014 02:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 792.43,
+    "equity": 793.47,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.9 min",
+   "detail": "1.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "FAIL",
-   "detail": "57.32% at a typical stop vs 10.0% cap - 3/3 reference stops would be SKIPPED",
+   "detail": "57.35% at a typical stop vs 10.0% cap - 3/3 reference stops would be SKIPPED",
    "why": "Minimum lot is a floor; below a certain equity every signal is refused."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/29 03:02:01",
-   "nextRun": "2026/07/29 03:32:00",
+   "lastRun": "2026/07/29 03:32:01",
+   "nextRun": "2026/07/29 04:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,33 +223,33 @@
   "currency": "ZAR",
   "equity": 399.34,
   "minLot": 0.01,
-  "perPoint": 16.71,
+  "perPoint": 16.72,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "rows": [
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 103.59,
-    "pct": 25.94,
+    "amount": 103.64,
+    "pct": 25.95,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 228.9,
-    "pct": 57.32,
+    "amount": 229.02,
+    "pct": 57.35,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 479.52,
-    "pct": 120.08,
+    "amount": 479.76,
+    "pct": 120.14,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7630.0
+  "equityForTruePct": 7634.0
  }
 }
