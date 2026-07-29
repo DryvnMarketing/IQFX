@@ -1268,6 +1268,10 @@
           ${rows}</table></div>
         ${rk.equityForTruePct ? `<p class="hw-note">A true ${rk.configuredPct}% at a typical stop needs about
           <b>${rk.equityForTruePct.toLocaleString()} ${rk.currency}</b> of equity.</p>` : ''}
+        ${(rk.noSkipSetups && rk.noSkipSetups.length) ? `<p class="hw-note">🔓 <b>Setup ${rk.noSkipSetups.join('/')} is never skipped</b> —
+          it is placed even when the min-lot floor puts it over the ${rk.capPct}% cap, so the "SKIPPED" rows above
+          apply only to the other setups. The lot cannot go below ${rk.minLot}; the cap can refuse a trade, never
+          shrink one.</p>` : ''}
         ${rk.singleLeg ? `<p class="hw-note">⚠️ At minimum lot the TP1/TP2 split collapses to a
           <b>single leg</b>: the position closes fully at TP1 and there is no runner — a different exit from
           the two-leg structure the backtest measures.</p>` : ''}`;
