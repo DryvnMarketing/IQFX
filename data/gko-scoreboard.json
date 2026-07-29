@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T06:53:44.818570+00:00",
+ "generatedAt": "2026-07-29T07:32:14.282031+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -239,7 +239,9 @@
    "order_type": "MKT",
    "order_ticket": 3007151845,
    "placed_epoch": 1785139356,
-   "ts": "2026-07-27T08:02:36.866195+00:00"
+   "ts": "2026-07-27T08:02:36.866195+00:00",
+   "position_id": 3017000979,
+   "fill": 4045.65
   },
   {
    "signal_id": 40189,
@@ -255,16 +257,40 @@
    "decision": "SKIP: 19 min old",
    "reason": "stale (19 min > 8)",
    "ts": "2026-07-28T08:14:58.896169+00:00"
+  },
+  {
+   "signal_id": 40216,
+   "posted": "2026-07-29T07:14:44+00:00",
+   "age_min": 0.2,
+   "dir": "SELL",
+   "zone_lo": 4045.0,
+   "zone_hi": 4050.0,
+   "tp1": 4043.0,
+   "sl": 4055.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4045 - 4050\n\nTP 1: 4043\nTP 2: 4033\n\nSL: 4055\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4045.65,
+   "spread": 0.168,
+   "intended_entry": 4045.65,
+   "risk_pts": 9.35,
+   "in_zone": true,
+   "decision": "PLACED SELL 0.03 XAUUSD MKT@4045.65 SL 4055.00 TP 4043.00 | 0.03 lots = 28.05 USD = 3.56% of equity",
+   "status": "PLACED",
+   "lots": 0.03,
+   "sizing": "0.03 lots = 28.05 USD = 3.56% of equity",
+   "order_type": "MKT",
+   "order_ticket": 3017000979,
+   "placed_epoch": 1785309293,
+   "ts": "2026-07-29T07:14:53.413158+00:00"
   }
  ],
- "seenSignals": 123,
- "dayTrades": 0,
+ "seenSignals": 125,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 10,
-  "taken": 6,
+  "signals": 11,
+  "taken": 7,
   "skipped": 2,
-  "open": 1,
+  "open": 2,
   "closed": 5,
   "wins": 4,
   "winRate": 80.0,
@@ -283,7 +309,7 @@
   ]
  ],
  "account": {
-  "equity": 787.9,
+  "equity": 787.24,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -291,9 +317,9 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.168,
-  "tickAgeSec": 1,
+  "tickAgeSec": 2,
   "serverOffsetHours": 0,
-  "openPositions": 0,
+  "openPositions": 1,
   "week": {
    "closed": 3,
    "net": -13.89,
