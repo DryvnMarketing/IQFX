@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-07-29T14:13:13.439569+00:00",
+ "generatedAt": "2026-07-29T14:32:03.268872+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 16300,
+   "pid": 13248,
    "running": true,
-   "logAgeMin": 1.0,
+   "logAgeMin": 2.0,
    "stateAgeMin": 0.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-07-29T14:12:13.303Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "lastLog": "[2026-07-29T14:30:06.791Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
-    "equity": 2601.92,
+    "equity": 3089.04,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1675.944
+    "valuePerPointPerLot": 1675.91
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 132.7,
-   "heartbeatMin": 1.9,
-   "lastLog": "[2026-07-29 14:11:23Z] no new H4 bar (last 07-29 08:00Z), pos=0",
+   "logAgeMin": 0.7,
+   "stateAgeMin": 151.6,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-07-29 14:31:24Z] no new H4 bar (last 07-29 08:00Z), pos=0",
    "account": {
     "equity": 860.33,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 20.5,
+   "logAgeMin": 39.4,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-07-29 13:52:43Z] day guard check failed: MT5 init failed: (-6, 'Terminal: Authorization failed')",
@@ -107,7 +107,7 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 16300",
+   "detail": "pid 13248",
    "why": "No process, no trading."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 8.82% of equity at a typical stop, and up to 18.49% on the widest (1/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 7.43% of equity at a typical stop, and up to 15.57% on the widest (1/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,9 +205,9 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/29 16:08:26",
-   "nextRun": "2026/07/29 16:32:00",
-   "result": 0,
+   "lastRun": "2026/07/29 16:32:01",
+   "nextRun": "2026/07/29 17:02:00",
+   "result": 267009,
    "ok": true
   },
   {
@@ -221,7 +221,7 @@
  "canTrade": true,
  "risk": {
   "currency": "ZAR",
-  "equity": 2601.92,
+  "equity": 3089.04,
   "minLot": 0.01,
   "perPoint": 16.76,
   "configuredPct": 3.0,
@@ -235,21 +235,21 @@
     "stop": "tight (p10)",
     "points": 6.2,
     "amount": 103.91,
-    "pct": 3.99,
+    "pct": 3.36,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
     "amount": 229.6,
-    "pct": 8.82,
+    "pct": 7.43,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 481.0,
-    "pct": 18.49,
+    "amount": 480.99,
+    "pct": 15.57,
     "skipped": true
    }
   ],
