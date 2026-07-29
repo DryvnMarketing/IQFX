@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T06:53:09.912739+00:00",
+ "generatedAt": "2026-07-29T06:53:41.135096+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,12 +7,12 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 7.4,
-   "stateAgeMin": 2.3,
-   "heartbeatMin": 2.3,
+   "logAgeMin": 7.9,
+   "stateAgeMin": 2.8,
+   "heartbeatMin": 2.8,
    "lastLog": "[2026-07-29T06:45:49.268Z]   WhatsApp API status 200",
    "account": {
-    "equity": 1540.29,
+    "equity": 1537.61,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1672.176
+    "valuePerPointPerLot": 1672.065
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.3,
-   "stateAgeMin": 172.3,
-   "heartbeatMin": 2.3,
+   "logAgeMin": 2.8,
+   "stateAgeMin": 172.8,
+   "heartbeatMin": 2.8,
    "lastLog": "[2026-07-29 06:50:54Z] no new H4 bar (last 07-29 00:00Z), pos=1",
    "account": {
-    "equity": 787.73,
+    "equity": 787.86,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 83.1,
+   "logAgeMin": 83.6,
    "stateAgeMin": 0.2,
    "heartbeatMin": 0.2,
    "lastLog": "[2026-07-29 05:30:05Z] another follower is already running (pid 18060) \u2014 exiting",
    "account": {
-    "equity": 787.73,
+    "equity": 787.86,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.3 min",
+   "detail": "2.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A always placed; 14.87% of equity at a typical stop (over the 10.0% cap - min-lot floor). Other setups still capped at 10.0%.",
+   "detail": "Setup A always placed; 14.9% of equity at a typical stop (over the 10.0% cap - min-lot floor). Other setups still capped at 10.0%.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -218,10 +218,10 @@
    "ok": true
   }
  ],
- "canTrade": false,
+ "canTrade": true,
  "risk": {
   "currency": "ZAR",
-  "equity": 1540.29,
+  "equity": 1537.61,
   "minLot": 0.01,
   "perPoint": 16.72,
   "configuredPct": 3.0,
@@ -234,21 +234,21 @@
     "stop": "tight (p10)",
     "points": 6.2,
     "amount": 103.67,
-    "pct": 6.73,
+    "pct": 6.74,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 229.09,
-    "pct": 14.87,
+    "amount": 229.07,
+    "pct": 14.9,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 479.91,
-    "pct": 31.16,
+    "amount": 479.88,
+    "pct": 31.21,
     "skipped": true
    }
   ],
