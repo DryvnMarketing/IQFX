@@ -165,7 +165,7 @@
     renderBiasPanel(); renderCalendar();
     // Gold-only rendering — never paint gold signals/levels onto the US30 context view
     if (S.sym !== 'XAUUSD') return;
-    renderKpis(); renderIdea(); renderTake(); renderStats(); renderTip();
+    renderKpis(); renderIdea(); renderGates(); renderTake(); renderStats(); renderTip();
     setLevels(S.day);
   }
 
@@ -290,7 +290,8 @@
       const s = d.signal;
       return mk('A', s.dir, `LIVE ${s.dir} — Setup ${s.setup}`,
         `Entry <b>${f1(s.entry)}</b> · SL <b>${f1(s.tp1Done ? s.entry : s.sl)}</b> · TP1 <b>${f1(s.tp1)}</b> · TP2 <b>${f1(s.tp2)}</b>\nStatus: ${stateText(d.signalState)}`,
-        'VALIDATED setup — +0.168R/trade, 50% win, PF 1.42 across 2 years. The agent takes this one.');
+        'The agent takes this one. Edge over 7.5 years is +0.075R/trade with a 95% CI that includes zero — '
+        + 'the often-quoted +0.168R came from a 2-year window. See the Research tab.');
     }
     if (!ses.open) return mk('C', null, 'Market closed', ses.next, 'No read until the session opens.');
     if (uk.min < 420 || uk.min >= 1020) return mk('C', null, 'Outside the 07:00–17:00 UK read window',
@@ -355,6 +356,77 @@
     h.className = 'idea-headline' + (idea.grade === 'A' && idea.dir ? ' ' + idea.dir.toLowerCase() : '');
     $('ideaBody').innerHTML = idea.body;
     $('ideaEdge').textContent = idea.edge ? '📌 ' + idea.edge : '';
+  }
+
+  // ── 🚦 Entry gates ──
+  // The setup card says what it is waiting for, condition by condition. Deliberately
+  // NOT a 0-100 score: the Trade Quality Model was built and failed — no pre-trade
+  // feature separated winners from losers — so a confidence number here would be
+  // precision this system does not have.
+  function renderGates() {
+    const d = S.day, b = S.bias, ses = sessionInfo(Date.now()), uk = ukParts(Date.now());
+    const list = $('gateList'), badge = $('gateBadge'), blocker = $('gateBlocker');
+    if (!list) return;
+    if (!d || !b) { list.innerHTML = '<div class="muted">Analyzing…</div>'; return; }
+
+    const dir = b.long ? 'LONG' : b.short ? 'SHORT' : null;
+    const a = d.asia;
+    const inLdn = uk.min >= 480 && uk.min < 690;
+    const inNy = uk.min >= 795 && uk.min < 1020;
+    const price = S.paxgLast ?? (S.bars15.length ? S.bars15[S.bars15.length - 1].close : null);
+    const gap = (price != null && d.ema50) ? price - d.ema50 : null;
+
+    // [label, state, detail] — state: ok | wait | off
+    const g = [];
+    g.push(['Market open', ses.open ? 'ok' : 'off', ses.open ? ses.phase : ses.next]);
+    g.push(['Inside a trading window',
+      inLdn ? 'ok' : inNy ? 'ok' : 'wait',
+      inLdn ? 'London 08:00–11:30' : inNy ? 'New York 13:15–17:00'
+        : uk.min < 480 ? 'London opens 08:00 UK' : uk.min < 795 ? 'lunch chop — NY opens 13:15 UK'
+        : 'windows closed for the day']);
+    g.push(['4H bias agrees (EMA50 + MACD)',
+      b.tradeable && dir ? 'ok' : 'off',
+      b.tradeable && dir ? `${dir} · ${b.confidence}% of checks` : 'mixed — the single biggest filter']);
+    g.push(['Trades left today', (d.tradesToday ?? 0) < 2 ? 'ok' : 'off',
+      `${d.tradesToday ?? 0} of 2 used`]);
+
+    if (inLdn || uk.min < 480) {
+      g.push(['Asian range wide enough',
+        a ? (a.ok ? 'ok' : 'off') : 'wait',
+        a ? `${F1(a.range)} pts${a.ok ? '' : ' — under the 15pt floor, Setup A OFF'}` : 'still forming']);
+      g.push(['Liquidity swept',
+        a && ((dir === 'LONG' && d.sweep?.lo) || (dir === 'SHORT' && d.sweep?.hi)) ? 'ok' : 'wait',
+        dir === 'SHORT' ? `needs a sweep ABOVE ${a ? F1(a.hi) : '—'}`
+          : dir === 'LONG' ? `needs a sweep BELOW ${a ? F1(a.lo) : '—'}` : 'no direction yet']);
+      g.push(['Candle closed back inside', d.signal ? 'ok' : 'wait',
+        d.signal ? 'confirmed' : 'this is the trigger — nothing counts until it closes']);
+    }
+    if (inNy) {
+      const near = gap != null && d.atr ? Math.abs(gap) <= 1.2 * d.atr : false;
+      g.push(['Price at the 15m 50 EMA', near ? 'ok' : 'wait',
+        gap != null ? `${F1(Math.abs(gap))} pts away (need ≤ ${F1(1.2 * (d.atr || 0))})` : '—']);
+      g.push(['RSI in the 40–60 band',
+        d.rsi >= 40 && d.rsi <= 60 ? 'ok' : 'wait', d.rsi ? F1(d.rsi) : '—']);
+      g.push(['Confirming close', d.signal ? 'ok' : 'wait',
+        d.signal ? 'confirmed' : 'needs the closed candle — not the wick']);
+    }
+
+    const waiting = g.filter((x) => x[1] === 'wait');
+    const blocked = g.filter((x) => x[1] === 'off');
+    list.innerHTML = g.map(([label, state, detail]) => `
+      <div class="gate gate-${state}">
+        <span class="gate-icon" aria-hidden="true">${state === 'ok' ? '✓' : state === 'off' ? '✕' : '…'}</span>
+        <span class="gate-label">${label}<span class="gate-detail">${detail}</span></span>
+        <span class="gate-state">${state === 'ok' ? 'MET' : state === 'off' ? 'BLOCKED' : 'WAITING'}</span>
+      </div>`).join('');
+    badge.textContent = blocked.length ? `${blocked.length} blocked`
+      : waiting.length ? `${waiting.length} waiting` : 'all met';
+    badge.className = 'panel-badge ' + (blocked.length ? 'gb-off' : waiting.length ? 'gb-wait' : 'gb-ok');
+    blocker.innerHTML = blocked.length
+      ? `<b>Not eligible today.</b> ${blocked[0][0]} — ${blocked[0][2]}.`
+      : waiting.length
+        ? `<b>Waiting on:</b> ${waiting[0][0]} — ${waiting[0][2]}.`
+        : `<b>All gates met</b> — the agent acts on the next confirmed close.`;
   }
 
   function renderTake() {
@@ -536,6 +608,7 @@
     SUNDAY:   { view: 'sundayView',   title: 'SUNDAY BRIEF <span>·</span> XAU/USD <span>·</span> fundamentals',       load: () => loadSunday() },
     GKO:      { view: 'gkoView',      title: 'GKO FOLLOWER <span>·</span> forward-test scoreboard',                   load: () => loadGko() },
     HEALTH:   { view: 'healthView',   title: 'AGENT HEALTH <span>·</span> last published snapshot',                   load: () => loadHealth() },
+    RESEARCH: { view: 'researchView', title: 'RESEARCH REGISTRY <span>·</span> every candidate, including the dead',  load: () => loadResearch() },
   };
 
   async function switchSymbol() {
@@ -1160,10 +1233,57 @@
       </div>`;
     }).join('');
     const cal = h.calendar || {};
+
+    // ── CAPABILITY: can it actually trade, not merely is it running ──
+    const checks = h.checks || [];
+    const capRows = checks.map((c) => `
+      <div class="cap-row cap-${c.state.toLowerCase()}">
+        <span class="cap-state">${c.state}</span>
+        <span class="cap-name">${c.name}<span class="cap-detail">${c.detail ?? ''}</span></span>
+        <span class="cap-why">${c.why ?? ''}</span>
+      </div>`).join('');
+    const capVerdict = h.canTrade
+      ? '<span class="cap-verdict up">CAN TRADE</span>'
+      : '<span class="cap-verdict down">CANNOT TRADE</span>';
+
+    // ── RISK REALITY: what a trade actually costs, vs what the config asks for ──
+    const rk = h.risk || null;
+    let riskBlock = '';
+    if (rk && !rk.error) {
+      const rows = (rk.rows || []).map((r) => `
+        <tr class="${r.skipped ? 'rr-skip' : ''}">
+          <td>${r.stop}</td><td>${r.points} pts</td>
+          <td>${r.amount.toLocaleString()} ${rk.currency}</td>
+          <td><b>${r.pct}%</b></td>
+          <td>${r.skipped ? 'SKIPPED — over cap' : 'would trade'}</td>
+        </tr>`).join('');
+      riskBlock = `
+        <h3>Risk reality — live account</h3>
+        <p class="hw-note">Configured risk is <b>${rk.configuredPct}%</b> with a <b>${rk.capPct}%</b> cap, but
+          <b>minimum lot is a floor</b>. At ${rk.equity.toLocaleString()} ${rk.currency} equity, one point of gold
+          costs ${rk.perPoint} ${rk.currency} at the smallest lot the broker accepts — so the configured
+          percentage is a target, not what actually happens.</p>
+        <div class="hw-scroll"><table class="hw-table rr-table">
+          <tr><th>Reference stop</th><th>Distance</th><th>Risked</th><th>% of equity</th><th>Outcome</th></tr>
+          ${rows}</table></div>
+        ${rk.equityForTruePct ? `<p class="hw-note">A true ${rk.configuredPct}% at a typical stop needs about
+          <b>${rk.equityForTruePct.toLocaleString()} ${rk.currency}</b> of equity.</p>` : ''}
+        ${rk.singleLeg ? `<p class="hw-note">⚠️ At minimum lot the TP1/TP2 split collapses to a
+          <b>single leg</b>: the position closes fully at TP1 and there is no runner — a different exit from
+          the two-leg structure the backtest measures.</p>` : ''}`;
+    } else if (rk && rk.error) {
+      riskBlock = `<h3>Risk reality</h3><div class="hw-warn">⚠️ ${rk.error}</div>`;
+    }
+
     $('healthView').innerHTML = `
       ${snapStale ? `<div class="hw-stale">⚠️ This snapshot is ${ageStr(h.generatedAt)} — the laptop may be asleep or the publisher stopped. Everything below is that old.</div>` : ''}
       <div class="hw-head"><h2>Agent health</h2>
         <div class="hw-verdict ${snapStale ? 'down' : 'up'}">${ageStr(h.generatedAt)}</div></div>
+      ${checks.length ? `<div class="cap-head"><h3>Capability ${capVerdict}</h3></div>
+        <p class="hw-note">Each line asserts against what the system is <b>supposed</b> to be, not merely that it
+          responds. Three failures in one week all looked healthy to a process check.</p>
+        <div class="cap-grid">${capRows}</div>` : ''}
+      ${riskBlock}
       <p class="hw-note">A process being <b>up</b> is not the same as it <b>working</b> — three silent failures on 2026-07-19
         all looked like normal operation. "QUIET" means the process is alive but hasn't written a heartbeat recently.</p>
       <div class="hlt-grid">${cards}</div>
@@ -1178,6 +1298,47 @@
           protects against events it can actually see.</p>`}
       <p class="muted hw-foot">Snapshot ${new Date(h.generatedAt).toLocaleString()}. The dashboard is static and cannot
         poll the laptop; this is the last state the agents published.</p>`;
+  }
+
+  // ── 🧪 Research registry ──
+  // Every candidate ever tested, including the dead ones. Rejected ideas stay
+  // visible so a known-dead one cannot quietly return as a fresh insight — and
+  // every expectancy carries the sample it rests on, because "+0.168R validated"
+  // looked convincing for a year while resting on 662 days.
+  async function loadResearch() {
+    const r = await getJson('research-registry.json', 'researchView',
+      'A hand-maintained record of every strategy candidate tested for this system.');
+    if (!r) return;
+    const ORDER = { live: 0, demo: 1, research: 2, untestable: 3, rejected: 4 };
+    const LABEL = { live: 'LIVE', demo: 'DEMO', research: 'RESEARCH', untestable: 'UNTESTABLE', rejected: 'REJECTED' };
+    const cands = [...(r.candidates || [])].sort((a, b) => (ORDER[a.stage] ?? 9) - (ORDER[b.stage] ?? 9));
+    const rows = cands.map((c) => `
+      <tr class="rs-${c.stage}">
+        <td><b>${c.name}</b><span class="rs-sym">${c.symbol}</span>
+          ${c.detail ? `<div class="rs-detail">${c.detail}</div>` : ''}</td>
+        <td><span class="rs-badge rs-b-${c.stage}">${LABEL[c.stage] || c.stage}</span></td>
+        <td class="rs-num">${c.expectancy}</td>
+        <td class="rs-sample">${c.sample}</td>
+        <td class="rs-sample">${c.oos}</td>
+        <td>${c.decision}</td>
+      </tr>`).join('');
+    const counts = cands.reduce((m, c) => (m[c.stage] = (m[c.stage] || 0) + 1, m), {});
+    $('researchView').innerHTML = `
+      <div class="hw-head"><h2>Research registry</h2>
+        <div class="hw-verdict">${cands.length} candidates</div></div>
+      <p class="hw-note">${r.principle}</p>
+      <div class="hw-grid">
+        <div class="hw-stat"><span>LIVE</span><b>${counts.live || 0}</b></div>
+        <div class="hw-stat"><span>DEMO</span><b>${counts.demo || 0}</b></div>
+        <div class="hw-stat"><span>REJECTED</span><b>${counts.rejected || 0}</b></div>
+        <div class="hw-stat"><span>UNTESTABLE</span><b>${counts.untestable || 0}</b></div>
+      </div>
+      <div class="hw-scroll"><table class="hw-table rs-table">
+        <tr><th>Candidate</th><th>Stage</th><th>Expectancy</th><th>Sample it rests on</th>
+            <th>Out of sample</th><th>Decision</th></tr>
+        ${rows}</table></div>
+      <p class="hw-note">${r.note}</p>
+      <p class="muted hw-foot">Updated ${r.updated}. Maintained by hand alongside the research repo.</p>`;
   }
 
   // US cash-index (^DJI) session state, computed in New York time (DST-safe via Intl).

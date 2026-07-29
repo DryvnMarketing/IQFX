@@ -4,7 +4,7 @@
     {
       "name": "iqfx",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["dev-server.js"],
+      "runtimeArgs": ["--use-system-ca", "dev-server.js"],
       "port": 3210
     }
   ]

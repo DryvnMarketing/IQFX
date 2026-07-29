@@ -70,6 +70,15 @@
       <div class="idea-edge" id="ideaEdge"></div>
     </div>
 
+    <!-- What the setup is waiting for. Conditions, not a confidence score: the
+         Trade Quality Model was built, tested and rejected — no pre-trade feature
+         separated winners from losers, so a 0–100 number here would be invented. -->
+    <div class="panel" id="gatePanel">
+      <div class="panel-title">🚦 Entry gates <span class="panel-badge" id="gateBadge">—</span></div>
+      <div id="gateList" class="gates"></div>
+      <div id="gateBlocker" class="gate-blocker"></div>
+    </div>
+
     <div class="panel" id="takePanel">
       <div class="panel-title">🧭 Agent's Take</div>
       <div class="take-verdict" id="takeVerdict">Analyzing…</div>
@@ -116,6 +125,7 @@
         <button class="sym-tab" data-sym="SUNDAY">🌍 Sunday</button>
         <button class="sym-tab" data-sym="GKO">📡 GKO</button>
         <button class="sym-tab" data-sym="HEALTH">🩺 Health</button>
+        <button class="sym-tab" data-sym="RESEARCH">🧪 Research</button>
       </div>
       <div class="chart-title" id="chartTitle">GOLD SPOT <span>·</span> XAU/USD <span>·</span> 15M</div>
       <div class="chart-legend" id="chartLegend">
@@ -134,6 +144,7 @@
     <div id="sundayView" class="homework" hidden></div>
     <div id="gkoView" class="homework" hidden></div>
     <div id="healthView" class="homework" hidden></div>
+    <div id="researchView" class="homework" hidden></div>
     <div class="stats-strip">
       <div class="stat"><div class="stat-l">SESSION</div><div class="stat-v" id="stSession">—</div></div>
       <div class="stat"><div class="stat-l">ASIAN RANGE</div><div class="stat-v" id="stAsia">—</div></div>

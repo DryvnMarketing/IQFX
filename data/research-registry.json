@@ -1,0 +1,157 @@
+{
+  "updated": "2026-07-28",
+  "note": "Hand-maintained. Every candidate ever tested for this system, including the dead ones. Kept visible so a known-dead idea cannot quietly come back as a fresh insight.",
+  "principle": "Expectancy, drawdown and out-of-sample come before win rate. A number with no sample size beside it is not evidence.",
+  "candidates": [
+    {
+      "name": "Gold Setup A/B (LIVE)",
+      "symbol": "XAUUSD",
+      "stage": "live",
+      "expectancy": "+0.075R",
+      "sample": "677 trades / 1,956 days / 2019-2026",
+      "oos": "+0.011R on 443 unseen trades (2019-2023)",
+      "decision": "Trading, but the edge is NOT established over the long run",
+      "detail": "Re-validated 2026-07-28 on the tick archive. Full-period 95% CI is -0.011R..+0.164R, which INCLUDES ZERO; 17/31 quarters positive. The often-quoted +0.168R/50.2%/PF1.42 came from ~662 days (2024 onward) and does not generalise: 2020 -0.166R, 2022 -0.098R. Setup A (+0.298R) looks robust on only 58 trades in 7.5 years; Setup B is 91% of all trades and returns -0.010R across the five unseen years.",
+      "ref": "revalidate.py, commit ee5a99a"
+    },
+    {
+      "name": "Tighter stop x0.6 + TP1 1.5R",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "+0.071R",
+      "sample": "677 trades / 1,956 days",
+      "oos": "-0.020R on unseen data",
+      "decision": "Withdrawn - was on demo forward test (magic 990714)",
+      "detail": "Scored +0.285R vs +0.177R on the short sample and was promoted to a demo forward test on that basis. Over 7.5 years it is +0.071R against a +0.075R baseline. The gain was specific to the window; neighbouring settings (x0.6/2.0R, x0.8/1.5R, x1.0/1.5R) are all within noise.",
+      "ref": "revalidate.py"
+    },
+    {
+      "name": "BTC H4 Donchian-20 trend",
+      "symbol": "BTCUSD",
+      "stage": "demo",
+      "expectancy": "+0.281R",
+      "sample": "7 of 8 years, 2018-2026",
+      "oos": "PF 1.66",
+      "decision": "Running on demo only",
+      "detail": "35% win rate and fat-tailed - 64% of profit came from 5 trades. Losing streaks are normal and expected, not evidence of failure.",
+      "ref": "btc_bt.py"
+    },
+    {
+      "name": "GKO signal follower",
+      "symbol": "XAUUSD",
+      "stage": "demo",
+      "expectancy": "+0.328R",
+      "sample": "53 signals - PRELIMINARY",
+      "oos": "none yet",
+      "decision": "Forward test only; needs a locked holdout",
+      "detail": "Integrity checks passed and the edge looks real but slippage-fragile. Not validated. Next step is a tick-level re-simulation to settle break-even management before anything is changed.",
+      "ref": "gko_score.py"
+    },
+    {
+      "name": "Pack S1 - London sweep to auction acceptance",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "-0.456R",
+      "sample": "33 dev trades",
+      "oos": "-0.402R on 10 holdout trades",
+      "decision": "Fails its own promotion standard",
+      "detail": "The specified stop (sweep extreme + 0.10x M15 ATR) is a median 3.6 points on gold: 41% of trades take a full stop and only 28% ever reach +1R. Its unfiltered baseline is also negative, so the filters are not the problem - the premise is.",
+      "ref": "pack_bt.py"
+    },
+    {
+      "name": "Pack S5 - VWAP pullback after displacement",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "-0.127R",
+      "sample": "52 dev trades",
+      "oos": "+0.212R on 18 holdout trades",
+      "decision": "Fails - sample far below the required minimum",
+      "detail": "First run returned +1.015R with an 82% win rate. All of it was a lookahead bug: the code read the M15 bar CONTAINING the current M5 bar and entered before that bar closed. Correcting it moved expectancy by -1.07R.",
+      "ref": "pack_bt.py"
+    },
+    {
+      "name": "Pack S2 / S3 / S4",
+      "symbol": "XAUUSD + EURUSD",
+      "stage": "untestable",
+      "expectancy": "-",
+      "sample": "-",
+      "oos": "-",
+      "decision": "Cannot be tested with data that exists here",
+      "detail": "S2 needs GC signed futures delta (the pack itself says it is untestable without one). S3 needs a CME 6E volume profile. S4 needs a macro-surprise history plus US 2-year yields at M1. Untested is not the same as disproven.",
+      "ref": "pack_bt.py"
+    },
+    {
+      "name": "Reversal / early-exit detection",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "-0.023R to -0.088R",
+      "sample": "181 trades",
+      "oos": "all variants below baseline",
+      "decision": "Do not revive without new information",
+      "detail": "Breakeven-after-1R, ATR trailing, structure-break exit and armed-structure exit were all tested. Every one LOWERED expectancy. You cannot separate a reversal from a deep pullback in real time: 30% of winners first draw to -0.5R. A tighter INITIAL stop helps; a reactive trailing stop hurts.",
+      "ref": "exit_bt.py"
+    },
+    {
+      "name": "Trade Quality Model (A+/A scoring)",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "no predictive power",
+      "sample": "-",
+      "oos": "failed",
+      "decision": "Do not rebuild",
+      "detail": "An attempt to score setups 0-100 and trade only the best. No pre-trade feature separated winners from losers. This is why the dashboard shows which conditions are met rather than a confidence score.",
+      "ref": "analyze_edge.py"
+    },
+    {
+      "name": "US30 - gold rules and native strategy",
+      "symbol": "US30",
+      "stage": "rejected",
+      "expectancy": "-0.042R / +0.003R",
+      "sample": "holdout failed",
+      "oos": "failed",
+      "decision": "Context tab only, never traded",
+      "ref": "us30_bt.py"
+    },
+    {
+      "name": "NAS100 signal-seller strategy",
+      "symbol": "NAS100",
+      "stage": "rejected",
+      "expectancy": "-0.084R",
+      "sample": "full history",
+      "oos": "inversion also loses",
+      "decision": "No winning variant found",
+      "ref": "nas_pdh_bt.py"
+    },
+    {
+      "name": "Scalping agent (~21 hypotheses)",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "no edge found",
+      "sample": "tick replay, 2019-2026",
+      "oos": "negative across full history",
+      "decision": "Do not rebuild without new information",
+      "ref": "tick_sim.py"
+    },
+    {
+      "name": "BTC funding rate as a signal",
+      "symbol": "BTCUSD",
+      "stage": "rejected",
+      "expectancy": "null",
+      "sample": "1,167 daily observations",
+      "oos": "correlation +0.008 to +0.016",
+      "decision": "No directional or volatility edge",
+      "ref": "btc_funding_study.py"
+    },
+    {
+      "name": "Entry-side hypotheses (~30)",
+      "symbol": "XAUUSD",
+      "stage": "rejected",
+      "expectancy": "all at or below baseline",
+      "sample": "various",
+      "oos": "-",
+      "decision": "Entry side is exhausted",
+      "detail": "Indicator variants, SMC (FVG / order block / BOS, all near random), candlestick patterns, ORB, time-of-day, volatility spike, ADX filter, volume filter, EMA20 trail, time stop, retrace entry (adverse selection - monotonically worse), martingale (demonstrated deferred ruin).",
+      "ref": "gold-edge-risk-analysis"
+    }
+  ]
+}

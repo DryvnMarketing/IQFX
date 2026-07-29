@@ -396,3 +396,60 @@ body {
   .stats-strip { grid-template-columns: repeat(3, 1fr); }
   .topbar { flex-wrap: wrap; gap: 10px; }
 }
+
+/* ── Entry gates: conditions, never a confidence score ───────────────── */
+.gates{display:flex;flex-direction:column;gap:2px;margin-top:4px}
+.gate{display:grid;grid-template-columns:18px 1fr auto;gap:8px;align-items:start;
+  padding:7px 6px;border-radius:6px;font-size:12px}
+.gate+.gate{border-top:1px solid var(--line,#1e2c3a)}
+.gate-icon{font-weight:700;text-align:center;line-height:1.3}
+.gate-label{display:flex;flex-direction:column;line-height:1.35}
+.gate-detail{font-size:11px;opacity:.62;margin-top:1px}
+.gate-state{font-size:9.5px;letter-spacing:.7px;font-weight:700;opacity:.75;padding-top:2px}
+.gate-ok .gate-icon,.gate-ok .gate-state{color:#25c281}
+.gate-wait .gate-icon,.gate-wait .gate-state{color:#e2a53a}
+.gate-off .gate-icon,.gate-off .gate-state{color:#e56b6b}
+.gate-off{opacity:.85}
+.gate-blocker{margin-top:9px;padding:8px 10px;border-radius:6px;font-size:12px;
+  background:rgba(255,255,255,.04);border-left:3px solid #e2a53a;line-height:1.45}
+.panel-badge.gb-ok{color:#25c281}.panel-badge.gb-wait{color:#e2a53a}.panel-badge.gb-off{color:#e56b6b}
+
+/* ── Capability: can it trade, not is it up ──────────────────────────── */
+.cap-head{display:flex;align-items:center;gap:10px;margin-top:18px}
+.cap-verdict{font-size:11px;font-weight:700;letter-spacing:.8px;padding:3px 9px;border-radius:11px}
+.cap-verdict.up{background:rgba(37,194,129,.16);color:#25c281}
+.cap-verdict.down{background:rgba(229,107,107,.16);color:#e56b6b}
+.cap-grid{display:flex;flex-direction:column;gap:1px;margin:10px 0 4px}
+.cap-row{display:grid;grid-template-columns:58px minmax(220px,1.1fr) 1.4fr;gap:12px;
+  align-items:start;padding:9px 10px;border-radius:6px;background:rgba(255,255,255,.02);font-size:12px}
+.cap-state{font-size:10px;font-weight:700;letter-spacing:.6px;padding:2px 0}
+.cap-pass .cap-state{color:#25c281}
+.cap-warn .cap-state{color:#e2a53a}
+.cap-fail .cap-state{color:#e56b6b}
+.cap-fail{background:rgba(229,107,107,.09);border-left:3px solid #e56b6b}
+.cap-warn{border-left:3px solid #e2a53a}
+.cap-name{display:flex;flex-direction:column;line-height:1.35}
+.cap-detail{font-size:11px;opacity:.65;margin-top:2px}
+.cap-why{font-size:11px;opacity:.55;line-height:1.4}
+.rr-table td{font-size:12px}
+.rr-table tr.rr-skip{color:#e56b6b}
+.rr-table tr.rr-skip b{color:#e56b6b}
+
+/* ── Research registry ───────────────────────────────────────────────── */
+.rs-table{width:100%;font-size:12px}
+.rs-table td{vertical-align:top;padding:9px 8px}
+.rs-sym{display:inline-block;margin-left:7px;font-size:10px;opacity:.5;letter-spacing:.5px}
+.rs-detail{font-size:11px;opacity:.6;margin-top:4px;line-height:1.45;max-width:520px}
+.rs-num{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.rs-sample{font-size:11px;opacity:.72;line-height:1.4}
+.rs-badge{font-size:9.5px;font-weight:700;letter-spacing:.6px;padding:3px 7px;border-radius:10px;white-space:nowrap}
+.rs-b-live{background:rgba(37,194,129,.16);color:#25c281}
+.rs-b-demo{background:rgba(77,169,232,.16);color:#6fb9ec}
+.rs-b-research{background:rgba(255,255,255,.08);color:#9fb0c0}
+.rs-b-untestable{background:rgba(226,165,58,.14);color:#e2a53a}
+.rs-b-rejected{background:rgba(229,107,107,.13);color:#e56b6b}
+.rs-rejected{opacity:.72}
+@media (max-width:860px){
+  .cap-row{grid-template-columns:52px 1fr}
+  .cap-why{grid-column:2;margin-top:2px}
+}
