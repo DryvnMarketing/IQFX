@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T14:09:10.044899+00:00",
+ "generatedAt": "2026-07-29T14:12:28.333410+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 16300,
    "running": true,
-   "logAgeMin": 16.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-07-29T13:53:32.581Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 0.6,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-07-29T14:12:13.303Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "equity": 2601.92,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1675.509
+    "valuePerPointPerLot": 1675.378
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 17.2,
-   "stateAgeMin": 129.4,
-   "heartbeatMin": 17.2,
-   "lastLog": "[2026-07-29 13:52:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 131.9,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-07-29 14:11:23Z] no new H4 bar (last 07-29 08:00Z), pos=0",
    "account": {
-    "equity": 858.81,
+    "equity": 860.33,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 18060,
    "running": true,
-   "logAgeMin": 17.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 19.8,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-07-29 13:52:43Z] day guard check failed: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
-    "equity": 859.3,
+    "equity": 860.33,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A always placed; 8.82% of equity at a typical stop (over the 10.0% cap - min-lot floor). Other setups still capped at 10.0%.",
+   "detail": "Setup A/B always placed; 8.82% of equity at a typical stop (over the 10.0% cap - min-lot floor). Other setups still capped at 10.0%.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -207,7 +207,7 @@
    "name": "Dashboard Publisher",
    "lastRun": "2026/07/29 16:08:26",
    "nextRun": "2026/07/29 16:32:00",
-   "result": 267009,
+   "result": 0,
    "ok": true
   },
   {
@@ -223,31 +223,32 @@
   "currency": "ZAR",
   "equity": 2601.92,
   "minLot": 0.01,
-  "perPoint": 16.76,
+  "perPoint": 16.75,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
-   "A"
+   "A",
+   "B"
   ],
   "rows": [
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 103.88,
+    "amount": 103.87,
     "pct": 3.99,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 229.54,
+    "amount": 229.53,
     "pct": 8.82,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 480.87,
+    "amount": 480.83,
     "pct": 18.48,
     "skipped": true
    }
