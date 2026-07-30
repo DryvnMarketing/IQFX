@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-30T14:02:13.317263+00:00",
+ "generatedAt": "2026-07-30T14:32:11.567016+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,19 +7,19 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 2.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-07-30T13:59:39.716Z] headline throttled: Germany: War-driven energy shock shapes outlook \u2013 Commerzbank",
+   "logAgeMin": 11.3,
+   "stateAgeMin": 0.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-07-30T14:21:13.074Z] headline throttled: Gold: FOMC repricing caps CTA upside \u2013 TD Securities",
    "account": {
-    "equity": 2434.84,
+    "equity": 683.55,
     "currency": "ZAR",
     "demo": false,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.36,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1646.913
+    "valuePerPointPerLot": 1651.643
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 3.7,
-   "stateAgeMin": 118.8,
-   "heartbeatMin": 3.7,
-   "lastLog": "[2026-07-30 13:58:44Z] no new H4 bar (last 07-30 08:00Z), pos=0",
+   "logAgeMin": 3.8,
+   "stateAgeMin": 149.0,
+   "heartbeatMin": 3.8,
+   "lastLog": "[2026-07-30 14:28:46Z] no new H4 bar (last 07-30 08:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 19556,
+   "pid": 34452,
    "running": true,
-   "logAgeMin": 430.9,
-   "stateAgeMin": 208.8,
-   "heartbeatMin": 208.8,
+   "logAgeMin": 461.0,
+   "stateAgeMin": 238.9,
+   "heartbeatMin": 238.9,
    "lastLog": "[2026-07-30 06:51:37Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 872.99,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 9.27% of equity at a typical stop, and up to 19.41% on the widest (1/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 33.1% of equity at a typical stop, and up to 69.35% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/30 16:02:01",
-   "nextRun": "2026/07/30 16:32:00",
+   "lastRun": "2026/07/30 16:32:01",
+   "nextRun": "2026/07/30 17:02:00",
    "result": 267009,
    "ok": true
   },
@@ -221,9 +221,9 @@
  "canTrade": true,
  "risk": {
   "currency": "ZAR",
-  "equity": 2434.84,
+  "equity": 683.55,
   "minLot": 0.01,
-  "perPoint": 16.47,
+  "perPoint": 16.52,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.11,
-    "pct": 4.19,
-    "skipped": false
+    "amount": 102.4,
+    "pct": 14.98,
+    "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.63,
-    "pct": 9.27,
-    "skipped": false
+    "amount": 226.28,
+    "pct": 33.1,
+    "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 472.66,
-    "pct": 19.41,
+    "amount": 474.02,
+    "pct": 69.35,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7521.0
+  "equityForTruePct": 7543.0
  }
 }
