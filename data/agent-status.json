@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T10:02:10.106837+00:00",
+ "generatedAt": "2026-07-31T10:32:04.015771+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 19.8,
-   "stateAgeMin": 1.0,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-07-31T09:42:46.276Z] heartbeat: tick 242, Fri 10:42 UK, trades 0/2, open=none",
+   "logAgeMin": 1.4,
+   "stateAgeMin": 1.7,
+   "heartbeatMin": 1.4,
+   "lastLog": "[2026-07-31T10:30:46.739Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "equity": 936.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.37,
+    "spread": 0.36,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1653.624
+    "valuePerPointPerLot": 1653.615
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.4,
-   "stateAgeMin": 122.6,
-   "heartbeatMin": 2.4,
-   "lastLog": "[2026-07-31 10:00:16Z] no new H4 bar (last 07-31 04:00Z), pos=0",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 152.2,
+   "heartbeatMin": 2.1,
+   "lastLog": "[2026-07-31 10:30:18Z] no new H4 bar (last 07-31 04:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 100.2,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-07-31 08:22:31Z]   whatsapp -> 210 (attempt 1)",
+   "logAgeMin": 9.3,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-31 10:23:03Z] journal: order 3029030121 never filled -> NO_FILL (signal 40267)",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.0 min",
+   "detail": "1.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 12:02:01",
-   "nextRun": "2026/07/31 12:32:00",
+   "lastRun": "2026/07/31 12:32:01",
+   "nextRun": "2026/07/31 13:02:00",
    "result": 267009,
    "ok": true
   },
