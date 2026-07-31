@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T20:36:21.275176+00:00",
+ "generatedAt": "2026-07-31T21:02:11.282732+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -386,8 +386,8 @@
   "connected": true,
   "symbol": "XAUUSD",
   "login": 436786587,
-  "spread": 0.168,
-  "tickAgeSec": 0,
+  "spread": 0.182,
+  "tickAgeSec": 252,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
