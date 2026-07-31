@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-07-31T21:02:03.760862+00:00",
+ "generatedAt": "2026-07-31T21:32:24.836755+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 13248,
-   "running": true,
+   "pid": null,
+   "running": false,
    "logAgeMin": 28.0,
-   "stateAgeMin": 1.7,
-   "heartbeatMin": 1.7,
-   "lastLog": "[2026-07-31T20:34:07.006Z] heartbeat: tick 565, Fri 21:34 UK, trades 0/2, open=none",
+   "stateAgeMin": 2.5,
+   "heartbeatMin": 2.5,
+   "lastLog": "[2026-07-31T21:05:24.127Z] heartbeat: tick 571, Fri 22:05 UK, trades 0/2, open=none",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -21,7 +21,7 @@
     "login": 454101,
     "spread": 1.02,
     "tickAgeSec": 0,
-    "serverOffsetHours": 3,
+    "serverOffsetHours": 2,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 60.8,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-07-31 21:01:26Z] no new H4 bar (last 07-31 16:00Z), pos=0",
+   "logAgeMin": 2.9,
+   "stateAgeMin": 93.0,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-07-31 21:31:28Z] no new H4 bar (last 07-31 16:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 62.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 95.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-07-31 20:00:05Z] idle \u2014 20:59 UK outside 07:00-17:00",
    "account": {
     "equity": 872.99,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 250,
-    "serverOffsetHours": 0,
+    "tickAgeSec": 2235,
+    "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
      "closed": 4,
@@ -106,14 +106,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "PASS",
-   "detail": "pid 13248",
+   "state": "FAIL",
+   "detail": "not running",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.7 min",
+   "detail": "2.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,20 +205,20 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 23:02:02",
-   "nextRun": "2026/07/31 23:32:00",
+   "lastRun": "2026/07/31 23:32:02",
+   "nextRun": "2026/08/01 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/07/30 23:30:01",
-   "nextRun": "2026/07/31 23:30:00",
+   "lastRun": "2026/07/31 23:30:01",
+   "nextRun": "2026/08/01 23:30:00",
    "result": 0,
    "ok": true
   }
  ],
- "canTrade": true,
+ "canTrade": false,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
