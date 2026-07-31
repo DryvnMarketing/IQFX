@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T21:32:24.836755+00:00",
+ "generatedAt": "2026-07-31T22:02:24.140491+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 28.0,
-   "stateAgeMin": 2.5,
-   "heartbeatMin": 2.5,
-   "lastLog": "[2026-07-31T21:05:24.127Z] heartbeat: tick 571, Fri 22:05 UK, trades 0/2, open=none",
+   "logAgeMin": 27.4,
+   "stateAgeMin": 1.8,
+   "heartbeatMin": 1.8,
+   "lastLog": "[2026-07-31T21:35:58.513Z] heartbeat: tick 577, Fri 22:35 UK, trades 0/2, open=none",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 18040,
-   "running": true,
-   "logAgeMin": 2.9,
-   "stateAgeMin": 93.0,
-   "heartbeatMin": 2.9,
-   "lastLog": "[2026-07-31 21:31:28Z] no new H4 bar (last 07-31 16:00Z), pos=0",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 3.1,
+   "stateAgeMin": 123.2,
+   "heartbeatMin": 3.1,
+   "lastLog": "[2026-07-31 22:01:29Z] no new H4 bar (last 07-31 16:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 95.1,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-07-31 20:00:05Z] idle \u2014 20:59 UK outside 07:00-17:00",
+   "logAgeMin": 4.5,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-07-31 22:00:28Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2235,
+    "tickAgeSec": 4021,
     "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.5 min",
+   "detail": "1.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -177,9 +177,9 @@
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/07/31 00:05:01",
-   "nextRun": "2026/08/01 00:05:00",
-   "result": 0,
+   "lastRun": "2026/08/01 00:05:01",
+   "nextRun": "2026/08/02 00:05:00",
+   "result": 267009,
    "ok": true
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 23:32:02",
-   "nextRun": "2026/08/01 00:02:00",
+   "lastRun": "2026/08/01 00:02:01",
+   "nextRun": "2026/08/01 00:32:00",
    "result": 267009,
    "ok": true
   },
