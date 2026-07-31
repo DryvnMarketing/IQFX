@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T07:02:13.919960+00:00",
+ "generatedAt": "2026-07-31T07:32:08.242028+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 1.6,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-07-31T07:00:53.699Z]   WhatsApp API status 200",
+   "logAgeMin": 1.4,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-07-31T07:31:06.026Z]   WhatsApp API status 200",
    "account": {
     "equity": 846.57,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1649.117
+    "valuePerPointPerLot": 1649.275
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.5,
-   "stateAgeMin": 177.8,
-   "heartbeatMin": 2.5,
-   "lastLog": "[2026-07-31 07:00:00Z] no new H4 bar (last 07-31 00:00Z), pos=0",
+   "logAgeMin": 2.6,
+   "stateAgeMin": 207.9,
+   "heartbeatMin": 2.6,
+   "lastLog": "[2026-07-31 07:30:05Z] no new H4 bar (last 07-31 00:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 92.4,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 122.6,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-07-31 05:30:09Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 872.99,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 09:02:02",
-   "nextRun": "2026/07/31 09:32:00",
+   "lastRun": "2026/07/31 09:32:02",
+   "nextRun": "2026/07/31 10:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.25,
+    "amount": 102.26,
     "pct": 12.08,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.93,
+    "amount": 225.95,
     "pct": 26.69,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.3,
+    "amount": 473.34,
     "pct": 55.91,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7531.0
+  "equityForTruePct": 7532.0
  }
 }
