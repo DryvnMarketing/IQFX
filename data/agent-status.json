@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T10:32:04.015771+00:00",
+ "generatedAt": "2026-07-31T11:02:37.344379+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 1.7,
-   "heartbeatMin": 1.4,
-   "lastLog": "[2026-07-31T10:30:46.739Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 17.3,
+   "stateAgeMin": 1.9,
+   "heartbeatMin": 1.9,
+   "lastLog": "[2026-07-31T10:45:43.405Z] heartbeat: tick 288, Fri 11:45 UK, trades 0/2, open=none",
    "account": {
     "equity": 936.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.36,
+    "spread": 0.4,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1653.615
+    "valuePerPointPerLot": 1654.644
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.1,
-   "stateAgeMin": 152.2,
-   "heartbeatMin": 2.1,
-   "lastLog": "[2026-07-31 10:30:18Z] no new H4 bar (last 07-31 04:00Z), pos=0",
+   "logAgeMin": 2.7,
+   "stateAgeMin": 183.0,
+   "heartbeatMin": 2.7,
+   "lastLog": "[2026-07-31 11:00:20Z] no new H4 bar (last 07-31 04:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 3,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 9.3,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 40.1,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-07-31 10:23:03Z] journal: order 3029030121 never filled -> NO_FILL (signal 40267)",
    "account": {
     "equity": 872.99,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.4 min",
+   "detail": "1.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 24.18% of equity at a typical stop, and up to 50.65% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 24.2% of equity at a typical stop, and up to 50.69% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 12:32:01",
-   "nextRun": "2026/07/31 13:02:00",
+   "lastRun": "2026/07/31 13:02:02",
+   "nextRun": "2026/07/31 13:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 936.91,
   "minLot": 0.01,
-  "perPoint": 16.54,
+  "perPoint": 16.55,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.52,
-    "pct": 10.94,
+    "amount": 102.59,
+    "pct": 10.95,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 226.55,
-    "pct": 24.18,
+    "amount": 226.69,
+    "pct": 24.2,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 474.59,
-    "pct": 50.65,
+    "amount": 474.88,
+    "pct": 50.69,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7552.0
+  "equityForTruePct": 7556.0
  }
 }
