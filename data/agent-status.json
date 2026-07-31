@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-31T07:32:08.242028+00:00",
+ "generatedAt": "2026-07-31T08:02:07.251308+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-07-31T07:31:06.026Z]   WhatsApp API status 200",
+   "logAgeMin": 18.3,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-07-31T07:44:09.772Z] headline throttled: Dow Jones futures rise as tech rally, AI optimism drive market rebound",
    "account": {
     "equity": 846.57,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.36,
+    "spread": 0.37,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1649.275
+    "valuePerPointPerLot": 1649.444
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 2.6,
-   "stateAgeMin": 207.9,
-   "heartbeatMin": 2.6,
-   "lastLog": "[2026-07-31 07:30:05Z] no new H4 bar (last 07-31 00:00Z), pos=0",
+   "logAgeMin": 2.4,
+   "stateAgeMin": 2.4,
+   "heartbeatMin": 2.4,
+   "lastLog": "[2026-07-31 08:00:07Z] bar 07-31 04:00Z close 63,875 | don20 62,629-65,358 | ema20 64,246 | atr 686 | none",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 122.6,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 152.4,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-07-31 05:30:09Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 872.99,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 26.69% of equity at a typical stop, and up to 55.91% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 26.69% of equity at a typical stop, and up to 55.92% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/07/31 09:32:02",
-   "nextRun": "2026/07/31 10:02:00",
+   "lastRun": "2026/07/31 10:02:02",
+   "nextRun": "2026/07/31 10:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,22 +234,22 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.26,
+    "amount": 102.27,
     "pct": 12.08,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.95,
+    "amount": 225.97,
     "pct": 26.69,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.34,
-    "pct": 55.91,
+    "amount": 473.39,
+    "pct": 55.92,
     "skipped": true
    }
   ],
