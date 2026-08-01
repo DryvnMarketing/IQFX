@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-01T12:32:03.681060+00:00",
+ "generatedAt": "2026-08-01T13:02:03.777143+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 329.8,
-   "stateAgeMin": 814.2,
-   "heartbeatMin": 329.8,
+   "logAgeMin": 359.8,
+   "stateAgeMin": 844.2,
+   "heartbeatMin": 359.8,
    "lastLog": "    at async main (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1748:39)",
    "account": {
     "equity": 36.91,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 1.02,
-    "tickAgeSec": 45728,
+    "tickAgeSec": 47528,
     "serverOffsetHours": -13,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 18040,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 30.1,
+   "stateAgeMin": 60.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-01 12:32:04Z] no new H4 bar (last 08-01 08:00Z), pos=0",
+   "lastLog": "[2026-08-01 13:02:05Z] no new H4 bar (last 08-01 08:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 31.8,
+   "logAgeMin": 61.8,
    "stateAgeMin": 0.2,
    "heartbeatMin": 0.2,
    "lastLog": "[2026-08-01 12:00:23Z] idle \u2014 weekend (Sat)",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 56053,
+    "tickAgeSec": 57855,
     "serverOffsetHours": -16,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "329.8 min",
+   "detail": "359.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/01 14:32:01",
-   "nextRun": "2026/08/01 15:02:00",
+   "lastRun": "2026/08/01 15:02:01",
+   "nextRun": "2026/08/01 15:32:00",
    "result": 267009,
    "ok": true
   },
