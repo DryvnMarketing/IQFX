@@ -1,458 +1,334 @@
 {
-  "generatedAt": "2026-07-26T19:43:06.557Z",
-  "today": "2026-07-26",
+  "generatedAt": "2026-08-02T18:30:50.989Z",
+  "today": "2026-08-02",
   "week": {
-    "monday": "2026-07-20",
-    "friday": "2026-07-24",
+    "monday": "2026-07-27",
+    "friday": "2026-07-31",
     "days": 5,
-    "open": 3995.57,
-    "close": 4052.845,
-    "high": 4166.13,
-    "low": 3982.63,
-    "net": 57.274999999999636,
-    "range": 183.5
+    "open": 4090.16,
+    "close": 4045.165,
+    "high": 4120.495,
+    "low": 3996.055,
+    "net": -44.99499999999989,
+    "range": 124.44000000000005
   },
   "emas": {
-    "d20": 4086.3678286819027,
-    "d50": 4251.419746111171
+    "d20": 4077.837578609508,
+    "d50": 4216.652144313013
   },
   "structure": "below both daily EMAs — downtrend structure",
-  "paxg": 4062.25,
-  "gap": null,
+  "paxg": 4067.01,
+  "gap": {
+    "pts": 13.020000000000437,
+    "projected": 4066.8000000000006,
+    "friClose": 4053.78
+  },
   "calendar": {
     "events": [
       {
         "title": "LME Copper Inventories",
         "country": "GBP",
-        "date": "2026-07-27T04:00:00-04:00",
+        "date": "2026-08-03T04:00:00-04:00",
         "impact": "Medium",
         "forecast": "",
-        "previous": "-4650",
-        "ms": 1785139200000
+        "previous": "-5550",
+        "ms": 1785744000000
       },
       {
-        "title": "RBA Gov Bullock Speaks",
-        "country": "AUD",
-        "date": "2026-07-27T23:05:00-04:00",
+        "title": "ISM Manufacturing PMI",
+        "country": "USD",
+        "date": "2026-08-03T10:00:00-04:00",
         "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785207900000
+        "forecast": "54.0",
+        "previous": "53.3",
+        "ms": 1785765600000
+      },
+      {
+        "title": "ISM Manufacturing Prices",
+        "country": "USD",
+        "date": "2026-08-03T10:00:00-04:00",
+        "impact": "Medium",
+        "forecast": "70.0",
+        "previous": "73.0",
+        "ms": 1785765600000
       },
       {
         "title": "LME Copper Inventories",
         "country": "GBP",
-        "date": "2026-07-28T04:00:00-04:00",
+        "date": "2026-08-04T04:00:00-04:00",
         "impact": "Medium",
         "forecast": "",
         "previous": "",
-        "ms": 1785225600000
+        "ms": 1785830400000
       },
       {
-        "title": "CB Consumer Confidence",
+        "title": "JOLTS Job Openings",
         "country": "USD",
-        "date": "2026-07-28T10:00:00-04:00",
+        "date": "2026-08-04T10:00:00-04:00",
         "impact": "Medium",
-        "forecast": "92.1",
-        "previous": "91.2",
-        "ms": 1785247200000
+        "forecast": "7.42M",
+        "previous": "7.59M",
+        "ms": 1785852000000
       },
       {
-        "title": "CPI m/m",
-        "country": "AUD",
-        "date": "2026-07-28T21:30:00-04:00",
-        "impact": "High",
-        "forecast": "0.2%",
-        "previous": "-0.7%",
-        "ms": 1785288600000
-      },
-      {
-        "title": "CPI y/y",
-        "country": "AUD",
-        "date": "2026-07-28T21:30:00-04:00",
-        "impact": "High",
-        "forecast": "4.0%",
-        "previous": "4.0%",
-        "ms": 1785288600000
-      },
-      {
-        "title": "Trimmed Mean CPI m/m",
-        "country": "AUD",
-        "date": "2026-07-28T21:30:00-04:00",
-        "impact": "High",
-        "forecast": "0.4%",
-        "previous": "0.4%",
-        "ms": 1785288600000
-      },
-      {
-        "title": "LME Copper Inventories",
-        "country": "GBP",
-        "date": "2026-07-29T04:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785312000000
-      },
-      {
-        "title": "Federal Funds Rate",
-        "country": "USD",
-        "date": "2026-07-29T14:00:00-04:00",
-        "impact": "High",
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "ms": 1785348000000
-      },
-      {
-        "title": "FOMC Statement",
-        "country": "USD",
-        "date": "2026-07-29T14:00:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785348000000
-      },
-      {
-        "title": "FOMC Press Conference",
-        "country": "USD",
-        "date": "2026-07-29T14:30:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785349800000
-      },
-      {
-        "title": "German Prelim CPI m/m",
-        "country": "EUR",
-        "date": "2026-07-30T02:29:00-04:00",
-        "impact": "Medium",
-        "forecast": "0.7%",
-        "previous": "-0.3%",
-        "ms": 1785392940000
-      },
-      {
-        "title": "German Prelim GDP q/q",
-        "country": "EUR",
-        "date": "2026-07-30T04:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "0.1%",
-        "previous": "0.3%",
-        "ms": 1785398400000
-      },
-      {
-        "title": "LME Copper Inventories",
-        "country": "GBP",
-        "date": "2026-07-30T04:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785398400000
-      },
-      {
-        "title": "BOE Monetary Policy Report",
-        "country": "GBP",
-        "date": "2026-07-30T07:00:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785409200000
-      },
-      {
-        "title": "Monetary Policy Summary",
-        "country": "GBP",
-        "date": "2026-07-30T07:00:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785409200000
-      },
-      {
-        "title": "MPC Official Bank Rate Votes",
-        "country": "GBP",
-        "date": "2026-07-30T07:00:00-04:00",
-        "impact": "High",
-        "forecast": "2-0-7",
-        "previous": "2-0-7",
-        "ms": 1785409200000
-      },
-      {
-        "title": "Official Bank Rate",
-        "country": "GBP",
-        "date": "2026-07-30T07:00:00-04:00",
-        "impact": "High",
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "ms": 1785409200000
-      },
-      {
-        "title": "Advance GDP q/q",
-        "country": "USD",
-        "date": "2026-07-30T08:30:00-04:00",
-        "impact": "High",
-        "forecast": "2.3%",
-        "previous": "2.0%",
-        "ms": 1785414600000
-      },
-      {
-        "title": "Core PCE Price Index m/m",
-        "country": "USD",
-        "date": "2026-07-30T08:30:00-04:00",
+        "title": "Employment Change q/q",
+        "country": "NZD",
+        "date": "2026-08-04T18:45:00-04:00",
         "impact": "High",
         "forecast": "0.1%",
-        "previous": "0.3%",
-        "ms": 1785414600000
+        "previous": "0.2%",
+        "ms": 1785883500000
       },
       {
-        "title": "Advance GDP Price Index q/q",
-        "country": "USD",
-        "date": "2026-07-30T08:30:00-04:00",
+        "title": "Unemployment Rate",
+        "country": "NZD",
+        "date": "2026-08-04T18:45:00-04:00",
+        "impact": "High",
+        "forecast": "5.4%",
+        "previous": "5.3%",
+        "ms": 1785883500000
+      },
+      {
+        "title": "LME Copper Inventories",
+        "country": "GBP",
+        "date": "2026-08-05T04:00:00-04:00",
         "impact": "Medium",
-        "forecast": "3.7%",
-        "previous": "3.6%",
-        "ms": 1785414600000
+        "forecast": "",
+        "previous": "",
+        "ms": 1785916800000
+      },
+      {
+        "title": "ADP Non-Farm Employment Change",
+        "country": "USD",
+        "date": "2026-08-05T08:15:00-04:00",
+        "impact": "Medium",
+        "forecast": "71K",
+        "previous": "98K",
+        "ms": 1785932100000
+      },
+      {
+        "title": "ISM Services PMI",
+        "country": "USD",
+        "date": "2026-08-05T10:00:00-04:00",
+        "impact": "Medium",
+        "forecast": "54.5",
+        "previous": "54.0",
+        "ms": 1785938400000
+      },
+      {
+        "title": "LME Copper Inventories",
+        "country": "GBP",
+        "date": "2026-08-06T04:00:00-04:00",
+        "impact": "Medium",
+        "forecast": "",
+        "previous": "",
+        "ms": 1786003200000
       },
       {
         "title": "Unemployment Claims",
         "country": "USD",
-        "date": "2026-07-30T08:30:00-04:00",
+        "date": "2026-08-06T08:30:00-04:00",
         "impact": "Medium",
-        "forecast": "206K",
-        "previous": "187K",
-        "ms": 1785414600000
-      },
-      {
-        "title": "BOJ Policy Rate",
-        "country": "JPY",
-        "date": "2026-07-30T22:30:00-04:00",
-        "impact": "High",
-        "forecast": "<1.00%",
-        "previous": "<1.00%",
-        "ms": 1785465000000
-      },
-      {
-        "title": "Monetary Policy Statement",
-        "country": "JPY",
-        "date": "2026-07-30T22:30:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785465000000
-      },
-      {
-        "title": "BOJ Outlook Report",
-        "country": "JPY",
-        "date": "2026-07-30T22:31:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785465060000
-      },
-      {
-        "title": "BOJ Press Conference",
-        "country": "JPY",
-        "date": "2026-07-31T01:30:00-04:00",
-        "impact": "High",
-        "forecast": "",
-        "previous": "",
-        "ms": 1785475800000
+        "forecast": "205K",
+        "previous": "197K",
+        "ms": 1786019400000
       },
       {
         "title": "LME Copper Inventories",
         "country": "GBP",
-        "date": "2026-07-31T04:00:00-04:00",
+        "date": "2026-08-07T04:00:00-04:00",
         "impact": "Medium",
         "forecast": "",
         "previous": "",
-        "ms": 1785484800000
+        "ms": 1786089600000
       },
       {
-        "title": "Core CPI Flash Estimate y/y",
-        "country": "EUR",
-        "date": "2026-07-31T05:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "2.4%",
-        "previous": "2.4%",
-        "ms": 1785488400000
-      },
-      {
-        "title": "CPI Flash Estimate y/y",
-        "country": "EUR",
-        "date": "2026-07-31T05:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "2.9%",
-        "previous": "2.8%",
-        "ms": 1785488400000
-      },
-      {
-        "title": "GDP m/m",
+        "title": "Employment Change",
         "country": "CAD",
-        "date": "2026-07-31T08:30:00-04:00",
+        "date": "2026-08-07T08:30:00-04:00",
         "impact": "High",
-        "forecast": "0.2%",
-        "previous": "0.5%",
-        "ms": 1785501000000
+        "forecast": "15.0K",
+        "previous": "18.2K",
+        "ms": 1786105800000
       },
       {
-        "title": "Employment Cost Index q/q",
-        "country": "USD",
-        "date": "2026-07-31T08:30:00-04:00",
-        "impact": "Medium",
-        "forecast": "0.8%",
-        "previous": "0.9%",
-        "ms": 1785501000000
+        "title": "Unemployment Rate",
+        "country": "CAD",
+        "date": "2026-08-07T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "6.5%",
+        "previous": "6.5%",
+        "ms": 1786105800000
       },
       {
-        "title": "Revised UoM Consumer Sentiment",
+        "title": "Average Hourly Earnings m/m",
         "country": "USD",
-        "date": "2026-07-31T10:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "54.2",
-        "previous": "54.4",
-        "ms": 1785506400000
+        "date": "2026-08-07T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "0.3%",
+        "previous": "0.3%",
+        "ms": 1786105800000
       },
       {
-        "title": "Revised UoM Inflation Expectations",
+        "title": "Non-Farm Employment Change",
         "country": "USD",
-        "date": "2026-07-31T10:00:00-04:00",
-        "impact": "Medium",
-        "forecast": "",
+        "date": "2026-08-07T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "88K",
+        "previous": "57K",
+        "ms": 1786105800000
+      },
+      {
+        "title": "Unemployment Rate",
+        "country": "USD",
+        "date": "2026-08-07T08:30:00-04:00",
+        "impact": "High",
+        "forecast": "4.2%",
         "previous": "4.2%",
-        "ms": 1785506400000
+        "ms": 1786105800000
       }
     ],
     "partial": null
   },
   "headlines": [
     {
-      "title": "After Trump calls off bombing, Iran signals it will halt strikes as long as US does",
-      "link": "https://www.investing.com/news/commodities-news/iran-will-halt-attacks-as-long-as-us-maintains-pause-iranian-source-says-after-trump-calls-off-strikes-4812898",
-      "pubMs": 1785081266000,
+      "title": "OPEC+ members agree to September quota hike",
+      "link": "https://www.investing.com/news/commodities-news/opec-members-agree-to-september-quota-hike-4829688",
+      "pubMs": 1785664026000,
       "src": "Investing",
       "hot": false
     },
     {
-      "title": "Iran war spreads to Red Sea and Caspian, Gulf quiet as US forgoes strikes",
-      "link": "https://www.investing.com/news/commodities-news/iran-war-spreads-to-red-sea-and-caspian-gulf-quiet-as-us-forgoes-strikes-4812822",
-      "pubMs": 1785029785000,
+      "title": "OPEC+ set for September quota increase followed by pause, sources say",
+      "link": "https://www.investing.com/news/commodities-news/opec-set-for-september-quota-increase-followed-by-pause-sources-say-4829678",
+      "pubMs": 1785650426000,
       "src": "Investing",
       "hot": false
     },
     {
-      "title": "Houthis fire on Saudi oil sites; no US strike on Iran for first time in two weeks",
-      "link": "https://www.investing.com/news/commodities-news/trump-vows-to-punish-iran-and-houthis-for-attacks-in-red-sea-4810448",
-      "pubMs": 1785003869000,
+      "title": "UBS explains what it would take for gold prices to turn higher in 2H26",
+      "link": "https://www.investing.com/news/commodities-news/ubs-explains-what-it-would-take-for-gold-prices-to-turn-higher-in-2h26-4829671",
+      "pubMs": 1785643097000,
       "src": "Investing",
       "hot": false
     },
     {
-      "title": "Swiss cheesemakers try to fill hole in sales from US tariffs",
-      "link": "https://www.investing.com/news/commodities-news/swiss-cheesemakers-try-to-fill-hole-in-sales-from-us-tariffs-4812765",
-      "pubMs": 1784967172000,
-      "src": "Investing",
-      "hot": true
-    },
-    {
-      "title": "Singapore Dollar: MAS seen on hold with cautious inflation tone – OCBC",
-      "link": "https://www.fxstreet.com/news/singapore-dollar-mas-seen-on-hold-with-cautious-inflation-tone-ocbc-202607242105",
-      "pubMs": 1784927100000,
-      "src": "FXStreet",
-      "hot": true
-    },
-    {
-      "title": "Forecasting the upcoming week: Fed, BoE and BoJ decisions take center stage",
-      "link": "https://www.fxstreet.com/news/forecasting-the-upcoming-week-fed-boe-and-boj-decisions-take-center-stage-202607241928",
-      "pubMs": 1784921327000,
+      "title": "Forecasting the upcoming week: US labor market takes center stage after hawkish Fed split",
+      "link": "https://www.fxstreet.com/news/forecasting-the-upcoming-week-us-labor-market-takes-center-stage-after-hawkish-fed-split-202607312014",
+      "pubMs": 1785528879000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "Gold snaps two-week losing run as technical buying offsets inflationary pressures",
-      "link": "https://www.investing.com/news/commodities-news/gold-set-for-first-weekly-gain-in-three-as-fed-meast-stay-in-focus-4810406",
-      "pubMs": 1784920015000,
-      "src": "Investing",
-      "hot": true
-    },
-    {
-      "title": "Thai Baht: Oil shock and dovish BoT keep THB pressured against US Dollar – OCBC",
-      "link": "https://www.fxstreet.com/news/thai-baht-oil-shock-and-dovish-bot-keep-thb-pressured-against-us-dollar-ocbc-202607241858",
-      "pubMs": 1784919480000,
+      "title": "Gold slides as US yields surge, keeping $4,100 out of reach",
+      "link": "https://www.fxstreet.com/news/gold-slides-as-us-yields-surge-keeping-4-100-out-of-reach-202607311944",
+      "pubMs": 1785527084000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "Gold gains despite firm US Dollar",
-      "link": "https://www.fxstreet.com/news/gold-gains-despite-firm-us-dollar-202607241830",
-      "pubMs": 1784917853000,
-      "src": "FXStreet",
-      "hot": false
-    },
-    {
-      "title": "Oil falls on report China pushing for end US-Iran war",
-      "link": "https://www.investing.com/news/commodities-news/oil-set-for-weekly-rise-amid-red-sea-shipping-attacks-kazakhstan-output-cuts-4810381",
-      "pubMs": 1784916414000,
+      "title": "Gold prices in July snap four-month losing streak, helped by weaker dollar",
+      "link": "https://www.investing.com/news/commodities-news/gold-edges-lower-but-heads-for-first-monthly-gain-in-5-4826693",
+      "pubMs": 1785526151000,
       "src": "Investing",
       "hot": false
     },
     {
-      "title": "Silver Price Forecast: XAG/USD consolidates as bulls struggle to clear the 21-day SMA",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-consolidates-as-bulls-struggle-to-clear-the-21-day-sma-202607241758",
-      "pubMs": 1784915886000,
+      "title": "Tether adds 14 tons of gold to reserves in second quarter",
+      "link": "https://www.investing.com/news/commodities-news/tether-adds-14-tons-of-gold-to-reserves-in-second-quarter-93CH-4829311",
+      "pubMs": 1785525739000,
+      "src": "Investing",
+      "hot": false
+    },
+    {
+      "title": "United States Dollar Index struggles near 100 after suspected Japanese intervention",
+      "link": "https://www.fxstreet.com/news/united-states-dollar-index-struggles-near-100-after-suspected-japanese-intervention-202607311855",
+      "pubMs": 1785524114000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "The Dow Jones Industrial Average buys a rumour and sleeps through a tariff regime",
-      "link": "https://www.fxstreet.com/news/the-dow-jones-industrial-average-buys-a-rumour-and-sleeps-through-a-tariff-regime-202607241748",
-      "pubMs": 1784915303000,
+      "title": "Fed's Barkin: It's a close call whether interest rates are high enough",
+      "link": "https://www.fxstreet.com/news/feds-barkin-its-a-close-call-whether-interest-rates-are-high-enough-202607311824",
+      "pubMs": 1785522276000,
       "src": "FXStreet",
       "hot": true
     },
     {
-      "title": "Singapore Dollar: Hawkish MAS stance supports SGD – MUFG",
-      "link": "https://www.fxstreet.com/news/singapore-dollar-hawkish-mas-stance-supports-sgd-mufg-202607241744",
-      "pubMs": 1784915040000,
-      "src": "FXStreet",
-      "hot": false
-    },
-    {
-      "title": "US Dollar: Softer yields curb gains ahead of FOMC – Scotiabank",
-      "link": "https://www.fxstreet.com/news/us-dollar-softer-yields-curb-gains-ahead-of-fomc-scotiabank-202607241636",
-      "pubMs": 1784911003000,
+      "title": "Euro recovers as Eurozone inflation stays firm",
+      "link": "https://www.fxstreet.com/news/euro-recovers-as-eurozone-inflation-stays-firm-202607311800",
+      "pubMs": 1785520810000,
       "src": "FXStreet",
       "hot": true
     },
     {
-      "title": "Euro: Choppy range view holds against US Dollar – Rabobank",
-      "link": "https://www.fxstreet.com/news/euro-choppy-range-view-holds-against-us-dollar-rabobank-202607241617",
-      "pubMs": 1784909865000,
+      "title": "Silver Price Forecast: XAG/USD consolidates above $55 as downside momentum eases",
+      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-consolidates-above-55-as-downside-momentum-eases-202607311740",
+      "pubMs": 1785519643000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "British Pound rises as Oil slide softens USD, Fed hike bets increase",
-      "link": "https://www.fxstreet.com/news/british-pound-rises-as-oil-slide-softens-usd-fed-hike-bets-increase-202607241608",
-      "pubMs": 1784909324000,
+      "title": "WTI Oil recovers above $83 ahead of OPEC meeting",
+      "link": "https://www.fxstreet.com/news/wti-oil-recovers-above-83-ahead-of-opec-meeting-202607311611",
+      "pubMs": 1785514288000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "Oil: Supply risks keep prices elevated – BNY",
-      "link": "https://www.fxstreet.com/news/oil-supply-risks-keep-prices-elevated-bny-202607241603",
-      "pubMs": 1784908987000,
+      "title": "Australian Dollar holds despite weak Chinese PMIs",
+      "link": "https://www.fxstreet.com/news/australian-dollar-holds-despite-weak-chinese-pmis-202607311605",
+      "pubMs": 1785513914000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "Swiss Franc gains slightly against US Dollar as Oil prices ease",
-      "link": "https://www.fxstreet.com/news/swiss-franc-gains-slightly-against-us-dollar-as-oil-prices-ease-202607241557",
-      "pubMs": 1784908629000,
+      "title": "Swiss Franc trims losses against US Dollar amid Japanese intervention concerns",
+      "link": "https://www.fxstreet.com/news/swiss-franc-trims-losses-against-us-dollar-amid-japanese-intervention-concerns-202607311544",
+      "pubMs": 1785512675000,
       "src": "FXStreet",
       "hot": false
     },
     {
-      "title": "British Pound: Strong UK data fail to lift GBP against US Dollar – Scotiabank",
-      "link": "https://www.fxstreet.com/news/british-pound-strong-uk-data-fail-to-lift-gbp-against-us-dollar-scotiabank-202607241549",
-      "pubMs": 1784908160000,
+      "title": "New Zealand Dollar weakens after China PMI miss as the US Dollar rebounds",
+      "link": "https://www.fxstreet.com/news/new-zealnd-dollar-weakens-after-china-pmi-miss-as-the-us-dollar-rebounds-202607311436",
+      "pubMs": 1785508566000,
       "src": "FXStreet",
+      "hot": false
+    },
+    {
+      "title": "Euro: Range seen around mid‑1.15s against US Dollar – Scotiabank",
+      "link": "https://www.fxstreet.com/news/euro-range-seen-around-mid-115s-against-us-dollar-scotiabank-202607311435",
+      "pubMs": 1785508534000,
+      "src": "FXStreet",
+      "hot": false
+    },
+    {
+      "title": "Federal Reserve Board requests comment on a proposal to modernize its rule governing the extension of credit to bank \"insiders\"—bank executives, board members and major shareholders who could potentially influence a bank's lending decisions",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260731b.htm",
+      "pubMs": 1785506400000,
+      "src": "Fed",
+      "hot": false
+    },
+    {
+      "title": "Gold declines as firmer US Dollar, hawkish Fed outlook weigh",
+      "link": "https://www.fxstreet.com/news/gold-declines-as-firmer-us-dollar-and-hawkish-fed-outlook-weigh-202607311148",
+      "pubMs": 1785498529000,
+      "src": "FXStreet",
+      "hot": false
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement action with Iuka Bancshares, Inc. and The Iuka State Bank",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260730b.htm",
+      "pubMs": 1785423600000,
+      "src": "Fed",
+      "hot": false
+    },
+    {
+      "title": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of First Interstate Bank",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260730a.htm",
+      "pubMs": 1785423600000,
+      "src": "Fed",
       "hot": false
     }
   ]
