@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-08-02T21:02:44.201525+00:00",
+ "generatedAt": "2026-08-02T21:33:08.257578+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 63.7,
-   "stateAgeMin": 2765.9,
-   "heartbeatMin": 63.7,
+   "pid": 13248,
+   "running": true,
+   "logAgeMin": 93.7,
+   "stateAgeMin": 2796.0,
+   "heartbeatMin": 93.7,
    "lastLog": "[2026-08-02T20:00:08.192Z]   WhatsApp API status 200",
    "account": {
     "equity": 36.91,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 1.02,
-    "tickAgeSec": 162835,
-    "serverOffsetHours": -45,
+    "tickAgeSec": 164636,
+    "serverOffsetHours": -46,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -29,20 +29,20 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1642.778
+    "valuePerPointPerLot": 1643.557
    },
-   "stale": false
+   "stale": true
   },
   {
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 1.2,
-   "stateAgeMin": 61.3,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-08-02 21:03:44Z] no new H4 bar (last 08-02 16:00Z), pos=0",
+   "pid": 18040,
+   "running": true,
+   "logAgeMin": 1.0,
+   "stateAgeMin": 91.1,
+   "heartbeatMin": 1.0,
+   "lastLog": "[2026-08-02 21:33:47Z] no new H4 bar (last 08-02 16:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 5.2,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 34.7,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-08-02 21:00:12Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 872.99,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 173247,
-    "serverOffsetHours": -48,
+    "tickAgeSec": 175018,
+    "serverOffsetHours": -49,
     "openPositions": 0,
     "week": {
      "closed": 4,
@@ -106,14 +106,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "FAIL",
-   "detail": "not running",
+   "state": "PASS",
+   "detail": "pid 13248",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
-   "state": "PASS",
-   "detail": "63.7 min",
+   "state": "WARN",
+   "detail": "93.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 609.76% of equity at a typical stop, and up to 1277.37% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 610.04% of equity at a typical stop, and up to 1277.98% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,25 +205,25 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/02 23:02:01",
-   "nextRun": "2026/08/02 23:32:00",
+   "lastRun": "2026/08/02 23:32:02",
+   "nextRun": "2026/08/03 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/08/01 23:30:01",
-   "nextRun": "2026/08/02 23:30:00",
+   "lastRun": "2026/08/02 23:30:01",
+   "nextRun": "2026/08/03 23:30:00",
    "result": 0,
    "ok": true
   }
  ],
- "canTrade": false,
+ "canTrade": true,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
   "minLot": 0.01,
-  "perPoint": 16.43,
+  "perPoint": 16.44,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.85,
-    "pct": 275.95,
+    "amount": 101.9,
+    "pct": 276.08,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.06,
-    "pct": 609.76,
+    "amount": 225.17,
+    "pct": 610.04,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 471.48,
-    "pct": 1277.37,
+    "amount": 471.7,
+    "pct": 1277.98,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7502.0
+  "equityForTruePct": 7506.0
  }
 }
