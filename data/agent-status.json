@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-02T18:02:19.368304+00:00",
+ "generatedAt": "2026-08-02T18:32:21.596846+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 13248,
-   "running": true,
-   "logAgeMin": 2100.2,
-   "stateAgeMin": 2584.7,
-   "heartbeatMin": 2100.2,
-   "lastLog": "    at async main (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1748:39)",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 1.3,
+   "stateAgeMin": 2615.5,
+   "heartbeatMin": 1.3,
+   "lastLog": "[2026-08-02T18:32:09.193Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 1.02,
-    "tickAgeSec": 151954,
-    "serverOffsetHours": -42,
+    "tickAgeSec": 153813,
+    "serverOffsetHours": -43,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -31,7 +31,7 @@
     "minLot": 0.01,
     "valuePerPointPerLot": 1649.751
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 4.3,
-   "stateAgeMin": 119.4,
-   "heartbeatMin": 4.3,
-   "lastLog": "[2026-08-02 17:58:33Z] no new H4 bar (last 08-02 12:00Z), pos=0",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 150.4,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-02 18:33:35Z] no new H4 bar (last 08-02 12:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 3.4,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "pid": 25900,
+   "running": true,
+   "logAgeMin": 33.4,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-08-02 18:00:27Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 872.99,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 162352,
-    "serverOffsetHours": -45,
+    "tickAgeSec": 164154,
+    "serverOffsetHours": -46,
     "openPositions": 0,
     "week": {
      "closed": 4,
@@ -99,21 +99,21 @@
   }
  ],
  "calendar": {
-  "events": 113,
-  "forwardDated": 0,
-  "highForward": 0
+  "events": 114,
+  "forwardDated": 114,
+  "highForward": 8
  },
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "PASS",
-   "detail": "pid 13248",
+   "state": "FAIL",
+   "detail": "not running",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
-   "state": "WARN",
-   "detail": "2100.2 min",
+   "state": "PASS",
+   "detail": "1.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -143,7 +143,7 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
+   "detail": "XAU Weekly Brief = 1",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
@@ -191,10 +191,10 @@
   },
   {
    "name": "XAU Sunday Fundamentals",
-   "lastRun": "2026/07/26 20:30:00",
-   "nextRun": "2026/08/02 20:30:00",
-   "result": 1,
-   "ok": false
+   "lastRun": "2026/08/02 20:30:00",
+   "nextRun": "2026/08/09 20:30:00",
+   "result": 0,
+   "ok": true
   },
   {
    "name": "XAU Weekend Gap Check",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/02 20:02:02",
-   "nextRun": "2026/08/02 20:32:00",
+   "lastRun": "2026/08/02 20:32:02",
+   "nextRun": "2026/08/02 21:02:00",
    "result": 267009,
    "ok": true
   },
@@ -218,7 +218,7 @@
    "ok": true
   }
  ],
- "canTrade": true,
+ "canTrade": false,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
