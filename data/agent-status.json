@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-08-02T18:32:21.596846+00:00",
+ "generatedAt": "2026-08-02T19:02:24.298275+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 1.3,
-   "stateAgeMin": 2615.5,
-   "heartbeatMin": 1.3,
+   "pid": 13248,
+   "running": true,
+   "logAgeMin": 30.5,
+   "stateAgeMin": 2644.8,
+   "heartbeatMin": 30.5,
    "lastLog": "[2026-08-02T18:32:09.193Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 36.91,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 1.02,
-    "tickAgeSec": 153813,
+    "tickAgeSec": 155563,
     "serverOffsetHours": -43,
     "openPositions": 0,
     "week": {
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 150.4,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-02 18:33:35Z] no new H4 bar (last 08-02 12:00Z), pos=0",
+   "logAgeMin": 4.3,
+   "stateAgeMin": 179.5,
+   "heartbeatMin": 4.3,
+   "lastLog": "[2026-08-02 18:58:37Z] no new H4 bar (last 08-02 12:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 33.4,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-02 18:00:27Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 3.5,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-02 19:00:08Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 164154,
+    "tickAgeSec": 165943,
     "serverOffsetHours": -46,
     "openPositions": 0,
     "week": {
@@ -106,14 +106,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "FAIL",
-   "detail": "not running",
+   "state": "PASS",
+   "detail": "pid 13248",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.3 min",
+   "detail": "30.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/02 20:32:02",
-   "nextRun": "2026/08/02 21:02:00",
+   "lastRun": "2026/08/02 21:02:02",
+   "nextRun": "2026/08/02 21:32:00",
    "result": 267009,
    "ok": true
   },
@@ -218,7 +218,7 @@
    "ok": true
   }
  ],
- "canTrade": false,
+ "canTrade": true,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
