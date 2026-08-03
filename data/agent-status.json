@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-03T10:02:43.493084+00:00",
+ "generatedAt": "2026-08-03T10:32:19.406647+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-03T10:03:02.673Z] heartbeat: tick 243, Mon 11:03 UK, trades 0/2, open=none",
+   "logAgeMin": 4.6,
+   "stateAgeMin": 2.4,
+   "heartbeatMin": 2.4,
+   "lastLog": "[2026-08-03T10:28:51.337Z] headline throttled: Fed\u2019s Williams: Affirms confidence for inflation to return to 2% target",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.4,
+    "spread": 0.43,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1650.458
+    "valuePerPointPerLot": 1649.672
    },
    "stale": false
   },
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 3.1,
-   "stateAgeMin": 120.0,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-08-03 10:01:47Z] no new H4 bar (last 08-03 04:00Z), pos=0",
+   "pid": 18040,
+   "running": true,
+   "logAgeMin": 2.2,
+   "stateAgeMin": 149.1,
+   "heartbeatMin": 2.2,
+   "lastLog": "[2026-08-03 10:31:50Z] no new H4 bar (last 08-03 04:00Z), pos=0",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 51.8,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "pid": 25900,
+   "running": true,
+   "logAgeMin": 80.0,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-03 09:14:05Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 895.49,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "2.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 612.61% of equity at a typical stop, and up to 1283.34% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 612.31% of equity at a typical stop, and up to 1282.73% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/03 12:02:02",
-   "nextRun": "2026/08/03 12:32:00",
+   "lastRun": "2026/08/03 12:32:02",
+   "nextRun": "2026/08/03 13:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.33,
-    "pct": 277.24,
+    "amount": 102.28,
+    "pct": 277.11,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 226.11,
-    "pct": 612.61,
+    "amount": 226.01,
+    "pct": 612.31,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.68,
-    "pct": 1283.34,
+    "amount": 473.46,
+    "pct": 1282.73,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7537.0
+  "equityForTruePct": 7534.0
  }
 }
