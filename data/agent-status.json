@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-03T05:03:35.729260+00:00",
+ "generatedAt": "2026-08-03T05:32:41.615076+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 15.9,
+   "pid": 13248,
+   "running": true,
+   "logAgeMin": 10.4,
    "stateAgeMin": 5.1,
    "heartbeatMin": 5.1,
-   "lastLog": "[2026-08-03T04:48:45.075Z] heartbeat: tick 67, Mon 5:48 UK, trades 0/2, open=none",
+   "lastLog": "[2026-08-03T05:22:51.059Z]   WhatsApp API status 200",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1645.91
+    "valuePerPointPerLot": 1645.613
    },
    "stale": false
   },
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 1.3,
-   "stateAgeMin": 61.5,
-   "heartbeatMin": 1.3,
-   "lastLog": "[2026-08-03 05:04:33Z] no new H4 bar (last 08-03 00:00Z), pos=0",
+   "pid": 18040,
+   "running": true,
+   "logAgeMin": 4.0,
+   "stateAgeMin": 89.2,
+   "heartbeatMin": 4.0,
+   "lastLog": "[2026-08-03 05:29:36Z] no new H4 bar (last 08-03 00:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 25900,
-   "running": true,
-   "logAgeMin": 186.0,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "pid": null,
+   "running": false,
+   "logAgeMin": 214.4,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-08-03 02:00:12Z] idle \u2014 03:00 UK outside 07:00-17:00",
    "account": {
     "equity": 872.99,
@@ -106,8 +106,8 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "FAIL",
-   "detail": "not running",
+   "state": "PASS",
+   "detail": "pid 13248",
    "why": "No process, no trading."
   },
   {
@@ -143,13 +143,13 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekly Brief = 1",
+   "detail": "GKO Follower = -2147020576, XAU Weekly Brief = 1",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 610.92% of equity at a typical stop, and up to 1279.81% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 610.81% of equity at a typical stop, and up to 1279.57% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -170,10 +170,10 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/07/31 07:30:00",
-   "nextRun": "2026/08/03 07:30:00",
-   "result": 267009,
-   "ok": true
+   "lastRun": "2026/08/03 07:30:00",
+   "nextRun": "2026/08/04 07:30:00",
+   "result": -2147020576,
+   "ok": false
   },
   {
    "name": "BTC Trend Agent",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/03 07:02:02",
-   "nextRun": "2026/08/03 07:32:00",
+   "lastRun": "2026/08/03 07:32:02",
+   "nextRun": "2026/08/03 08:02:00",
    "result": 267009,
    "ok": true
   },
@@ -218,7 +218,7 @@
    "ok": true
   }
  ],
- "canTrade": false,
+ "canTrade": true,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.05,
-    "pct": 276.47,
+    "amount": 102.03,
+    "pct": 276.42,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.49,
-    "pct": 610.92,
+    "amount": 225.45,
+    "pct": 610.81,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 472.38,
-    "pct": 1279.81,
+    "amount": 472.29,
+    "pct": 1279.57,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7516.0
+  "equityForTruePct": 7515.0
  }
 }
