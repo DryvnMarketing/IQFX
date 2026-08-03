@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-03T02:02:34.285258+00:00",
+ "generatedAt": "2026-08-03T02:33:44.346513+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 13248,
-   "running": true,
-   "logAgeMin": 2.0,
+   "pid": null,
+   "running": false,
+   "logAgeMin": 12.4,
    "stateAgeMin": 2.0,
    "heartbeatMin": 2.0,
-   "lastLog": "[2026-08-03T02:01:09.672Z]   WhatsApp API status 200",
+   "lastLog": "[2026-08-03T02:22:24.416Z] headline throttled: Australian Dollar remains stronger following China\u2019s RatingDog Manufacturing PMI data",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1647.313
+    "valuePerPointPerLot": 1647.471
    },
    "stale": false
   },
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 18040,
-   "running": true,
-   "logAgeMin": 4.3,
-   "stateAgeMin": 119.5,
-   "heartbeatMin": 4.3,
-   "lastLog": "[2026-08-03 01:59:12Z] no new H4 bar (last 08-02 20:00Z), pos=0",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 1.6,
+   "stateAgeMin": 151.9,
+   "heartbeatMin": 1.6,
+   "lastLog": "[2026-08-03 02:34:14Z] no new H4 bar (last 08-02 20:00Z), pos=0",
    "account": {
     "equity": 872.99,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 25900,
-   "running": true,
-   "logAgeMin": 4.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "pid": null,
+   "running": false,
+   "logAgeMin": 36.7,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-08-03 02:00:12Z] idle \u2014 03:00 UK outside 07:00-17:00",
    "account": {
     "equity": 872.99,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -106,8 +106,8 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "PASS",
-   "detail": "pid 13248",
+   "state": "FAIL",
+   "detail": "not running",
    "why": "No process, no trading."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 611.44% of equity at a typical stop, and up to 1280.9% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 611.5% of equity at a typical stop, and up to 1281.02% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/03 04:02:02",
-   "nextRun": "2026/08/03 04:32:00",
+   "lastRun": "2026/08/03 04:32:02",
+   "nextRun": "2026/08/03 05:02:00",
    "result": 267009,
    "ok": true
   },
@@ -218,7 +218,7 @@
    "ok": true
   }
  ],
- "canTrade": true,
+ "canTrade": false,
  "risk": {
   "currency": "ZAR",
   "equity": 36.91,
@@ -234,22 +234,22 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.13,
-    "pct": 276.71,
+    "amount": 102.14,
+    "pct": 276.74,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.68,
-    "pct": 611.44,
+    "amount": 225.7,
+    "pct": 611.5,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 472.78,
-    "pct": 1280.9,
+    "amount": 472.82,
+    "pct": 1281.02,
     "skipped": true
    }
   ],
