@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-03T08:06:38.474814+00:00",
+ "generatedAt": "2026-08-03T08:34:32.807840+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -374,10 +374,12 @@
    "order_type": "LIMIT",
    "order_ticket": 3035616975,
    "placed_epoch": 1785744219,
-   "ts": "2026-08-03T08:03:39.100269+00:00"
+   "ts": "2026-08-03T08:03:39.100269+00:00",
+   "position_id": 3035616975,
+   "fill": 4057.5
   }
  ],
- "seenSignals": 173,
+ "seenSignals": 175,
  "dayTrades": 1,
  "halted": false,
  "stats": {
@@ -403,7 +405,7 @@
   ]
  ],
  "account": {
-  "equity": 872.99,
+  "equity": 864.5,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -413,7 +415,7 @@
   "spread": 0.168,
   "tickAgeSec": 1,
   "serverOffsetHours": 0,
-  "openPositions": 0,
+  "openPositions": 1,
   "week": {
    "closed": 3,
    "net": 29.71,
