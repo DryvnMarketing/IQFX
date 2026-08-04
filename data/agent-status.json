@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-04T05:04:01.330850+00:00",
+ "generatedAt": "2026-08-04T07:33:05.715916+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 21.0,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-04T05:04:50.924Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 17.3,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-04T07:33:46.944Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.44,
+    "spread": 0.43,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1649.921
+    "valuePerPointPerLot": 1649.192
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 2.7,
-   "stateAgeMin": 62.8,
-   "heartbeatMin": 2.7,
-   "lastLog": "[2026-08-04 05:03:40Z] no new H4 bar (last 08-04 00:00Z), pos=0",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 211.9,
+   "heartbeatMin": 1.7,
+   "lastLog": "[2026-08-04 07:33:52Z] no new H4 bar (last 08-04 00:00Z), pos=0",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 7.4,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-04 05:00:02Z] idle \u2014 05:59 UK outside 07:00-17:00",
+   "pid": 25900,
+   "running": true,
+   "logAgeMin": 125.4,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-04 05:31:07Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -143,37 +143,37 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "GKO Follower = -2147023829, XAU Weekly Brief = 1",
+   "detail": "XAU Weekly Brief = 1",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 612.41% of equity at a typical stop, and up to 1282.92% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 612.14% of equity at a typical stop, and up to 1282.36% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/08/03 08:35:00",
-   "nextRun": "2026/08/04 08:35:00",
+   "lastRun": "2026/08/04 08:35:00",
+   "nextRun": "2026/08/05 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/08/03 08:35:00",
-   "nextRun": "2026/08/04 08:35:00",
+   "lastRun": "2026/08/04 08:35:00",
+   "nextRun": "2026/08/05 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/08/03 07:30:00",
-   "nextRun": "2026/08/04 07:30:00",
-   "result": -2147023829,
-   "ok": false
+   "lastRun": "2026/08/04 07:30:00",
+   "nextRun": "2026/08/05 07:30:00",
+   "result": 267009,
+   "ok": true
   },
   {
    "name": "BTC Trend Agent",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/04 07:02:02",
-   "nextRun": "2026/08/04 07:32:00",
+   "lastRun": "2026/08/04 09:32:02",
+   "nextRun": "2026/08/04 10:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 36.91,
   "minLot": 0.01,
-  "perPoint": 16.5,
+  "perPoint": 16.49,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.3,
-    "pct": 277.15,
+    "amount": 102.25,
+    "pct": 277.02,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 226.04,
-    "pct": 612.41,
+    "amount": 225.94,
+    "pct": 612.14,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.53,
-    "pct": 1282.92,
+    "amount": 473.32,
+    "pct": 1282.36,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7535.0
+  "equityForTruePct": 7531.0
  }
 }
