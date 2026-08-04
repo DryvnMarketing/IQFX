@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-04T12:02:02.892741+00:00",
+ "generatedAt": "2026-08-04T12:32:00.958503+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 13248,
+   "pid": 15380,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 10.9,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-04T12:01:30.839Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 10.7,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-04T12:21:19.447Z] heartbeat: tick 533, Tue 13:21 UK, trades 0/2, open=none",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.36,
+    "spread": 0.43,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1644.243
+    "valuePerPointPerLot": 1643.521
    },
    "stale": false
   },
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 18040,
+   "pid": 16048,
    "running": true,
-   "logAgeMin": 3.1,
-   "stateAgeMin": 238.2,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-08-04 11:59:01Z] no new H4 bar (last 08-04 04:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 28.0,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-08-04 12:31:25Z] no new H4 bar (last 08-04 08:00Z), pos=0",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 25900,
+   "pid": 16184,
    "running": true,
-   "logAgeMin": 237.3,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-04 08:04:38Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "logAgeMin": 20.7,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-04 12:11:22Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -99,27 +99,27 @@
   }
  ],
  "calendar": {
-  "events": 116,
-  "forwardDated": 85,
+  "events": 117,
+  "forwardDated": 86,
   "highForward": 7
  },
  "checks": [
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 13248",
+   "detail": "pid 15380",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
    "name": "TradingView CDP (port 9222)",
-   "state": "FAIL",
-   "detail": "dead - briefs and price reads will fail",
+   "state": "PASS",
+   "detail": "responding",
    "why": "A dead MSIX app cannot be relaunched by the agent itself."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 610.3% of equity at a typical stop, and up to 1278.51% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 610.03% of equity at a typical stop, and up to 1277.95% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -172,7 +172,7 @@
    "name": "GKO Follower",
    "lastRun": "2026/08/04 07:30:00",
    "nextRun": "2026/08/05 07:30:00",
-   "result": 267009,
+   "result": 0,
    "ok": true
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/04 14:02:02",
-   "nextRun": "2026/08/04 14:32:00",
+   "lastRun": "2026/08/04 14:32:00",
+   "nextRun": "2026/08/04 15:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.94,
-    "pct": 276.19,
+    "amount": 101.9,
+    "pct": 276.07,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.26,
-    "pct": 610.3,
+    "amount": 225.16,
+    "pct": 610.03,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 471.9,
-    "pct": 1278.51,
+    "amount": 471.69,
+    "pct": 1277.95,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7509.0
+  "equityForTruePct": 7505.0
  }
 }
