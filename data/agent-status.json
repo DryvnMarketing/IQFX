@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-04T07:33:05.715916+00:00",
+ "generatedAt": "2026-08-04T08:02:37.682678+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 17.3,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-04T07:33:46.944Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 16.1,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-08-04T08:03:06.320Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1649.192
+    "valuePerPointPerLot": 1648.329
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 211.9,
-   "heartbeatMin": 1.7,
-   "lastLog": "[2026-08-04 07:33:52Z] no new H4 bar (last 08-04 00:00Z), pos=0",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 1.1,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-08-04 08:03:54Z] bar 08-04 04:00Z close 63,620 | don20 62,194-64,037 | ema20 63,343 | atr 621 | none",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 25900,
-   "running": true,
-   "logAgeMin": 125.4,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-04 05:31:07Z]   whatsapp -> 200 (attempt 1)",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 1.5,
+   "stateAgeMin": 3.9,
+   "heartbeatMin": 1.5,
+   "lastLog": "[2026-08-04 08:04:38Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 612.14% of equity at a typical stop, and up to 1282.36% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 611.82% of equity at a typical stop, and up to 1281.69% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/04 09:32:02",
-   "nextRun": "2026/08/04 10:02:00",
+   "lastRun": "2026/08/04 10:02:02",
+   "nextRun": "2026/08/04 10:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 36.91,
   "minLot": 0.01,
-  "perPoint": 16.49,
+  "perPoint": 16.48,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.25,
-    "pct": 277.02,
+    "amount": 102.2,
+    "pct": 276.88,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 225.94,
-    "pct": 612.14,
+    "amount": 225.82,
+    "pct": 611.82,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.32,
-    "pct": 1282.36,
+    "amount": 473.07,
+    "pct": 1281.69,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7531.0
+  "equityForTruePct": 7527.0
  }
 }
