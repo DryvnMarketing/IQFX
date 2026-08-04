@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-04T10:02:03.312315+00:00",
+ "generatedAt": "2026-08-04T10:32:02.959640+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 13248,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 12.1,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-04T10:01:36.318Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 11.8,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-04T10:31:54.229Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.42,
+    "spread": 0.39,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1650.185
+    "valuePerPointPerLot": 1649.625
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 18040,
    "running": true,
-   "logAgeMin": 3.1,
-   "stateAgeMin": 118.2,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-08-04 09:59:02Z] no new H4 bar (last 08-04 04:00Z), pos=0",
+   "logAgeMin": 3.0,
+   "stateAgeMin": 148.2,
+   "heartbeatMin": 3.0,
+   "lastLog": "[2026-08-04 10:29:02Z] no new H4 bar (last 08-04 04:00Z), pos=0",
    "account": {
     "equity": 895.49,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 25900,
    "running": true,
-   "logAgeMin": 117.3,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 147.3,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-04 08:04:38Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
     "equity": 895.49,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 612.5% of equity at a typical stop, and up to 1283.13% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 612.3% of equity at a typical stop, and up to 1282.69% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/04 12:02:02",
-   "nextRun": "2026/08/04 12:32:00",
+   "lastRun": "2026/08/04 12:32:02",
+   "nextRun": "2026/08/04 13:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 102.31,
-    "pct": 277.19,
+    "amount": 102.28,
+    "pct": 277.1,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 226.08,
-    "pct": 612.5,
+    "amount": 226.0,
+    "pct": 612.3,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 473.6,
-    "pct": 1283.13,
+    "amount": 473.44,
+    "pct": 1282.69,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7536.0
+  "equityForTruePct": 7533.0
  }
 }
