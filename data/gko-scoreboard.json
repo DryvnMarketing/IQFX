@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-05T08:32:06.949496+00:00",
+ "generatedAt": "2026-08-05T09:02:06.586834+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -382,22 +382,53 @@
    "r": 0.6,
    "outcome": "TP",
    "closed_at": "2026-08-03T09:13:39+00:00"
+  },
+  {
+   "signal_id": 40345,
+   "posted": "2026-08-05T08:33:25+00:00",
+   "age_min": 0.2,
+   "dir": "BUY",
+   "zone_lo": 4159.5,
+   "zone_hi": 4164.5,
+   "tp1": 4166.5,
+   "sl": 4154.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4164.5 \u2013 4159.5\n\nTP 1: 4166.5\nTP 2: 4176.5\n\nSL: 4154\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4165.33,
+   "spread": 0.168,
+   "intended_entry": 4162.0,
+   "risk_pts": 8.0,
+   "in_zone": false,
+   "decision": "PLACED BUY 0.04 XAUUSD LIMIT@4162.00 SL 4154.00 TP 4166.50 | 0.04 lots = 32.00 USD = 3.57% of equity",
+   "status": "CLOSED",
+   "lots": 0.04,
+   "sizing": "0.04 lots = 32.00 USD = 3.57% of equity",
+   "order_type": "LIMIT",
+   "order_ticket": 3045565196,
+   "placed_epoch": 1785918818,
+   "ts": "2026-08-05T08:33:38.896989+00:00",
+   "position_id": 3045565196,
+   "fill": 4162.0,
+   "exit": 4166.5,
+   "profit": 18.0,
+   "r": 0.562,
+   "outcome": "TP",
+   "closed_at": "2026-08-05T08:43:42+00:00"
   }
  ],
- "seenSignals": 206,
- "dayTrades": 0,
+ "seenSignals": 208,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 14,
-  "taken": 8,
+  "signals": 15,
+  "taken": 9,
   "skipped": 2,
   "open": 0,
-  "closed": 8,
-  "wins": 7,
-  "winRate": 87.5,
-  "expectancy": 0.236,
-  "totalR": 1.89,
-  "netCash": 53.9
+  "closed": 9,
+  "wins": 8,
+  "winRate": 88.9,
+  "expectancy": 0.272,
+  "totalR": 2.45,
+  "netCash": 71.9
  },
  "skipReasons": [
   [
@@ -410,7 +441,7 @@
   ]
  ],
  "account": {
-  "equity": 895.61,
+  "equity": 912.51,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -422,9 +453,9 @@
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 2,
-   "net": 35.16,
-   "wins": 2
+   "closed": 3,
+   "net": 53.16,
+   "wins": 3
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0
