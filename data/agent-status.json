@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-05T08:02:02.206722+00:00",
+ "generatedAt": "2026-08-05T08:32:02.333612+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15380,
    "running": true,
-   "logAgeMin": 1.5,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-05T08:00:32.278Z]   WhatsApp API status 200",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-08-05T08:31:55.678Z] headline throttled: ADP Employment Report expected to show a steady labor market in July",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.39,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1637.286
+    "valuePerPointPerLot": 1639.154
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 16048,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
+   "stateAgeMin": 30.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-05 08:01:30Z] bar 08-05 04:00Z close 64,108 | don20 62,211-64,495 | ema20 63,674 | atr 597 | none",
+   "lastLog": "[2026-08-05 08:31:30Z] no new H4 bar (last 08-05 04:00Z), pos=1",
    "account": {
-    "equity": 895.07,
+    "equity": 895.6,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 16184,
    "running": true,
-   "logAgeMin": 152.1,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-05 05:30:01Z] another follower is already running (pid 16184) \u2014 exiting",
+   "logAgeMin": 25.7,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-05 08:06:23Z] loop error (2 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
    "account": {
-    "equity": 895.04,
+    "equity": 895.6,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 607.72% of equity at a typical stop, and up to 1273.1% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 608.41% of equity at a typical stop, and up to 1274.55% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/05 10:02:01",
-   "nextRun": "2026/08/05 10:32:00",
+   "lastRun": "2026/08/05 10:32:01",
+   "nextRun": "2026/08/05 11:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 36.91,
   "minLot": 0.01,
-  "perPoint": 16.37,
+  "perPoint": 16.39,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.51,
-    "pct": 275.03,
+    "amount": 101.63,
+    "pct": 275.34,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 224.31,
-    "pct": 607.72,
+    "amount": 224.56,
+    "pct": 608.41,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 469.9,
-    "pct": 1273.1,
+    "amount": 470.44,
+    "pct": 1274.55,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7477.0
+  "equityForTruePct": 7485.0
  }
 }
