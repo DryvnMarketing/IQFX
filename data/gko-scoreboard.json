@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-06T05:32:05.921459+00:00",
+ "generatedAt": "2026-08-06T06:02:06.146064+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -416,7 +416,7 @@
   }
  ],
  "seenSignals": 216,
- "dayTrades": 1,
+ "dayTrades": 0,
  "halted": false,
  "stats": {
   "signals": 15,
@@ -441,15 +441,15 @@
   ]
  ],
  "account": {
-  "equity": 918.64,
+  "equity": 918.08,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
   "connected": true,
   "symbol": "XAUUSD",
   "login": 436786587,
-  "spread": 0.168,
-  "tickAgeSec": 1,
+  "spread": 0.182,
+  "tickAgeSec": 2,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
