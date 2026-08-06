@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-06T07:02:02.206415+00:00",
+ "generatedAt": "2026-08-06T08:02:00.951452+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 15380,
+   "pid": 15716,
    "running": true,
-   "logAgeMin": 4.2,
-   "stateAgeMin": 4.2,
-   "heartbeatMin": 4.2,
-   "lastLog": "[2026-08-06T06:57:50.649Z]   WhatsApp API status 200",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 10.8,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-06T08:01:33.036Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.41,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1633.564
+    "valuePerPointPerLot": 1633.961
    },
    "stale": false
   },
@@ -37,14 +37,14 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 16048,
+   "pid": 15692,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 180.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-06 07:01:35Z] no new H4 bar (last 08-06 00:00Z), pos=1",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 0.9,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-08-06 08:01:15Z] bar 08-06 04:00Z close 64,746 | don20 62,211-64,996 | ema20 64,058 | atr 564 | none",
    "account": {
-    "equity": 917.66,
+    "equity": 935.7,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -69,28 +69,28 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 16184,
+   "pid": 15884,
    "running": true,
-   "logAgeMin": 92.0,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-06 05:30:03Z] another follower is already running (pid 16184) \u2014 exiting",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-06 08:00:11Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 917.66,
+    "equity": 935.72,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.168,
+    "spread": 0.182,
     "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 2,
-     "net": 40.5,
-     "wins": 2
+     "closed": 3,
+     "net": 58.5,
+     "wins": 3
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -107,19 +107,19 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 15380",
+   "detail": "pid 15716",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.2 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
    "name": "TradingView CDP (port 9222)",
-   "state": "PASS",
-   "detail": "responding",
+   "state": "FAIL",
+   "detail": "dead - briefs and price reads will fail",
    "why": "A dead MSIX app cannot be relaunched by the agent itself."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 606.34% of equity at a typical stop, and up to 1270.21% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 606.48% of equity at a typical stop, and up to 1270.51% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/06 09:02:01",
-   "nextRun": "2026/08/06 09:32:00",
+   "lastRun": "2026/08/06 10:02:00",
+   "nextRun": "2026/08/06 10:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.28,
-    "pct": 274.4,
+    "amount": 101.31,
+    "pct": 274.47,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 223.8,
-    "pct": 606.34,
+    "amount": 223.85,
+    "pct": 606.48,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 468.83,
-    "pct": 1270.21,
+    "amount": 468.95,
+    "pct": 1270.51,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7460.0
+  "equityForTruePct": 7462.0
  }
 }
