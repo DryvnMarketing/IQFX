@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-07T08:32:02.850126+00:00",
+ "generatedAt": "2026-08-07T09:02:02.921420+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 26.1,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-07T08:31:26.048Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 25.8,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-07T09:01:42.840Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 36.91,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.36,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1631.88
+    "valuePerPointPerLot": 1628.371
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.8,
-   "stateAgeMin": 30.8,
+   "stateAgeMin": 60.8,
    "heartbeatMin": 0.8,
-   "lastLog": "[2026-08-07 08:31:18Z] no new H4 bar (last 08-07 04:00Z), pos=1",
+   "lastLog": "[2026-08-07 09:01:18Z] no new H4 bar (last 08-07 04:00Z), pos=1",
    "account": {
-    "equity": 907.17,
+    "equity": 909.01,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,19 +71,19 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 30.4,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 60.4,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-08-07 08:01:40Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 907.17,
+    "equity": 908.93,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.168,
+    "spread": 0.182,
     "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 605.71% of equity at a typical stop, and up to 1268.9% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 604.41% of equity at a typical stop, and up to 1266.17% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/07 10:32:02",
-   "nextRun": "2026/08/07 11:02:00",
+   "lastRun": "2026/08/07 11:02:02",
+   "nextRun": "2026/08/07 11:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 36.91,
   "minLot": 0.01,
-  "perPoint": 16.32,
+  "perPoint": 16.28,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.18,
-    "pct": 274.12,
+    "amount": 100.96,
+    "pct": 273.53,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 223.57,
-    "pct": 605.71,
+    "amount": 223.09,
+    "pct": 604.41,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 468.35,
-    "pct": 1268.9,
+    "amount": 467.34,
+    "pct": 1266.17,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7452.0
+  "equityForTruePct": 7436.0
  }
 }
