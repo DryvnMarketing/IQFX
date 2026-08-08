@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-08T16:32:02.890631+00:00",
+ "generatedAt": "2026-08-08T17:02:03.167377+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 571.8,
-   "stateAgeMin": 1068.0,
-   "heartbeatMin": 571.8,
+   "logAgeMin": 601.8,
+   "stateAgeMin": 1098.0,
+   "heartbeatMin": 601.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 36.91,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.88,
-    "tickAgeSec": 60125,
+    "tickAgeSec": 61925,
     "serverOffsetHours": -17,
     "openPositions": 0,
     "week": {
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 30.7,
+   "stateAgeMin": 60.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-08-08 16:31:21Z] no new H4 bar (last 08-08 12:00Z), pos=1",
+   "lastLog": "[2026-08-08 17:01:21Z] no new H4 bar (last 08-08 12:00Z), pos=1",
    "account": {
-    "equity": 913.21,
+    "equity": 913.47,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-08 16:00:23Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-08 17:00:00Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 913.21,
+    "equity": 913.47,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 70446,
+    "tickAgeSec": 72247,
     "serverOffsetHours": -20,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "571.8 min",
+   "detail": "601.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/08 18:32:02",
-   "nextRun": "2026/08/08 19:02:00",
+   "lastRun": "2026/08/08 19:02:02",
+   "nextRun": "2026/08/08 19:32:00",
    "result": 267009,
    "ok": true
   },
