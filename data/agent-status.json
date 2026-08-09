@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-09T01:32:02.964883+00:00",
+ "generatedAt": "2026-08-09T02:02:03.015311+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 1111.8,
-   "stateAgeMin": 1608.0,
-   "heartbeatMin": 1111.8,
+   "logAgeMin": 1141.8,
+   "stateAgeMin": 1638.0,
+   "heartbeatMin": 1141.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 36.91,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.88,
-    "tickAgeSec": 92525,
+    "tickAgeSec": 94325,
     "serverOffsetHours": -26,
     "openPositions": 0,
     "week": {
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 90.7,
+   "stateAgeMin": 120.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-08-09 01:31:22Z] no new H4 bar (last 08-08 20:00Z), pos=1",
+   "lastLog": "[2026-08-09 02:01:23Z] no new H4 bar (last 08-08 20:00Z), pos=1",
    "account": {
-    "equity": 911.34,
+    "equity": 911.09,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-09 01:00:21Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-09 02:00:22Z] idle \u2014 weekend (Sun)",
    "account": {
-    "equity": 911.34,
+    "equity": 911.01,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 102846,
+    "tickAgeSec": 104647,
     "serverOffsetHours": -29,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1111.8 min",
+   "detail": "1141.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/09 03:32:02",
-   "nextRun": "2026/08/09 04:02:00",
+   "lastRun": "2026/08/09 04:02:02",
+   "nextRun": "2026/08/09 04:32:00",
    "result": 267009,
    "ok": true
   },
