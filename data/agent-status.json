@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-10T04:32:02.875242+00:00",
+ "generatedAt": "2026-08-10T05:02:02.863377+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 28.8,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-08-10T04:31:19.342Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 28.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-10T05:01:36.205Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 2819.63,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.36,
+    "spread": 0.44,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1616.456
+    "valuePerPointPerLot": 1616.23
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 30.6,
+   "stateAgeMin": 60.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-10 04:31:26Z] no new H4 bar (last 08-10 00:00Z), pos=1",
+   "lastLog": "[2026-08-10 05:01:26Z] no new H4 bar (last 08-10 00:00Z), pos=1",
    "account": {
-    "equity": 912.82,
+    "equity": 912.46,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 31.7,
+   "logAgeMin": 1.9,
    "stateAgeMin": 0.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-10 04:00:22Z] idle \u2014 05:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-08-10 05:00:10Z] idle \u2014 06:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 912.82,
+    "equity": 912.46,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/10 06:32:02",
-   "nextRun": "2026/08/10 07:02:00",
+   "lastRun": "2026/08/10 07:02:02",
+   "nextRun": "2026/08/10 07:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.22,
+    "amount": 100.21,
     "pct": 3.55,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.45,
+    "amount": 221.42,
     "pct": 7.85,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.92,
+    "amount": 463.86,
     "pct": 16.45,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7382.0
+  "equityForTruePct": 7381.0
  }
 }
