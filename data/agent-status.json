@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-10T05:02:02.863377+00:00",
+ "generatedAt": "2026-08-10T05:32:02.909013+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 28.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-10T05:01:36.205Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 28.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-10T05:31:53.159Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 2819.63,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.44,
+    "spread": 0.45,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1616.23
+    "valuePerPointPerLot": 1615.91
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 60.6,
+   "stateAgeMin": 90.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-10 05:01:26Z] no new H4 bar (last 08-10 00:00Z), pos=1",
+   "lastLog": "[2026-08-10 05:31:26Z] no new H4 bar (last 08-10 00:00Z), pos=1",
    "account": {
-    "equity": 912.46,
+    "equity": 912.81,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-10 05:00:10Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-10 05:30:01Z] another follower is already running (pid 15884) \u2014 exiting",
    "account": {
-    "equity": 912.46,
+    "equity": 912.81,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -170,8 +170,8 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/08/07 07:30:01",
-   "nextRun": "2026/08/10 07:30:00",
+   "lastRun": "2026/08/10 07:30:00",
+   "nextRun": "2026/08/11 07:30:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/10 07:02:02",
-   "nextRun": "2026/08/10 07:32:00",
+   "lastRun": "2026/08/10 07:32:02",
+   "nextRun": "2026/08/10 08:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.21,
+    "amount": 100.19,
     "pct": 3.55,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.42,
+    "amount": 221.38,
     "pct": 7.85,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.86,
+    "amount": 463.77,
     "pct": 16.45,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7381.0
+  "equityForTruePct": 7379.0
  }
 }
