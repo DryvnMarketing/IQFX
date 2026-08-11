@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-11T09:32:02.882573+00:00",
+ "generatedAt": "2026-08-11T10:02:02.913035+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 4.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-11T09:27:22.678Z]   WhatsApp API status 200",
+   "logAgeMin": 2.8,
+   "stateAgeMin": 1.0,
+   "heartbeatMin": 1.0,
+   "lastLog": "[2026-08-11T09:59:17.191Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "equity": 563.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.41,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1624.615
+    "valuePerPointPerLot": 1624.591
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 90.5,
+   "stateAgeMin": 120.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-11 09:31:33Z] no new H4 bar (last 08-11 04:00Z), pos=1",
+   "lastLog": "[2026-08-11 10:01:33Z] no new H4 bar (last 08-11 04:00Z), pos=1",
    "account": {
-    "equity": 1063.8,
+    "equity": 1061.96,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 89.1,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 119.1,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-11 08:02:56Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 1061.68,
+    "equity": 1062.38,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "1.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/11 11:32:02",
-   "nextRun": "2026/08/11 12:02:00",
+   "lastRun": "2026/08/11 12:02:02",
+   "nextRun": "2026/08/11 12:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,7 +234,7 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.73,
+    "amount": 100.72,
     "pct": 17.86,
     "skipped": true
    },
