@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-12T08:32:07.614335+00:00",
+ "generatedAt": "2026-08-12T09:02:07.051996+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -565,7 +565,7 @@
   ]
  ],
  "account": {
-  "equity": 1068.16,
+  "equity": 1068.47,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -577,9 +577,9 @@
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 5,
-   "net": 84.94,
-   "wins": 5
+   "closed": 4,
+   "net": 66.94,
+   "wins": 4
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0
