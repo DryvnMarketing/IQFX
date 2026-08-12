@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-12T11:02:06.467349+00:00",
+ "generatedAt": "2026-08-12T11:32:07.805401+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -554,13 +554,15 @@
    "risk_pts": 7.6,
    "in_zone": false,
    "decision": "PLACED BUY 0.06 XAUUSD LIMIT@4404.60 SL 4397.00 TP 4409.10 | 0.06 lots = 45.60 USD = 4.27% of equity",
-   "status": "PLACED",
+   "status": "NO_FILL",
    "lots": 0.06,
    "sizing": "0.06 lots = 45.60 USD = 4.27% of equity",
    "order_type": "LIMIT",
    "order_ticket": 3074814125,
    "placed_epoch": 1786525574,
-   "ts": "2026-08-12T09:06:14.809912+00:00"
+   "ts": "2026-08-12T09:06:14.809912+00:00",
+   "outcome": "NO_FILL",
+   "note": "order never produced an entry deal (limit not filled / cancelled)"
   }
  ],
  "seenSignals": 276,
@@ -568,9 +570,9 @@
  "halted": false,
  "stats": {
   "signals": 20,
-  "taken": 14,
+  "taken": 13,
   "skipped": 2,
-  "open": 1,
+  "open": 0,
   "closed": 13,
   "wins": 12,
   "winRate": 92.3,
@@ -589,7 +591,7 @@
   ]
  ],
  "account": {
-  "equity": 1076.49,
+  "equity": 1075.99,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -597,7 +599,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 2,
+  "tickAgeSec": 0,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
