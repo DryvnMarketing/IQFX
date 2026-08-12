@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-12T05:02:02.881588+00:00",
+ "generatedAt": "2026-08-12T05:32:02.942498+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 26.2,
-   "stateAgeMin": 0.9,
-   "heartbeatMin": 0.9,
-   "lastLog": "[2026-08-12T04:35:51.567Z]   WhatsApp API status 200",
+   "logAgeMin": 25.9,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-12T05:06:09.159Z] heartbeat: tick 73, Wed 6:06 UK, trades 0/2, open=none",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.44,
+    "spread": 0.45,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1616.982
+    "valuePerPointPerLot": 1615.896
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 15692,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 60.5,
+   "stateAgeMin": 90.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-12 05:01:35Z] no new H4 bar (last 08-12 00:00Z), pos=1",
+   "lastLog": "[2026-08-12 05:31:35Z] no new H4 bar (last 08-12 00:00Z), pos=1",
    "account": {
-    "equity": 1068.39,
+    "equity": 1067.51,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 15884,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-12 05:00:17Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-12 05:30:01Z] another follower is already running (pid 15884) \u2014 exiting",
    "account": {
-    "equity": 1068.39,
+    "equity": 1067.51,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.9 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5565.99% of equity at a typical stop, and up to 11660.15% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5562.26% of equity at a typical stop, and up to 11652.32% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -170,8 +170,8 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/08/11 07:30:00",
-   "nextRun": "2026/08/12 07:30:00",
+   "lastRun": "2026/08/12 07:30:00",
+   "nextRun": "2026/08/13 07:30:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/12 07:02:02",
-   "nextRun": "2026/08/12 07:32:00",
+   "lastRun": "2026/08/12 07:32:02",
+   "nextRun": "2026/08/12 08:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 3.98,
   "minLot": 0.01,
-  "perPoint": 16.17,
+  "perPoint": 16.16,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.25,
-    "pct": 2518.92,
+    "amount": 100.19,
+    "pct": 2517.22,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.53,
-    "pct": 5565.99,
+    "amount": 221.38,
+    "pct": 5562.26,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 464.07,
-    "pct": 11660.15,
+    "amount": 463.76,
+    "pct": 11652.32,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7384.0
+  "equityForTruePct": 7379.0
  }
 }
