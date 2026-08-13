@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-13T10:02:08.102171+00:00",
+ "generatedAt": "2026-08-13T10:12:58.732009+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -630,7 +630,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 2,
+  "tickAgeSec": 1,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
@@ -663,12 +663,17 @@
   "measuredSLshare": 27.8,
   "control": {
    "ran": "2026-08-13",
-   "hisExp": 0.201,
-   "randomExp": 0.289,
-   "mechExp": 0.317,
-   "causalExp": -0.017,
-   "verdict": "no measurable edge over random entries",
-   "note": "a 4.5:7.05 zone wins ~83% of the time by chance and still returns 0.000R - the high win rate is the geometry, not skill"
+   "estimate": 0.1,
+   "detectionFloor": 0.148,
+   "arms": "23 of 24",
+   "signalsToResolve": 225,
+   "verdict": "small, positive, and unresolved at this sample size",
+   "note": "best estimate ~+0.10R gross, below the +0.148R that n=141 can detect - so treat it as unproven either way, not as zero",
+   "netByVenue": {
+    "exnessDemo": 0.08,
+    "rcgLive": -0.062
+   },
+   "management": "GKO's taught two-leg exit (half TP1, stop to BE, runner to TP2) scored WORSE than taking TP1 in full in all 12 configurations - the BE stop scratches the runner"
   },
   "claimedWin": 85.3,
   "claimedSLshare": 14.7,
