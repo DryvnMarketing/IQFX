@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-13T14:32:08.271339+00:00",
+ "generatedAt": "2026-08-13T15:02:08.864883+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -596,7 +596,7 @@
    "closed_at": "2026-08-13T07:51:06+00:00"
   }
  ],
- "seenSignals": 291,
+ "seenSignals": 294,
  "dayTrades": 1,
  "halted": false,
  "stats": {
@@ -630,7 +630,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 2,
+  "tickAgeSec": 1,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
