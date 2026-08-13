@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-13T13:02:02.163283+00:00",
+ "generatedAt": "2026-08-13T13:32:02.045551+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 16.4,
-   "stateAgeMin": 0.9,
-   "heartbeatMin": 0.9,
-   "lastLog": "[2026-08-13T12:45:43.218Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 6.8,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-13T13:25:14.271Z] headline throttled: US Dollar: Yield support erodes on weaker inflation \u2013 DBS",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.6,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1611.35
+    "valuePerPointPerLot": 1613.457
    },
    "stale": false
   },
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 15692,
+   "pid": 13764,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 60.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-13 13:01:43Z] no new H4 bar (last 08-13 08:00Z), pos=0",
+   "logAgeMin": 2.5,
+   "stateAgeMin": 90.4,
+   "heartbeatMin": 2.5,
+   "lastLog": "[2026-08-13 13:29:33Z] no new H4 bar (last 08-13 08:00Z), pos=0",
    "account": {
     "equity": 1140.13,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 15884,
+   "pid": 14852,
    "running": true,
-   "logAgeMin": 310.6,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-13 07:51:30Z]   whatsapp -> 200 (attempt 1)",
+   "logAgeMin": 12.7,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-13 13:19:26Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 1140.13,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.9 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5546.61% of equity at a typical stop, and up to 11619.53% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5553.86% of equity at a typical stop, and up to 11634.73% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/13 15:02:01",
-   "nextRun": "2026/08/13 15:32:00",
+   "lastRun": "2026/08/13 15:32:01",
+   "nextRun": "2026/08/13 16:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 3.98,
   "minLot": 0.01,
-  "perPoint": 16.11,
+  "perPoint": 16.13,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 99.9,
-    "pct": 2510.14,
+    "amount": 100.03,
+    "pct": 2513.43,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 220.75,
-    "pct": 5546.61,
+    "amount": 221.04,
+    "pct": 5553.86,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 462.46,
-    "pct": 11619.53,
+    "amount": 463.06,
+    "pct": 11634.73,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7358.0
+  "equityForTruePct": 7368.0
  }
 }
