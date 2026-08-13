@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-13T01:32:06.694233+00:00",
+ "generatedAt": "2026-08-13T02:02:07.335384+00:00",
  "benchmark": {
   "dev": 0.328,
   "holdout": 0.164,
@@ -565,7 +565,7 @@
    "note": "order never produced an entry deal (limit not filled / cancelled)"
   }
  ],
- "seenSignals": 280,
+ "seenSignals": 281,
  "dayTrades": 1,
  "halted": false,
  "stats": {
