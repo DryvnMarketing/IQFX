@@ -1108,18 +1108,35 @@
     const r = g.research || null;                       // triggered-only research stats
     const trig = r && r.triggered;
     const gap = (r && r.claimedWin != null && trig) ? (r.claimedWin - trig.win) : null;
-    const expR = (n) => `${n >= 0 ? '+' : ''}${Number(n).toFixed(3)}R`;   // 3dp so +0.228R ≠ +0.164R
+    // 3dp so +0.228R ≠ +0.164R. Null-safe and sign-correct: benchmarks are now derived
+    // from the rescored CSV rather than frozen constants, so they can be absent OR
+    // negative — the old template hardcoded a leading "+" and an "up" colour class.
+    const expR = (n) => (n == null || !isFinite(Number(n))) ? '—'
+      : `${Number(n) >= 0 ? '+' : ''}${Number(n).toFixed(3)}R`;
+    const CLS = (n) => (n == null || !isFinite(Number(n))) ? 'muted'
+      : (Number(n) > 0 ? 'up' : Number(n) < 0 ? 'down' : 'muted');
     $('gkoView').innerHTML = `
       <div class="hw-head"><h2>GKO follower — triggered-trade record</h2>
         <div class="hw-verdict ${g.halted ? 'down' : 'up'}">${g.halted ? '🛑 HALTED' : '▶️ running'}</div></div>
 
+      ${r && r.control ? `
+      <div class="hw-warnbox hw-bad">🛑 <b>No measurable edge — disproven ${r.control.ran}.</b>
+        This tab used to headline <b>+0.228R</b>. That came from a fill model that credited ladder rungs which filled
+        <i>after</i> the trade had already banked its target — a lookahead. Scored honestly the same signals give
+        <b>${expR(r.control.causalExp)}</b>, and run against controls, <b>random entries score just as well</b>
+        (his ${expR(r.control.hisExp)} vs random ${expR(r.control.randomExp)} vs a mechanical limit at spot∓2.6
+        ${expR(r.control.mechExp)} — all under the same broken model, all indistinguishable).
+        <br><b>Read the win rate below with this in mind:</b> ${r.control.note}.
+        Demo forward-test only — this is not a strategy to fund.</div>` : ''}
+
       ${trig ? `
       <p class="hw-note">Success rate below counts <b>only trades that actually triggered</b> — the ${trig.n} signals whose
-        entry limit filled. The <b>${r.noFill}</b> never-filled orders (of ${r.totalScraped} scraped) are excluded: no fill = no
+        entry limit filled. The <b>${r.noFill}</b> never-filled orders${r.rejected ? ` and <b>${r.rejected}</b> with
+        impossible posted levels` : ''} (of ${r.totalScraped} scraped) are excluded: no fill = no
         trade = no P&L. This is the realized record of taken trades.</p>
       <div class="hw-grid">
-        <div class="hw-stat hw-hi"><span>TRIGGERED WIN RATE</span><b>${trig.win}%</b></div>
         <div class="hw-stat"><span>EXPECTANCY · all filled</span><b>${expR(trig.exp)}</b></div>
+        <div class="hw-stat"><span>WIN RATE <i>(free — see above)</i></span><b>${trig.win}%</b></div>
         <div class="hw-stat"><span>HOLDOUT · honest</span><b>${expR(r.holdout.exp)} · ${r.holdout.win}%</b></div>
         <div class="hw-stat"><span>FILLED TRADES</span><b>${trig.n}</b></div>
       </div>` : `<div class="hw-warnbox">Triggered-trade research stats unavailable — publisher couldn't read the scored file.</div>`}
@@ -1129,7 +1146,10 @@
         He tells followers to move stop to <b>breakeven</b> once in profit and bank early ("set BE to hold", "close all if satisfied").
         ${r.beManaged ? `<b>${r.beManaged.greenFirstPct}%</b> of the trades that hit SL in this <i>set-and-forget</i> model had first gone green —
         his BE rule scratches those at zero instead of a full loss. Modelled with that rule: <b>~${r.beManaged.nonLoss}% non-loss</b> (≈ his claimed rate),
-        expectancy <b>${expR(r.beManaged.exp)}</b>. The bigger real-world drag is <b>stop-slippage</b> — ~⅓ of losses spike well past the stop on gold's violent bars, which can cut the edge toward breakeven. ` : ''}
+        expectancy <b>${expR(r.beManaged.exp)}</b>.
+        ${r.beManaged.voidAsEvidence ? `<i>That figure explains his claimed <b>rate</b> and nothing more — it is a best-case rule applied
+        after the fact to a base that measures ~0R, and the control test found no edge to manage. Do not read it as a target.</i> ` : ''}
+        The bigger real-world drag is <b>stop-slippage</b> — ~⅓ of losses spike well past the stop on gold's violent bars, which can cut the edge toward breakeven. ` : ''}
         The <b>${trig.win}%</b> above is what a fire-and-forget follower gets from the posted TP/SL alone; his own wins are real but need
         following his in-trade management. That gap is the whole point of the live forward-test.</div>` : ''}
 
@@ -1140,9 +1160,9 @@
       <h3>What it's measured against</h3>
       <table class="hw-table">
         <tr><th>Sample</th><th>Expectancy</th><th>Win</th><th>Meaning</th></tr>
-        <tr><td>Dev · in-sample${r?.dev ? ` (${r.dev.n})` : ''}</td><td class="up">+${b.dev}R</td><td>${r?.dev ? r.dev.win + '%' : '—'}</td><td class="muted">where the model was built — expect regression</td></tr>
-        <tr><td><b>Holdout · out-of-sample${r?.holdout ? ` (${r.holdout.n})` : ''}</b></td><td class="up">+${b.holdout}R</td><td>${r?.holdout ? r.holdout.win + '%' : '—'}</td><td class="muted">the honest forward number</td></tr>
-        <tr><td>Your gold agent</td><td class="up">+${b.goldAgent}R</td><td class="muted">—</td><td class="muted">validated 662 days</td></tr>
+        <tr><td>Dev · in-sample${r?.dev ? ` (${r.dev.n})` : ''}</td><td class="${CLS(b.dev)}">${expR(b.dev)}</td><td>${r?.dev ? r.dev.win + '%' : '—'}</td><td class="muted">where the model was built — expect regression</td></tr>
+        <tr><td><b>Holdout · out-of-sample${r?.holdout ? ` (${r.holdout.n})` : ''}</b></td><td class="${CLS(b.holdout)}">${expR(b.holdout)}</td><td>${r?.holdout ? r.holdout.win + '%' : '—'}</td><td class="muted">the honest forward number</td></tr>
+        <tr><td>Your gold agent</td><td class="${CLS(b.goldAgent)}">${expR(b.goldAgent)}</td><td class="muted">—</td><td class="muted">7.5 yrs / 1,956 days — 95% CI includes zero</td></tr>
       </table>
       <p class="hw-note">⚠️ ${b.note} — expect the live result to converge toward the <b>holdout</b>, not the dev number.</p>
 

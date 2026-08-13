@@ -260,6 +260,10 @@ body {
 }
 .hw-warnbox b, .hw-warn b, .hw-stale b { color: #ffd98a; }
 .hw-stale { background: rgba(239,83,80,.12); border-color: rgba(239,83,80,.45); border-left-color: var(--sl); color: #ff9b98; }
+/* hw-bad: a finding that has been DISPROVEN, not merely caveated. Same red as
+   hw-stale so it cannot be skimmed as one of the amber "be careful" notes. */
+.hw-warnbox.hw-bad { background: rgba(239,83,80,.13); border-color: rgba(239,83,80,.5); border-left-color: var(--sl); color: #ff9b98; }
+.hw-warnbox.hw-bad b { color: #ffb3b0; }
 .hw-cal { list-style: none; padding: 0; margin: 10px 0; }
 .hw-cal li { padding: 5px 0; border-bottom: 1px solid rgba(29,38,53,.55); font-size: 12.5px; }
 .hw-cal b { color: var(--gold-2); font-variant-numeric: tabular-nums; margin-right: 6px; }

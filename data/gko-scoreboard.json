@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-08-13T09:02:08.621166+00:00",
+ "generatedAt": "2026-08-13T09:38:56.700063+00:00",
  "benchmark": {
-  "dev": 0.328,
-  "holdout": 0.164,
-  "goldAgent": 0.168,
-  "note": "holdout 95% CI [-0.050,+0.374] crosses zero; not validated"
+  "dev": 0.096,
+  "holdout": -0.045,
+  "goldAgent": 0.075,
+  "note": "rescored 2026-08-13 after the ladder-fill lookahead was fixed; random entries score the same, so treat these as ~zero, not as a target"
  },
  "journal": [
   {
@@ -596,7 +596,7 @@
    "closed_at": "2026-08-13T07:51:06+00:00"
   }
  ],
- "seenSignals": 289,
+ "seenSignals": 290,
  "dayTrades": 1,
  "halted": false,
  "stats": {
@@ -643,33 +643,44 @@
  },
  "research": {
   "triggered": {
-   "n": 136,
-   "win": 72.1,
-   "exp": 0.228
+   "n": 133,
+   "win": 72.2,
+   "exp": 0.01
   },
   "dev": {
-   "n": 53,
-   "win": 84.9,
-   "exp": 0.328
+   "n": 52,
+   "win": 84.6,
+   "exp": 0.096
   },
   "holdout": {
-   "n": 83,
-   "win": 63.9,
-   "exp": 0.164
+   "n": 81,
+   "win": 64.2,
+   "exp": -0.045
   },
   "noFill": 8,
+  "rejected": 3,
   "totalScraped": 144,
-  "measuredSLshare": 27.9,
+  "measuredSLshare": 27.8,
+  "control": {
+   "ran": "2026-08-13",
+   "hisExp": 0.201,
+   "randomExp": 0.289,
+   "mechExp": 0.317,
+   "causalExp": -0.017,
+   "verdict": "no measurable edge over random entries",
+   "note": "a 4.5:7.05 zone wins ~83% of the time by chance and still returns 0.000R - the high win rate is the geometry, not skill"
+  },
   "claimedWin": 85.3,
   "claimedSLshare": 14.7,
   "claimedN": 184,
   "beManaged": {
    "beTrigger": 0.5,
-   "greenFirstPct": 61,
-   "nonLoss": 83.1,
-   "slShare": 16.9,
-   "exp": 0.346,
-   "idealised": true
+   "greenFirstPct": 57,
+   "nonLoss": 82.7,
+   "slShare": 17.3,
+   "exp": 0.123,
+   "idealised": true,
+   "voidAsEvidence": true
   }
  }
 }
