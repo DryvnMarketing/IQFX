@@ -1120,14 +1120,19 @@
         <div class="hw-verdict ${g.halted ? 'down' : 'up'}">${g.halted ? '🛑 HALTED' : '▶️ running'}</div></div>
 
       ${r && r.control ? `
-      <div class="hw-warnbox hw-bad">🛑 <b>No measurable edge — disproven ${r.control.ran}.</b>
-        This tab used to headline <b>+0.228R</b>. That came from a fill model that credited ladder rungs which filled
-        <i>after</i> the trade had already banked its target — a lookahead. Scored honestly the same signals give
-        <b>${expR(r.control.causalExp)}</b>, and run against controls, <b>random entries score just as well</b>
-        (his ${expR(r.control.hisExp)} vs random ${expR(r.control.randomExp)} vs a mechanical limit at spot∓2.6
-        ${expR(r.control.mechExp)} — all under the same broken model, all indistinguishable).
-        <br><b>Read the win rate below with this in mind:</b> ${r.control.note}.
-        Demo forward-test only — this is not a strategy to fund.</div>` : ''}
+      <div class="hw-warnbox">⚖️ <b>Unresolved, small and positive — rescored ${r.control.ran}.</b>
+        This tab used to headline <b>+0.228R</b>. That was a lookahead: the fill model credited ladder rungs which
+        filled <i>after</i> the trade had already banked its target. But the correction first overshot to "no edge",
+        and that was wrong too — those fill models used the near edge with an 8–24h window, and
+        <b>nobody trades that</b> (the follower uses a limit at the zone <i>mid</i> with an 8-minute deadline).
+        Rescored as actually traded, his signals beat a random-time control in <b>${r.control.arms}</b> configurations.
+        <br><b>Best estimate ~${expR(r.control.estimate)} gross</b>, which sits <i>below</i> the
+        ${expR(r.control.detectionFloor)} this sample size can resolve — so it is unproven either way, not zero.
+        Settling it needs ~${r.control.signalsToResolve} signals.
+        ${r.control.netByVenue ? `<br><b>Venue decides it:</b> after spread that nets
+        <b>${expR(r.control.netByVenue.exnessDemo)}</b> on the Exness demo but
+        <b>${expR(r.control.netByVenue.rcgLive)}</b> at RCG live — keep it where the spread is tight.` : ''}
+        ${r.control.management ? `<br><b>Management:</b> ${r.control.management}.` : ''}</div>` : ''}
 
       ${trig ? `
       <p class="hw-note">Success rate below counts <b>only trades that actually triggered</b> — the ${trig.n} signals whose
@@ -1136,7 +1141,7 @@
         trade = no P&L. This is the realized record of taken trades.</p>
       <div class="hw-grid">
         <div class="hw-stat"><span>EXPECTANCY · all filled</span><b>${expR(trig.exp)}</b></div>
-        <div class="hw-stat"><span>WIN RATE <i>(free — see above)</i></span><b>${trig.win}%</b></div>
+        <div class="hw-stat"><span>WIN RATE <i>(read with the note above)</i></span><b>${trig.win}%</b></div>
         <div class="hw-stat"><span>HOLDOUT · honest</span><b>${expR(r.holdout.exp)} · ${r.holdout.win}%</b></div>
         <div class="hw-stat"><span>FILLED TRADES</span><b>${trig.n}</b></div>
       </div>` : `<div class="hw-warnbox">Triggered-trade research stats unavailable — publisher couldn't read the scored file.</div>`}
