@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-15T22:02:03.329455+00:00",
+ "generatedAt": "2026-08-15T22:32:02.793585+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 901.1,
-   "stateAgeMin": 1385.5,
-   "heartbeatMin": 901.1,
+   "logAgeMin": 931.1,
+   "stateAgeMin": 1415.4,
+   "heartbeatMin": 931.1,
    "lastLog": "[2026-08-15T07:00:58.984Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 3.98,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 79928,
-    "serverOffsetHours": -22,
+    "tickAgeSec": 81727,
+    "serverOffsetHours": -23,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 13764,
    "running": true,
    "logAgeMin": 2.3,
-   "stateAgeMin": 117.3,
+   "stateAgeMin": 147.3,
    "heartbeatMin": 2.3,
-   "lastLog": "[2026-08-15 21:59:48Z] no new H4 bar (last 08-15 16:00Z), pos=0",
+   "lastLog": "[2026-08-15 22:29:48Z] no new H4 bar (last 08-15 16:00Z), pos=0",
    "account": {
     "equity": 1162.02,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14852,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-15 22:00:13Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 1162.02,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 90249,
-    "serverOffsetHours": -25,
+    "tickAgeSec": 92048,
+    "serverOffsetHours": -26,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "901.1 min",
+   "detail": "931.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -177,8 +177,8 @@
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/08/15 00:05:02",
-   "nextRun": "2026/08/16 00:05:00",
+   "lastRun": "2026/08/16 00:05:02",
+   "nextRun": "2026/08/17 00:05:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/16 00:02:01",
-   "nextRun": "2026/08/16 00:32:00",
+   "lastRun": "2026/08/16 00:32:01",
+   "nextRun": "2026/08/16 01:02:00",
    "result": 267009,
    "ok": true
   },
