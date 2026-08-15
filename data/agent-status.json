@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-15T21:32:02.826472+00:00",
+ "generatedAt": "2026-08-15T22:02:03.329455+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 871.1,
-   "stateAgeMin": 1355.4,
-   "heartbeatMin": 871.1,
+   "logAgeMin": 901.1,
+   "stateAgeMin": 1385.5,
+   "heartbeatMin": 901.1,
    "lastLog": "[2026-08-15T07:00:58.984Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 3.98,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 78127,
+    "tickAgeSec": 79928,
     "serverOffsetHours": -22,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 13764,
    "running": true,
    "logAgeMin": 2.3,
-   "stateAgeMin": 87.3,
+   "stateAgeMin": 117.3,
    "heartbeatMin": 2.3,
-   "lastLog": "[2026-08-15 21:29:48Z] no new H4 bar (last 08-15 16:00Z), pos=0",
+   "lastLog": "[2026-08-15 21:59:48Z] no new H4 bar (last 08-15 16:00Z), pos=0",
    "account": {
     "equity": 1162.02,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 14852,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-15 21:00:04Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-15 22:00:13Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 1162.02,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 88448,
+    "tickAgeSec": 90249,
     "serverOffsetHours": -25,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "871.1 min",
+   "detail": "901.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/15 23:32:01",
-   "nextRun": "2026/08/16 00:02:00",
+   "lastRun": "2026/08/16 00:02:01",
+   "nextRun": "2026/08/16 00:32:00",
    "result": 267009,
    "ok": true
   },
