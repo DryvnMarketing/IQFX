@@ -1,270 +1,188 @@
 {
-  "generatedAt": "2026-07-26T19:47:46.962Z",
+  "generatedAt": "2026-08-15T07:00:30.636Z",
   "weekOf": {
-    "monday": "2026-07-20",
-    "friday": "2026-07-24"
+    "monday": "2026-08-10",
+    "friday": "2026-08-14"
   },
   "week": {
-    "open": 3994.8,
-    "close": 4052.845,
-    "high": 4166.13,
-    "low": 3982.63,
-    "range": 183.5,
-    "net": 58.04499999999962,
-    "netPct": 1.453013918093512,
-    "closePosPct": 38.264305177111545,
+    "open": 4341.605,
+    "close": 4376.82,
+    "high": 4449.83,
+    "low": 4311.04,
+    "range": 138.78999999999996,
+    "net": 35.215000000000146,
+    "netPct": 0.811105570405418,
+    "closePosPct": 47.39534548598585,
     "direction": "up"
   },
   "days": [
     {
-      "date": "2026-07-20",
+      "date": "2026-08-10",
       "dow": "Mon",
       "traded": true,
-      "open": 3994.8,
-      "close": 4000.555,
-      "high": 4040.815,
-      "low": 3982.63,
-      "range": 58.184999999999945,
-      "net": 5.754999999999654
+      "open": 4341.605,
+      "close": 4399.895,
+      "high": 4401.065,
+      "low": 4313.43,
+      "range": 87.63499999999931,
+      "net": 58.29000000000087
     },
     {
-      "date": "2026-07-21",
+      "date": "2026-08-11",
       "dow": "Tue",
       "traded": true,
-      "open": 4000.67,
-      "close": 4080.59,
-      "high": 4087.135,
-      "low": 4000.305,
-      "range": 86.83000000000038,
-      "net": 79.92000000000007
+      "open": 4399.935,
+      "close": 4369.2,
+      "high": 4435.245,
+      "low": 4356.7,
+      "range": 78.54500000000007,
+      "net": -30.735000000000582
     },
     {
-      "date": "2026-07-22",
+      "date": "2026-08-12",
       "dow": "Wed",
       "traded": true,
-      "open": 4080.595,
-      "close": 4121.525,
-      "high": 4166.13,
-      "low": 4076.755,
-      "range": 89.375,
-      "net": 40.929999999999836
+      "open": 4369.19,
+      "close": 4401.835,
+      "high": 4441.315,
+      "low": 4362.655,
+      "range": 78.65999999999985,
+      "net": 32.64500000000044
     },
     {
-      "date": "2026-07-23",
+      "date": "2026-08-13",
       "dow": "Thu",
       "traded": true,
-      "open": 4121.625,
-      "close": 4049.785,
-      "high": 4141.275,
-      "low": 4040.185,
-      "range": 101.08999999999969,
-      "net": -71.84000000000015
+      "open": 4401.925,
+      "close": 4354.91,
+      "high": 4449.83,
+      "low": 4343.65,
+      "range": 106.18000000000029,
+      "net": -47.01500000000033
     },
     {
-      "date": "2026-07-24",
+      "date": "2026-08-14",
       "dow": "Fri",
       "traded": true,
-      "open": 4049.78,
-      "close": 4052.845,
-      "high": 4082.16,
-      "low": 4022.06,
-      "range": 60.09999999999991,
-      "net": 3.0649999999996
+      "open": 4354.92,
+      "close": 4376.82,
+      "high": 4397.06,
+      "low": 4311.04,
+      "range": 86.02000000000044,
+      "net": 21.899999999999636
     }
   ],
   "biggestDay": {
     "dow": "Thu",
-    "range": 101.08999999999969
+    "range": 106.18000000000029
   },
   "quietestDay": {
-    "dow": "Mon",
-    "range": 58.184999999999945
+    "dow": "Tue",
+    "range": 78.54500000000007
   },
   "untested": {
     "above": [
       {
         "type": "high",
-        "price": 4082.16,
-        "time": 1784905200,
-        "date": "2026-07-24",
+        "price": 4397.06,
+        "time": 1786712400,
+        "date": "2026-08-14",
         "dow": "Fri",
         "thisWeek": true,
-        "dist": 29.315000000000055
+        "dist": 20.24000000000069
       },
       {
         "type": "high",
-        "price": 4141.275,
-        "time": 1784768400,
-        "date": "2026-07-23",
+        "price": 4402.215,
+        "time": 1786626000,
+        "date": "2026-08-13",
         "dow": "Thu",
         "thisWeek": true,
-        "dist": 88.42999999999984
+        "dist": 25.395000000000437
       },
       {
         "type": "high",
-        "price": 4166.13,
-        "time": 1784732400,
-        "date": "2026-07-22",
-        "dow": "Wed",
+        "price": 4449.83,
+        "time": 1786579200,
+        "date": "2026-08-13",
+        "dow": "Thu",
         "thisWeek": true,
-        "dist": 113.28500000000031
+        "dist": 73.01000000000022
       }
     ],
     "below": [
       {
         "type": "low",
-        "price": 4044.81,
-        "time": 1784898000,
-        "date": "2026-07-24",
+        "price": 4311.04,
+        "time": 1786683600,
+        "date": "2026-08-14",
         "dow": "Fri",
         "thisWeek": true,
-        "dist": 8.034999999999854
+        "dist": 65.77999999999975
       },
       {
         "type": "low",
-        "price": 4022.06,
-        "time": 1784869200,
-        "date": "2026-07-24",
-        "dow": "Fri",
-        "thisWeek": true,
-        "dist": 30.784999999999854
-      },
-      {
-        "type": "low",
-        "price": 3999.915,
-        "time": 1784584800,
-        "date": "2026-07-20",
-        "dow": "Mon",
-        "thisWeek": true,
-        "dist": 52.929999999999836
-      },
-      {
-        "type": "low",
-        "price": 3982.63,
-        "time": 1784505600,
-        "date": "2026-07-20",
-        "dow": "Mon",
-        "thisWeek": true,
-        "dist": 70.21499999999969
-      },
-      {
-        "type": "low",
-        "price": 3959.8,
-        "time": 1784293200,
-        "date": "2026-07-17",
+        "price": 4301.015,
+        "time": 1786104000,
+        "date": "2026-08-07",
         "dow": "Fri",
         "thisWeek": false,
-        "dist": 93.04499999999962
+        "dist": 75.80499999999938
+      },
+      {
+        "type": "low",
+        "price": 4229.875,
+        "time": 1786060800,
+        "date": "2026-08-07",
+        "dow": "Fri",
+        "thisWeek": false,
+        "dist": 146.9449999999997
+      },
+      {
+        "type": "low",
+        "price": 4223.505,
+        "time": 1786032000,
+        "date": "2026-08-06",
+        "dow": "Thu",
+        "thisWeek": false,
+        "dist": 153.3149999999996
+      },
+      {
+        "type": "low",
+        "price": 4150.28,
+        "time": 1785924000,
+        "date": "2026-08-05",
+        "dow": "Wed",
+        "thisWeek": false,
+        "dist": 226.53999999999996
       }
     ]
   },
   "prior": {
-    "high": 4104.05,
-    "low": 3959.8
+    "high": 4371.84,
+    "low": 4019.24
   },
-  "typicalRange": 243.87500000000023,
+  "typicalRange": 231.72000000000025,
   "pastRangeWeeks": 12,
-  "rangeVsTypical": 75.24346488980002,
+  "rangeVsTypical": 59.89556361125488,
   "emas": {
-    "h1_50": 4065.9678058668806,
-    "h1_200": 4066.170282658797,
-    "d_20": 4086.134137043621,
-    "d_50": 4222.58807031871
+    "h1_50": 4369.885998359667,
+    "h1_200": 4292.916046137206,
+    "d_20": 4226.8126815280475,
+    "d_50": 4227.939862571657
   },
   "round50": [
-    4100,
-    4050
+    4400,
+    4350
   ],
   "trend": {
-    "vsD20": -33.289137043621395,
-    "vsD50": -169.74307031871058,
-    "label": "below both daily EMAs — downtrend structure"
+    "vsD20": 150.0073184719522,
+    "vsD50": 148.880137428343,
+    "label": "above both daily EMAs — uptrend structure"
   },
   "calendar": {
-    "published": true,
-    "events": [
-      {
-        "title": "Federal Funds Rate",
-        "timeMs": 1785348000000,
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "date": "2026-07-29",
-        "dow": "Wed",
-        "uk": "19:00"
-      },
-      {
-        "title": "FOMC Statement",
-        "timeMs": 1785348000000,
-        "forecast": "",
-        "previous": "",
-        "date": "2026-07-29",
-        "dow": "Wed",
-        "uk": "19:00"
-      },
-      {
-        "title": "FOMC Press Conference",
-        "timeMs": 1785349800000,
-        "forecast": "",
-        "previous": "",
-        "date": "2026-07-29",
-        "dow": "Wed",
-        "uk": "19:30"
-      },
-      {
-        "title": "BOE Monetary Policy Report",
-        "timeMs": 1785409200000,
-        "forecast": "",
-        "previous": "",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "12:00"
-      },
-      {
-        "title": "Monetary Policy Summary",
-        "timeMs": 1785409200000,
-        "forecast": "",
-        "previous": "",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "12:00"
-      },
-      {
-        "title": "MPC Official Bank Rate Votes",
-        "timeMs": 1785409200000,
-        "forecast": "2-0-7",
-        "previous": "2-0-7",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "12:00"
-      },
-      {
-        "title": "Official Bank Rate",
-        "timeMs": 1785409200000,
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "12:00"
-      },
-      {
-        "title": "Advance GDP q/q",
-        "timeMs": 1785414600000,
-        "forecast": "2.3%",
-        "previous": "2.0%",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "13:30"
-      },
-      {
-        "title": "Core PCE Price Index m/m",
-        "timeMs": 1785414600000,
-        "forecast": "0.1%",
-        "previous": "0.3%",
-        "date": "2026-07-30",
-        "dow": "Thu",
-        "uk": "13:30"
-      }
-    ]
+    "published": false,
+    "events": []
   },
   "accounts": [
     {
@@ -276,56 +194,25 @@
         "demo": true,
         "currency": "USD",
         "days": 7,
-        "legs_opened": 3,
-        "signals_opened": 3,
-        "closed": [
-          {
-            "time": 1784644188,
-            "symbol": "XAUUSD",
-            "leg": "?",
-            "reason": "sl",
-            "price": 4069.246,
-            "profit": -17.21,
-            "volume": 0.01,
-            "position_id": 2986879521
-          },
-          {
-            "time": 1784644188,
-            "symbol": "XAUUSD",
-            "leg": "?",
-            "reason": "sl",
-            "price": 4069.246,
-            "profit": -17.21,
-            "volume": 0.01,
-            "position_id": 2986879500
-          },
-          {
-            "time": 1784749547,
-            "symbol": "XAUUSD",
-            "leg": "?",
-            "reason": "manual/other",
-            "price": 4134.227,
-            "profit": 8.45,
-            "volume": 0.01,
-            "position_id": 2991688880
-          }
-        ],
+        "legs_opened": 0,
+        "signals_opened": 0,
+        "closed": [],
         "summary": {
-          "legs_closed": 3,
-          "wins": 1,
-          "losses": 2,
-          "net_profit": -25.97,
-          "gross_win": 8.45,
-          "gross_loss": -34.42
+          "legs_closed": 0,
+          "wins": 0,
+          "losses": 0,
+          "net_profit": 0,
+          "gross_win": 0,
+          "gross_loss": 0
         }
       }
     },
     {
       "key": "live",
-      "label": "RCG live (cent)",
+      "label": "RCG live (ZAR)",
       "data": {
         "success": true,
-        "label": "RCG live (cent)",
+        "label": "RCG live (ZAR)",
         "demo": false,
         "currency": "ZAR",
         "days": 7,
