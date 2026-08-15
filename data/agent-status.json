@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-15T14:02:03.537569+00:00",
+ "generatedAt": "2026-08-15T14:32:03.298720+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 421.1,
-   "stateAgeMin": 905.5,
-   "heartbeatMin": 421.1,
+   "logAgeMin": 451.1,
+   "stateAgeMin": 935.5,
+   "heartbeatMin": 451.1,
    "lastLog": "[2026-08-15T07:00:58.984Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 3.98,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 51129,
-    "serverOffsetHours": -14,
+    "tickAgeSec": 52929,
+    "serverOffsetHours": -15,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 13764,
    "running": true,
    "logAgeMin": 2.4,
-   "stateAgeMin": 117.4,
+   "stateAgeMin": 147.4,
    "heartbeatMin": 2.4,
-   "lastLog": "[2026-08-15 13:59:45Z] no new H4 bar (last 08-15 08:00Z), pos=0",
+   "lastLog": "[2026-08-15 14:29:45Z] no new H4 bar (last 08-15 08:00Z), pos=0",
    "account": {
     "equity": 1162.02,
     "currency": "USD",
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 14852,
    "running": true,
-   "logAgeMin": 1.7,
+   "logAgeMin": 31.7,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-08-15 14:00:29Z] idle \u2014 weekend (Sat)",
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 61450,
-    "serverOffsetHours": -17,
+    "tickAgeSec": 63249,
+    "serverOffsetHours": -18,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "421.1 min",
+   "detail": "451.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/15 16:02:01",
-   "nextRun": "2026/08/15 16:32:00",
+   "lastRun": "2026/08/15 16:32:01",
+   "nextRun": "2026/08/15 17:02:00",
    "result": 267009,
    "ok": true
   },
