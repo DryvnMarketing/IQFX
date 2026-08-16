@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-16T19:32:03.438549+00:00",
+ "generatedAt": "2026-08-16T20:02:03.021223+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 61.2,
-   "stateAgeMin": 2675.5,
-   "heartbeatMin": 61.2,
-   "lastLog": "[2026-08-16T18:30:51.621Z]   WhatsApp API status 200 (attempt 3)",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 2705.5,
+   "heartbeatMin": 2.0,
+   "lastLog": "[2026-08-16T20:00:08.179Z]   WhatsApp API status 200",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 157328,
+    "tickAgeSec": 159128,
     "serverOffsetHours": -44,
     "openPositions": 0,
     "week": {
@@ -37,11 +37,11 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 26496,
+   "pid": 28324,
    "running": true,
-   "logAgeMin": 767.3,
-   "stateAgeMin": 927.3,
-   "heartbeatMin": 767.3,
+   "logAgeMin": 797.3,
+   "stateAgeMin": 957.3,
+   "heartbeatMin": 797.3,
    "lastLog": "[2026-08-16 06:44:51Z] no new H4 bar (last 08-16 00:00Z), pos=0",
    "account": {
     "equity": 1162.02,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 15368,
+   "pid": 2080,
    "running": true,
-   "logAgeMin": 812.1,
-   "stateAgeMin": 765.6,
-   "heartbeatMin": 765.6,
+   "logAgeMin": 842.1,
+   "stateAgeMin": 795.6,
+   "heartbeatMin": 795.6,
    "lastLog": "[2026-08-16 06:00:01Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 1162.02,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 167649,
+    "tickAgeSec": 169449,
     "serverOffsetHours": -47,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "61.2 min",
+   "detail": "2.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -198,15 +198,15 @@
   },
   {
    "name": "XAU Weekend Gap Check",
-   "lastRun": "2026/08/09 22:00:00",
-   "nextRun": "2026/08/16 22:00:00",
+   "lastRun": "2026/08/16 22:00:00",
+   "nextRun": "2026/08/23 22:00:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/16 21:32:01",
-   "nextRun": "2026/08/16 22:02:00",
+   "lastRun": "2026/08/16 22:02:01",
+   "nextRun": "2026/08/16 22:32:00",
    "result": 267009,
    "ok": true
   },
