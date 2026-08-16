@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-16T05:02:02.976325+00:00",
+ "generatedAt": "2026-08-16T05:32:03.179807+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 1321.1,
-   "stateAgeMin": 1805.5,
-   "heartbeatMin": 1321.1,
+   "logAgeMin": 1351.1,
+   "stateAgeMin": 1835.5,
+   "heartbeatMin": 1351.1,
    "lastLog": "[2026-08-15T07:00:58.984Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 3.98,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 105128,
-    "serverOffsetHours": -29,
+    "tickAgeSec": 106928,
+    "serverOffsetHours": -30,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,11 +40,28 @@
    "pid": 13764,
    "running": true,
    "logAgeMin": 2.3,
-   "stateAgeMin": 57.3,
+   "stateAgeMin": 87.3,
    "heartbeatMin": 2.3,
-   "lastLog": "[2026-08-16 04:59:50Z] no new H4 bar (last 08-16 00:00Z), pos=0",
+   "lastLog": "[2026-08-16 05:29:50Z] no new H4 bar (last 08-16 00:00Z), pos=0",
    "account": {
-    "error": "init -6"
+    "equity": 1162.02,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "BTCUSD",
+    "login": 436786587,
+    "spread": 7.0,
+    "tickAgeSec": 1,
+    "serverOffsetHours": 0,
+    "openPositions": 0,
+    "week": {
+     "closed": 2,
+     "net": -8.1,
+     "wins": 0
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1.0
    },
    "stale": false
   },
@@ -54,12 +71,29 @@
    "live": false,
    "pid": 14852,
    "running": true,
-   "logAgeMin": 2.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 32.1,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-16 05:00:00Z] idle \u2014 weekend (Sun)",
    "account": {
-    "error": "init -6"
+    "equity": 1162.02,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 436786587,
+    "spread": 0.182,
+    "tickAgeSec": 117250,
+    "serverOffsetHours": -33,
+    "openPositions": 0,
+    "week": {
+     "closed": 3,
+     "net": 43.16,
+     "wins": 3
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 100.0
    },
    "stale": false
   }
@@ -79,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1321.1 min",
+   "detail": "1351.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -171,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/16 07:02:01",
-   "nextRun": "2026/08/16 07:32:00",
+   "lastRun": "2026/08/16 07:32:01",
+   "nextRun": "2026/08/16 08:02:00",
    "result": 267009,
    "ok": true
   },
