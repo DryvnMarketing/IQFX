@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-17T07:32:03.358890+00:00",
+ "generatedAt": "2026-08-17T08:02:03.257062+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 1.2,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-17T07:30:53.825Z] headline throttled: Japanese Yen: Intervention risks cap losses against US Dollar \u2013 OCBC",
+   "logAgeMin": 4.8,
+   "stateAgeMin": 0.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-08-17T07:57:19.514Z]   WhatsApp API status 200",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1613.858
+    "valuePerPointPerLot": 1615.406
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 3916,
    "running": true,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 211.7,
-   "heartbeatMin": 1.4,
-   "lastLog": "[2026-08-17 07:30:49Z] no new H4 bar (last 08-17 00:00Z), pos=0",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 1.2,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-08-17 08:00:53Z] bar 08-17 04:00Z close 63,453 | don20 62,446-63,583 | ema20 63,162 | atr 332 | none",
    "account": {
-    "equity": 1162.02,
+    "equity": 1128.08,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 122.1,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-17 05:30:08Z]   whatsapp -> 200 (attempt 1)",
+   "logAgeMin": 8.7,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-17 07:53:28Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 1162.02,
+    "equity": 1128.08,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -86,7 +86,7 @@
     "spread": 0.182,
     "tickAgeSec": 2,
     "serverOffsetHours": 0,
-    "openPositions": 0,
+    "openPositions": 1,
     "week": {
      "closed": 2,
      "net": 31.35,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.2 min",
+   "detail": "0.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5555.24% of equity at a typical stop, and up to 11637.62% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5560.57% of equity at a typical stop, and up to 11648.78% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/17 09:32:01",
-   "nextRun": "2026/08/17 10:02:00",
+   "lastRun": "2026/08/17 10:02:01",
+   "nextRun": "2026/08/17 10:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 3.98,
   "minLot": 0.01,
-  "perPoint": 16.14,
+  "perPoint": 16.15,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.06,
-    "pct": 2514.05,
+    "amount": 100.16,
+    "pct": 2516.46,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.1,
-    "pct": 5555.24,
+    "amount": 221.31,
+    "pct": 5560.57,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.18,
-    "pct": 11637.62,
+    "amount": 463.62,
+    "pct": 11648.78,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7370.0
+  "equityForTruePct": 7377.0
  }
 }
