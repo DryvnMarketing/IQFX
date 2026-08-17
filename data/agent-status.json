@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-17T14:02:06.579552+00:00",
+ "generatedAt": "2026-08-17T14:32:03.738244+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 12.7,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-17T13:49:27.867Z] heartbeat: tick 398, Mon 14:49 UK, trades 0/2, open=none",
+   "logAgeMin": 5.8,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-17T14:26:22.659Z] headline throttled: Gold: Investors extend longs but hedge risks \u2013 TD Securities",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1619.853
+    "valuePerPointPerLot": 1617.457
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 3916,
    "running": true,
-   "logAgeMin": 0.8,
-   "stateAgeMin": 121.0,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-08-17 14:01:23Z] no new H4 bar (last 08-17 08:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 151.0,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-08-17 14:31:31Z] no new H4 bar (last 08-17 08:00Z), pos=0",
    "account": {
-    "equity": 1390.23,
+    "equity": 1406.82,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 297.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 326.9,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-17 09:05:12Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1390.23,
+    "equity": 1406.82,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5575.88% of equity at a typical stop, and up to 11680.85% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5567.63% of equity at a typical stop, and up to 11663.57% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/17 16:02:01",
-   "nextRun": "2026/08/17 16:32:00",
+   "lastRun": "2026/08/17 16:32:01",
+   "nextRun": "2026/08/17 17:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 3.98,
   "minLot": 0.01,
-  "perPoint": 16.2,
+  "perPoint": 16.17,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.43,
-    "pct": 2523.39,
+    "amount": 100.28,
+    "pct": 2519.66,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.92,
-    "pct": 5575.88,
+    "amount": 221.59,
+    "pct": 5567.63,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 464.9,
-    "pct": 11680.85,
+    "amount": 464.21,
+    "pct": 11663.57,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7397.0
+  "equityForTruePct": 7386.0
  }
 }
