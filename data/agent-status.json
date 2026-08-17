@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-17T07:02:03.725172+00:00",
+ "generatedAt": "2026-08-17T07:32:03.358890+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 2.8,
-   "stateAgeMin": 2.8,
-   "heartbeatMin": 2.8,
-   "lastLog": "[2026-08-17T06:59:23.319Z]   WhatsApp API status 200",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-17T07:30:53.825Z] headline throttled: Japanese Yen: Intervention risks cap losses against US Dollar \u2013 OCBC",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.42,
+    "spread": 0.43,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1613.174
+    "valuePerPointPerLot": 1613.858
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 3916,
    "running": true,
    "logAgeMin": 1.4,
-   "stateAgeMin": 181.7,
+   "stateAgeMin": 211.7,
    "heartbeatMin": 1.4,
-   "lastLog": "[2026-08-17 07:00:44Z] no new H4 bar (last 08-17 00:00Z), pos=0",
+   "lastLog": "[2026-08-17 07:30:49Z] no new H4 bar (last 08-17 00:00Z), pos=0",
    "account": {
     "equity": 1162.02,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 92.1,
+   "logAgeMin": 122.1,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-08-17 05:30:08Z]   whatsapp -> 200 (attempt 1)",
@@ -84,13 +84,13 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 3,
-     "net": 43.16,
-     "wins": 3
+     "closed": 2,
+     "net": 31.35,
+     "wins": 2
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.8 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5552.89% of equity at a typical stop, and up to 11632.69% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5555.24% of equity at a typical stop, and up to 11637.62% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/17 09:02:01",
-   "nextRun": "2026/08/17 09:32:00",
+   "lastRun": "2026/08/17 09:32:01",
+   "nextRun": "2026/08/17 10:02:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 3.98,
   "minLot": 0.01,
-  "perPoint": 16.13,
+  "perPoint": 16.14,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.02,
-    "pct": 2512.98,
+    "amount": 100.06,
+    "pct": 2514.05,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.0,
-    "pct": 5552.89,
+    "amount": 221.1,
+    "pct": 5555.24,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 462.98,
-    "pct": 11632.69,
+    "amount": 463.18,
+    "pct": 11637.62,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7367.0
+  "equityForTruePct": 7370.0
  }
 }
