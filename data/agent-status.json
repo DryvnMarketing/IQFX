@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-17T08:02:03.257062+00:00",
+ "generatedAt": "2026-08-17T08:32:02.690021+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 4.8,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-17T07:57:19.514Z]   WhatsApp API status 200",
+   "logAgeMin": 3.1,
+   "stateAgeMin": 0.9,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-08-17T08:28:58.199Z] headline throttled: US Dollar: Softer data challenges resilience \u2013 MUFG",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.43,
+    "spread": 0.36,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1615.406
+    "valuePerPointPerLot": 1615.146
    },
    "stale": false
   },
@@ -40,11 +40,11 @@
    "pid": 3916,
    "running": true,
    "logAgeMin": 1.2,
-   "stateAgeMin": 1.2,
+   "stateAgeMin": 31.2,
    "heartbeatMin": 1.2,
-   "lastLog": "[2026-08-17 08:00:53Z] bar 08-17 04:00Z close 63,453 | don20 62,446-63,583 | ema20 63,162 | atr 332 | none",
+   "lastLog": "[2026-08-17 08:30:55Z] no new H4 bar (last 08-17 04:00Z), pos=0",
    "account": {
-    "equity": 1128.08,
+    "equity": 1124.24,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 8.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 38.7,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-17 07:53:28Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 1128.08,
+    "equity": 1124.78,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5560.57% of equity at a typical stop, and up to 11648.78% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5559.67% of equity at a typical stop, and up to 11646.91% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/17 10:02:01",
-   "nextRun": "2026/08/17 10:32:00",
+   "lastRun": "2026/08/17 10:32:01",
+   "nextRun": "2026/08/17 11:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.16,
-    "pct": 2516.46,
+    "amount": 100.14,
+    "pct": 2516.06,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.31,
-    "pct": 5560.57,
+    "amount": 221.28,
+    "pct": 5559.67,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.62,
-    "pct": 11648.78,
+    "amount": 463.55,
+    "pct": 11646.91,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7377.0
+  "equityForTruePct": 7376.0
  }
 }
