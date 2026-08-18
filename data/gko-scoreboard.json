@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T14:02:25.541861+00:00",
+ "generatedAt": "2026-08-18T14:34:31.465575+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -699,7 +699,7 @@
    "risk_pts": 7.5,
    "in_zone": false,
    "decision": "PLACED SELL 0.08 XAUUSD LIMIT@4401.50 SL 4409.00 TP 4397.00 | 0.08 lots = 60.00 USD = 4.19% of equity",
-   "status": "PLACED",
+   "status": "CLOSED",
    "lots": 0.08,
    "sizing": "0.08 lots = 60.00 USD = 4.19% of equity",
    "order_type": "LIMIT",
@@ -707,7 +707,12 @@
    "placed_epoch": 1787038530,
    "ts": "2026-08-18T07:35:30.722029+00:00",
    "position_id": 3099070947,
-   "fill": 4401.5
+   "fill": 4401.5,
+   "exit": 4400.41,
+   "profit": 8.69,
+   "r": 0.145,
+   "outcome": "TP",
+   "closed_at": "2026-08-18T07:49:29+00:00"
   }
  ],
  "seenSignals": 336,
@@ -717,13 +722,13 @@
   "signals": 25,
   "taken": 17,
   "skipped": 2,
-  "open": 1,
-  "closed": 16,
-  "wins": 14,
-  "winRate": 87.5,
-  "expectancy": 0.242,
-  "totalR": 3.88,
-  "netCash": 113.18
+  "open": 0,
+  "closed": 17,
+  "wins": 15,
+  "winRate": 88.2,
+  "expectancy": 0.237,
+  "totalR": 4.02,
+  "netCash": 121.87
  },
  "skipReasons": [
   [
@@ -736,7 +741,7 @@
   ]
  ],
  "account": {
-  "equity": 1560.02,
+  "equity": 1570.84,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
