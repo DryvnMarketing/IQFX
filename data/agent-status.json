@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T16:32:50.840427+00:00",
+ "generatedAt": "2026-08-18T17:02:21.571043+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 1.5,
-   "heartbeatMin": 1.5,
+   "logAgeMin": 31.1,
+   "stateAgeMin": 4.3,
+   "heartbeatMin": 4.3,
    "lastLog": "[2026-08-18T16:32:20.003Z] heartbeat: tick 495, Tue 17:32 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 1.5,
-   "stateAgeMin": 29.4,
-   "heartbeatMin": 1.5,
-   "lastLog": "[2026-08-18 16:33:38Z] no new H4 bar (last 08-18 12:00Z), pos=1",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 58.9,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-18 17:04:09Z] no new H4 bar (last 08-18 12:00Z), pos=1",
    "account": {
-    "equity": 1556.27,
+    "equity": 1550.68,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 36.0,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-18 16:00:20Z] idle \u2014 17:00 UK outside 07:00-17:00",
+   "logAgeMin": 5.5,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-18 17:00:13Z] idle \u2014 18:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1551.42,
+    "equity": 1555.52,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.5 min",
+   "detail": "4.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 18:32:01",
-   "nextRun": "2026/08/18 19:02:00",
+   "lastRun": "2026/08/18 19:02:01",
+   "nextRun": "2026/08/18 19:32:00",
    "result": 267009,
    "ok": true
   },
