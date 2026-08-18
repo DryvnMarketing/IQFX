@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T09:02:05.058837+00:00",
+ "generatedAt": "2026-08-18T09:32:13.735864+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 3.6,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-18T08:59:15.870Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 11.5,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-18T09:20:54.770Z] headline throttled: British Pound trades lower against US Dollar after soft UK employment data",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": 3916,
    "running": true,
-   "logAgeMin": 4.2,
-   "stateAgeMin": 59.6,
-   "heartbeatMin": 4.2,
-   "lastLog": "[2026-08-18 08:59:23Z] no new H4 bar (last 08-18 04:00Z), pos=1",
+   "logAgeMin": 2.3,
+   "stateAgeMin": 88.4,
+   "heartbeatMin": 2.3,
+   "lastLog": "[2026-08-18 09:30:05Z] no new H4 bar (last 08-18 04:00Z), pos=1",
    "account": {
-    "equity": 1461.79,
+    "equity": 1460.33,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 88.1,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 116.8,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-18 07:35:33Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 1461.74,
+    "equity": 1460.33,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 11:02:01",
-   "nextRun": "2026/08/18 11:32:00",
+   "lastRun": "2026/08/18 11:32:01",
+   "nextRun": "2026/08/18 12:02:00",
    "result": 267009,
    "ok": true
   },
