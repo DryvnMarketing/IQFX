@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-18T21:02:21.385582+00:00",
+ "generatedAt": "2026-08-18T21:33:29.811970+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 15716,
-   "running": true,
-   "logAgeMin": 18.9,
-   "stateAgeMin": 3.1,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-08-18T20:43:53.299Z] heartbeat: tick 543, Tue 21:43 UK, trades 0/2, open=none",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 19.8,
+   "stateAgeMin": 4.3,
+   "heartbeatMin": 4.3,
+   "lastLog": "[2026-08-18T21:14:58.354Z] heartbeat: tick 549, Tue 22:14 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 3.6,
-   "stateAgeMin": 62.6,
-   "heartbeatMin": 3.6,
-   "lastLog": "[2026-08-18 21:00:14Z] no new H4 bar (last 08-18 16:00Z), pos=1",
+   "logAgeMin": 8.3,
+   "stateAgeMin": 94.6,
+   "heartbeatMin": 8.3,
+   "lastLog": "[2026-08-18 21:27:31Z] no new H4 bar (last 08-18 16:00Z), pos=1",
    "account": {
-    "equity": 1551.29,
+    "equity": 1551.37,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 4.8,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 36.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-18 21:00:05Z] idle \u2014 22:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1551.15,
+    "equity": 1551.3,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,8 +67,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 417,
-    "serverOffsetHours": 0,
+    "tickAgeSec": 2343,
+    "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -89,14 +89,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "PASS",
-   "detail": "pid 15716",
+   "state": "FAIL",
+   "detail": "not running",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.1 min",
+   "detail": "4.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,16 +182,16 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 23:02:01",
-   "nextRun": "2026/08/18 23:32:00",
+   "lastRun": "2026/08/18 23:32:01",
+   "nextRun": "2026/08/19 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/08/17 23:30:01",
-   "nextRun": "2026/08/18 23:30:00",
-   "result": 0,
+   "lastRun": "2026/08/18 23:30:01",
+   "nextRun": "2026/08/19 23:30:00",
+   "result": 267009,
    "ok": true
   }
  ],
