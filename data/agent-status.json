@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T10:02:31.237928+00:00",
+ "generatedAt": "2026-08-18T10:32:24.092704+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 13.8,
-   "stateAgeMin": 1.0,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-08-18T09:49:46.349Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 17.2,
+   "stateAgeMin": 2.9,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-08-18T10:16:19.912Z] heartbeat: tick 268, Tue 11:16 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 5.3,
-   "stateAgeMin": 120.6,
-   "heartbeatMin": 5.3,
-   "lastLog": "[2026-08-18 09:59:17Z] no new H4 bar (last 08-18 04:00Z), pos=1",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 150.6,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-18 10:34:11Z] no new H4 bar (last 08-18 04:00Z), pos=1",
    "account": {
-    "equity": 1461.12,
+    "equity": 1460.81,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 13.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 43.6,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-18 09:51:58Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1460.53,
+    "equity": 1460.88,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.0 min",
+   "detail": "2.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 12:02:01",
-   "nextRun": "2026/08/18 12:32:00",
+   "lastRun": "2026/08/18 12:32:01",
+   "nextRun": "2026/08/18 13:02:00",
    "result": 267009,
    "ok": true
   },
