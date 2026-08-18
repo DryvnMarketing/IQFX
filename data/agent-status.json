@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-18T22:02:26.978068+00:00",
+ "generatedAt": "2026-08-18T22:32:17.670278+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 17.6,
-   "stateAgeMin": 1.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-08-18T21:45:57.759Z] heartbeat: tick 555, Tue 22:45 UK, trades 0/2, open=none",
+   "pid": 15716,
+   "running": true,
+   "logAgeMin": 15.8,
+   "stateAgeMin": 5.1,
+   "heartbeatMin": 5.1,
+   "lastLog": "[2026-08-18T22:17:03.468Z] heartbeat: tick 561, Tue 23:17 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -20,14 +20,14 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 123.3,
-   "heartbeatMin": 1.4,
-   "lastLog": "[2026-08-18 22:03:08Z] no new H4 bar (last 08-18 16:00Z), pos=1",
+   "pid": 3916,
+   "running": true,
+   "logAgeMin": 2.7,
+   "stateAgeMin": 151.9,
+   "heartbeatMin": 2.7,
+   "lastLog": "[2026-08-18 22:30:22Z] no new H4 bar (last 08-18 16:00Z), pos=1",
    "account": {
-    "equity": 1550.99,
+    "equity": 1551.12,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 4,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -52,21 +52,21 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 5.5,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "pid": 3676,
+   "running": true,
+   "logAgeMin": 33.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-18 22:00:07Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1550.63,
+    "equity": 1551.01,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.336,
+    "spread": 0.182,
     "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
@@ -89,14 +89,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "FAIL",
-   "detail": "not running",
+   "state": "PASS",
+   "detail": "pid 15716",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.8 min",
+   "detail": "5.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 00:02:01",
-   "nextRun": "2026/08/19 00:32:00",
+   "lastRun": "2026/08/19 00:32:02",
+   "nextRun": "2026/08/19 01:02:00",
    "result": 267009,
    "ok": true
   },
