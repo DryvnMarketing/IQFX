@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T18:03:16.219276+00:00",
+ "generatedAt": "2026-08-18T18:33:31.728991+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 12.6,
-   "stateAgeMin": 2.7,
-   "heartbeatMin": 2.7,
-   "lastLog": "[2026-08-18T17:51:50.267Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 22.6,
+   "stateAgeMin": 1.2,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-08-18T18:11:58.867Z] headline throttled: Economists agree: BoE will hold rates through year-end \u2013 Reuters poll",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 119.8,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-18 18:05:27Z] no new H4 bar (last 08-18 12:00Z), pos=1",
+   "logAgeMin": 5.1,
+   "stateAgeMin": 150.0,
+   "heartbeatMin": 5.1,
+   "lastLog": "[2026-08-18 18:30:36Z] no new H4 bar (last 08-18 12:00Z), pos=1",
    "account": {
-    "equity": 1552.83,
+    "equity": 1554.93,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 6.6,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 36.7,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-18 18:00:07Z] idle \u2014 19:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1552.8,
+    "equity": 1555.15,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.7 min",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 20:02:01",
-   "nextRun": "2026/08/18 20:32:00",
+   "lastRun": "2026/08/18 20:32:01",
+   "nextRun": "2026/08/18 21:02:00",
    "result": 267009,
    "ok": true
   },
