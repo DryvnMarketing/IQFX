@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T04:02:10.881747+00:00",
+ "generatedAt": "2026-08-18T04:32:06.094771+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15716,
    "running": true,
-   "logAgeMin": 8.6,
-   "stateAgeMin": 3.5,
-   "heartbeatMin": 3.5,
-   "lastLog": "[2026-08-18T03:53:41.010Z]   WhatsApp API status 200",
+   "logAgeMin": 23.4,
+   "stateAgeMin": 2.9,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-08-18T04:08:49.737Z] heartbeat: tick 61, Tue 5:08 UK, trades 0/2, open=none",
    "account": {
     "equity": 3.98,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.44,
+    "spread": 0.36,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1623.833
+    "valuePerPointPerLot": 1624.328
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 3916,
    "running": true,
-   "logAgeMin": 2.9,
-   "stateAgeMin": 238.7,
-   "heartbeatMin": 2.9,
-   "lastLog": "[2026-08-18 03:59:24Z] no new H4 bar (last 08-17 20:00Z), pos=1",
+   "logAgeMin": 2.7,
+   "stateAgeMin": 27.8,
+   "heartbeatMin": 2.7,
+   "lastLog": "[2026-08-18 04:29:30Z] no new H4 bar (last 08-18 00:00Z), pos=1",
    "account": {
-    "equity": 1428.54,
+    "equity": 1429.99,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 29212,
    "running": true,
-   "logAgeMin": 2.3,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 32.1,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-08-18 04:00:06Z] idle \u2014 05:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1428.54,
+    "equity": 1430.0,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.5 min",
+   "detail": "2.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 5589.58% of equity at a typical stop, and up to 11709.55% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 5591.28% of equity at a typical stop, and up to 11713.12% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 06:02:01",
-   "nextRun": "2026/08/18 06:32:00",
+   "lastRun": "2026/08/18 06:32:01",
+   "nextRun": "2026/08/18 07:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.68,
-    "pct": 2529.59,
+    "amount": 100.71,
+    "pct": 2530.36,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.47,
-    "pct": 5589.58,
+    "amount": 222.53,
+    "pct": 5591.28,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 466.04,
-    "pct": 11709.55,
+    "amount": 466.18,
+    "pct": 11713.12,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7416.0
+  "equityForTruePct": 7418.0
  }
 }
