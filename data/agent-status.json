@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T21:33:29.811970+00:00",
+ "generatedAt": "2026-08-18T22:02:26.978068+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 19.8,
-   "stateAgeMin": 4.3,
-   "heartbeatMin": 4.3,
-   "lastLog": "[2026-08-18T21:14:58.354Z] heartbeat: tick 549, Tue 22:14 UK, trades 0/2, open=none",
+   "logAgeMin": 17.6,
+   "stateAgeMin": 1.8,
+   "heartbeatMin": 1.8,
+   "lastLog": "[2026-08-18T21:45:57.759Z] heartbeat: tick 555, Tue 22:45 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 8.3,
-   "stateAgeMin": 94.6,
-   "heartbeatMin": 8.3,
-   "lastLog": "[2026-08-18 21:27:31Z] no new H4 bar (last 08-18 16:00Z), pos=1",
+   "logAgeMin": 1.4,
+   "stateAgeMin": 123.3,
+   "heartbeatMin": 1.4,
+   "lastLog": "[2026-08-18 22:03:08Z] no new H4 bar (last 08-18 16:00Z), pos=1",
    "account": {
-    "equity": 1551.37,
+    "equity": 1550.99,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 4,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,21 +54,21 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 36.9,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-18 21:00:05Z] idle \u2014 22:00 UK outside 07:00-17:00",
+   "logAgeMin": 5.5,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-18 22:00:07Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1551.3,
+    "equity": 1550.63,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.182,
-    "tickAgeSec": 2343,
-    "serverOffsetHours": -1,
+    "spread": 0.336,
+    "tickAgeSec": 2,
+    "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.3 min",
+   "detail": "1.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -154,8 +154,8 @@
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/08/18 00:05:01",
-   "nextRun": "2026/08/19 00:05:00",
+   "lastRun": "2026/08/19 00:05:01",
+   "nextRun": "2026/08/20 00:05:00",
    "result": 0,
    "ok": true
   },
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 23:32:01",
-   "nextRun": "2026/08/19 00:02:00",
+   "lastRun": "2026/08/19 00:02:01",
+   "nextRun": "2026/08/19 00:32:00",
    "result": 267009,
    "ok": true
   },
@@ -191,7 +191,7 @@
    "name": "Trading System Backup",
    "lastRun": "2026/08/18 23:30:01",
    "nextRun": "2026/08/19 23:30:00",
-   "result": 267009,
+   "result": 0,
    "ok": true
   }
  ],
