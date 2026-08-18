@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T16:02:30.587785+00:00",
+ "generatedAt": "2026-08-18T16:32:50.840427+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 3.7,
-   "stateAgeMin": 2.4,
-   "heartbeatMin": 2.4,
-   "lastLog": "[2026-08-18T15:59:53.530Z] heartbeat: tick 488, Tue 16:59 UK, trades 0/2, open=none",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 1.5,
+   "heartbeatMin": 1.5,
+   "lastLog": "[2026-08-18T16:32:20.003Z] heartbeat: tick 495, Tue 17:32 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 5.7,
-   "stateAgeMin": 236.2,
-   "heartbeatMin": 5.7,
-   "lastLog": "[2026-08-18 15:58:52Z] no new H4 bar (last 08-18 08:00Z), pos=0",
+   "logAgeMin": 1.5,
+   "stateAgeMin": 29.4,
+   "heartbeatMin": 1.5,
+   "lastLog": "[2026-08-18 16:33:38Z] no new H4 bar (last 08-18 12:00Z), pos=1",
    "account": {
-    "equity": 1566.16,
+    "equity": 1556.27,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -37,7 +37,7 @@
     "spread": 7.0,
     "tickAgeSec": 2,
     "serverOffsetHours": 0,
-    "openPositions": 0,
+    "openPositions": 1,
     "week": {
      "closed": 1,
      "net": -2.11,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 5.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 36.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-18 16:00:20Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1565.36,
+    "equity": 1551.42,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.4 min",
+   "detail": "1.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 18:02:01",
-   "nextRun": "2026/08/18 18:32:00",
+   "lastRun": "2026/08/18 18:32:01",
+   "nextRun": "2026/08/18 19:02:00",
    "result": 267009,
    "ok": true
   },
