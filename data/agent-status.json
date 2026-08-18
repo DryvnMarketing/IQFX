@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T19:02:22.037323+00:00",
+ "generatedAt": "2026-08-18T19:32:18.853790+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": null,
    "running": false,
-   "logAgeMin": 19.8,
-   "stateAgeMin": 4.2,
-   "heartbeatMin": 4.2,
-   "lastLog": "[2026-08-18T18:43:42.768Z]   WhatsApp API status 200",
+   "logAgeMin": 24.0,
+   "stateAgeMin": 2.8,
+   "heartbeatMin": 2.8,
+   "lastLog": "[2026-08-18T19:09:30.845Z] heartbeat: tick 525, Tue 20:09 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -20,14 +20,14 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 3916,
-   "running": true,
-   "logAgeMin": 4.6,
-   "stateAgeMin": 178.3,
-   "heartbeatMin": 4.6,
-   "lastLog": "[2026-08-18 18:59:22Z] no new H4 bar (last 08-18 12:00Z), pos=1",
+   "pid": null,
+   "running": false,
+   "logAgeMin": 7.2,
+   "stateAgeMin": 209.0,
+   "heartbeatMin": 7.2,
+   "lastLog": "[2026-08-18 19:27:35Z] no new H4 bar (last 08-18 12:00Z), pos=1",
    "account": {
-    "equity": 1554.23,
+    "equity": 1554.06,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 4.8,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 35.5,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-18 19:00:17Z] idle \u2014 20:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1554.16,
+    "equity": 1553.83,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.2 min",
+   "detail": "2.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/18 21:02:01",
-   "nextRun": "2026/08/18 21:32:00",
+   "lastRun": "2026/08/18 21:32:02",
+   "nextRun": "2026/08/18 22:02:00",
    "result": 267009,
    "ok": true
   },
