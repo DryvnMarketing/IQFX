@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T13:32:00.946163+00:00",
+ "generatedAt": "2026-08-19T14:02:00.935769+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 17.0,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19T13:15:04.199Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-19T14:01:52.271Z] headline throttled: Fed Minutes expected to shed light on the depth of FOMC hawkish split",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 90.6,
+   "stateAgeMin": 120.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 13:31:25Z] no new H4 bar (last 08-19 08:00Z), pos=0",
+   "lastLog": "[2026-08-19 14:01:25Z] no new H4 bar (last 08-19 08:00Z), pos=0",
    "account": {
-    "equity": 1022.04,
+    "equity": 1015.39,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 326.4,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 356.4,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-19 08:05:39Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1019.34,
+    "equity": 1016.64,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 15:32:00",
-   "nextRun": "2026/08/19 16:02:00",
+   "lastRun": "2026/08/19 16:02:00",
+   "nextRun": "2026/08/19 16:32:00",
    "result": 267009,
    "ok": true
   },
