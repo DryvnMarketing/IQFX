@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T07:02:00.952523+00:00",
+ "generatedAt": "2026-08-19T07:32:00.964103+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 3.3,
-   "stateAgeMin": 3.6,
-   "heartbeatMin": 3.3,
-   "lastLog": "[2026-08-19T06:58:41.169Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 8.7,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-19T07:23:21.767Z] heartbeat: tick 113, Wed 8:23 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 176.0,
+   "stateAgeMin": 206.0,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 07:01:23Z] no new H4 bar (last 08-19 00:00Z), pos=1",
+   "lastLog": "[2026-08-19 07:31:24Z] no new H4 bar (last 08-19 00:00Z), pos=1",
    "account": {
-    "equity": 1537.6,
+    "equity": 1401.29,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.7,
+   "logAgeMin": 0.1,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-19 07:00:22Z]   whatsapp -> 210 (attempt 1)",
+   "lastLog": "[2026-08-19 07:31:55Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1537.73,
+    "equity": 1399.49,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -69,10 +69,10 @@
     "spread": 0.182,
     "tickAgeSec": 1,
     "serverOffsetHours": 0,
-    "openPositions": 1,
+    "openPositions": 0,
     "week": {
-     "closed": 3,
-     "net": -25.66,
+     "closed": 4,
+     "net": -86.67,
      "wins": 2
     },
     "minLot": 0.01,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.3 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 09:02:00",
-   "nextRun": "2026/08/19 09:32:00",
+   "lastRun": "2026/08/19 09:32:00",
+   "nextRun": "2026/08/19 10:02:00",
    "result": 267009,
    "ok": true
   },
