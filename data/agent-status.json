@@ -1,16 +1,16 @@
 {
- "generatedAt": "2026-08-19T05:02:21.490926+00:00",
+ "generatedAt": "2026-08-19T05:32:22.938002+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": null,
-   "running": false,
-   "logAgeMin": 9.9,
-   "stateAgeMin": 4.5,
-   "heartbeatMin": 4.5,
-   "lastLog": "[2026-08-19T04:53:30.846Z]   WhatsApp API status 200",
+   "pid": 15716,
+   "running": true,
+   "logAgeMin": 13.6,
+   "stateAgeMin": 2.6,
+   "heartbeatMin": 2.6,
+   "lastLog": "[2026-08-19T05:19:42.283Z] heartbeat: tick 73, Wed 6:19 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -22,12 +22,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 6.3,
-   "stateAgeMin": 58.4,
-   "heartbeatMin": 6.3,
-   "lastLog": "[2026-08-19 04:58:10Z] no new H4 bar (last 08-19 00:00Z), pos=1",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 88.3,
+   "heartbeatMin": 2.0,
+   "lastLog": "[2026-08-19 05:32:22Z] no new H4 bar (last 08-19 00:00Z), pos=1",
    "account": {
-    "equity": 1546.03,
+    "equity": 1545.75,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": null,
    "running": false,
-   "logAgeMin": 5.2,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-19 05:00:20Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 4.0,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-19 05:31:22Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 1546.07,
+    "equity": 1545.76,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 3,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -89,14 +89,14 @@
  "checks": [
   {
    "name": "Gold agent process",
-   "state": "FAIL",
-   "detail": "not running",
+   "state": "PASS",
+   "detail": "pid 15716",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.5 min",
+   "detail": "2.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -125,8 +125,8 @@
   },
   {
    "name": "Scheduled tasks",
-   "state": "WARN",
-   "detail": "GKO Follower = -1",
+   "state": "PASS",
+   "detail": "all clean",
    "why": "A failed weekly job produces silence, not an error."
   }
  ],
@@ -147,10 +147,10 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/08/18 07:30:00",
-   "nextRun": "2026/08/19 07:30:00",
-   "result": -1,
-   "ok": false
+   "lastRun": "2026/08/19 07:30:00",
+   "nextRun": "2026/08/20 07:30:00",
+   "result": 267009,
+   "ok": true
   },
   {
    "name": "BTC Trend Agent",
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 07:02:02",
-   "nextRun": "2026/08/19 07:32:00",
+   "lastRun": "2026/08/19 07:32:05",
+   "nextRun": "2026/08/19 08:02:00",
    "result": 267009,
    "ok": true
   },
