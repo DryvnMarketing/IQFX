@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T11:32:01.004845+00:00",
+ "generatedAt": "2026-08-19T12:02:00.875506+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-19T11:31:28.518Z] heartbeat: tick 303, Wed 12:31 UK, trades 0/2, open=none",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-19T12:01:59.653Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 210.6,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 11:31:24Z] no new H4 bar (last 08-19 04:00Z), pos=0",
+   "lastLog": "[2026-08-19 12:01:25Z] bar 08-19 08:00Z close 64,459 | don20 62,638-65,014 | ema20 64,035 | atr 400 | none",
    "account": {
     "equity": 1523.07,
     "currency": "USD",
@@ -39,8 +39,8 @@
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 1,
-     "net": -2.11,
+     "closed": 0,
+     "net": 0,
      "wins": 0
     },
     "minLot": 0.01,
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 206.4,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 236.4,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-19 08:05:39Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 1523.07,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 13:32:00",
-   "nextRun": "2026/08/19 14:02:00",
+   "lastRun": "2026/08/19 14:02:00",
+   "nextRun": "2026/08/19 14:32:00",
    "result": 267009,
    "ok": true
   },
