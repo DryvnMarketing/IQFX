@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T18:02:01.050986+00:00",
+ "generatedAt": "2026-08-19T18:32:01.021563+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 14.8,
-   "stateAgeMin": 4.7,
-   "heartbeatMin": 4.7,
-   "lastLog": "[2026-08-19T17:47:12.235Z]   WhatsApp API status 200",
+   "logAgeMin": 14.1,
+   "stateAgeMin": 4.2,
+   "heartbeatMin": 4.2,
+   "lastLog": "[2026-08-19T18:17:54.047Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 120.6,
+   "stateAgeMin": 150.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 18:01:27Z] no new H4 bar (last 08-19 12:00Z), pos=1",
+   "lastLog": "[2026-08-19 18:31:27Z] no new H4 bar (last 08-19 12:00Z), pos=1",
    "account": {
-    "equity": 858.21,
+    "equity": 858.52,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 2.1,
+   "logAgeMin": 32.0,
    "stateAgeMin": 0.5,
    "heartbeatMin": 0.5,
    "lastLog": "[2026-08-19 18:00:01Z] idle \u2014 19:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 858.21,
+    "equity": 858.36,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.7 min",
+   "detail": "4.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 20:02:00",
-   "nextRun": "2026/08/19 20:32:00",
+   "lastRun": "2026/08/19 20:32:00",
+   "nextRun": "2026/08/19 21:02:00",
    "result": 267009,
    "ok": true
   },
