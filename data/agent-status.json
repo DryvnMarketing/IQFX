@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T06:32:00.990926+00:00",
+ "generatedAt": "2026-08-19T07:02:00.952523+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 4.0,
-   "stateAgeMin": 4.3,
-   "heartbeatMin": 4.0,
-   "lastLog": "[2026-08-19T06:28:03.270Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 3.3,
+   "stateAgeMin": 3.6,
+   "heartbeatMin": 3.3,
+   "lastLog": "[2026-08-19T06:58:41.169Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 146.0,
+   "stateAgeMin": 176.0,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 06:31:23Z] no new H4 bar (last 08-19 00:00Z), pos=1",
+   "lastLog": "[2026-08-19 07:01:23Z] no new H4 bar (last 08-19 00:00Z), pos=1",
    "account": {
-    "equity": 1544.6,
+    "equity": 1537.6,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 10.7,
+   "logAgeMin": 1.7,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-19 06:21:22Z]   whatsapp -> 200 (attempt 1)",
+   "lastLog": "[2026-08-19 07:00:22Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1544.62,
+    "equity": 1537.73,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,9 +67,9 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
-    "openPositions": 0,
+    "openPositions": 1,
     "week": {
      "closed": 3,
      "net": -25.66,
@@ -82,8 +82,8 @@
   }
  ],
  "calendar": {
-  "events": 108,
-  "forwardDated": 61,
+  "events": 110,
+  "forwardDated": 64,
   "highForward": 4
  },
  "checks": [
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.0 min",
+   "detail": "3.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -133,15 +133,15 @@
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/08/18 08:35:01",
-   "nextRun": "2026/08/19 08:35:00",
+   "lastRun": "2026/08/19 08:35:00",
+   "nextRun": "2026/08/20 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/08/18 08:35:01",
-   "nextRun": "2026/08/19 08:35:00",
+   "lastRun": "2026/08/19 08:35:00",
+   "nextRun": "2026/08/20 08:35:00",
    "result": 0,
    "ok": true
   },
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 08:32:00",
-   "nextRun": "2026/08/19 09:02:00",
+   "lastRun": "2026/08/19 09:02:00",
+   "nextRun": "2026/08/19 09:32:00",
    "result": 267009,
    "ok": true
   },
