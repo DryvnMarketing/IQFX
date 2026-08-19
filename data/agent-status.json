@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T08:02:00.946739+00:00",
+ "generatedAt": "2026-08-19T08:32:00.962336+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19T08:01:23.552Z] headline throttled: Euro: Extends rebound as yields stabilize against US Dollar - Danske Bank",
+   "logAgeMin": 7.8,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-19T08:24:16.079Z] heartbeat: tick 171, Wed 9:24 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
+   "stateAgeMin": 30.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-19 08:01:24Z] bar 08-19 04:00Z close 64,234 | don20 62,638-65,014 | ema20 63,990 | atr 408 | none",
+   "lastLog": "[2026-08-19 08:31:24Z] no new H4 bar (last 08-19 04:00Z), pos=0",
    "account": {
-    "equity": 1406.11,
+    "equity": 1479.64,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 30.1,
+   "logAgeMin": 26.4,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-19 07:31:55Z]   whatsapp -> 210 (attempt 1)",
+   "lastLog": "[2026-08-19 08:05:39Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 1406.11,
+    "equity": 1479.64,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,13 +67,13 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 4,
-     "net": -86.67,
-     "wins": 2
+     "closed": 5,
+     "net": -60.57,
+     "wins": 3
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/19 10:02:00",
-   "nextRun": "2026/08/19 10:32:00",
+   "lastRun": "2026/08/19 10:32:00",
+   "nextRun": "2026/08/19 11:02:00",
    "result": 267009,
    "ok": true
   },
