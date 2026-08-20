@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T08:02:02.365232+00:00",
+ "generatedAt": "2026-08-20T08:32:02.285561+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 21.3,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-20T07:40:47.292Z] headline throttled: US Dollar: Under pressure as yields capped \u2013 OCBC",
+   "logAgeMin": 3.9,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-08-20T08:28:07.326Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
+   "stateAgeMin": 30.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-20 08:01:30Z] bar 08-20 04:00Z close 69,778 | don20 62,638-70,385 | ema20 66,025 | atr 896 | none",
+   "lastLog": "[2026-08-20 08:31:30Z] no new H4 bar (last 08-20 04:00Z), pos=0",
    "account": {
     "equity": 937.94,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 46.3,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 76.3,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-08-20 07:15:45Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 937.94,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/20 10:02:01",
-   "nextRun": "2026/08/20 10:32:00",
+   "lastRun": "2026/08/20 10:32:01",
+   "nextRun": "2026/08/20 11:02:00",
    "result": 267009,
    "ok": true
   },
