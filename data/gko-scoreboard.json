@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T07:32:07.014107+00:00",
+ "generatedAt": "2026-08-20T08:02:07.014255+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -797,7 +797,7 @@
    "ts": "2026-08-20T07:15:44.512161+00:00"
   }
  ],
- "seenSignals": 363,
+ "seenSignals": 365,
  "dayTrades": 0,
  "halted": false,
  "stats": {
@@ -827,7 +827,7 @@
   ]
  ],
  "account": {
-  "equity": 861.1,
+  "equity": 937.94,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -839,9 +839,9 @@
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 5,
-   "net": -60.57,
-   "wins": 3
+   "closed": 4,
+   "net": -69.42,
+   "wins": 2
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0

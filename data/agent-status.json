@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T07:32:02.295535+00:00",
+ "generatedAt": "2026-08-20T08:02:02.365232+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 0.7,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-08-20T07:30:39.400Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 21.3,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-20T07:40:47.292Z] headline throttled: US Dollar: Under pressure as yields capped \u2013 OCBC",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 210.6,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-20 07:31:30Z] no new H4 bar (last 08-20 00:00Z), pos=1",
+   "lastLog": "[2026-08-20 08:01:30Z] bar 08-20 04:00Z close 69,778 | don20 62,638-70,385 | ema20 66,025 | atr 896 | none",
    "account": {
-    "equity": 863.57,
+    "equity": 937.94,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -37,7 +37,7 @@
     "spread": 7.0,
     "tickAgeSec": 1,
     "serverOffsetHours": 0,
-    "openPositions": 1,
+    "openPositions": 0,
     "week": {
      "closed": 0,
      "net": 0,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 16.3,
+   "logAgeMin": 46.3,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-08-20 07:15:45Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 866.61,
+    "equity": 937.94,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -71,9 +71,9 @@
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 5,
-     "net": -60.57,
-     "wins": 3
+     "closed": 4,
+     "net": -69.42,
+     "wins": 2
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/20 09:32:01",
-   "nextRun": "2026/08/20 10:02:00",
+   "lastRun": "2026/08/20 10:02:01",
+   "nextRun": "2026/08/20 10:32:00",
    "result": 267009,
    "ok": true
   },
