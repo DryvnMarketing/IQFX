@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T07:02:06.554708+00:00",
+ "generatedAt": "2026-08-20T07:32:07.014107+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -775,15 +775,35 @@
    "r": 0.451,
    "outcome": "TP",
    "closed_at": "2026-08-19T08:05:31+00:00"
+  },
+  {
+   "signal_id": 40596,
+   "posted": "2026-08-20T07:15:16+00:00",
+   "age_min": 0.5,
+   "dir": "BUY",
+   "zone_lo": 4483.0,
+   "zone_hi": 4488.0,
+   "tp1": 4490.0,
+   "sl": 4478.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4488 \u2013 4483\n\nTP 1: 4490\nTP 2: 4500\n\nSL: 4478\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4490.33,
+   "spread": 0.182,
+   "intended_entry": 4485.5,
+   "risk_pts": 7.5,
+   "in_zone": false,
+   "decision": "SKIP: price 4490.33 already past TP1 4490.00",
+   "status": "SKIPPED",
+   "reason": "already past TP1",
+   "ts": "2026-08-20T07:15:44.512161+00:00"
   }
  ],
- "seenSignals": 361,
+ "seenSignals": 363,
  "dayTrades": 0,
  "halted": false,
  "stats": {
-  "signals": 27,
+  "signals": 28,
   "taken": 19,
-  "skipped": 2,
+  "skipped": 3,
   "open": 0,
   "closed": 19,
   "wins": 16,
@@ -800,10 +820,14 @@
   [
    "stale (19 min > 8)",
    1
+  ],
+  [
+   "already past TP1",
+   1
   ]
  ],
  "account": {
-  "equity": 874.01,
+  "equity": 861.1,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -811,7 +835,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 1,
+  "tickAgeSec": 2,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
