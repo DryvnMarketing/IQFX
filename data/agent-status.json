@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T18:02:02.261195+00:00",
+ "generatedAt": "2026-08-20T18:32:02.432973+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1.6,
+   "logAgeMin": 6.9,
    "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-20T18:00:28.379Z] headline throttled: Japanese Yen underperforms as elevated Oil prices weigh, US Dollar recovers",
+   "lastLog": "[2026-08-20T18:25:12.179Z] heartbeat: tick 663, Thu 19:25 UK, trades 1/2, open=LONG",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 120.5,
+   "stateAgeMin": 150.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-20 18:01:32Z] no new H4 bar (last 08-20 12:00Z), pos=0",
+   "lastLog": "[2026-08-20 18:31:32Z] no new H4 bar (last 08-20 12:00Z), pos=0",
    "account": {
-    "equity": 958.86,
+    "equity": 959.43,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 61.9,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 91.9,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-08-20 17:00:09Z] idle \u2014 18:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 958.81,
+    "equity": 959.67,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/20 20:02:01",
-   "nextRun": "2026/08/20 20:32:00",
+   "lastRun": "2026/08/20 20:32:01",
+   "nextRun": "2026/08/20 21:02:00",
    "result": 267009,
    "ok": true
   },
