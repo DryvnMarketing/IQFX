@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T13:58:57.828712+00:00",
+ "generatedAt": "2026-08-20T14:02:02.429760+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 9.6,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 12.7,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
    "lastLog": "[2026-08-20T13:49:24.476Z] heartbeat: tick 397, Thu 14:49 UK, trades 1/2, open=LONG",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -22,12 +22,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 2.5,
-   "stateAgeMin": 37.5,
-   "heartbeatMin": 2.5,
-   "lastLog": "[2026-08-20 13:56:31Z] no new H4 bar (last 08-20 08:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 40.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-08-20 14:01:31Z] no new H4 bar (last 08-20 08:00Z), pos=0",
    "account": {
-    "equity": 921.3,
+    "equity": 928.05,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 42.1,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-20 13:16:54Z]   whatsapp -> 200 (attempt 1)",
+   "logAgeMin": 2.1,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-20 14:00:01Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "equity": 921.07,
+    "equity": 927.87,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/20 15:58:57",
-   "nextRun": "2026/08/20 16:02:00",
+   "lastRun": "2026/08/20 16:02:01",
+   "nextRun": "2026/08/20 16:32:00",
    "result": 267009,
    "ok": true
   },
