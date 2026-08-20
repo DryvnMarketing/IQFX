@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-20T00:32:02.259739+00:00",
+ "generatedAt": "2026-08-20T01:02:02.246732+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 29.4,
-   "stateAgeMin": 4.1,
-   "heartbeatMin": 4.1,
-   "lastLog": "[2026-08-20T00:02:37.743Z] heartbeat: tick 13, Thu 1:02 UK, trades 0/2, open=none",
+   "logAgeMin": 29.1,
+   "stateAgeMin": 3.7,
+   "heartbeatMin": 3.7,
+   "lastLog": "[2026-08-20T00:32:58.704Z] heartbeat: tick 19, Thu 1:32 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 30.6,
+   "stateAgeMin": 60.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-20 00:31:29Z] no new H4 bar (last 08-19 20:00Z), pos=1",
+   "lastLog": "[2026-08-20 01:01:29Z] no new H4 bar (last 08-19 20:00Z), pos=1",
    "account": {
-    "equity": 871.7,
+    "equity": 870.79,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.6,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-20 00:00:27Z] idle \u2014 01:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-20 01:00:19Z] idle \u2014 02:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 871.54,
+    "equity": 870.63,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.1 min",
+   "detail": "3.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/20 02:32:01",
-   "nextRun": "2026/08/20 03:02:00",
+   "lastRun": "2026/08/20 03:02:01",
+   "nextRun": "2026/08/20 03:32:00",
    "result": 267009,
    "ok": true
   },
