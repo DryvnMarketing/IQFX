@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-21T10:32:02.198998+00:00",
+ "generatedAt": "2026-08-21T11:02:02.291184+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1.5,
-   "stateAgeMin": 1.8,
+   "logAgeMin": 16.6,
+   "stateAgeMin": 1.5,
    "heartbeatMin": 1.5,
-   "lastLog": "[2026-08-21T10:30:32.947Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "lastLog": "[2026-08-21T10:45:27.831Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 150.4,
+   "stateAgeMin": 180.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-21 10:31:39Z] no new H4 bar (last 08-21 04:00Z), pos=1",
+   "lastLog": "[2026-08-21 11:01:39Z] no new H4 bar (last 08-21 04:00Z), pos=1",
    "account": {
-    "equity": 990.02,
+    "equity": 988.05,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 140.4,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 170.4,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-21 08:11:43Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 990.0,
+    "equity": 987.95,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/21 12:32:01",
-   "nextRun": "2026/08/21 13:02:00",
+   "lastRun": "2026/08/21 13:02:01",
+   "nextRun": "2026/08/21 13:32:00",
    "result": 267009,
    "ok": true
   },
