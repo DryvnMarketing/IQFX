@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-21T20:32:02.266000+00:00",
+ "generatedAt": "2026-08-21T21:02:02.179443+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 8.4,
-   "stateAgeMin": 3.4,
-   "heartbeatMin": 3.4,
-   "lastLog": "[2026-08-21T20:23:39.903Z]   WhatsApp API status 200",
+   "logAgeMin": 8.2,
+   "stateAgeMin": 3.0,
+   "heartbeatMin": 3.0,
+   "lastLog": "[2026-08-21T20:53:54.670Z] heartbeat: tick 588, Fri 21:53 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 30.4,
+   "stateAgeMin": 60.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-21 20:31:40Z] no new H4 bar (last 08-21 16:00Z), pos=1",
+   "lastLog": "[2026-08-21 21:01:40Z] no new H4 bar (last 08-21 16:00Z), pos=1",
    "account": {
-    "equity": 985.99,
+    "equity": 985.68,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-21 20:00:18Z] idle \u2014 21:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-21 21:00:16Z] idle \u2014 22:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 986.0,
+    "equity": 985.63,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 0,
+    "tickAgeSec": 246,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.4 min",
+   "detail": "3.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/21 22:32:01",
-   "nextRun": "2026/08/21 23:02:00",
+   "lastRun": "2026/08/21 23:02:01",
+   "nextRun": "2026/08/21 23:32:00",
    "result": 267009,
    "ok": true
   },
