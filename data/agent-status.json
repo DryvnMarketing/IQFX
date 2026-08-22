@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-22T10:32:02.578005+00:00",
+ "generatedAt": "2026-08-22T11:02:02.443734+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 211.2,
-   "stateAgeMin": 696.7,
-   "heartbeatMin": 211.2,
+   "logAgeMin": 241.2,
+   "stateAgeMin": 726.7,
+   "heartbeatMin": 241.2,
    "lastLog": "[2026-08-22T07:00:52.088Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "error": "init -6"
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 390.4,
+   "stateAgeMin": 420.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-22 10:31:42Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-22 11:01:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 155.7,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-22 10:31:50Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 185.7,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-22 11:02:02Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "211.2 min",
+   "detail": "241.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/22 12:32:01",
-   "nextRun": "2026/08/22 13:02:00",
+   "lastRun": "2026/08/22 13:02:01",
+   "nextRun": "2026/08/22 13:32:00",
    "result": 267009,
    "ok": true
   },
