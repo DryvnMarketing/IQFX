@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-22T23:02:02.487354+00:00",
+ "generatedAt": "2026-08-22T23:32:02.383585+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 961.2,
-   "stateAgeMin": 1446.7,
-   "heartbeatMin": 961.2,
+   "logAgeMin": 991.2,
+   "stateAgeMin": 1476.7,
+   "heartbeatMin": 991.2,
    "lastLog": "[2026-08-22T07:00:52.088Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "error": "init -6"
@@ -22,10 +22,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 1140.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-22 23:01:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 1170.4,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-22 23:31:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 905.7,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-22 23:02:05Z] loop error (1057 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 935.7,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-22 23:31:42Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "961.2 min",
+   "detail": "991.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/23 01:02:01",
-   "nextRun": "2026/08/23 01:32:00",
+   "lastRun": "2026/08/23 01:32:01",
+   "nextRun": "2026/08/23 02:02:00",
    "result": 267009,
    "ok": true
   },
