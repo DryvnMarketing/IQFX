@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-23T20:02:02.519730+00:00",
+ "generatedAt": "2026-08-23T20:32:02.567584+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1.4,
-   "stateAgeMin": 2706.7,
-   "heartbeatMin": 1.4,
+   "logAgeMin": 31.4,
+   "stateAgeMin": 2736.7,
+   "heartbeatMin": 31.4,
    "lastLog": "[2026-08-23T20:00:41.539Z]   !! WhatsApp FAILED after 3 attempts (self-signed certificate in certificate chain) \u2014 message lost",
    "account": {
     "error": "init -6"
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 2400.4,
+   "stateAgeMin": 2430.4,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-23 20:01:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-23 20:31:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 2165.7,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-23 20:01:59Z] loop error (2536 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 2195.7,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-23 20:31:39Z] loop error (2572 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.4 min",
+   "detail": "31.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/23 22:02:01",
-   "nextRun": "2026/08/23 22:32:00",
+   "lastRun": "2026/08/23 22:32:01",
+   "nextRun": "2026/08/23 23:02:00",
    "result": 267009,
    "ok": true
   },
