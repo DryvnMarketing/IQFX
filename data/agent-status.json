@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-23T15:32:02.343959+00:00",
+ "generatedAt": "2026-08-23T16:02:02.470591+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1951.2,
-   "stateAgeMin": 2436.7,
-   "heartbeatMin": 1951.2,
+   "logAgeMin": 1981.2,
+   "stateAgeMin": 2466.7,
+   "heartbeatMin": 1981.2,
    "lastLog": "[2026-08-22T07:00:52.088Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "error": "init -6"
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 2130.4,
+   "stateAgeMin": 2160.4,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-23 15:31:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-23 16:01:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 1895.7,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-23 15:31:52Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 1925.7,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-23 16:01:35Z] loop error (2258 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1951.2 min",
+   "detail": "1981.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/23 17:32:01",
-   "nextRun": "2026/08/23 18:02:00",
+   "lastRun": "2026/08/23 18:02:01",
+   "nextRun": "2026/08/23 18:32:00",
    "result": 267009,
    "ok": true
   },
