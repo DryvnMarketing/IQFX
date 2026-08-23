@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-23T18:02:02.510667+00:00",
+ "generatedAt": "2026-08-23T18:32:02.385282+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,14 +7,14 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 2101.2,
-   "stateAgeMin": 2586.7,
-   "heartbeatMin": 2101.2,
-   "lastLog": "[2026-08-22T07:00:52.088Z]   WhatsApp API status 200 (attempt 3)",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 2616.7,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-08-23T18:30:50.710Z]   !! WhatsApp FAILED after 3 attempts (self-signed certificate in certificate chain) \u2014 message lost",
    "account": {
     "error": "init -6"
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 2280.4,
+   "stateAgeMin": 2310.4,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-23 18:01:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-23 18:31:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 2045.7,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-23 18:02:03Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 2075.7,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-23 18:31:40Z] loop error (2432 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
    "account": {
     "error": "init -6"
    },
@@ -61,8 +61,8 @@
   },
   {
    "name": "Heartbeat fresh",
-   "state": "WARN",
-   "detail": "2101.2 min",
+   "state": "PASS",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -134,8 +134,8 @@
   },
   {
    "name": "XAU Sunday Fundamentals",
-   "lastRun": "2026/08/16 20:30:00",
-   "nextRun": "2026/08/23 20:30:00",
+   "lastRun": "2026/08/23 20:30:00",
+   "nextRun": "2026/08/30 20:30:00",
    "result": 0,
    "ok": true
   },
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/23 20:02:01",
-   "nextRun": "2026/08/23 20:32:00",
+   "lastRun": "2026/08/23 20:32:01",
+   "nextRun": "2026/08/23 21:02:00",
    "result": 267009,
    "ok": true
   },
