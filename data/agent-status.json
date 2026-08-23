@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-23T22:32:02.262914+00:00",
+ "generatedAt": "2026-08-23T23:02:02.524430+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,14 +7,14 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 151.4,
-   "stateAgeMin": 2856.7,
-   "heartbeatMin": 151.4,
-   "lastLog": "[2026-08-23T20:00:41.539Z]   !! WhatsApp FAILED after 3 attempts (self-signed certificate in certificate chain) \u2014 message lost",
+   "logAgeMin": 1.4,
+   "stateAgeMin": 1.4,
+   "heartbeatMin": 1.4,
+   "lastLog": "[2026-08-23T23:00:37.889Z] headlines FXStreet failed: self-signed certificate in certificate chain",
    "account": {
     "error": "init -6"
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 2550.4,
+   "stateAgeMin": 2580.4,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-23 22:31:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-23 23:01:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 2315.7,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-23 22:31:48Z] loop error (2718 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 2345.7,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-23 23:01:38Z] loop error (2755 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
    "account": {
     "error": "init -6"
    },
@@ -61,8 +61,8 @@
   },
   {
    "name": "Heartbeat fresh",
-   "state": "WARN",
-   "detail": "151.4 min",
+   "state": "PASS",
+   "detail": "1.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 00:32:01",
-   "nextRun": "2026/08/24 01:02:00",
+   "lastRun": "2026/08/24 01:02:01",
+   "nextRun": "2026/08/24 01:32:00",
    "result": 267009,
    "ok": true
   },
