@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T09:02:02.773489+00:00",
+ "generatedAt": "2026-08-24T09:32:02.927524+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.0,
+   "logAgeMin": 16.1,
    "stateAgeMin": 0.5,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-24T09:02:02.392Z]   !! WhatsApp FAILED after 3 attempts (socket hang up) \u2014 message lost",
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-24T09:15:59.283Z] headline throttled: Euro holds near three-month highs as investors await US sanctions to Iran",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 60.4,
+   "stateAgeMin": 90.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 09:01:41Z] no new H4 bar (last 08-24 04:00Z), pos=0",
+   "lastLog": "[2026-08-24 09:31:42Z] no new H4 bar (last 08-24 04:00Z), pos=0",
    "account": {
     "equity": 1021.91,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 87.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 117.9,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-24 07:34:15Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 1021.91,
@@ -67,13 +67,13 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 3,
-     "net": -20.87,
-     "wins": 2
+     "closed": 2,
+     "net": -34.91,
+     "wins": 1
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 11:02:01",
-   "nextRun": "2026/08/24 11:32:00",
+   "lastRun": "2026/08/24 11:32:01",
+   "nextRun": "2026/08/24 12:02:00",
    "result": 267009,
    "ok": true
   },
