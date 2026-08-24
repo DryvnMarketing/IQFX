@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T08:02:02.954402+00:00",
+ "generatedAt": "2026-08-24T08:32:02.625669+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 4.9,
-   "stateAgeMin": 0.8,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-08-24T07:57:09.586Z] headline throttled: US Dollar: Momentum fades as yields stay high \u2013 MUFG",
+   "logAgeMin": 3.6,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-24T08:28:25.544Z] headline throttled: Oil: Sanctions risk keeps market tense \u2013 Danske Bank",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 0.4,
+   "stateAgeMin": 30.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 08:01:41Z] bar 08-24 04:00Z close 77,300 | don20 72,475-79,516 | ema20 75,927 | atr 1,140 | none",
+   "lastLog": "[2026-08-24 08:31:41Z] no new H4 bar (last 08-24 04:00Z), pos=0",
    "account": {
-    "equity": 985.75,
+    "equity": 975.4,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 27.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 57.8,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-24 07:34:15Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 985.75,
+    "equity": 976.4,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.8 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 10:02:01",
-   "nextRun": "2026/08/24 10:32:00",
+   "lastRun": "2026/08/24 10:32:01",
+   "nextRun": "2026/08/24 11:02:00",
    "result": 267009,
    "ok": true
   },
