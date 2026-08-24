@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T01:02:02.555768+00:00",
+ "generatedAt": "2026-08-24T01:32:02.418553+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 3.4,
-   "stateAgeMin": 3.4,
-   "heartbeatMin": 3.4,
-   "lastLog": "[2026-08-24T00:58:38.917Z] headlines FXStreet failed: self-signed certificate in certificate chain",
+   "logAgeMin": 2.9,
+   "stateAgeMin": 2.9,
+   "heartbeatMin": 2.9,
+   "lastLog": "[2026-08-24T01:29:11.228Z] headlines FXStreet failed: self-signed certificate in certificate chain",
    "account": {
     "error": "init -6"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 2700.4,
+   "stateAgeMin": 2730.4,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-24 01:01:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-24 01:31:44Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 2465.7,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-24 01:01:56Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 2495.7,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-24 01:31:45Z] loop error (2926 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifi",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.4 min",
+   "detail": "2.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 03:02:01",
-   "nextRun": "2026/08/24 03:32:00",
+   "lastRun": "2026/08/24 03:32:01",
+   "nextRun": "2026/08/24 04:02:00",
    "result": 267009,
    "ok": true
   },
