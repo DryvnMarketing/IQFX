@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T14:32:02.636325+00:00",
+ "generatedAt": "2026-08-24T15:02:02.632696+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 13.6,
-   "stateAgeMin": 1.0,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-08-24T14:18:31.454Z] heartbeat: tick 429, Mon 15:18 UK, trades 0/2, open=none",
+   "logAgeMin": 8.1,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-08-24T14:54:00.563Z] headline throttled: Japanese Yen slips as US Dollar stabilizes, US PCE in focus",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 150.4,
+   "stateAgeMin": 180.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 14:31:43Z] no new H4 bar (last 08-24 08:00Z), pos=0",
+   "lastLog": "[2026-08-24 15:01:43Z] no new H4 bar (last 08-24 08:00Z), pos=0",
    "account": {
     "equity": 1098.89,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 63.9,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 93.9,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-08-24 13:28:10Z] loop error (1 in a row): <urlopen error timed out>",
    "account": {
     "equity": 1098.89,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.0 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 16:32:01",
-   "nextRun": "2026/08/24 17:02:00",
+   "lastRun": "2026/08/24 17:02:01",
+   "nextRun": "2026/08/24 17:32:00",
    "result": 267009,
    "ok": true
   },
