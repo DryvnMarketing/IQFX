@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T15:02:02.632696+00:00",
+ "generatedAt": "2026-08-24T15:32:02.550231+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 8.1,
-   "stateAgeMin": 0.8,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-08-24T14:54:00.563Z] headline throttled: Japanese Yen slips as US Dollar stabilizes, US PCE in focus",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-08-24T15:30:18.351Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 180.4,
+   "stateAgeMin": 210.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 15:01:43Z] no new H4 bar (last 08-24 08:00Z), pos=0",
+   "lastLog": "[2026-08-24 15:31:43Z] no new H4 bar (last 08-24 08:00Z), pos=0",
    "account": {
     "equity": 1098.89,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 93.9,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 123.9,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-24 13:28:10Z] loop error (1 in a row): <urlopen error timed out>",
    "account": {
     "equity": 1098.89,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.8 min",
+   "detail": "0.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 17:02:01",
-   "nextRun": "2026/08/24 17:32:00",
+   "lastRun": "2026/08/24 17:32:01",
+   "nextRun": "2026/08/24 18:02:00",
    "result": 267009,
    "ok": true
   },
