@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T18:32:02.617948+00:00",
+ "generatedAt": "2026-08-24T19:02:02.637117+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,12 +7,12 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 2.4,
-   "stateAgeMin": 2.4,
-   "heartbeatMin": 2.4,
-   "lastLog": "[2026-08-24T18:29:41.095Z] headlines FXStreet failed: self-signed certificate in certificate chain",
+   "logAgeMin": 1.3,
+   "stateAgeMin": 1.3,
+   "heartbeatMin": 1.3,
+   "lastLog": "[2026-08-24T19:00:46.765Z] headlines FXStreet failed: self-signed certificate in certificate chain",
    "account": {
-    "error": "init -6"
+    "error": "init -10005"
    },
    "stale": false
   },
@@ -22,10 +22,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 150.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 18:31:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 1.4,
+   "stateAgeMin": 181.5,
+   "heartbeatMin": 1.4,
+   "lastLog": "[2026-08-24 19:01:43Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
    "account": {
     "error": "init -6"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 139.9,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-24 18:32:04Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 171.0,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-08-24 19:03:04Z] loop error (196 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certific",
    "account": {
     "error": "init -6"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.4 min",
+   "detail": "1.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -74,7 +74,7 @@
   {
    "name": "Live broker login matches config",
    "state": "FAIL",
-   "detail": "init -6",
+   "detail": "init -10005",
    "why": "A mismatch aborts every order, silently, until someone looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 20:32:01",
-   "nextRun": "2026/08/24 21:02:00",
+   "lastRun": "2026/08/24 21:02:01",
+   "nextRun": "2026/08/24 21:32:00",
    "result": 267009,
    "ok": true
   },
