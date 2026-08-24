@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T11:02:02.556305+00:00",
+ "generatedAt": "2026-08-24T11:32:02.515624+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 16.4,
-   "stateAgeMin": 1.1,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-08-24T10:45:43.455Z] heartbeat: tick 295, Mon 11:45 UK, trades 0/2, open=none",
+   "logAgeMin": 5.8,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-08-24T11:26:14.862Z] headline throttled: Gold: Breakout sustains upward momentum \u2013 Societe Generale",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 180.4,
+   "stateAgeMin": 210.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-24 11:01:42Z] no new H4 bar (last 08-24 04:00Z), pos=0",
+   "lastLog": "[2026-08-24 11:31:42Z] no new H4 bar (last 08-24 04:00Z), pos=0",
    "account": {
     "equity": 1045.94,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 207.8,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 237.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-24 07:34:15Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 1045.94,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/24 13:02:01",
-   "nextRun": "2026/08/24 13:32:00",
+   "lastRun": "2026/08/24 13:32:01",
+   "nextRun": "2026/08/24 14:02:00",
    "result": 267009,
    "ok": true
   },
