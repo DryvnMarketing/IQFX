@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-25T08:02:02.622282+00:00",
+ "generatedAt": "2026-08-25T08:32:02.504848+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 8.4,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-25T07:53:40.978Z]   WhatsApp API status 200",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 1.0,
+   "heartbeatMin": 1.0,
+   "lastLog": "[2026-08-25T08:30:05.970Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 0.3,
+   "stateAgeMin": 30.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-25 08:01:46Z] bar 08-25 04:00Z close 79,657 | don20 75,563-81,267 | ema20 77,454 | atr 1,330 | none",
+   "lastLog": "[2026-08-25 08:31:46Z] no new H4 bar (last 08-25 04:00Z), pos=0",
    "account": {
-    "equity": 1338.04,
+    "equity": 1474.34,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 152.0,
+   "logAgeMin": 182.1,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
    "lastLog": "[2026-08-25 05:30:03Z] another follower is already running (pid 16304) \u2014 exiting",
    "account": {
-    "equity": 1338.04,
+    "equity": 1474.34,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.2 min",
+   "detail": "1.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/25 10:02:01",
-   "nextRun": "2026/08/25 10:32:00",
+   "lastRun": "2026/08/25 10:32:01",
+   "nextRun": "2026/08/25 11:02:00",
    "result": 267009,
    "ok": true
   },
