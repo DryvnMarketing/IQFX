@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-25T19:02:02.781940+00:00",
+ "generatedAt": "2026-08-25T19:32:02.636038+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 3.5,
-   "stateAgeMin": 3.5,
-   "heartbeatMin": 3.5,
-   "lastLog": "[2026-08-25T18:58:37.363Z]   WhatsApp API status 200",
+   "logAgeMin": 8.2,
+   "stateAgeMin": 3.1,
+   "heartbeatMin": 3.1,
+   "lastLog": "[2026-08-25T19:23:50.060Z] heartbeat: tick 568, Tue 20:23 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 120.3,
+   "stateAgeMin": 150.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-25 19:01:47Z] no new H4 bar (last 08-25 12:00Z), pos=0",
+   "lastLog": "[2026-08-25 19:31:47Z] no new H4 bar (last 08-25 12:00Z), pos=0",
    "account": {
-    "equity": 1249.36,
+    "equity": 620.15,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-25 19:00:08Z] idle \u2014 20:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 1249.36,
+    "equity": 620.15,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.5 min",
+   "detail": "3.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/25 21:02:01",
-   "nextRun": "2026/08/25 21:32:00",
+   "lastRun": "2026/08/25 21:32:01",
+   "nextRun": "2026/08/25 22:02:00",
    "result": 267009,
    "ok": true
   },
