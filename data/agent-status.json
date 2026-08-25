@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-25T16:32:02.521908+00:00",
+ "generatedAt": "2026-08-25T17:02:03.121103+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,12 +7,12 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-25T16:31:39.514Z] headlines FXStreet failed: self-signed certificate in certificate chain",
+   "logAgeMin": 4.9,
+   "stateAgeMin": 4.9,
+   "heartbeatMin": 4.9,
+   "lastLog": "[2026-08-25T16:57:10.006Z] headlines FXStreet failed: self-signed certificate in certificate chain",
    "account": {
-    "error": "init -6"
+    "error": "login mismatch: terminal has 507904, expected 454101"
    },
    "stale": false
   },
@@ -23,11 +23,28 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 270.3,
+   "stateAgeMin": 0.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-25 16:31:46Z] tick error: mt5 initialize failed: (-6, 'Terminal: Authorization failed')",
+   "lastLog": "[2026-08-25 17:01:47Z] bar 08-25 12:00Z close 79,503 | don20 75,563-81,267 | ema20 77,792 | atr 1,343 | none",
    "account": {
-    "error": "init -6"
+    "equity": 1138.99,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "BTCUSD",
+    "login": 436786587,
+    "spread": 7.0,
+    "tickAgeSec": 1,
+    "serverOffsetHours": 0,
+    "openPositions": 0,
+    "week": {
+     "closed": 0,
+     "net": 0,
+     "wins": 0
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1.0
    },
    "stale": false
   },
@@ -37,12 +54,29 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 75.4,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-25 16:32:02Z] loop error (85 in a row): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certifica",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-25 17:00:10Z] idle \u2014 18:00 UK outside 07:00-17:00",
    "account": {
-    "error": "init -6"
+    "equity": 1138.15,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 436786587,
+    "spread": 0.182,
+    "tickAgeSec": 0,
+    "serverOffsetHours": 0,
+    "openPositions": 0,
+    "week": {
+     "closed": 2,
+     "net": -34.91,
+     "wins": 1
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 100.0
    },
    "stale": false
   }
@@ -62,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "4.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -74,7 +108,7 @@
   {
    "name": "Live broker login matches config",
    "state": "FAIL",
-   "detail": "init -6",
+   "detail": "login mismatch: terminal has 507904, expected 454101",
    "why": "A mismatch aborts every order, silently, until someone looks."
   },
   {
@@ -148,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/25 18:32:01",
-   "nextRun": "2026/08/25 19:02:00",
+   "lastRun": "2026/08/25 19:02:01",
+   "nextRun": "2026/08/25 19:32:00",
    "result": 267009,
    "ok": true
   },
