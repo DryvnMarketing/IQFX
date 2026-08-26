@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T02:32:02.638026+00:00",
+ "generatedAt": "2026-08-26T03:02:02.818467+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 13.6,
-   "stateAgeMin": 3.5,
-   "heartbeatMin": 3.5,
-   "lastLog": "[2026-08-26T02:18:26.879Z] headline throttled: Australian Dollar strengthens against Japanese Yen following CPI data",
+   "logAgeMin": 18.4,
+   "stateAgeMin": 3.3,
+   "heartbeatMin": 3.3,
+   "lastLog": "[2026-08-26T02:43:41.387Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 150.3,
+   "stateAgeMin": 180.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-26 02:31:49Z] no new H4 bar (last 08-25 20:00Z), pos=0",
+   "lastLog": "[2026-08-26 03:01:49Z] no new H4 bar (last 08-25 20:00Z), pos=0",
    "account": {
     "equity": 620.15,
     "currency": "USD",
@@ -54,10 +54,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.8,
+   "logAgeMin": 1.8,
    "stateAgeMin": 0.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-26 02:00:19Z] idle \u2014 03:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-08-26 03:00:20Z] idle \u2014 04:00 UK outside 07:00-17:00",
    "account": {
     "equity": 620.15,
     "currency": "USD",
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.5 min",
+   "detail": "3.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/26 04:32:01",
-   "nextRun": "2026/08/26 05:02:00",
+   "lastRun": "2026/08/26 05:02:01",
+   "nextRun": "2026/08/26 05:32:00",
    "result": 267009,
    "ok": true
   },
