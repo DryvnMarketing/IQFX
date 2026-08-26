@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T00:02:02.686848+00:00",
+ "generatedAt": "2026-08-26T00:32:02.548363+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 30.1,
+   "stateAgeMin": 4.8,
+   "heartbeatMin": 4.8,
    "lastLog": "[2026-08-26T00:01:57.671Z] heartbeat: tick 13, Wed 1:01 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 0.3,
+   "stateAgeMin": 30.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-26 00:01:48Z] bar 08-25 20:00Z close 78,533 | don20 75,563-81,267 | ema20 77,960 | atr 1,298 | none",
+   "lastLog": "[2026-08-26 00:31:48Z] no new H4 bar (last 08-25 20:00Z), pos=0",
    "account": {
     "equity": 620.15,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,7 +54,7 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 2.0,
+   "logAgeMin": 32.0,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
    "lastLog": "[2026-08-26 00:00:04Z] idle \u2014 01:00 UK outside 07:00-17:00",
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.1 min",
+   "detail": "4.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/26 02:02:01",
-   "nextRun": "2026/08/26 02:32:00",
+   "lastRun": "2026/08/26 02:32:01",
+   "nextRun": "2026/08/26 03:02:00",
    "result": 267009,
    "ok": true
   },
