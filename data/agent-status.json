@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T20:32:02.629450+00:00",
+ "generatedAt": "2026-08-26T21:02:02.826572+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 13.2,
-   "stateAgeMin": 3.1,
-   "heartbeatMin": 3.1,
-   "lastLog": "[2026-08-26T20:18:50.434Z] heartbeat: tick 584, Wed 21:18 UK, trades 0/2, open=none",
+   "logAgeMin": 12.9,
+   "stateAgeMin": 2.8,
+   "heartbeatMin": 2.8,
+   "lastLog": "[2026-08-26T20:49:09.981Z] heartbeat: tick 590, Wed 21:49 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 30.2,
+   "stateAgeMin": 60.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-26 20:31:53Z] no new H4 bar (last 08-26 16:00Z), pos=0",
+   "lastLog": "[2026-08-26 21:01:54Z] no new H4 bar (last 08-26 16:00Z), pos=0",
    "account": {
     "equity": 729.51,
     "currency": "USD",
@@ -54,10 +54,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.7,
+   "logAgeMin": 2.1,
    "stateAgeMin": 0.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-26 20:00:26Z] idle \u2014 21:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-08-26 21:00:00Z] idle \u2014 21:59 UK outside 07:00-17:00",
    "account": {
     "equity": 729.51,
     "currency": "USD",
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 248,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.1 min",
+   "detail": "2.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/26 22:32:01",
-   "nextRun": "2026/08/26 23:02:00",
+   "lastRun": "2026/08/26 23:02:01",
+   "nextRun": "2026/08/26 23:32:00",
    "result": 267009,
    "ok": true
   },
