@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T13:02:02.456828+00:00",
+ "generatedAt": "2026-08-26T13:32:02.682312+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 2.7,
-   "stateAgeMin": 1.0,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-08-26T12:59:19.828Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 19.6,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-08-26T13:12:27.947Z] heartbeat: tick 371, Wed 14:12 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 60.2,
+   "stateAgeMin": 90.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-26 13:01:51Z] no new H4 bar (last 08-26 08:00Z), pos=0",
+   "lastLog": "[2026-08-26 13:31:52Z] no new H4 bar (last 08-26 08:00Z), pos=0",
    "account": {
     "equity": 729.51,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 361.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 391.0,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-08-26 07:01:03Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 729.51,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.0 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/26 15:02:01",
-   "nextRun": "2026/08/26 15:32:00",
+   "lastRun": "2026/08/26 15:32:01",
+   "nextRun": "2026/08/26 16:02:00",
    "result": 267009,
    "ok": true
   },
