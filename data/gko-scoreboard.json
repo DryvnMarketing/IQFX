@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T07:02:08.002120+00:00",
+ "generatedAt": "2026-08-26T07:32:07.317711+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -894,7 +894,7 @@
    "closed_at": "2026-08-26T07:00:44+00:00"
   }
  ],
- "seenSignals": 429,
+ "seenSignals": 431,
  "dayTrades": 1,
  "halted": false,
  "stats": {
@@ -936,8 +936,8 @@
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 3,
-   "net": -25.97,
+   "closed": 2,
+   "net": 35.04,
    "wins": 2
   },
   "minLot": 0.01,
