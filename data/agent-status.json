@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T11:02:02.346988+00:00",
+ "generatedAt": "2026-08-26T11:32:02.614207+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 21.0,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-08-26T10:41:04.977Z] heartbeat: tick 299, Wed 11:41 UK, trades 0/2, open=none",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-08-26T11:31:57.299Z]   WhatsApp attempt 2/3 failed (HTTP 503) \u2014 retrying",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 180.2,
+   "stateAgeMin": 210.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-26 11:01:51Z] no new H4 bar (last 08-26 04:00Z), pos=0",
+   "lastLog": "[2026-08-26 11:31:51Z] no new H4 bar (last 08-26 04:00Z), pos=0",
    "account": {
     "equity": 729.51,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 241.0,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 271.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-26 07:01:03Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 729.51,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/26 13:02:01",
-   "nextRun": "2026/08/26 13:32:00",
+   "lastRun": "2026/08/26 13:32:01",
+   "nextRun": "2026/08/26 14:02:00",
    "result": 267009,
    "ok": true
   },
