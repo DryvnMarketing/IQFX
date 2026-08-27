@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-27T08:32:02.662701+00:00",
+ "generatedAt": "2026-08-27T09:02:02.782519+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 2.6,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-27T08:29:28.670Z] headline throttled: Australian Dollar: Tests resistance on firm inflation \u2013 OCBC",
+   "logAgeMin": 1.3,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-08-27T09:00:47.617Z] headline throttled: Euro steadies against Canadian Dollar following stronger German Consumer Confidence data",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 30.2,
+   "stateAgeMin": 60.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-27 08:31:55Z] no new H4 bar (last 08-27 04:00Z), pos=0",
+   "lastLog": "[2026-08-27 09:01:55Z] no new H4 bar (last 08-27 04:00Z), pos=0",
    "account": {
-    "equity": 747.95,
+    "equity": 750.63,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 11.4,
+   "logAgeMin": 41.5,
    "stateAgeMin": 0.3,
    "heartbeatMin": 0.3,
    "lastLog": "[2026-08-27 08:20:39Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 747.95,
+    "equity": 749.98,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.5 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/27 10:32:01",
-   "nextRun": "2026/08/27 11:02:00",
+   "lastRun": "2026/08/27 11:02:01",
+   "nextRun": "2026/08/27 11:32:00",
    "result": 267009,
    "ok": true
   },
