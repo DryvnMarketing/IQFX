@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-27T13:02:02.511916+00:00",
+ "generatedAt": "2026-08-27T13:32:02.463752+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 19.2,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-08-27T12:42:54.338Z]   WhatsApp API status 200",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-08-27T13:30:02.687Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 60.2,
+   "stateAgeMin": 90.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-27 13:01:56Z] no new H4 bar (last 08-27 08:00Z), pos=0",
+   "lastLog": "[2026-08-27 13:31:56Z] no new H4 bar (last 08-27 08:00Z), pos=0",
    "account": {
     "equity": 795.86,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 70.2,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 100.2,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-27 11:51:56Z] loop error (1 in a row): <urlopen error timed out>",
    "account": {
     "equity": 795.86,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/27 15:02:01",
-   "nextRun": "2026/08/27 15:32:00",
+   "lastRun": "2026/08/27 15:32:01",
+   "nextRun": "2026/08/27 16:02:00",
    "result": 267009,
    "ok": true
   },
