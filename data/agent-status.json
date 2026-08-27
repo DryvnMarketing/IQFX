@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-27T04:02:02.632630+00:00",
+ "generatedAt": "2026-08-27T04:32:02.650769+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 3.6,
-   "stateAgeMin": 3.6,
-   "heartbeatMin": 3.6,
-   "lastLog": "[2026-08-27T03:58:29.800Z]   WhatsApp API status 200",
+   "logAgeMin": 28.6,
+   "stateAgeMin": 3.3,
+   "heartbeatMin": 3.3,
+   "lastLog": "[2026-08-27T04:03:28.946Z] heartbeat: tick 61, Thu 5:03 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 0.2,
+   "stateAgeMin": 30.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-08-27 04:01:53Z] bar 08-27 00:00Z close 78,821 | don20 76,645-81,267 | ema20 78,322 | atr 1,104 | none",
+   "lastLog": "[2026-08-27 04:31:53Z] no new H4 bar (last 08-27 00:00Z), pos=0",
    "account": {
     "equity": 729.51,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 61.7,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 91.7,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-08-27 03:00:26Z] idle \u2014 04:00 UK outside 07:00-17:00",
    "account": {
     "equity": 729.51,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.6 min",
+   "detail": "3.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/27 06:02:01",
-   "nextRun": "2026/08/27 06:32:00",
+   "lastRun": "2026/08/27 06:32:01",
+   "nextRun": "2026/08/27 07:02:00",
    "result": 267009,
    "ok": true
   },
