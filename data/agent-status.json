@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-27T14:32:02.356985+00:00",
+ "generatedAt": "2026-08-27T15:02:02.479073+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 19.7,
+   "logAgeMin": 18.6,
    "stateAgeMin": 1.0,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-08-27T14:12:24.769Z] heartbeat: tick 429, Thu 15:12 UK, trades 0/2, open=none",
+   "lastLog": "[2026-08-27T14:43:27.481Z] heartbeat: tick 459, Thu 15:43 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 150.2,
+   "stateAgeMin": 180.2,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-27 14:31:56Z] no new H4 bar (last 08-27 08:00Z), pos=0",
+   "lastLog": "[2026-08-27 15:01:57Z] no new H4 bar (last 08-27 08:00Z), pos=0",
    "account": {
     "equity": 795.86,
     "currency": "USD",
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 160.2,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 190.2,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-27 11:51:56Z] loop error (1 in a row): <urlopen error timed out>",
    "account": {
     "equity": 795.86,
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/27 16:32:01",
-   "nextRun": "2026/08/27 17:02:00",
+   "lastRun": "2026/08/27 17:02:01",
+   "nextRun": "2026/08/27 17:32:00",
    "result": 267009,
    "ok": true
   },
