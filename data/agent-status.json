@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-28T06:02:02.469158+00:00",
+ "generatedAt": "2026-08-28T06:32:02.590450+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 22.7,
-   "stateAgeMin": 2.4,
-   "heartbeatMin": 2.4,
-   "lastLog": "[2026-08-28T05:39:23.000Z] heartbeat: tick 79, Fri 6:39 UK, trades 0/2, open=none",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 2.0,
+   "heartbeatMin": 2.0,
+   "lastLog": "[2026-08-28T06:30:05.127Z] news: 2 red event(s) today: 15:00 Fed Chairman Warsh Speaks; 15:00 Prelim Benchmark Payrolls Revision",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 120.1,
+   "stateAgeMin": 150.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-08-28 06:02:01Z] no new H4 bar (last 08-28 00:00Z), pos=0",
+   "lastLog": "[2026-08-28 06:32:01Z] no new H4 bar (last 08-28 00:00Z), pos=0",
    "account": {
     "equity": 795.86,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,9 +54,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 32.1,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 62.1,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-08-28 05:30:03Z] another follower is already running (pid 16304) \u2014 exiting",
    "account": {
     "equity": 795.86,
@@ -82,8 +82,8 @@
   }
  ],
  "calendar": {
-  "events": 86,
-  "forwardDated": 22,
+  "events": 89,
+  "forwardDated": 25,
   "highForward": 4
  },
  "checks": [
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.4 min",
+   "detail": "2.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/28 08:02:01",
-   "nextRun": "2026/08/28 08:32:00",
+   "lastRun": "2026/08/28 08:32:01",
+   "nextRun": "2026/08/28 09:02:00",
    "result": 267009,
    "ok": true
   },
