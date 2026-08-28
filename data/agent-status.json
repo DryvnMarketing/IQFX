@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-28T20:02:02.556758+00:00",
+ "generatedAt": "2026-08-28T20:32:02.578271+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 9.3,
-   "stateAgeMin": 4.1,
-   "heartbeatMin": 4.1,
-   "lastLog": "[2026-08-28T19:52:49.583Z] heartbeat: tick 577, Fri 20:52 UK, trades 0/2, open=none",
+   "logAgeMin": 8.8,
+   "stateAgeMin": 3.6,
+   "heartbeatMin": 3.6,
+   "lastLog": "[2026-08-28T20:23:14.642Z] heartbeat: tick 583, Fri 21:23 UK, trades 0/2, open=none",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 0.0,
-   "stateAgeMin": 0.0,
+   "stateAgeMin": 30.0,
    "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-28 20:02:03Z] bar 08-28 16:00Z close 77,563 | don20 77,615-81,507 | ema20 78,909 | atr 1,154 | 08-28 16:00Z opened SHORT",
+   "lastLog": "[2026-08-28 20:32:04Z] no new H4 bar (last 08-28 16:00Z), pos=1",
    "account": {
-    "equity": 846.11,
+    "equity": 848.36,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-28 20:00:15Z] idle \u2014 21:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 846.11,
+    "equity": 848.33,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.1 min",
+   "detail": "3.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/28 22:02:01",
-   "nextRun": "2026/08/28 22:32:00",
+   "lastRun": "2026/08/28 22:32:01",
+   "nextRun": "2026/08/28 23:02:00",
    "result": 267009,
    "ok": true
   },
