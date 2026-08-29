@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T06:32:03.350834+00:00",
+ "generatedAt": "2026-08-29T07:02:02.731449+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,14 +7,14 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 456.9,
-   "stateAgeMin": 456.8,
-   "heartbeatMin": 456.8,
-   "lastLog": "[2026-08-28T22:55:12.586Z] heartbeat: tick 613, Fri 23:55 UK, trades 0/2, open=none",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 486.8,
+   "heartbeatMin": 1.2,
+   "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -22,12 +22,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 145.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-29 06:32:06Z] no new H4 bar (last 08-29 00:00Z), pos=1",
+   "logAgeMin": 5.0,
+   "stateAgeMin": 175.0,
+   "heartbeatMin": 5.0,
+   "lastLog": "[2026-08-29 06:57:06Z] no new H4 bar (last 08-29 00:00Z), pos=1",
    "account": {
-    "equity": 847.7,
+    "equity": 847.34,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.8,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-29 06:00:20Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-29 07:00:05Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 847.7,
+    "equity": 847.34,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 34448,
+    "tickAgeSec": 36246,
     "serverOffsetHours": -10,
     "openPositions": 0,
     "week": {
@@ -95,8 +95,8 @@
   },
   {
    "name": "Heartbeat fresh",
-   "state": "WARN",
-   "detail": "456.8 min",
+   "state": "PASS",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -126,7 +126,7 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekend Gap Check = 2",
+   "detail": "XAU Weekly Brief = 1, XAU Weekend Gap Check = 2",
    "why": "A failed weekly job produces silence, not an error."
   }
  ],
@@ -161,10 +161,10 @@
   },
   {
    "name": "XAU Weekly Brief",
-   "lastRun": "2026/08/22 09:00:00",
-   "nextRun": "2026/08/29 09:00:00",
-   "result": 0,
-   "ok": true
+   "lastRun": "2026/08/29 09:00:00",
+   "nextRun": "2026/09/05 09:00:00",
+   "result": 1,
+   "ok": false
   },
   {
    "name": "XAU Sunday Fundamentals",
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/29 08:32:01",
-   "nextRun": "2026/08/29 09:02:00",
+   "lastRun": "2026/08/29 09:02:01",
+   "nextRun": "2026/08/29 09:32:00",
    "result": 267009,
    "ok": true
   },
