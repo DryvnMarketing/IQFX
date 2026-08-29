@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T16:32:02.927679+00:00",
+ "generatedAt": "2026-08-29T17:02:03.067350+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 571.2,
-   "stateAgeMin": 1056.8,
-   "heartbeatMin": 571.2,
+   "logAgeMin": 601.2,
+   "stateAgeMin": 1086.8,
+   "heartbeatMin": 601.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 5.0,
-   "stateAgeMin": 30.0,
+   "stateAgeMin": 60.0,
    "heartbeatMin": 5.0,
-   "lastLog": "[2026-08-29 16:27:07Z] no new H4 bar (last 08-29 12:00Z), pos=1",
+   "lastLog": "[2026-08-29 16:57:07Z] no new H4 bar (last 08-29 12:00Z), pos=1",
    "account": {
-    "equity": 843.22,
+    "equity": 841.68,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 91.8,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 121.8,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-08-29 15:00:16Z] idle \u2014 weekend (Sat)",
    "account": {
-    "equity": 843.21,
+    "equity": 841.67,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 70447,
+    "tickAgeSec": 72247,
     "serverOffsetHours": -20,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "571.2 min",
+   "detail": "601.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/29 18:32:01",
-   "nextRun": "2026/08/29 19:02:00",
+   "lastRun": "2026/08/29 19:02:01",
+   "nextRun": "2026/08/29 19:32:00",
    "result": 267009,
    "ok": true
   },

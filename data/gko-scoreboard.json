@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-29T16:32:08.895319+00:00",
+ "generatedAt": "2026-08-29T17:02:08.393475+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -986,7 +986,7 @@
   ]
  ],
  "account": {
-  "equity": 843.28,
+  "equity": 841.64,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -994,7 +994,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 70449,
+  "tickAgeSec": 72249,
   "serverOffsetHours": -20,
   "openPositions": 0,
   "week": {
