@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T21:32:02.879046+00:00",
+ "generatedAt": "2026-08-30T22:02:02.699174+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 92.0,
-   "stateAgeMin": 2796.8,
-   "heartbeatMin": 92.0,
+   "logAgeMin": 122.0,
+   "stateAgeMin": 2826.8,
+   "heartbeatMin": 122.0,
    "lastLog": "[2026-08-30T20:00:08.158Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.8,
-   "stateAgeMin": 89.9,
+   "stateAgeMin": 119.9,
    "heartbeatMin": 4.8,
-   "lastLog": "[2026-08-30 21:27:14Z] no new H4 bar (last 08-30 16:00Z), pos=0",
+   "lastLog": "[2026-08-30 21:57:15Z] no new H4 bar (last 08-30 16:00Z), pos=0",
    "account": {
     "equity": 833.8,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,10 +54,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.9,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-30 21:00:11Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 20.2,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-08-30 21:41:55Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "equity": 833.8,
     "currency": "USD",
@@ -66,9 +66,9 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.182,
-    "tickAgeSec": 174847,
-    "serverOffsetHours": -49,
+    "spread": 0.238,
+    "tickAgeSec": 1,
+    "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "92.0 min",
+   "detail": "122.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 23:32:01",
-   "nextRun": "2026/08/31 00:02:00",
+   "lastRun": "2026/08/31 00:02:01",
+   "nextRun": "2026/08/31 00:32:00",
    "result": 267009,
    "ok": true
   },
