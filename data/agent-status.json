@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T05:02:02.771629+00:00",
+ "generatedAt": "2026-08-30T05:32:02.983332+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1321.2,
-   "stateAgeMin": 1806.8,
-   "heartbeatMin": 1321.2,
+   "logAgeMin": 1351.2,
+   "stateAgeMin": 1836.8,
+   "heartbeatMin": 1351.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,11 +23,28 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.9,
-   "stateAgeMin": 59.9,
+   "stateAgeMin": 89.9,
    "heartbeatMin": 4.9,
-   "lastLog": "[2026-08-30 04:57:10Z] no new H4 bar (last 08-30 00:00Z), pos=1",
+   "lastLog": "[2026-08-30 05:27:10Z] no new H4 bar (last 08-30 00:00Z), pos=1",
    "account": {
-    "error": "init -6"
+    "equity": 840.73,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "BTCUSD",
+    "login": 436786587,
+    "spread": 7.0,
+    "tickAgeSec": 2,
+    "serverOffsetHours": 0,
+    "openPositions": 1,
+    "week": {
+     "closed": 0,
+     "net": 0,
+     "wins": 0
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1.0
    },
    "stale": false
   },
@@ -37,12 +54,29 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-08-30 05:02:02Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 9.5,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-30 05:22:37Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
    "account": {
-    "error": "init -6"
+    "equity": 840.75,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 436786587,
+    "spread": 0.182,
+    "tickAgeSec": 117248,
+    "serverOffsetHours": -33,
+    "openPositions": 0,
+    "week": {
+     "closed": 3,
+     "net": 23.65,
+     "wins": 3
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 100.0
    },
    "stale": false
   }
@@ -62,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1321.2 min",
+   "detail": "1351.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 07:02:01",
-   "nextRun": "2026/08/30 07:32:00",
+   "lastRun": "2026/08/30 07:32:01",
+   "nextRun": "2026/08/30 08:02:00",
    "result": 267009,
    "ok": true
   },
