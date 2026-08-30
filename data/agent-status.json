@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T19:32:02.807317+00:00",
+ "generatedAt": "2026-08-30T20:02:02.653400+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 61.6,
-   "stateAgeMin": 2676.8,
-   "heartbeatMin": 61.6,
-   "lastLog": "[2026-08-30T18:30:30.737Z]   WhatsApp API status 200",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 2706.8,
+   "heartbeatMin": 1.9,
+   "lastLog": "[2026-08-30T20:00:08.158Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,9 +23,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.9,
-   "stateAgeMin": 209.9,
+   "stateAgeMin": 239.9,
    "heartbeatMin": 4.9,
-   "lastLog": "[2026-08-30 19:27:14Z] no new H4 bar (last 08-30 12:00Z), pos=0",
+   "lastLog": "[2026-08-30 19:57:14Z] no new H4 bar (last 08-30 12:00Z), pos=0",
    "account": {
     "equity": 833.8,
     "currency": "USD",
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -54,10 +54,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.8,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-30 19:00:18Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-30 20:00:07Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 833.8,
     "currency": "USD",
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 167647,
+    "tickAgeSec": 169447,
     "serverOffsetHours": -47,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "61.6 min",
+   "detail": "1.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -126,7 +126,7 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1, XAU Weekend Gap Check = 2",
+   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
    "why": "A failed weekly job produces silence, not an error."
   }
  ],
@@ -175,15 +175,15 @@
   },
   {
    "name": "XAU Weekend Gap Check",
-   "lastRun": "2026/08/23 22:00:00",
-   "nextRun": "2026/08/30 22:00:00",
-   "result": 2,
-   "ok": false
+   "lastRun": "2026/08/30 22:00:00",
+   "nextRun": "2026/09/06 22:00:00",
+   "result": 0,
+   "ok": true
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 21:32:01",
-   "nextRun": "2026/08/30 22:02:00",
+   "lastRun": "2026/08/30 22:02:01",
+   "nextRun": "2026/08/30 22:32:00",
    "result": 267009,
    "ok": true
   },
