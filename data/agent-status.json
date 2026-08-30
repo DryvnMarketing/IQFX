@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T04:02:02.984265+00:00",
+ "generatedAt": "2026-08-30T04:32:02.853521+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1261.2,
-   "stateAgeMin": 1746.8,
-   "heartbeatMin": 1261.2,
+   "logAgeMin": 1291.2,
+   "stateAgeMin": 1776.8,
+   "heartbeatMin": 1291.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.9,
-   "stateAgeMin": 240.0,
+   "stateAgeMin": 29.9,
    "heartbeatMin": 4.9,
-   "lastLog": "[2026-08-30 03:57:10Z] no new H4 bar (last 08-29 20:00Z), pos=1",
+   "lastLog": "[2026-08-30 04:27:10Z] no new H4 bar (last 08-30 00:00Z), pos=1",
    "account": {
-    "equity": 840.8,
+    "equity": 841.15,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -35,7 +35,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.7,
+   "logAgeMin": 31.6,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-08-30 04:00:27Z] idle \u2014 weekend (Sun)",
    "account": {
-    "equity": 840.79,
+    "equity": 841.15,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,8 +67,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 111848,
-    "serverOffsetHours": -31,
+    "tickAgeSec": 113647,
+    "serverOffsetHours": -32,
     "openPositions": 0,
     "week": {
      "closed": 3,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1261.2 min",
+   "detail": "1291.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 06:02:01",
-   "nextRun": "2026/08/30 06:32:00",
+   "lastRun": "2026/08/30 06:32:01",
+   "nextRun": "2026/08/30 07:02:00",
    "result": 267009,
    "ok": true
   },
