@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T11:02:03.146656+00:00",
+ "generatedAt": "2026-08-30T11:32:02.946408+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,12 +7,12 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1681.2,
-   "stateAgeMin": 2166.8,
-   "heartbeatMin": 1681.2,
+   "logAgeMin": 1711.2,
+   "stateAgeMin": 2196.8,
+   "heartbeatMin": 1711.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
-    "error": "init -6"
+    "error": "login mismatch: terminal has 507904, expected 454101"
    },
    "stale": true
   },
@@ -23,11 +23,28 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.9,
-   "stateAgeMin": 179.9,
+   "stateAgeMin": 209.9,
    "heartbeatMin": 4.9,
-   "lastLog": "[2026-08-30 10:57:11Z] no new H4 bar (last 08-30 04:00Z), pos=1",
+   "lastLog": "[2026-08-30 11:27:12Z] no new H4 bar (last 08-30 04:00Z), pos=1",
    "account": {
-    "error": "init -6"
+    "equity": 840.28,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "BTCUSD",
+    "login": 436786587,
+    "spread": 7.0,
+    "tickAgeSec": 2,
+    "serverOffsetHours": 0,
+    "openPositions": 1,
+    "week": {
+     "closed": 0,
+     "net": 0,
+     "wins": 0
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 1.0
    },
    "stale": false
   },
@@ -37,12 +54,29 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 2.4,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-08-30 11:01:51Z] loop error (2 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
+   "logAgeMin": 22.1,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-08-30 11:09:59Z] loop error (14 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "error": "init -6"
+    "equity": 840.28,
+    "currency": "USD",
+    "demo": true,
+    "algoTrading": true,
+    "connected": true,
+    "symbol": "XAUUSD",
+    "login": 436786587,
+    "spread": 0.182,
+    "tickAgeSec": 138848,
+    "serverOffsetHours": -39,
+    "openPositions": 0,
+    "week": {
+     "closed": 3,
+     "net": 23.65,
+     "wins": 3
+    },
+    "minLot": 0.01,
+    "valuePerPointPerLot": 100.0
    },
    "stale": false
   }
@@ -62,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1681.2 min",
+   "detail": "1711.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -74,7 +108,7 @@
   {
    "name": "Live broker login matches config",
    "state": "FAIL",
-   "detail": "init -6",
+   "detail": "login mismatch: terminal has 507904, expected 454101",
    "why": "A mismatch aborts every order, silently, until someone looks."
   },
   {
@@ -148,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 13:02:01",
-   "nextRun": "2026/08/30 13:32:00",
+   "lastRun": "2026/08/30 13:32:01",
+   "nextRun": "2026/08/30 14:02:00",
    "result": 267009,
    "ok": true
   },
