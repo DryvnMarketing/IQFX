@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-30T05:32:02.983332+00:00",
+ "generatedAt": "2026-08-30T06:02:02.827055+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1351.2,
-   "stateAgeMin": 1836.8,
-   "heartbeatMin": 1351.2,
+   "logAgeMin": 1381.2,
+   "stateAgeMin": 1866.8,
+   "heartbeatMin": 1381.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.9,
-   "stateAgeMin": 89.9,
+   "stateAgeMin": 119.9,
    "heartbeatMin": 4.9,
-   "lastLog": "[2026-08-30 05:27:10Z] no new H4 bar (last 08-30 00:00Z), pos=1",
+   "lastLog": "[2026-08-30 05:57:10Z] no new H4 bar (last 08-30 00:00Z), pos=1",
    "account": {
-    "equity": 840.73,
+    "equity": 841.07,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 9.5,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-08-30 05:22:37Z] stale-order sweep error: MT5 init failed: (-6, 'Terminal: Authorization failed')",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-08-30 06:00:08Z] idle \u2014 weekend (Sun)",
    "account": {
-    "equity": 840.75,
+    "equity": 841.07,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -67,7 +67,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 117248,
+    "tickAgeSec": 119047,
     "serverOffsetHours": -33,
     "openPositions": 0,
     "week": {
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1351.2 min",
+   "detail": "1381.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/30 07:32:01",
-   "nextRun": "2026/08/30 08:02:00",
+   "lastRun": "2026/08/30 08:02:01",
+   "nextRun": "2026/08/30 08:32:00",
    "result": 267009,
    "ok": true
   },
