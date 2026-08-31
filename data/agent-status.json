@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-31T10:32:02.711700+00:00",
+ "generatedAt": "2026-08-31T11:02:03.108326+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 22.0,
-   "stateAgeMin": 1.5,
-   "heartbeatMin": 1.5,
-   "lastLog": "[2026-08-31T10:10:05.388Z]   !! WhatsApp FAILED after 3 attempts (HTTP 210) \u2014 message lost",
+   "logAgeMin": 1.0,
+   "stateAgeMin": 1.1,
+   "heartbeatMin": 1.0,
+   "lastLog": "[2026-08-31T11:01:04.481Z]   WhatsApp API status 200",
    "account": {
     "error": "login mismatch: terminal has 507904, expected 454101"
    },
@@ -23,11 +23,11 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.8,
-   "stateAgeMin": 149.8,
+   "stateAgeMin": 179.8,
    "heartbeatMin": 4.8,
-   "lastLog": "[2026-08-31 10:27:18Z] no new H4 bar (last 08-31 04:00Z), pos=0",
+   "lastLog": "[2026-08-31 10:57:18Z] no new H4 bar (last 08-31 04:00Z), pos=0",
    "account": {
-    "equity": 753.4,
+    "equity": 669.56,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -54,12 +54,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 9.7,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.6,
+   "logAgeMin": 39.7,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-08-31 10:22:25Z]   whatsapp -> 210 (attempt 1)",
    "account": {
-    "equity": 753.4,
+    "equity": 674.87,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -96,7 +96,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.5 min",
+   "detail": "1.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -182,8 +182,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/08/31 12:32:01",
-   "nextRun": "2026/08/31 13:02:00",
+   "lastRun": "2026/08/31 13:02:01",
+   "nextRun": "2026/08/31 13:32:00",
    "result": 267009,
    "ok": true
   },
