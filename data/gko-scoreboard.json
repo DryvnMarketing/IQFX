@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-31T11:32:09.794775+00:00",
+ "generatedAt": "2026-08-31T12:02:08.111200+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1016,16 +1016,42 @@
    "r": -1.0,
    "outcome": "SL",
    "closed_at": "2026-08-31T11:22:20+00:00"
+  },
+  {
+   "signal_id": 40788,
+   "posted": "2026-08-31T11:53:56+00:00",
+   "age_min": 0.1,
+   "dir": "SELL",
+   "zone_lo": 4453.0,
+   "zone_hi": 4458.0,
+   "tp1": 4451.0,
+   "sl": 4463.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4453 - 4458\n\nTP 1: 4451\nTP 2: 4441\n\nSL: 4463\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4453.22,
+   "spread": 0.182,
+   "intended_entry": 4453.22,
+   "risk_pts": 9.78,
+   "in_zone": true,
+   "decision": "PLACED SELL 0.02 XAUUSD MKT@4453.22 SL 4463.00 TP 4451.00 | 0.02 lots = 19.57 USD = 3.34% of equity",
+   "status": "PLACED",
+   "lots": 0.02,
+   "sizing": "0.02 lots = 19.57 USD = 3.34% of equity",
+   "order_type": "MKT",
+   "order_ticket": 3161252219,
+   "placed_epoch": 1788177245,
+   "ts": "2026-08-31T11:54:05.013965+00:00",
+   "position_id": 3161252219,
+   "fill": 4453.22
   }
  ],
- "seenSignals": 479,
- "dayTrades": 2,
+ "seenSignals": 481,
+ "dayTrades": 3,
  "halted": false,
  "stats": {
-  "signals": 36,
-  "taken": 25,
+  "signals": 37,
+  "taken": 26,
   "skipped": 5,
-  "open": 0,
+  "open": 1,
   "closed": 25,
   "wins": 20,
   "winRate": 80.0,
@@ -1048,7 +1074,7 @@
   ]
  ],
  "account": {
-  "equity": 585.45,
+  "equity": 566.19,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -1058,7 +1084,7 @@
   "spread": 0.182,
   "tickAgeSec": 1,
   "serverOffsetHours": 0,
-  "openPositions": 0,
+  "openPositions": 1,
   "week": {
    "closed": 5,
    "net": -41.83,
