@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-01T06:02:08.471481+00:00",
+ "generatedAt": "2026-09-01T06:32:09.396374+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1049,7 +1049,7 @@
    "closed_at": "2026-08-31T12:09:08+00:00"
   }
  ],
- "seenSignals": 494,
+ "seenSignals": 495,
  "dayTrades": 0,
  "halted": false,
  "stats": {
