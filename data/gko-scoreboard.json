@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-01T07:32:08.104149+00:00",
+ "generatedAt": "2026-09-01T08:02:08.923140+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1047,22 +1047,53 @@
    "r": 0.227,
    "outcome": "TP",
    "closed_at": "2026-08-31T12:09:08+00:00"
+  },
+  {
+   "signal_id": 40811,
+   "posted": "2026-09-01T07:43:15+00:00",
+   "age_min": 0.5,
+   "dir": "SELL",
+   "zone_lo": 4421.0,
+   "zone_hi": 4426.0,
+   "tp1": 4419.0,
+   "sl": 4431.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4421 - 4426\n\nTP 1: 4419\nTP 2: 4409\n\nSL: 4431\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4421.72,
+   "spread": 0.182,
+   "intended_entry": 4421.72,
+   "risk_pts": 9.28,
+   "in_zone": true,
+   "decision": "PLACED SELL 0.03 XAUUSD MKT@4421.72 SL 4431.00 TP 4419.00 | 0.03 lots = 27.85 USD = 4.55% of equity",
+   "status": "CLOSED",
+   "lots": 0.03,
+   "sizing": "0.03 lots = 27.85 USD = 4.55% of equity",
+   "order_type": "MKT",
+   "order_ticket": 3165760920,
+   "placed_epoch": 1788248627,
+   "ts": "2026-09-01T07:43:47.202888+00:00",
+   "position_id": 3165760920,
+   "fill": 4421.72,
+   "exit": 4419.0,
+   "profit": 8.15,
+   "r": 0.293,
+   "outcome": "TP",
+   "closed_at": "2026-09-01T07:44:10+00:00"
   }
  ],
- "seenSignals": 495,
- "dayTrades": 0,
+ "seenSignals": 498,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 37,
-  "taken": 26,
+  "signals": 38,
+  "taken": 27,
   "skipped": 5,
   "open": 0,
-  "closed": 26,
-  "wins": 21,
-  "winRate": 80.8,
-  "expectancy": 0.111,
-  "totalR": 2.88,
-  "netCash": 69.47
+  "closed": 27,
+  "wins": 22,
+  "winRate": 81.5,
+  "expectancy": 0.117,
+  "totalR": 3.17,
+  "netCash": 77.62
  },
  "skipReasons": [
   [
@@ -1079,7 +1110,7 @@
   ]
  ],
  "account": {
-  "equity": 612.51,
+  "equity": 635.83,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,
@@ -1087,13 +1118,13 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 2,
+  "tickAgeSec": 1,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 6,
-   "net": -37.4,
-   "wins": 4
+   "closed": 7,
+   "net": -29.25,
+   "wins": 5
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0
