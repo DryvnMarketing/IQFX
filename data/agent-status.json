@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-02T02:32:02.760827+00:00",
+ "generatedAt": "2026-09-02T03:02:02.514565+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 12.3,
-   "stateAgeMin": 2.2,
-   "heartbeatMin": 2.2,
-   "lastLog": "[2026-09-02T02:19:45.132Z] headline throttled: Australian Dollar surges to July 8 high vs New Zealand Dollar after Aussie GDP, RBNZ",
+   "logAgeMin": 27.2,
+   "stateAgeMin": 1.7,
+   "heartbeatMin": 1.7,
+   "lastLog": "[2026-09-02T02:34:52.791Z] heartbeat: tick 43, Wed 3:34 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.45,
+    "spread": 0.51,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1617.135
+    "valuePerPointPerLot": 1616.355
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.7,
-   "stateAgeMin": 149.7,
-   "heartbeatMin": 4.7,
-   "lastLog": "[2026-09-02 02:27:26Z] no new H4 bar (last 09-01 20:00Z), pos=0",
+   "logAgeMin": 4.6,
+   "stateAgeMin": 179.7,
+   "heartbeatMin": 4.6,
+   "lastLog": "[2026-09-02 02:57:26Z] no new H4 bar (last 09-01 20:00Z), pos=0",
    "account": {
     "equity": 706.72,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-02 02:00:27Z] idle \u2014 03:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-09-02 03:00:18Z] idle \u2014 04:00 UK outside 07:00-17:00",
    "account": {
     "equity": 706.72,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.2 min",
+   "detail": "1.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 173.63% of equity at a typical stop, and up to 363.73% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 173.54% of equity at a typical stop, and up to 363.55% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/02 04:32:01",
-   "nextRun": "2026/09/02 05:02:00",
+   "lastRun": "2026/09/02 05:02:01",
+   "nextRun": "2026/09/02 05:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.17,
+  "perPoint": 16.16,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.26,
-    "pct": 78.58,
+    "amount": 100.21,
+    "pct": 78.54,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.55,
-    "pct": 173.63,
+    "amount": 221.44,
+    "pct": 173.54,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 464.12,
-    "pct": 363.73,
+    "amount": 463.89,
+    "pct": 363.55,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7385.0
+  "equityForTruePct": 7381.0
  }
 }
