@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-03T11:32:03.013005+00:00",
+ "generatedAt": "2026-09-03T12:02:02.754226+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-09-03T11:31:44.697Z] headline throttled: Economists agree: ECB to hike rates on September 10 \u2013 Reuters poll",
+   "logAgeMin": 10.1,
+   "stateAgeMin": 5.0,
+   "heartbeatMin": 5.0,
+   "lastLog": "[2026-09-03T11:52:00.718Z] headline throttled: Japanese Yen: BoJ meeting to decide JPY path \u2013 Commerzbank",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1603.801
+    "valuePerPointPerLot": 1603.852
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.5,
-   "stateAgeMin": 209.6,
+   "stateAgeMin": 239.6,
    "heartbeatMin": 4.5,
-   "lastLog": "[2026-09-03 11:27:33Z] no new H4 bar (last 09-03 04:00Z), pos=0",
+   "lastLog": "[2026-09-03 11:57:33Z] no new H4 bar (last 09-03 04:00Z), pos=0",
    "account": {
     "equity": 978.83,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 165.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 195.0,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-09-03 08:47:08Z]   whatsapp -> 210 (attempt 1)",
    "account": {
     "equity": 978.83,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "5.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 172.19% of equity at a typical stop, and up to 360.73% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 172.2% of equity at a typical stop, and up to 360.74% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/03 13:32:01",
-   "nextRun": "2026/09/03 14:02:00",
+   "lastRun": "2026/09/03 14:02:01",
+   "nextRun": "2026/09/03 14:32:00",
    "result": 267009,
    "ok": true
   },
@@ -241,15 +241,15 @@
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 219.72,
-    "pct": 172.19,
+    "amount": 219.73,
+    "pct": 172.2,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 460.29,
-    "pct": 360.73,
+    "amount": 460.31,
+    "pct": 360.74,
     "skipped": true
    }
   ],
