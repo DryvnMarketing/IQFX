@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-04T06:32:09.730708+00:00",
+ "generatedAt": "2026-09-04T07:02:07.929126+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1140,16 +1140,40 @@
    "r": 0.6,
    "outcome": "TP",
    "closed_at": "2026-09-03T08:46:54+00:00"
+  },
+  {
+   "signal_id": 40882,
+   "posted": "2026-09-04T06:51:49+00:00",
+   "age_min": 0.3,
+   "dir": "SELL",
+   "zone_lo": 4464.0,
+   "zone_hi": 4469.0,
+   "tp1": 4462.0,
+   "sl": 4474.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4464 - 4469\n\nTP 1: 4462\nTP 2: 4452\n\nSL: 4474\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "spot": 4463.42,
+   "spread": 0.182,
+   "intended_entry": 4466.5,
+   "risk_pts": 7.5,
+   "in_zone": false,
+   "decision": "PLACED SELL 0.05 XAUUSD LIMIT@4466.50 SL 4474.00 TP 4462.00 | 0.05 lots = 37.50 USD = 3.85% of equity",
+   "status": "PLACED",
+   "lots": 0.05,
+   "sizing": "0.05 lots = 37.50 USD = 3.85% of equity",
+   "order_type": "LIMIT",
+   "order_ticket": 3182766069,
+   "placed_epoch": 1788504726,
+   "ts": "2026-09-04T06:52:06.384970+00:00"
   }
  ],
  "seenSignals": 500,
- "dayTrades": 0,
+ "dayTrades": 1,
  "halted": false,
  "stats": {
-  "signals": 40,
-  "taken": 29,
+  "signals": 41,
+  "taken": 30,
   "skipped": 5,
-  "open": 0,
+  "open": 1,
   "closed": 29,
   "wins": 24,
   "winRate": 82.8,
@@ -1172,7 +1196,7 @@
   ]
  ],
  "account": {
-  "equity": 974.4,
+  "equity": 992.93,
   "currency": "USD",
   "demo": true,
   "algoTrading": true,

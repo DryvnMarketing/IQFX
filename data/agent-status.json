@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-04T06:32:03.028893+00:00",
+ "generatedAt": "2026-09-04T07:02:02.556070+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 4.6,
-   "stateAgeMin": 4.7,
-   "heartbeatMin": 4.6,
-   "lastLog": "[2026-09-04T06:27:27.158Z]   WhatsApp API status 200",
+   "logAgeMin": 13.9,
+   "stateAgeMin": 3.8,
+   "heartbeatMin": 3.8,
+   "lastLog": "[2026-09-04T06:48:09.912Z] headline throttled: New Zealand Dollar advances as US Dollar struggles on softening hawkish expectations",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1597.856
+    "valuePerPointPerLot": 1599.694
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.5,
-   "stateAgeMin": 149.5,
-   "heartbeatMin": 4.5,
-   "lastLog": "[2026-09-04 06:27:39Z] no new H4 bar (last 09-04 00:00Z), pos=1",
+   "logAgeMin": 4.4,
+   "stateAgeMin": 179.4,
+   "heartbeatMin": 4.4,
+   "lastLog": "[2026-09-04 06:57:39Z] no new H4 bar (last 09-04 00:00Z), pos=1",
    "account": {
-    "equity": 974.4,
+    "equity": 992.77,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 3,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 62.1,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-04 05:30:04Z] another follower is already running (pid 16304) \u2014 exiting",
+   "logAgeMin": 10.0,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-04 06:52:07Z]   whatsapp -> 200 (attempt 1)",
    "account": {
-    "equity": 974.4,
+    "equity": 987.4,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -99,7 +99,7 @@
   }
  ],
  "calendar": {
-  "events": 131,
+  "events": 132,
   "forwardDated": 14,
   "highForward": 6
  },
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.6 min",
+   "detail": "3.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,22 +149,22 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 171.56% of equity at a typical stop, and up to 359.39% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 171.75% of equity at a typical stop, and up to 359.81% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/09/03 08:35:00",
-   "nextRun": "2026/09/04 08:35:00",
+   "lastRun": "2026/09/04 08:35:00",
+   "nextRun": "2026/09/07 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/09/03 08:35:00",
-   "nextRun": "2026/09/04 08:35:00",
+   "lastRun": "2026/09/04 08:35:00",
+   "nextRun": "2026/09/07 08:35:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/04 08:32:01",
-   "nextRun": "2026/09/04 09:02:00",
+   "lastRun": "2026/09/04 09:02:01",
+   "nextRun": "2026/09/04 09:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 15.98,
+  "perPoint": 16.0,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 99.07,
-    "pct": 77.64,
+    "amount": 99.18,
+    "pct": 77.73,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 218.91,
-    "pct": 171.56,
+    "amount": 219.16,
+    "pct": 171.75,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 458.58,
-    "pct": 359.39,
+    "amount": 459.11,
+    "pct": 359.81,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7297.0
+  "equityForTruePct": 7305.0
  }
 }
