@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-04T04:32:02.760160+00:00",
+ "generatedAt": "2026-09-04T05:02:02.910838+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 11.3,
-   "stateAgeMin": 1.2,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-09-04T04:20:46.907Z]   WhatsApp API status 200",
+   "logAgeMin": 10.9,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-09-04T04:51:08.950Z]   WhatsApp API status 200",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.46,
+    "spread": 0.45,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1597.077
+    "valuePerPointPerLot": 1597.068
    },
    "stale": false
   },
@@ -39,12 +39,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.4,
-   "stateAgeMin": 29.4,
-   "heartbeatMin": 4.4,
-   "lastLog": "[2026-09-04 04:27:39Z] no new H4 bar (last 09-04 00:00Z), pos=1",
+   "logAgeMin": 4.5,
+   "stateAgeMin": 59.5,
+   "heartbeatMin": 4.5,
+   "lastLog": "[2026-09-04 04:57:39Z] no new H4 bar (last 09-04 00:00Z), pos=1",
    "account": {
-    "equity": 978.75,
+    "equity": 977.13,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 1,
     "week": {
@@ -71,12 +71,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-09-04 04:00:04Z] idle \u2014 05:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.6,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-04 05:00:29Z] idle \u2014 06:00 UK outside 07:00-17:00",
    "account": {
-    "equity": 978.83,
+    "equity": 977.1,
     "currency": "USD",
     "demo": true,
     "algoTrading": true,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.2 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/04 06:32:01",
-   "nextRun": "2026/09/04 07:02:00",
+   "lastRun": "2026/09/04 07:02:01",
+   "nextRun": "2026/09/04 07:32:00",
    "result": 267009,
    "ok": true
   },
