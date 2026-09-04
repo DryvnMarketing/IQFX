@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-04T08:32:09.712502+00:00",
+ "generatedAt": "2026-09-04T09:02:09.493523+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1157,13 +1157,15 @@
    "risk_pts": 7.5,
    "in_zone": false,
    "decision": "PLACED SELL 0.05 XAUUSD LIMIT@4466.50 SL 4474.00 TP 4462.00 | 0.05 lots = 37.50 USD = 3.85% of equity",
-   "status": "PLACED",
+   "status": "NO_FILL",
    "lots": 0.05,
    "sizing": "0.05 lots = 37.50 USD = 3.85% of equity",
    "order_type": "LIMIT",
    "order_ticket": 3182766069,
    "placed_epoch": 1788504726,
-   "ts": "2026-09-04T06:52:06.384970+00:00"
+   "ts": "2026-09-04T06:52:06.384970+00:00",
+   "outcome": "NO_FILL",
+   "note": "order never produced an entry deal (limit not filled / cancelled)"
   }
  ],
  "seenSignals": 500,
@@ -1171,9 +1173,9 @@
  "halted": false,
  "stats": {
   "signals": 41,
-  "taken": 30,
+  "taken": 29,
   "skipped": 5,
-  "open": 1,
+  "open": 0,
   "closed": 29,
   "wins": 24,
   "winRate": 82.8,
@@ -1204,13 +1206,13 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 1,
+  "tickAgeSec": 2,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 7,
-   "net": -15.45,
-   "wins": 5
+   "closed": 6,
+   "net": -23.17,
+   "wins": 4
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0
