@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-05T21:02:03.050011+00:00",
+ "generatedAt": "2026-09-05T21:32:03.091629+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 841.2,
-   "stateAgeMin": 1325.9,
-   "heartbeatMin": 841.2,
+   "logAgeMin": 871.2,
+   "stateAgeMin": 1355.9,
+   "heartbeatMin": 871.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "equity": 127.6,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 76326,
-    "serverOffsetHours": -21,
+    "tickAgeSec": 78126,
+    "serverOffsetHours": -22,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.3,
-   "stateAgeMin": 59.3,
+   "stateAgeMin": 89.3,
    "heartbeatMin": 4.3,
-   "lastLog": "[2026-09-05 20:57:47Z] no new H4 bar (last 09-05 16:00Z), pos=0",
+   "lastLog": "[2026-09-05 21:27:48Z] no new H4 bar (last 09-05 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-09-05 21:00:09Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 86647,
-    "serverOffsetHours": -24,
+    "tickAgeSec": 88448,
+    "serverOffsetHours": -25,
     "openPositions": 0,
     "week": {
      "closed": 6,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "841.2 min",
+   "detail": "871.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,15 +205,15 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/05 23:02:01",
-   "nextRun": "2026/09/05 23:32:00",
+   "lastRun": "2026/09/05 23:32:01",
+   "nextRun": "2026/09/06 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/09/04 23:30:01",
-   "nextRun": "2026/09/05 23:30:00",
+   "lastRun": "2026/09/05 23:30:01",
+   "nextRun": "2026/09/06 23:30:00",
    "result": 0,
    "ok": true
   }
