@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T02:32:03.150352+00:00",
+ "generatedAt": "2026-09-06T03:02:03.567671+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1171.2,
-   "stateAgeMin": 1655.9,
-   "heartbeatMin": 1171.2,
+   "logAgeMin": 1201.2,
+   "stateAgeMin": 1685.9,
+   "heartbeatMin": 1201.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "equity": 127.6,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 96126,
+    "tickAgeSec": 97927,
     "serverOffsetHours": -27,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.3,
-   "stateAgeMin": 149.3,
+   "stateAgeMin": 179.3,
    "heartbeatMin": 4.3,
-   "lastLog": "[2026-09-06 02:27:49Z] no new H4 bar (last 09-05 20:00Z), pos=0",
+   "lastLog": "[2026-09-06 02:57:49Z] no new H4 bar (last 09-05 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-09-06 02:00:07Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-06 03:00:15Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 106448,
+    "tickAgeSec": 108249,
     "serverOffsetHours": -30,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1171.2 min",
+   "detail": "1201.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/06 04:32:01",
-   "nextRun": "2026/09/06 05:02:00",
+   "lastRun": "2026/09/06 05:02:01",
+   "nextRun": "2026/09/06 05:32:00",
    "result": 267009,
    "ok": true
   },
