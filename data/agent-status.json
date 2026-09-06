@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T18:02:03.193391+00:00",
+ "generatedAt": "2026-09-06T18:32:02.886754+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 2101.2,
-   "stateAgeMin": 2585.9,
-   "heartbeatMin": 2101.2,
-   "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
+   "logAgeMin": 1.6,
+   "stateAgeMin": 2615.9,
+   "heartbeatMin": 1.6,
+   "lastLog": "[2026-09-06T18:30:30.011Z]   WhatsApp API status 200",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 151926,
-    "serverOffsetHours": -42,
+    "tickAgeSec": 153726,
+    "serverOffsetHours": -43,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -31,7 +31,7 @@
     "minLot": 0.01,
     "valuePerPointPerLot": 1592.951
    },
-   "stale": true
+   "stale": false
   },
   {
    "key": "btc",
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.2,
-   "stateAgeMin": 119.2,
+   "stateAgeMin": 149.2,
    "heartbeatMin": 4.2,
-   "lastLog": "[2026-09-06 17:57:52Z] no new H4 bar (last 09-06 12:00Z), pos=0",
+   "lastLog": "[2026-09-06 18:27:52Z] no new H4 bar (last 09-06 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 2.0,
+   "logAgeMin": 32.0,
    "stateAgeMin": 0.5,
    "heartbeatMin": 0.5,
    "lastLog": "[2026-09-06 18:00:04Z] idle \u2014 weekend (Sun)",
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 162248,
-    "serverOffsetHours": -45,
+    "tickAgeSec": 164048,
+    "serverOffsetHours": -46,
     "openPositions": 0,
     "week": {
      "closed": 6,
@@ -112,8 +112,8 @@
   },
   {
    "name": "Heartbeat fresh",
-   "state": "WARN",
-   "detail": "2101.2 min",
+   "state": "PASS",
+   "detail": "1.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -191,8 +191,8 @@
   },
   {
    "name": "XAU Sunday Fundamentals",
-   "lastRun": "2026/08/30 20:30:00",
-   "nextRun": "2026/09/06 20:30:00",
+   "lastRun": "2026/09/06 20:30:00",
+   "nextRun": "2026/09/13 20:30:00",
    "result": 1,
    "ok": false
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/06 20:02:01",
-   "nextRun": "2026/09/06 20:32:00",
+   "lastRun": "2026/09/06 20:32:01",
+   "nextRun": "2026/09/06 21:02:00",
    "result": 267009,
    "ok": true
   },
