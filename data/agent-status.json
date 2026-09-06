@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T14:32:03.445687+00:00",
+ "generatedAt": "2026-09-06T15:02:02.807828+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1891.2,
-   "stateAgeMin": 2375.9,
-   "heartbeatMin": 1891.2,
+   "logAgeMin": 1921.2,
+   "stateAgeMin": 2405.9,
+   "heartbeatMin": 1921.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
     "equity": 127.6,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.76,
-    "tickAgeSec": 139327,
+    "tickAgeSec": 141126,
     "serverOffsetHours": -39,
     "openPositions": 0,
     "week": {
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.3,
-   "stateAgeMin": 149.3,
-   "heartbeatMin": 4.3,
-   "lastLog": "[2026-09-06 14:27:51Z] no new H4 bar (last 09-06 08:00Z), pos=0",
+   "logAgeMin": 4.2,
+   "stateAgeMin": 179.2,
+   "heartbeatMin": 4.2,
+   "lastLog": "[2026-09-06 14:57:51Z] no new H4 bar (last 09-06 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 15.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-09-06 14:16:51Z] loop error (1 in a row): <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-09-06 15:00:11Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 149649,
+    "tickAgeSec": 151448,
     "serverOffsetHours": -42,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1891.2 min",
+   "detail": "1921.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/06 16:32:01",
-   "nextRun": "2026/09/06 17:02:00",
+   "lastRun": "2026/09/06 17:02:01",
+   "nextRun": "2026/09/06 17:32:00",
    "result": 267009,
    "ok": true
   },
