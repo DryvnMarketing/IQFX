@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T15:02:02.807828+00:00",
+ "generatedAt": "2026-09-06T15:32:03.109435+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,29 +7,12 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1921.2,
-   "stateAgeMin": 2405.9,
-   "heartbeatMin": 1921.2,
+   "logAgeMin": 1951.2,
+   "stateAgeMin": 2435.9,
+   "heartbeatMin": 1951.2,
    "lastLog": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
    "account": {
-    "equity": 127.6,
-    "currency": "ZAR",
-    "demo": false,
-    "algoTrading": false,
-    "connected": true,
-    "symbol": "XAUUSD",
-    "login": 454101,
-    "spread": 0.76,
-    "tickAgeSec": 141126,
-    "serverOffsetHours": -39,
-    "openPositions": 0,
-    "week": {
-     "closed": 0,
-     "net": 0,
-     "wins": 0
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 1592.951
+    "error": "init -6"
    },
    "stale": true
   },
@@ -39,29 +22,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.2,
-   "stateAgeMin": 179.2,
-   "heartbeatMin": 4.2,
-   "lastLog": "[2026-09-06 14:57:51Z] no new H4 bar (last 09-06 08:00Z), pos=0",
+   "logAgeMin": 4.3,
+   "stateAgeMin": 209.3,
+   "heartbeatMin": 4.3,
+   "lastLog": "[2026-09-06 15:27:51Z] no new H4 bar (last 09-06 08:00Z), pos=0",
    "account": {
-    "equity": 0.0,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "connected": true,
-    "symbol": "BTCUSD",
-    "login": 436786587,
-    "spread": 7.0,
-    "tickAgeSec": 1,
-    "serverOffsetHours": 0,
-    "openPositions": 0,
-    "week": {
-     "closed": 1,
-     "net": -12.41,
-     "wins": 0
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 1.0
+    "error": "init -6"
    },
    "stale": false
   },
@@ -71,29 +37,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-06 15:00:11Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 1.6,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-09-06 15:31:58Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "equity": 0.0,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "connected": true,
-    "symbol": "XAUUSD",
-    "login": 436786587,
-    "spread": 0.182,
-    "tickAgeSec": 151448,
-    "serverOffsetHours": -42,
-    "openPositions": 0,
-    "week": {
-     "closed": 6,
-     "net": -23.17,
-     "wins": 4
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 100.0
+    "error": "init -6"
    },
    "stale": false
   }
@@ -113,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1921.2 min",
+   "detail": "1951.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -124,19 +73,19 @@
   },
   {
    "name": "Live broker login matches config",
-   "state": "PASS",
-   "detail": "454101 on XAUUSD",
+   "state": "FAIL",
+   "detail": "init -6",
    "why": "A mismatch aborts every order, silently, until someone looks."
   },
   {
    "name": "Live terminal connected",
-   "state": "PASS",
-   "detail": "connected",
+   "state": "WARN",
+   "detail": "no broker link",
    "why": "A disconnected terminal still answers, with a stale book."
   },
   {
    "name": "Algo trading enabled",
-   "state": "FAIL",
+   "state": "WARN",
    "detail": "OFF",
    "why": "Orders are rejected at the terminal with this off."
   },
@@ -145,12 +94,6 @@
    "state": "WARN",
    "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
    "why": "A failed weekly job produces silence, not an error."
-  },
-  {
-   "name": "Min-lot risk within cap",
-   "state": "WARN",
-   "detail": "Setup A/B always placed - 171.03% of equity at a typical stop, and up to 358.29% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
-   "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
@@ -205,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/06 17:02:01",
-   "nextRun": "2026/09/06 17:32:00",
+   "lastRun": "2026/09/06 17:32:01",
+   "nextRun": "2026/09/06 18:02:00",
    "result": 267009,
    "ok": true
   },
@@ -220,40 +163,6 @@
  ],
  "canTrade": false,
  "risk": {
-  "currency": "ZAR",
-  "equity": 127.6,
-  "minLot": 0.01,
-  "perPoint": 15.93,
-  "configuredPct": 3.0,
-  "capPct": 10.0,
-  "noSkipSetups": [
-   "A",
-   "B"
-  ],
-  "rows": [
-   {
-    "stop": "tight (p10)",
-    "points": 6.2,
-    "amount": 98.76,
-    "pct": 77.4,
-    "skipped": true
-   },
-   {
-    "stop": "typical (median)",
-    "points": 13.7,
-    "amount": 218.23,
-    "pct": 171.03,
-    "skipped": true
-   },
-   {
-    "stop": "wide (p90)",
-    "points": 28.7,
-    "amount": 457.18,
-    "pct": 358.29,
-    "skipped": true
-   }
-  ],
-  "singleLeg": true,
-  "equityForTruePct": 7274.0
+  "error": "account not readable - risk cannot be computed"
  }
 }
