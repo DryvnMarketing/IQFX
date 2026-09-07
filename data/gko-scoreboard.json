@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-07T10:02:09.831605+00:00",
+ "generatedAt": "2026-09-07T10:32:08.337171+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1210,8 +1210,8 @@
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 6,
-   "net": -23.17,
+   "closed": 5,
+   "net": 14.08,
    "wins": 4
   },
   "minLot": 0.01,
