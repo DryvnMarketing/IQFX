@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T17:02:02.542689+00:00",
+ "generatedAt": "2026-09-08T17:32:03.132145+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-09-08T17:01:43.374Z] headlines Fed failed: HTTP 404 for https://www.federalreserve.gov/feeds/press_all.xml",
+   "logAgeMin": 10.1,
+   "stateAgeMin": 5.0,
+   "heartbeatMin": 5.0,
+   "lastLog": "[2026-09-08T17:22:02.975Z]   WhatsApp API status 200",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1598.139
+    "valuePerPointPerLot": 1598.147
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.0,
-   "stateAgeMin": 59.0,
-   "heartbeatMin": 4.0,
-   "lastLog": "[2026-09-08 16:58:04Z] no new H4 bar (last 09-08 12:00Z), pos=0",
+   "logAgeMin": 4.1,
+   "stateAgeMin": 89.1,
+   "heartbeatMin": 4.1,
+   "lastLog": "[2026-09-08 17:28:04Z] no new H4 bar (last 09-08 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.6,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 31.7,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-08 17:00:27Z] idle \u2014 18:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "5.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/08 19:02:01",
-   "nextRun": "2026/09/08 19:32:00",
+   "lastRun": "2026/09/08 19:32:01",
+   "nextRun": "2026/09/08 20:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,7 +234,7 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 99.08,
+    "amount": 99.09,
     "pct": 77.65,
     "skipped": true
    },
