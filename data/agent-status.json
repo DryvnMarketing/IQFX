@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T04:32:02.636633+00:00",
+ "generatedAt": "2026-09-08T05:02:02.684144+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 1.2,
-   "stateAgeMin": 1.2,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-09-08T04:30:53.952Z]   WhatsApp API status 200",
+   "logAgeMin": 5.8,
+   "stateAgeMin": 0.7,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-09-08T04:56:16.121Z] headline throttled: New Zealand Dollar struggles after China\u2019s Trade Balance data",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.42,
+    "spread": 0.44,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1598.294
+    "valuePerPointPerLot": 1598.051
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.1,
-   "stateAgeMin": 29.1,
+   "stateAgeMin": 59.1,
    "heartbeatMin": 4.1,
-   "lastLog": "[2026-09-08 04:28:00Z] no new H4 bar (last 09-08 00:00Z), pos=0",
+   "lastLog": "[2026-09-08 04:58:00Z] no new H4 bar (last 09-08 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-09-08 04:00:23Z] idle \u2014 05:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-08 05:00:17Z] idle \u2014 06:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.2 min",
+   "detail": "0.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 171.6% of equity at a typical stop, and up to 359.49% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 171.58% of equity at a typical stop, and up to 359.44% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/08 06:32:01",
-   "nextRun": "2026/09/08 07:02:00",
+   "lastRun": "2026/09/08 07:02:01",
+   "nextRun": "2026/09/08 07:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 99.09,
-    "pct": 77.66,
+    "amount": 99.08,
+    "pct": 77.65,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 218.97,
-    "pct": 171.6,
+    "amount": 218.93,
+    "pct": 171.58,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 458.71,
-    "pct": 359.49,
+    "amount": 458.64,
+    "pct": 359.44,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7299.0
+  "equityForTruePct": 7298.0
  }
 }
