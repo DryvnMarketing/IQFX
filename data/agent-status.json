@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T18:02:02.811473+00:00",
+ "generatedAt": "2026-09-08T18:32:02.861997+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 9.6,
-   "stateAgeMin": 4.6,
-   "heartbeatMin": 4.6,
-   "lastLog": "[2026-09-08T17:52:27.506Z]   WhatsApp API status 200",
+   "logAgeMin": 9.3,
+   "stateAgeMin": 4.2,
+   "heartbeatMin": 4.2,
+   "lastLog": "[2026-09-08T18:22:48.291Z] heartbeat: tick 556, Tue 19:22 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1598.369
+    "valuePerPointPerLot": 1598.326
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 16144,
    "running": true,
    "logAgeMin": 4.0,
-   "stateAgeMin": 119.0,
+   "stateAgeMin": 149.0,
    "heartbeatMin": 4.0,
-   "lastLog": "[2026-09-08 17:58:04Z] no new H4 bar (last 09-08 12:00Z), pos=0",
+   "lastLog": "[2026-09-08 18:28:05Z] no new H4 bar (last 09-08 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.7,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
    "lastLog": "[2026-09-08 18:00:22Z] idle \u2014 19:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.6 min",
+   "detail": "4.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 171.61% of equity at a typical stop, and up to 359.51% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 171.61% of equity at a typical stop, and up to 359.5% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/08 20:02:01",
-   "nextRun": "2026/09/08 20:32:00",
+   "lastRun": "2026/09/08 20:32:01",
+   "nextRun": "2026/09/08 21:02:00",
    "result": 267009,
    "ok": true
   },
@@ -241,15 +241,15 @@
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 218.98,
+    "amount": 218.97,
     "pct": 171.61,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 458.73,
-    "pct": 359.51,
+    "amount": 458.72,
+    "pct": 359.5,
     "skipped": true
    }
   ],
