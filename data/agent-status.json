@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T04:32:03.232789+00:00",
+ "generatedAt": "2026-09-09T05:02:02.802701+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 3.8,
-   "stateAgeMin": 3.8,
-   "heartbeatMin": 3.8,
-   "lastLog": "[2026-09-09T04:28:17.804Z] headlines FXStreet failed: getaddrinfo ENOTFOUND www.fxstreet.com",
+   "logAgeMin": 3.6,
+   "stateAgeMin": 3.6,
+   "heartbeatMin": 3.6,
+   "lastLog": "[2026-09-09T04:58:29.419Z] headlines FXStreet failed: getaddrinfo ENOTFOUND www.fxstreet.com",
    "account": {
     "error": "init -10005"
    },
@@ -22,10 +22,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 5.7,
-   "stateAgeMin": 30.1,
-   "heartbeatMin": 5.7,
-   "lastLog": "[2026-09-09 04:27:29Z] tick error: mt5 initialize failed: (-10005, 'IPC timeout')",
+   "logAgeMin": 5.3,
+   "stateAgeMin": 60.1,
+   "heartbeatMin": 5.3,
+   "lastLog": "[2026-09-09 04:57:55Z] tick error: mt5 initialize failed: (-10005, 'IPC timeout')",
    "account": {
     "error": "init -10005"
    },
@@ -37,10 +37,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 0.9,
-   "stateAgeMin": 27.8,
-   "heartbeatMin": 0.9,
-   "lastLog": "[2026-09-09 04:33:24Z] loop error (15 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 57.8,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-09-09 05:03:05Z] loop error (31 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "error": "init -10005"
    },
@@ -62,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "3.8 min",
+   "detail": "3.6 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -148,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/09 06:32:01",
-   "nextRun": "2026/09/09 07:02:00",
+   "lastRun": "2026/09/09 07:02:01",
+   "nextRun": "2026/09/09 07:32:00",
    "result": 267009,
    "ok": true
   },
