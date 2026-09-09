@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-09T04:02:02.997603+00:00",
+ "generatedAt": "2026-09-09T04:32:03.232789+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,29 +7,12 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 21.1,
-   "stateAgeMin": 5.1,
-   "heartbeatMin": 5.1,
-   "lastLog": "[2026-09-09T03:40:57.602Z] heartbeat: tick 55, Wed 4:40 UK, trades 0/2, open=none",
+   "logAgeMin": 3.8,
+   "stateAgeMin": 3.8,
+   "heartbeatMin": 3.8,
+   "lastLog": "[2026-09-09T04:28:17.804Z] headlines FXStreet failed: getaddrinfo ENOTFOUND www.fxstreet.com",
    "account": {
-    "equity": 127.6,
-    "currency": "ZAR",
-    "demo": false,
-    "algoTrading": false,
-    "connected": true,
-    "symbol": "XAUUSD",
-    "login": 454101,
-    "spread": 0.45,
-    "tickAgeSec": 0,
-    "serverOffsetHours": 3,
-    "openPositions": 0,
-    "week": {
-     "closed": 0,
-     "net": 0,
-     "wins": 0
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 1597.7
+    "error": "init -10005"
    },
    "stale": false
   },
@@ -39,29 +22,12 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 4.0,
-   "stateAgeMin": 239.0,
-   "heartbeatMin": 4.0,
-   "lastLog": "[2026-09-09 03:58:08Z] no new H4 bar (last 09-08 20:00Z), pos=0",
+   "logAgeMin": 5.7,
+   "stateAgeMin": 30.1,
+   "heartbeatMin": 5.7,
+   "lastLog": "[2026-09-09 04:27:29Z] tick error: mt5 initialize failed: (-10005, 'IPC timeout')",
    "account": {
-    "equity": 0.0,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "connected": true,
-    "symbol": "BTCUSD",
-    "login": 436786587,
-    "spread": 7.0,
-    "tickAgeSec": 1,
-    "serverOffsetHours": 0,
-    "openPositions": 0,
-    "week": {
-     "closed": 0,
-     "net": 0,
-     "wins": 0
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 1.0
+    "error": "init -10005"
    },
    "stale": false
   },
@@ -71,29 +37,12 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-09 04:00:15Z] idle \u2014 05:00 UK outside 07:00-17:00",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 27.8,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-09-09 04:33:24Z] loop error (15 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
-    "equity": 0.0,
-    "currency": "USD",
-    "demo": true,
-    "algoTrading": true,
-    "connected": true,
-    "symbol": "XAUUSD",
-    "login": 436786587,
-    "spread": 0.182,
-    "tickAgeSec": 2,
-    "serverOffsetHours": 0,
-    "openPositions": 0,
-    "week": {
-     "closed": 2,
-     "net": 29.73,
-     "wins": 2
-    },
-    "minLot": 0.01,
-    "valuePerPointPerLot": 100.0
+    "error": "init -10005"
    },
    "stale": false
   }
@@ -113,7 +62,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "5.1 min",
+   "detail": "3.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -124,19 +73,19 @@
   },
   {
    "name": "Live broker login matches config",
-   "state": "PASS",
-   "detail": "454101 on XAUUSD",
+   "state": "FAIL",
+   "detail": "init -10005",
    "why": "A mismatch aborts every order, silently, until someone looks."
   },
   {
    "name": "Live terminal connected",
-   "state": "PASS",
-   "detail": "connected",
+   "state": "WARN",
+   "detail": "no broker link",
    "why": "A disconnected terminal still answers, with a stale book."
   },
   {
    "name": "Algo trading enabled",
-   "state": "FAIL",
+   "state": "WARN",
    "detail": "OFF",
    "why": "Orders are rejected at the terminal with this off."
   },
@@ -145,12 +94,6 @@
    "state": "WARN",
    "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
    "why": "A failed weekly job produces silence, not an error."
-  },
-  {
-   "name": "Min-lot risk within cap",
-   "state": "WARN",
-   "detail": "Setup A/B always placed - 171.54% of equity at a typical stop, and up to 359.36% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
-   "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
@@ -205,8 +148,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/09 06:02:01",
-   "nextRun": "2026/09/09 06:32:00",
+   "lastRun": "2026/09/09 06:32:01",
+   "nextRun": "2026/09/09 07:02:00",
    "result": 267009,
    "ok": true
   },
@@ -220,40 +163,6 @@
  ],
  "canTrade": false,
  "risk": {
-  "currency": "ZAR",
-  "equity": 127.6,
-  "minLot": 0.01,
-  "perPoint": 15.98,
-  "configuredPct": 3.0,
-  "capPct": 10.0,
-  "noSkipSetups": [
-   "A",
-   "B"
-  ],
-  "rows": [
-   {
-    "stop": "tight (p10)",
-    "points": 6.2,
-    "amount": 99.06,
-    "pct": 77.63,
-    "skipped": true
-   },
-   {
-    "stop": "typical (median)",
-    "points": 13.7,
-    "amount": 218.88,
-    "pct": 171.54,
-    "skipped": true
-   },
-   {
-    "stop": "wide (p90)",
-    "points": 28.7,
-    "amount": 458.54,
-    "pct": 359.36,
-    "skipped": true
-   }
-  ],
-  "singleLeg": true,
-  "equityForTruePct": 7296.0
+  "error": "account not readable - risk cannot be computed"
  }
 }
