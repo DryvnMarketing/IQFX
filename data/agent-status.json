@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-10T20:02:00.904291+00:00",
+ "generatedAt": "2026-09-10T20:32:00.897670+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 6168,
+   "pid": 5748,
    "running": true,
-   "logAgeMin": 242.4,
-   "stateAgeMin": 226.2,
-   "heartbeatMin": 226.2,
+   "logAgeMin": 272.4,
+   "stateAgeMin": 256.2,
+   "heartbeatMin": 256.2,
    "lastLog": "[2026-09-10T15:59:35.367Z] heartbeat: tick 330, Thu 16:59 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1621.505
+    "valuePerPointPerLot": 1621.503
    },
    "stale": true
   },
@@ -37,11 +37,11 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 1332,
+   "pid": 8900,
    "running": true,
-   "logAgeMin": 224.8,
-   "stateAgeMin": 239.8,
-   "heartbeatMin": 224.8,
+   "logAgeMin": 254.8,
+   "stateAgeMin": 269.8,
+   "heartbeatMin": 254.8,
    "lastLog": "[2026-09-10 16:17:15Z] no new H4 bar (last 09-10 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 3628,
+   "pid": 1564,
    "running": true,
-   "logAgeMin": 499.5,
-   "stateAgeMin": 222.1,
-   "heartbeatMin": 222.1,
+   "logAgeMin": 529.5,
+   "stateAgeMin": 252.1,
+   "heartbeatMin": 252.1,
    "lastLog": "[2026-09-10 11:42:34Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "equity": 0.0,
@@ -107,13 +107,13 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 6168",
+   "detail": "pid 5748",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "226.2 min",
+   "detail": "256.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/10 22:02:00",
-   "nextRun": "2026/09/10 22:32:00",
+   "lastRun": "2026/09/10 22:32:00",
+   "nextRun": "2026/09/10 23:02:00",
    "result": 267009,
    "ok": true
   },
