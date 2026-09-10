@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-10T19:02:00.829126+00:00",
+ "generatedAt": "2026-09-10T19:32:00.846277+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 2532,
+   "pid": 8200,
    "running": true,
-   "logAgeMin": 182.4,
-   "stateAgeMin": 166.2,
-   "heartbeatMin": 166.2,
+   "logAgeMin": 212.4,
+   "stateAgeMin": 196.2,
+   "heartbeatMin": 196.2,
    "lastLog": "[2026-09-10T15:59:35.367Z] heartbeat: tick 330, Thu 16:59 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1620.963
+    "valuePerPointPerLot": 1621.004
    },
    "stale": true
   },
@@ -37,11 +37,11 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 5376,
+   "pid": 13848,
    "running": true,
-   "logAgeMin": 164.8,
-   "stateAgeMin": 179.8,
-   "heartbeatMin": 164.8,
+   "logAgeMin": 194.8,
+   "stateAgeMin": 209.8,
+   "heartbeatMin": 194.8,
    "lastLog": "[2026-09-10 16:17:15Z] no new H4 bar (last 09-10 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 6776,
+   "pid": 9520,
    "running": true,
-   "logAgeMin": 439.5,
-   "stateAgeMin": 162.1,
-   "heartbeatMin": 162.1,
+   "logAgeMin": 469.5,
+   "stateAgeMin": 192.1,
+   "heartbeatMin": 192.1,
    "lastLog": "[2026-09-10 11:42:34Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "equity": 0.0,
@@ -107,13 +107,13 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 2532",
+   "detail": "pid 8200",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "166.2 min",
+   "detail": "196.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.04% of equity at a typical stop, and up to 364.59% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 174.04% of equity at a typical stop, and up to 364.6% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/10 21:02:00",
-   "nextRun": "2026/09/10 21:32:00",
+   "lastRun": "2026/09/10 21:32:00",
+   "nextRun": "2026/09/10 22:02:00",
    "result": 267009,
    "ok": true
   },
@@ -241,19 +241,19 @@
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.07,
+    "amount": 222.08,
     "pct": 174.04,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 465.22,
-    "pct": 364.59,
+    "amount": 465.23,
+    "pct": 364.6,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7402.0
+  "equityForTruePct": 7403.0
  }
 }
