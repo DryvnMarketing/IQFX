@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-10T03:32:11.138165+00:00",
+ "generatedAt": "2026-09-10T09:53:26.174984+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1166,15 +1166,30 @@
    "ts": "2026-09-04T06:52:06.384970+00:00",
    "outcome": "NO_FILL",
    "note": "order never produced an entry deal (limit not filled / cancelled)"
+  },
+  {
+   "signal_id": 40973,
+   "posted": "2026-09-10T07:10:27+00:00",
+   "age_min": 161.8,
+   "dir": "BUY",
+   "zone_lo": 4410.0,
+   "zone_hi": 4415.0,
+   "tp1": 4417.0,
+   "sl": 4405.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4415 \u2013 4410\n\nTP 1: 4417\nTP 2: 4427\n\nSL: 4405\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "status": "SKIPPED",
+   "decision": "SKIP: 162 min old",
+   "reason": "stale (162 min > 8)",
+   "ts": "2026-09-10T09:52:14.884214+00:00"
   }
  ],
  "seenSignals": 500,
  "dayTrades": 0,
  "halted": false,
  "stats": {
-  "signals": 41,
+  "signals": 42,
   "taken": 29,
-  "skipped": 5,
+  "skipped": 6,
   "open": 0,
   "closed": 29,
   "wins": 24,
@@ -1195,6 +1210,10 @@
   [
    "stale (19 min > 8)",
    1
+  ],
+  [
+   "stale (162 min > 8)",
+   1
   ]
  ],
  "account": {
@@ -1206,13 +1225,13 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.182,
-  "tickAgeSec": 1,
+  "tickAgeSec": 2,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {
-   "closed": 1,
-   "net": 22.5,
-   "wins": 1
+   "closed": 0,
+   "net": 0,
+   "wins": 0
   },
   "minLot": 0.01,
   "valuePerPointPerLot": 100.0

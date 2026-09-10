@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-10T03:32:03.169882+00:00",
+ "generatedAt": "2026-09-10T09:52:58.965242+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 15620,
    "running": true,
-   "logAgeMin": 29.3,
-   "stateAgeMin": 4.1,
-   "heartbeatMin": 4.1,
-   "lastLog": "[2026-09-10T03:02:47.708Z]   WhatsApp API status 200",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-10T09:53:16.201Z]   WhatsApp API status 200 (attempt 3)",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1603.079
+    "valuePerPointPerLot": 1607.582
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 16144,
    "running": true,
-   "logAgeMin": 3.0,
-   "stateAgeMin": 208.0,
-   "heartbeatMin": 3.0,
-   "lastLog": "[2026-09-10 03:29:06Z] no new H4 bar (last 09-09 20:00Z), pos=0",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 1.2,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-09-10 09:52:14Z] bar 09-10 04:00Z close 78,081 | don20 77,591-80,568 | ema20 78,763 | atr 764 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 16304,
    "running": true,
-   "logAgeMin": 31.8,
+   "logAgeMin": 1.2,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-09-10 03:00:19Z] idle \u2014 04:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-09-10 09:52:14Z] SKIP id=40973: 162 min old (> 8) \u2014 his TP1 is often reached within minutes",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,13 +84,13 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
-     "closed": 1,
-     "net": 22.5,
-     "wins": 1
+     "closed": 0,
+     "net": 0,
+     "wins": 0
     },
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
@@ -99,7 +99,7 @@
   }
  ],
  "calendar": {
-  "events": 98,
+  "events": 99,
   "forwardDated": 46,
   "highForward": 10
  },
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "4.1 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -143,37 +143,37 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
+   "detail": "XAU Session Agent = -1073741510, Gold Forward-Test = -1073741510, GKO Follower = -1073741510, XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1, Dashboard Publisher = -2147020576",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 172.12% of equity at a typical stop, and up to 360.57% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 172.6% of equity at a typical stop, and up to 361.58% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/09/09 08:35:00",
-   "nextRun": "2026/09/10 08:35:00",
-   "result": 0,
-   "ok": true
+   "lastRun": "2026/09/10 11:52:08",
+   "nextRun": "2026/09/11 08:35:00",
+   "result": -1073741510,
+   "ok": false
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/09/09 08:35:00",
-   "nextRun": "2026/09/10 08:35:00",
-   "result": 0,
-   "ok": true
+   "lastRun": "2026/09/10 11:52:08",
+   "nextRun": "2026/09/11 08:35:00",
+   "result": -1073741510,
+   "ok": false
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/09/09 07:30:00",
-   "nextRun": "2026/09/10 07:30:00",
-   "result": 0,
-   "ok": true
+   "lastRun": "2026/09/10 11:52:08",
+   "nextRun": "2026/09/11 07:30:00",
+   "result": -1073741510,
+   "ok": false
   },
   {
    "name": "BTC Trend Agent",
@@ -205,10 +205,10 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/10 05:32:02",
-   "nextRun": "2026/09/10 06:02:00",
-   "result": 267009,
-   "ok": true
+   "lastRun": "2026/09/10 11:52:11",
+   "nextRun": "2026/09/10 12:02:00",
+   "result": -2147020576,
+   "ok": false
   },
   {
    "name": "Trading System Backup",
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.03,
+  "perPoint": 16.08,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 99.39,
-    "pct": 77.89,
+    "amount": 99.67,
+    "pct": 78.11,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 219.62,
-    "pct": 172.12,
+    "amount": 220.24,
+    "pct": 172.6,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 460.08,
-    "pct": 360.57,
+    "amount": 461.38,
+    "pct": 361.58,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7321.0
+  "equityForTruePct": 7341.0
  }
 }
