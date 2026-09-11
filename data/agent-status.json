@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-11T00:02:02.497418+00:00",
+ "generatedAt": "2026-09-11T00:32:02.419583+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 8896,
+   "pid": 2372,
    "running": true,
-   "logAgeMin": 482.5,
-   "stateAgeMin": 466.2,
-   "heartbeatMin": 466.2,
+   "logAgeMin": 512.5,
+   "stateAgeMin": 496.2,
+   "heartbeatMin": 496.2,
    "lastLog": "[2026-09-10T15:59:35.367Z] heartbeat: tick 330, Thu 16:59 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1618.751
+    "valuePerPointPerLot": 1618.558
    },
    "stale": true
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.9,
-   "stateAgeMin": 1.9,
+   "stateAgeMin": 31.9,
    "heartbeatMin": 1.9,
-   "lastLog": "[2026-09-11 00:00:06Z] bar 09-10 20:00Z close 76,545 | don20 76,631-79,760 | ema20 78,224 | atr 794 | 09-10 20:00Z opened SHORT",
+   "lastLog": "[2026-09-11 00:30:06Z] no new H4 bar (last 09-10 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 10068,
+   "pid": 3088,
    "running": true,
-   "logAgeMin": 739.5,
-   "stateAgeMin": 462.1,
-   "heartbeatMin": 462.1,
+   "logAgeMin": 769.5,
+   "stateAgeMin": 492.1,
+   "heartbeatMin": 492.1,
    "lastLog": "[2026-09-10 11:42:34Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "equity": 0.0,
@@ -107,13 +107,13 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 8896",
+   "detail": "pid 2372",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "466.2 min",
+   "detail": "496.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 173.8% of equity at a typical stop, and up to 364.09% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 173.78% of equity at a typical stop, and up to 364.05% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/11 02:02:02",
-   "nextRun": "2026/09/11 02:32:00",
+   "lastRun": "2026/09/11 02:32:02",
+   "nextRun": "2026/09/11 03:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.36,
-    "pct": 78.65,
+    "amount": 100.35,
+    "pct": 78.64,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.77,
-    "pct": 173.8,
+    "amount": 221.74,
+    "pct": 173.78,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 464.58,
-    "pct": 364.09,
+    "amount": 464.53,
+    "pct": 364.05,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7392.0
+  "equityForTruePct": 7391.0
  }
 }
