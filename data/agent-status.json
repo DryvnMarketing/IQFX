@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T16:02:02.476027+00:00",
+ "generatedAt": "2026-09-11T16:32:02.482657+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 11404,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 20.9,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-11T16:01:37.793Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 20.6,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-11T16:31:58.258Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1613.454
+    "valuePerPointPerLot": 1613.24
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.9,
-   "stateAgeMin": 1.9,
+   "stateAgeMin": 31.9,
    "heartbeatMin": 1.9,
-   "lastLog": "[2026-09-11 16:00:11Z] bar 09-11 12:00Z close 77,703 | don20 76,429-79,760 | ema20 77,892 | atr 979 | none",
+   "lastLog": "[2026-09-11 16:30:11Z] no new H4 bar (last 09-11 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 1.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.7,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-11 16:00:19Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 173.23% of equity at a typical stop, and up to 362.9% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 173.21% of equity at a typical stop, and up to 362.85% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/11 18:02:02",
-   "nextRun": "2026/09/11 18:32:00",
+   "lastRun": "2026/09/11 18:32:02",
+   "nextRun": "2026/09/11 19:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.03,
-    "pct": 78.4,
+    "amount": 100.02,
+    "pct": 78.39,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.04,
-    "pct": 173.23,
+    "amount": 221.01,
+    "pct": 173.21,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.06,
-    "pct": 362.9,
+    "amount": 463.0,
+    "pct": 362.85,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7368.0
+  "equityForTruePct": 7367.0
  }
 }
