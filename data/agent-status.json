@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-11T03:32:02.467414+00:00",
+ "generatedAt": "2026-09-11T04:02:02.482943+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 1148,
+   "pid": 12548,
    "running": true,
-   "logAgeMin": 692.5,
-   "stateAgeMin": 676.2,
-   "heartbeatMin": 676.2,
+   "logAgeMin": 722.5,
+   "stateAgeMin": 706.2,
+   "heartbeatMin": 706.2,
    "lastLog": "[2026-09-10T15:59:35.367Z] heartbeat: tick 330, Thu 16:59 UK, trades 0/2, open=none",
    "account": {
     "equity": 127.6,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1621.1
+    "valuePerPointPerLot": 1619.852
    },
    "stale": true
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.9,
-   "stateAgeMin": 211.9,
+   "stateAgeMin": 1.9,
    "heartbeatMin": 1.9,
-   "lastLog": "[2026-09-11 03:30:07Z] no new H4 bar (last 09-10 20:00Z), pos=0",
+   "lastLog": "[2026-09-11 04:00:07Z] bar 09-11 00:00Z close 76,859 | don20 76,429-79,760 | ema20 78,094 | atr 771 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 6232,
+   "pid": 6580,
    "running": true,
-   "logAgeMin": 949.5,
-   "stateAgeMin": 672.1,
-   "heartbeatMin": 672.1,
+   "logAgeMin": 979.5,
+   "stateAgeMin": 702.1,
+   "heartbeatMin": 702.1,
    "lastLog": "[2026-09-10 11:42:34Z] loop error (1 in a row): <urlopen error [Errno 11001] getaddrinfo failed>",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -107,13 +107,13 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 1148",
+   "detail": "pid 12548",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "676.2 min",
+   "detail": "706.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.05% of equity at a typical stop, and up to 364.62% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 173.92% of equity at a typical stop, and up to 364.34% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/11 05:32:02",
-   "nextRun": "2026/09/11 06:02:00",
+   "lastRun": "2026/09/11 06:02:02",
+   "nextRun": "2026/09/11 06:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.21,
+  "perPoint": 16.2,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.51,
-    "pct": 78.77,
+    "amount": 100.43,
+    "pct": 78.71,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.09,
-    "pct": 174.05,
+    "amount": 221.92,
+    "pct": 173.92,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 465.26,
-    "pct": 364.62,
+    "amount": 464.9,
+    "pct": 364.34,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7403.0
+  "equityForTruePct": 7397.0
  }
 }
