@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T04:02:02.507378+00:00",
+ "generatedAt": "2026-09-12T04:32:02.527890+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 11404,
    "running": true,
-   "logAgeMin": 301.9,
-   "stateAgeMin": 316.1,
-   "heartbeatMin": 301.9,
+   "logAgeMin": 331.9,
+   "stateAgeMin": 346.1,
+   "heartbeatMin": 331.9,
    "lastLog": "[2026-09-11T23:00:07.274Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.53,
-    "tickAgeSec": 15128,
-    "serverOffsetHours": -4,
+    "tickAgeSec": 16928,
+    "serverOffsetHours": -5,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.8,
-   "stateAgeMin": 1.8,
+   "stateAgeMin": 31.8,
    "heartbeatMin": 1.8,
-   "lastLog": "[2026-09-12 04:00:14Z] bar 09-12 00:00Z close 77,256 | don20 76,003-79,873 | ema20 77,723 | atr 905 | none",
+   "lastLog": "[2026-09-12 04:30:14Z] no new H4 bar (last 09-12 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-09-12 04:00:17Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 25445,
-    "serverOffsetHours": -7,
+    "tickAgeSec": 27245,
+    "serverOffsetHours": -8,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "301.9 min",
+   "detail": "331.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/12 06:02:02",
-   "nextRun": "2026/09/12 06:32:00",
+   "lastRun": "2026/09/12 06:32:02",
+   "nextRun": "2026/09/12 07:02:00",
    "result": 267009,
    "ok": true
   },
