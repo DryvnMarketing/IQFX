@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T11:32:02.557103+00:00",
+ "generatedAt": "2026-09-13T12:02:02.578575+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 11404,
    "running": true,
-   "logAgeMin": 1711.8,
-   "stateAgeMin": 2206.1,
-   "heartbeatMin": 1711.8,
+   "logAgeMin": 1741.8,
+   "stateAgeMin": 2236.1,
+   "heartbeatMin": 1741.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 127.6,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.53,
-    "tickAgeSec": 128528,
+    "tickAgeSec": 130328,
     "serverOffsetHours": -36,
     "openPositions": 0,
     "week": {
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 211.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-09-13 11:30:19Z] no new H4 bar (last 09-13 04:00Z), pos=0",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 1.7,
+   "heartbeatMin": 1.7,
+   "lastLog": "[2026-09-13 12:00:19Z] bar 09-13 08:00Z close 76,750 | don20 76,003-79,873 | ema20 77,398 | atr 637 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-13 11:00:21Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 1.6,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-13 12:00:26Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 138846,
+    "tickAgeSec": 140645,
     "serverOffsetHours": -39,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "1711.8 min",
+   "detail": "1741.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/13 13:32:02",
-   "nextRun": "2026/09/13 14:02:00",
+   "lastRun": "2026/09/13 14:02:02",
+   "nextRun": "2026/09/13 14:32:00",
    "result": 267009,
    "ok": true
   },
