@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-17T22:02:02.043221+00:00",
+ "generatedAt": "2026-09-17T22:32:02.585916+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.8,
-   "stateAgeMin": 16.2,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-09-17T22:01:17.348Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 15.9,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-09-17T22:31:37.907Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1626.542
+    "valuePerPointPerLot": 1626.508
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.4,
-   "stateAgeMin": 121.4,
+   "stateAgeMin": 151.4,
    "heartbeatMin": 1.4,
-   "lastLog": "[2026-09-17 22:00:39Z] no new H4 bar (last 09-17 16:00Z), pos=0",
+   "lastLog": "[2026-09-17 22:30:39Z] no new H4 bar (last 09-17 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 3,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-09-17 22:00:15Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.8 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.64% of equity at a typical stop, and up to 365.84% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 174.63% of equity at a typical stop, and up to 365.84% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -177,8 +177,8 @@
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/09/17 00:05:01",
-   "nextRun": "2026/09/18 00:05:00",
+   "lastRun": "2026/09/18 00:05:01",
+   "nextRun": "2026/09/19 00:05:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/18 00:02:01",
-   "nextRun": "2026/09/18 00:32:00",
+   "lastRun": "2026/09/18 00:32:02",
+   "nextRun": "2026/09/18 01:02:00",
    "result": 267009,
    "ok": true
   },
@@ -234,21 +234,21 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.85,
+    "amount": 100.84,
     "pct": 79.03,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.84,
-    "pct": 174.64,
+    "amount": 222.83,
+    "pct": 174.63,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 466.82,
+    "amount": 466.81,
     "pct": 365.84,
     "skipped": true
    }
