@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-19T11:32:02.517067+00:00",
+ "generatedAt": "2026-09-19T12:02:02.635815+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 271.8,
-   "stateAgeMin": 765.0,
-   "heartbeatMin": 271.8,
+   "logAgeMin": 301.8,
+   "stateAgeMin": 795.0,
+   "heartbeatMin": 301.8,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 127.6,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 454101,
     "spread": 0.58,
-    "tickAgeSec": 41828,
+    "tickAgeSec": 43628,
     "serverOffsetHours": -12,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.2,
-   "stateAgeMin": 211.3,
+   "stateAgeMin": 1.2,
    "heartbeatMin": 1.2,
-   "lastLog": "[2026-09-19 11:30:49Z] no new H4 bar (last 09-19 04:00Z), pos=0",
+   "lastLog": "[2026-09-19 12:00:49Z] bar 09-19 08:00Z close 81,276 | don20 74,982-81,739 | ema20 78,747 | atr 897 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-09-19 11:00:04Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-19 12:00:21Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 52447,
+    "tickAgeSec": 54248,
     "serverOffsetHours": -15,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "271.8 min",
+   "detail": "301.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/19 13:32:02",
-   "nextRun": "2026/09/19 14:02:00",
+   "lastRun": "2026/09/19 14:02:02",
+   "nextRun": "2026/09/19 14:32:00",
    "result": 267009,
    "ok": true
   },
