@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-21T15:32:02.557515+00:00",
+ "generatedAt": "2026-09-21T16:02:02.552903+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 19.9,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-21T15:31:21.622Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 19.6,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-21T16:01:42.308Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1623.836
+    "valuePerPointPerLot": 1623.958
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.0,
-   "stateAgeMin": 211.1,
+   "stateAgeMin": 1.0,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-09-21 15:31:00Z] no new H4 bar (last 09-21 08:00Z), pos=0",
+   "lastLog": "[2026-09-21 16:01:02Z] bar 09-21 12:00Z close 85,927 | don20 77,142-85,303 | ema20 81,246 | atr 1,055 | 09-21 12:00Z opened LONG",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 437.9,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-21 08:14:12Z] loop error (1 in a row): float division by zero",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-09-21 16:00:02Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.35% of equity at a typical stop, and up to 365.24% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 174.36% of equity at a typical stop, and up to 365.26% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/21 17:32:02",
-   "nextRun": "2026/09/21 18:02:00",
+   "lastRun": "2026/09/21 18:02:02",
+   "nextRun": "2026/09/21 18:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,22 +234,22 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.68,
-    "pct": 78.9,
+    "amount": 100.69,
+    "pct": 78.91,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.47,
-    "pct": 174.35,
+    "amount": 222.48,
+    "pct": 174.36,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 466.04,
-    "pct": 365.24,
+    "amount": 466.08,
+    "pct": 365.26,
     "skipped": true
    }
   ],
