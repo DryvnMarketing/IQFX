@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T12:32:02.589771+00:00",
+ "generatedAt": "2026-09-22T13:02:02.549534+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 23.1,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-09-22T12:32:01.550Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 22.7,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-09-22T13:01:06.568Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1621.989
+    "valuePerPointPerLot": 1621.861
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 1.0,
-   "stateAgeMin": 30.9,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-09-22 12:31:06Z] no new H4 bar (last 09-22 08:00Z), pos=0",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 60.9,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-09-22 13:01:07Z] no new H4 bar (last 09-22 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 422.1,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 452.0,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-09-22 05:30:01Z] another follower is already running (pid 14008) \u2014 exiting",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "0.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.15% of equity at a typical stop, and up to 364.82% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 174.13% of equity at a typical stop, and up to 364.79% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/22 14:32:02",
-   "nextRun": "2026/09/22 15:02:00",
+   "lastRun": "2026/09/22 15:02:02",
+   "nextRun": "2026/09/22 15:32:00",
    "result": 267009,
    "ok": true
   },
@@ -241,19 +241,19 @@
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.21,
-    "pct": 174.15,
+    "amount": 222.19,
+    "pct": 174.13,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 465.51,
-    "pct": 364.82,
+    "amount": 465.47,
+    "pct": 364.79,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7407.0
+  "equityForTruePct": 7406.0
  }
 }
