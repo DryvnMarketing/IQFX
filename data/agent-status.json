@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T21:02:02.558199+00:00",
+ "generatedAt": "2026-09-22T21:32:02.669803+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 17.1,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-22T21:01:37.879Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 16.8,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-22T21:31:58.594Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -21,7 +21,7 @@
     "login": 454101,
     "spread": 0.82,
     "tickAgeSec": 0,
-    "serverOffsetHours": 3,
+    "serverOffsetHours": 2,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1614.485
+    "valuePerPointPerLot": 1615.18
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.9,
-   "stateAgeMin": 60.9,
+   "stateAgeMin": 90.9,
    "heartbeatMin": 0.9,
-   "lastLog": "[2026-09-22 21:01:08Z] no new H4 bar (last 09-22 16:00Z), pos=0",
+   "lastLog": "[2026-09-22 21:31:08Z] no new H4 bar (last 09-22 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-09-22 21:00:09Z] idle \u2014 22:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 246,
-    "serverOffsetHours": 0,
+    "tickAgeSec": 2046,
+    "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 173.34% of equity at a typical stop, and up to 363.13% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 173.42% of equity at a typical stop, and up to 363.29% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,15 +205,15 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/22 23:02:02",
-   "nextRun": "2026/09/22 23:32:00",
+   "lastRun": "2026/09/22 23:32:02",
+   "nextRun": "2026/09/23 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/09/21 23:30:01",
-   "nextRun": "2026/09/22 23:30:00",
+   "lastRun": "2026/09/22 23:30:01",
+   "nextRun": "2026/09/23 23:30:00",
    "result": 0,
    "ok": true
   }
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.14,
+  "perPoint": 16.15,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.1,
-    "pct": 78.45,
+    "amount": 100.14,
+    "pct": 78.48,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 221.18,
-    "pct": 173.34,
+    "amount": 221.28,
+    "pct": 173.42,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 463.36,
-    "pct": 363.13,
+    "amount": 463.56,
+    "pct": 363.29,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7373.0
+  "equityForTruePct": 7376.0
  }
 }
