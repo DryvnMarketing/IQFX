@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T06:32:02.536326+00:00",
+ "generatedAt": "2026-09-22T07:02:02.532655+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 27.2,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-22T06:31:38.621Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 26.9,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-22T07:01:59.210Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.42,
+    "spread": 0.43,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1626.946
+    "valuePerPointPerLot": 1627.178
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 1.0,
-   "stateAgeMin": 151.0,
+   "stateAgeMin": 181.0,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-09-22 06:31:06Z] no new H4 bar (last 09-22 00:00Z), pos=0",
+   "lastLog": "[2026-09-22 07:01:06Z] no new H4 bar (last 09-22 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 62.1,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 92.0,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-09-22 05:30:01Z] another follower is already running (pid 14008) \u2014 exiting",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,22 +149,22 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 174.68% of equity at a typical stop, and up to 365.94% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 174.7% of equity at a typical stop, and up to 365.99% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/09/21 08:35:00",
-   "nextRun": "2026/09/22 08:35:00",
+   "lastRun": "2026/09/22 08:35:00",
+   "nextRun": "2026/09/23 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/09/21 08:35:00",
-   "nextRun": "2026/09/22 08:35:00",
+   "lastRun": "2026/09/22 08:35:00",
+   "nextRun": "2026/09/23 08:35:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/22 08:32:02",
-   "nextRun": "2026/09/22 09:02:00",
+   "lastRun": "2026/09/22 09:02:02",
+   "nextRun": "2026/09/22 09:32:00",
    "result": 267009,
    "ok": true
   },
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 100.87,
-    "pct": 79.05,
+    "amount": 100.89,
+    "pct": 79.06,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 222.89,
-    "pct": 174.68,
+    "amount": 222.92,
+    "pct": 174.7,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 466.93,
-    "pct": 365.94,
+    "amount": 467.0,
+    "pct": 365.99,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7430.0
+  "equityForTruePct": 7431.0
  }
 }
