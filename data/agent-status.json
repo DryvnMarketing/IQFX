@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-24T21:32:02.732540+00:00",
+ "generatedAt": "2026-09-24T22:02:01.987933+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 16.2,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-24T21:31:18.952Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 15.8,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-09-24T22:01:39.906Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -19,9 +19,9 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 454101,
-    "spread": 0.93,
+    "spread": 0.53,
     "tickAgeSec": 0,
-    "serverOffsetHours": 2,
+    "serverOffsetHours": 3,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1639.627
+    "valuePerPointPerLot": 1643.058
    },
    "stale": false
   },
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 0.8,
-   "stateAgeMin": 90.8,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-09-24 21:31:18Z] no new H4 bar (last 09-24 16:00Z), pos=0",
+   "logAgeMin": 0.7,
+   "stateAgeMin": 120.8,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-09-24 22:01:18Z] no new H4 bar (last 09-24 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-24 21:00:23Z] idle \u2014 22:00 UK outside 07:00-17:00",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-09-24 22:00:16Z] idle \u2014 23:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 2047,
-    "serverOffsetHours": -1,
+    "tickAgeSec": 1,
+    "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 176.04% of equity at a typical stop, and up to 368.79% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 176.41% of equity at a typical stop, and up to 369.56% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/24 23:32:02",
-   "nextRun": "2026/09/25 00:02:00",
+   "lastRun": "2026/09/25 00:02:01",
+   "nextRun": "2026/09/25 00:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.4,
+  "perPoint": 16.43,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.66,
-    "pct": 79.67,
+    "amount": 101.87,
+    "pct": 79.84,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 224.63,
-    "pct": 176.04,
+    "amount": 225.1,
+    "pct": 176.41,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 470.57,
-    "pct": 368.79,
+    "amount": 471.56,
+    "pct": 369.56,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7488.0
+  "equityForTruePct": 7503.0
  }
 }
