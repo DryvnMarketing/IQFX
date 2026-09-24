@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-24T06:32:02.564413+00:00",
+ "generatedAt": "2026-09-24T07:02:02.622860+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 1.1,
-   "stateAgeMin": 26.6,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-09-24T06:30:59.038Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.7,
+   "stateAgeMin": 26.3,
+   "heartbeatMin": 0.7,
+   "lastLog": "[2026-09-24T07:01:19.948Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 127.6,
     "currency": "ZAR",
@@ -29,7 +29,7 @@
      "wins": 0
     },
     "minLot": 0.01,
-    "valuePerPointPerLot": 1638.131
+    "valuePerPointPerLot": 1638.607
    },
    "stale": false
   },
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.8,
-   "stateAgeMin": 150.8,
+   "stateAgeMin": 180.8,
    "heartbeatMin": 0.8,
-   "lastLog": "[2026-09-24 06:31:16Z] no new H4 bar (last 09-24 00:00Z), pos=0",
+   "lastLog": "[2026-09-24 07:01:16Z] no new H4 bar (last 09-24 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 62.0,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 92.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-24 05:30:01Z] another follower is already running (pid 14008) \u2014 exiting",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,22 +149,22 @@
   {
    "name": "Min-lot risk within cap",
    "state": "WARN",
-   "detail": "Setup A/B always placed - 175.88% of equity at a typical stop, and up to 368.45% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 175.93% of equity at a typical stop, and up to 368.56% on the widest (3/3 reference stops exceed the 10.0% cap). The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/09/23 08:35:00",
-   "nextRun": "2026/09/24 08:35:00",
+   "lastRun": "2026/09/24 08:35:00",
+   "nextRun": "2026/09/25 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/09/23 08:35:00",
-   "nextRun": "2026/09/24 08:35:00",
+   "lastRun": "2026/09/24 08:35:00",
+   "nextRun": "2026/09/25 08:35:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/24 08:32:02",
-   "nextRun": "2026/09/24 09:02:00",
+   "lastRun": "2026/09/24 09:02:02",
+   "nextRun": "2026/09/24 09:32:00",
    "result": 267009,
    "ok": true
   },
@@ -223,7 +223,7 @@
   "currency": "ZAR",
   "equity": 127.6,
   "minLot": 0.01,
-  "perPoint": 16.38,
+  "perPoint": 16.39,
   "configuredPct": 3.0,
   "capPct": 10.0,
   "noSkipSetups": [
@@ -234,26 +234,26 @@
    {
     "stop": "tight (p10)",
     "points": 6.2,
-    "amount": 101.56,
-    "pct": 79.6,
+    "amount": 101.59,
+    "pct": 79.62,
     "skipped": true
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
-    "amount": 224.42,
-    "pct": 175.88,
+    "amount": 224.49,
+    "pct": 175.93,
     "skipped": true
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
-    "amount": 470.14,
-    "pct": 368.45,
+    "amount": 470.28,
+    "pct": 368.56,
     "skipped": true
    }
   ],
   "singleLeg": true,
-  "equityForTruePct": 7481.0
+  "equityForTruePct": 7483.0
  }
 }
