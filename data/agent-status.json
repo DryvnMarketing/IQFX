@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T23:02:02.717423+00:00",
+ "generatedAt": "2026-09-25T23:32:02.789913+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 2.1,
-   "stateAgeMin": 15.0,
-   "heartbeatMin": 2.1,
+   "logAgeMin": 32.1,
+   "stateAgeMin": 45.0,
+   "heartbeatMin": 32.1,
    "lastLog": "[2026-09-25T23:00:00.866Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
@@ -21,7 +21,7 @@
     "login": 63338199,
     "spread": 1.21,
     "tickAgeSec": 0,
-    "serverOffsetHours": 1,
+    "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 180.7,
+   "stateAgeMin": 210.7,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-09-25 23:01:26Z] no new H4 bar (last 09-25 16:00Z), pos=0",
+   "lastLog": "[2026-09-25 23:31:26Z] no new H4 bar (last 09-25 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-09-25 23:00:10Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 7446,
-    "serverOffsetHours": -2,
+    "tickAgeSec": 9246,
+    "serverOffsetHours": -3,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "2.1 min",
+   "detail": "32.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/26 01:02:02",
-   "nextRun": "2026/09/26 01:32:00",
+   "lastRun": "2026/09/26 01:32:02",
+   "nextRun": "2026/09/26 02:02:00",
    "result": 267009,
    "ok": true
   },
