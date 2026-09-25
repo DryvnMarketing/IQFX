@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T19:32:02.760435+00:00",
+ "generatedAt": "2026-09-25T20:02:02.571020+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 17.4,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25T19:31:21.816Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 17.0,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-25T20:01:42.808Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 210.7,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25 19:31:25Z] no new H4 bar (last 09-25 12:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 0.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-09-25 20:01:25Z] bar 09-25 16:00Z close 83,995 | don20 82,854-87,286 | ema20 84,242 | atr 1,027 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 31.9,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-09-25 19:00:14Z] idle \u2014 20:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-09-25 20:00:05Z] idle \u2014 21:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/25 21:32:02",
-   "nextRun": "2026/09/25 22:02:00",
+   "lastRun": "2026/09/25 22:02:02",
+   "nextRun": "2026/09/25 22:32:00",
    "result": 267009,
    "ok": true
   },
