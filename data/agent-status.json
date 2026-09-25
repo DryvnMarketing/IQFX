@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T06:02:02.623608+00:00",
+ "generatedAt": "2026-09-25T06:32:02.664621+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 1.1,
-   "stateAgeMin": 26.7,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-09-25T06:00:55.070Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.8,
+   "stateAgeMin": 26.4,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-09-25T06:31:15.690Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 302.03,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 120.7,
+   "stateAgeMin": 150.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25 06:01:22Z] no new H4 bar (last 09-25 00:00Z), pos=0",
+   "lastLog": "[2026-09-25 06:31:22Z] no new H4 bar (last 09-25 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 14008,
    "running": true,
-   "logAgeMin": 32.1,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 62.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-25 05:30:01Z] another follower is already running (pid 14008) \u2014 exiting",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/25 08:02:02",
-   "nextRun": "2026/09/25 08:32:00",
+   "lastRun": "2026/09/25 08:32:02",
+   "nextRun": "2026/09/25 09:02:00",
    "result": 267009,
    "ok": true
   },
