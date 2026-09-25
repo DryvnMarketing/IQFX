@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T16:02:02.575283+00:00",
+ "generatedAt": "2026-09-25T16:32:02.580215+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 19.8,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-09-25T16:01:26.260Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 19.5,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-25T16:31:47.115Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 0.7,
+   "stateAgeMin": 30.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25 16:01:24Z] bar 09-25 12:00Z close 83,787 | don20 82,854-87,286 | ema20 84,268 | atr 1,067 | none",
+   "lastLog": "[2026-09-25 16:31:24Z] no new H4 bar (last 09-25 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 0,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-09-25 16:00:09Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.6 min",
+   "detail": "0.3 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/25 18:02:02",
-   "nextRun": "2026/09/25 18:32:00",
+   "lastRun": "2026/09/25 18:32:02",
+   "nextRun": "2026/09/25 19:02:00",
    "result": 267009,
    "ok": true
   },
