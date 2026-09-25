@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T14:02:02.604916+00:00",
+ "generatedAt": "2026-09-25T14:32:02.617035+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.8,
-   "stateAgeMin": 21.2,
-   "heartbeatMin": 0.8,
-   "lastLog": "[2026-09-25T14:01:18.438Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 20.9,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-09-25T14:31:39.432Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 120.7,
+   "stateAgeMin": 150.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25 14:01:24Z] no new H4 bar (last 09-25 08:00Z), pos=0",
+   "lastLog": "[2026-09-25 14:31:24Z] no new H4 bar (last 09-25 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 127.2,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 157.2,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-25 11:54:51Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.8 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/25 16:02:02",
-   "nextRun": "2026/09/25 16:32:00",
+   "lastRun": "2026/09/25 16:32:02",
+   "nextRun": "2026/09/25 17:02:00",
    "result": 267009,
    "ok": true
   },
