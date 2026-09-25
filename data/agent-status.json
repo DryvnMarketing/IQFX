@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T16:32:02.580215+00:00",
+ "generatedAt": "2026-09-25T17:02:02.583744+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 19.5,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-09-25T16:31:47.115Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 19.2,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-09-25T17:00:52.207Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 30.7,
+   "stateAgeMin": 60.7,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-09-25 16:31:24Z] no new H4 bar (last 09-25 12:00Z), pos=0",
+   "lastLog": "[2026-09-25 17:01:24Z] no new H4 bar (last 09-25 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 31.9,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 61.9,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
    "lastLog": "[2026-09-25 16:00:09Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/25 18:32:02",
-   "nextRun": "2026/09/25 19:02:00",
+   "lastRun": "2026/09/25 19:02:02",
+   "nextRun": "2026/09/25 19:32:00",
    "result": 267009,
    "ok": true
   },
