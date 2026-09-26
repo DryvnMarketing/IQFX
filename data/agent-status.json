@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T20:02:02.522463+00:00",
+ "generatedAt": "2026-09-26T20:32:04.807071+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 781.8,
-   "stateAgeMin": 1274.9,
-   "heartbeatMin": 781.8,
+   "logAgeMin": 812.0,
+   "stateAgeMin": 1305.1,
+   "heartbeatMin": 812.0,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 307.14,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.21,
-    "tickAgeSec": 72125,
-    "serverOffsetHours": -20,
+    "tickAgeSec": 73936,
+    "serverOffsetHours": -21,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 0.5,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-09-26 20:01:31Z] bar 09-26 16:00Z close 83,998 | don20 82,854-86,270 | ema20 84,164 | atr 787 | none",
+   "logAgeMin": 0.8,
+   "stateAgeMin": 30.8,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-09-26 20:31:31Z] no new H4 bar (last 09-26 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 32.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-26 20:00:16Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 83045,
-    "serverOffsetHours": -23,
+    "tickAgeSec": 84865,
+    "serverOffsetHours": -24,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "781.8 min",
+   "detail": "812.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/26 22:02:02",
-   "nextRun": "2026/09/26 22:32:00",
+   "lastRun": "2026/09/26 22:32:02",
+   "nextRun": "2026/09/26 23:02:00",
    "result": 267009,
    "ok": true
   },
