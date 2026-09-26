@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T00:02:02.636925+00:00",
+ "generatedAt": "2026-09-26T00:32:02.597303+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 62.0,
-   "stateAgeMin": 75.0,
-   "heartbeatMin": 62.0,
+   "logAgeMin": 92.0,
+   "stateAgeMin": 104.9,
+   "heartbeatMin": 92.0,
    "lastLog": "[2026-09-25T23:00:00.866Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.21,
-    "tickAgeSec": 125,
-    "serverOffsetHours": 0,
+    "tickAgeSec": 1925,
+    "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -31,7 +31,7 @@
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
    },
-   "stale": false
+   "stale": true
   },
   {
    "key": "btc",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 0.6,
+   "stateAgeMin": 30.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-09-26 00:01:26Z] bar 09-25 20:00Z close 84,087 | don20 82,854-87,286 | ema20 84,227 | atr 995 | none",
+   "lastLog": "[2026-09-26 00:31:26Z] no new H4 bar (last 09-25 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-09-26 00:00:08Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 11045,
-    "serverOffsetHours": -3,
+    "tickAgeSec": 12845,
+    "serverOffsetHours": -4,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -112,8 +112,8 @@
   },
   {
    "name": "Heartbeat fresh",
-   "state": "PASS",
-   "detail": "62.0 min",
+   "state": "WARN",
+   "detail": "92.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/26 02:02:02",
-   "nextRun": "2026/09/26 02:32:00",
+   "lastRun": "2026/09/26 02:32:02",
+   "nextRun": "2026/09/26 03:02:00",
    "result": 267009,
    "ok": true
   },
