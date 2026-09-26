@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T03:32:02.713847+00:00",
+ "generatedAt": "2026-09-26T04:02:02.583605+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 272.1,
-   "stateAgeMin": 285.0,
-   "heartbeatMin": 272.1,
+   "logAgeMin": 302.1,
+   "stateAgeMin": 315.0,
+   "heartbeatMin": 302.1,
    "lastLog": "[2026-09-25T23:00:00.866Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.21,
-    "tickAgeSec": 12726,
+    "tickAgeSec": 14525,
     "serverOffsetHours": -4,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 210.6,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-09-26 03:31:27Z] no new H4 bar (last 09-25 20:00Z), pos=0",
+   "lastLog": "[2026-09-26 04:01:27Z] bar 09-26 00:00Z close 83,925 | don20 82,854-87,286 | ema20 84,199 | atr 950 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 31.8,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-26 03:00:18Z] idle \u2014 weekend (Sat)",
+   "logAgeMin": 1.7,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-09-26 04:00:22Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 23646,
+    "tickAgeSec": 25446,
     "serverOffsetHours": -7,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "272.1 min",
+   "detail": "302.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/26 05:32:02",
-   "nextRun": "2026/09/26 06:02:00",
+   "lastRun": "2026/09/26 06:02:02",
+   "nextRun": "2026/09/26 06:32:00",
    "result": 267009,
    "ok": true
   },
