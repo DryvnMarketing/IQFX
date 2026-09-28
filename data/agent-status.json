@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T22:32:02.664603+00:00",
+ "generatedAt": "2026-09-28T23:02:02.639758+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.9,
-   "stateAgeMin": 15.1,
-   "heartbeatMin": 0.9,
-   "lastLog": "[2026-09-28T22:31:10.239Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.5,
+   "stateAgeMin": 0.8,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-09-28T23:01:31.108Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 339.06,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 150.2,
+   "stateAgeMin": 180.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-28 22:31:54Z] no new H4 bar (last 09-28 16:00Z), pos=0",
+   "lastLog": "[2026-09-28 23:01:54Z] no new H4 bar (last 09-28 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 22084,
+   "pid": 5480,
    "running": true,
-   "logAgeMin": 272.0,
-   "stateAgeMin": 247.0,
-   "heartbeatMin": 247.0,
+   "logAgeMin": 302.0,
+   "stateAgeMin": 277.0,
+   "heartbeatMin": 277.0,
    "lastLog": "[2026-09-28 18:00:03Z] idle \u2014 19:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.9 min",
+   "detail": "0.5 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/29 00:32:02",
-   "nextRun": "2026/09/29 01:02:00",
+   "lastRun": "2026/09/29 01:02:02",
+   "nextRun": "2026/09/29 01:32:00",
    "result": 267009,
    "ok": true
   },
