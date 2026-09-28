@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T07:02:02.629111+00:00",
+ "generatedAt": "2026-09-28T07:32:02.774265+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 25.9,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-28T07:01:40.921Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 25.6,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-09-28T07:32:02.178Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.14,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 9628,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 180.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-28 07:01:49Z] no new H4 bar (last 09-28 00:00Z), pos=0",
+   "logAgeMin": 0.3,
+   "stateAgeMin": 210.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-09-28 07:31:49Z] no new H4 bar (last 09-28 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 92.0,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 122.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-09-28 05:30:01Z] another follower is already running (pid 3396) \u2014 exiting",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/28 09:02:02",
-   "nextRun": "2026/09/28 09:32:00",
+   "lastRun": "2026/09/28 09:32:02",
+   "nextRun": "2026/09/28 10:02:00",
    "result": 267009,
    "ok": true
   },
