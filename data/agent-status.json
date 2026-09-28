@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T22:02:02.118195+00:00",
+ "generatedAt": "2026-09-28T22:32:02.664603+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 1.2,
-   "stateAgeMin": 15.4,
-   "heartbeatMin": 1.2,
-   "lastLog": "[2026-09-28T22:00:49.704Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 15.1,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-09-28T22:31:10.239Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 339.06,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.88,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 120.2,
+   "stateAgeMin": 150.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-28 22:01:53Z] no new H4 bar (last 09-28 16:00Z), pos=0",
+   "lastLog": "[2026-09-28 22:31:54Z] no new H4 bar (last 09-28 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -69,11 +69,11 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 26788,
+   "pid": 22084,
    "running": true,
-   "logAgeMin": 242.0,
-   "stateAgeMin": 217.0,
-   "heartbeatMin": 217.0,
+   "logAgeMin": 272.0,
+   "stateAgeMin": 247.0,
+   "heartbeatMin": 247.0,
    "lastLog": "[2026-09-28 18:00:03Z] idle \u2014 19:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -83,7 +83,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.182,
+    "spread": 0.168,
     "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.2 min",
+   "detail": "0.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -177,8 +177,8 @@
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/09/28 00:05:01",
-   "nextRun": "2026/09/29 00:05:00",
+   "lastRun": "2026/09/29 00:05:01",
+   "nextRun": "2026/09/30 00:05:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/29 00:02:01",
-   "nextRun": "2026/09/29 00:32:00",
+   "lastRun": "2026/09/29 00:32:02",
+   "nextRun": "2026/09/29 01:02:00",
    "result": 267009,
    "ok": true
   },
