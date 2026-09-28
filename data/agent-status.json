@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T16:02:02.683320+00:00",
+ "generatedAt": "2026-09-28T16:32:02.656975+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,19 +7,19 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 19.6,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-09-28T16:01:40.759Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 19.3,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-09-28T16:32:01.529Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
-    "equity": 327.19,
+    "equity": 330.78,
     "currency": "USD",
     "demo": false,
     "algoTrading": true,
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.32,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 0.2,
+   "stateAgeMin": 30.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-28 16:01:52Z] bar 09-28 12:00Z close 83,332 | don20 82,540-85,257 | ema20 83,974 | atr 816 | none",
+   "lastLog": "[2026-09-28 16:31:52Z] no new H4 bar (last 09-28 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 3396,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-09-28 16:00:17Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -149,7 +149,7 @@
   {
    "name": "Min-lot risk within cap",
    "state": "PASS",
-   "detail": "Setup A/B always placed - 4.19% of equity at a typical stop, inside the 10.0% cap. The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 4.14% of equity at a typical stop, inside the 10.0% cap. The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/28 18:02:02",
-   "nextRun": "2026/09/28 18:32:00",
+   "lastRun": "2026/09/28 18:32:02",
+   "nextRun": "2026/09/28 19:02:00",
    "result": 267009,
    "ok": true
   },
@@ -221,7 +221,7 @@
  "canTrade": true,
  "risk": {
   "currency": "USD",
-  "equity": 327.19,
+  "equity": 330.78,
   "minLot": 0.01,
   "perPoint": 1.0,
   "configuredPct": 3.0,
@@ -235,21 +235,21 @@
     "stop": "tight (p10)",
     "points": 6.2,
     "amount": 6.2,
-    "pct": 1.89,
+    "pct": 1.87,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
     "amount": 13.7,
-    "pct": 4.19,
+    "pct": 4.14,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
     "amount": 28.7,
-    "pct": 8.77,
+    "pct": 8.68,
     "skipped": false
    }
   ],
