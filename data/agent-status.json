@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T05:02:02.584873+00:00",
+ "generatedAt": "2026-09-29T05:32:02.680194+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 27.0,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-09-29T05:01:51.234Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 26.7,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-09-29T05:30:56.064Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.97,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.34,
+    "spread": 0.32,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 60.1,
+   "stateAgeMin": 90.2,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-09-29 05:01:56Z] no new H4 bar (last 09-29 00:00Z), pos=0",
+   "lastLog": "[2026-09-29 05:31:56Z] no new H4 bar (last 09-29 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 14096,
+   "pid": 26260,
    "running": true,
-   "logAgeMin": 662.0,
-   "stateAgeMin": 637.0,
-   "heartbeatMin": 637.0,
-   "lastLog": "[2026-09-28 18:00:03Z] idle \u2014 19:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-09-29 05:30:03Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -95,7 +95,7 @@
     "minLot": 0.01,
     "valuePerPointPerLot": 100.0
    },
-   "stale": true
+   "stale": false
   }
  ],
  "calendar": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.2 min",
+   "detail": "1.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -170,9 +170,9 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/09/28 07:30:00",
-   "nextRun": "2026/09/29 07:30:00",
-   "result": 0,
+   "lastRun": "2026/09/29 07:30:00",
+   "nextRun": "2026/09/30 07:30:00",
+   "result": 267009,
    "ok": true
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/29 07:02:02",
-   "nextRun": "2026/09/29 07:32:00",
+   "lastRun": "2026/09/29 07:32:02",
+   "nextRun": "2026/09/29 08:02:00",
    "result": 267009,
    "ok": true
   },
