@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T05:32:02.680194+00:00",
+ "generatedAt": "2026-09-29T06:02:02.653959+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 1.1,
-   "stateAgeMin": 26.7,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-09-29T05:30:56.064Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.8,
+   "stateAgeMin": 26.3,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-09-29T06:01:16.672Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 307.97,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.32,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 90.2,
+   "stateAgeMin": 120.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-09-29 05:31:56Z] no new H4 bar (last 09-29 00:00Z), pos=0",
+   "lastLog": "[2026-09-29 06:01:56Z] no new H4 bar (last 09-29 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 26260,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-09-29 05:30:03Z]   whatsapp -> 200 (attempt 1)",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/29 07:32:02",
-   "nextRun": "2026/09/29 08:02:00",
+   "lastRun": "2026/09/29 08:02:02",
+   "nextRun": "2026/09/29 08:32:00",
    "result": 267009,
    "ok": true
   },
