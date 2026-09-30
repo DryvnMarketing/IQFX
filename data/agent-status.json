@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T05:02:02.627983+00:00",
+ "generatedAt": "2026-09-30T05:32:02.645267+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 12416,
    "running": true,
-   "logAgeMin": 1.1,
-   "stateAgeMin": 27.9,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-09-30T05:00:55.292Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.8,
+   "stateAgeMin": 27.6,
+   "heartbeatMin": 0.8,
+   "lastLog": "[2026-09-30T05:31:15.700Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 360.56,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 9628,
    "running": true,
    "logAgeMin": 0.0,
-   "stateAgeMin": 60.0,
+   "stateAgeMin": 90.0,
    "heartbeatMin": 0.0,
-   "lastLog": "[2026-09-30 05:02:02Z] no new H4 bar (last 09-30 00:00Z), pos=0",
+   "lastLog": "[2026-09-30 05:32:02Z] no new H4 bar (last 09-30 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 26260,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-09-30 05:00:08Z] idle \u2014 06:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.8 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -143,7 +143,7 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
+   "detail": "GKO Follower = -2147020576, XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
@@ -170,10 +170,10 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/09/29 07:30:00",
-   "nextRun": "2026/09/30 07:30:00",
-   "result": 267009,
-   "ok": true
+   "lastRun": "2026/09/30 07:30:00",
+   "nextRun": "2026/10/01 07:30:00",
+   "result": -2147020576,
+   "ok": false
   },
   {
    "name": "BTC Trend Agent",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/30 07:02:02",
-   "nextRun": "2026/09/30 07:32:00",
+   "lastRun": "2026/09/30 07:32:02",
+   "nextRun": "2026/09/30 08:02:00",
    "result": 267009,
    "ok": true
   },
