@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T07:02:08.453844+00:00",
+ "generatedAt": "2026-10-01T14:23:29.003869+00:00",
  "benchmark": {
   "dev": 0.096,
   "holdout": -0.045,
@@ -1181,15 +1181,45 @@
    "decision": "SKIP: 162 min old",
    "reason": "stale (162 min > 8)",
    "ts": "2026-09-10T09:52:14.884214+00:00"
+  },
+  {
+   "signal_id": 41371,
+   "posted": "2026-10-01T12:17:27+00:00",
+   "age_min": 124.0,
+   "dir": "BUY",
+   "zone_lo": 4172.0,
+   "zone_hi": 4177.0,
+   "tp1": 4179.0,
+   "sl": 4167.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude3d\ud835\ude50\ud835\ude54 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4177 \u2013 4172\n\nTP 1: 4179\nTP 2: 4189\n\nSL: 4167\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "status": "SKIPPED",
+   "decision": "SKIP: 124 min old",
+   "reason": "stale (124 min > 8)",
+   "ts": "2026-10-01T14:21:29.339870+00:00"
+  },
+  {
+   "signal_id": 41379,
+   "posted": "2026-10-01T13:18:54+00:00",
+   "age_min": 62.6,
+   "dir": "SELL",
+   "zone_lo": 4171.0,
+   "zone_hi": 4176.0,
+   "tp1": 4169.0,
+   "sl": 4181.0,
+   "raw": "\ud835\ude53\ud835\ude3c\ud835\ude50\ud835\ude50\ud835\ude4e\ud835\ude3f \ud835\ude4e\ud835\ude40\ud835\ude47\ud835\ude47 \ud835\ude49\ud835\ude4a\ud835\ude52\n\nENTRY ZONE: 4171 - 4176\n\nTP 1: 4169\nTP 2: 4159\n\nSL: 4181\n\nExecution depends on confirmation and your money management.\n\n\ud83d\udcd6 LOT SIZE GUIDE\nBREAKANDBEYOND",
+   "status": "SKIPPED",
+   "decision": "SKIP: 63 min old",
+   "reason": "stale (63 min > 8)",
+   "ts": "2026-10-01T14:21:29.340869+00:00"
   }
  ],
  "seenSignals": 500,
  "dayTrades": 0,
  "halted": false,
  "stats": {
-  "signals": 42,
+  "signals": 44,
   "taken": 29,
-  "skipped": 6,
+  "skipped": 8,
   "open": 0,
   "closed": 29,
   "wins": 24,
@@ -1214,6 +1244,14 @@
   [
    "stale (162 min > 8)",
    1
+  ],
+  [
+   "stale (124 min > 8)",
+   1
+  ],
+  [
+   "stale (63 min > 8)",
+   1
   ]
  ],
  "account": {
@@ -1225,7 +1263,7 @@
   "symbol": "XAUUSD",
   "login": 436786587,
   "spread": 0.168,
-  "tickAgeSec": 1,
+  "tickAgeSec": 4,
   "serverOffsetHours": 0,
   "openPositions": 0,
   "week": {

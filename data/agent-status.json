@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-09-30T07:02:02.646252+00:00",
+ "generatedAt": "2026-10-01T14:23:15.259481+00:00",
  "agents": [
   {
    "key": "gold",
    "label": "XAU Session Agent",
    "live": true,
-   "pid": 12416,
+   "pid": 26728,
    "running": true,
-   "logAgeMin": 1.0,
-   "stateAgeMin": 26.6,
-   "heartbeatMin": 1.0,
-   "lastLog": "[2026-09-30T07:01:03.010Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 2.0,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-10-01T14:22:57.697Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
-    "equity": 368.69,
+    "equity": 365.15,
     "currency": "USD",
     "demo": false,
     "algoTrading": true,
@@ -37,12 +37,12 @@
    "key": "btc",
    "label": "BTC Trend Agent",
    "live": false,
-   "pid": 9628,
+   "pid": 22292,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 180.0,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-09-30 07:02:02Z] no new H4 bar (last 09-30 00:00Z), pos=0",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 1.9,
+   "heartbeatMin": 1.9,
+   "lastLog": "[2026-10-01 14:21:28Z] bar 10-01 08:00Z close 83,885 | don20 82,512-85,151 | ema20 83,717 | atr 814 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 4,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -69,12 +69,12 @@
    "key": "gko",
    "label": "GKO Follower",
    "live": false,
-   "pid": 26260,
+   "pid": 22156,
    "running": true,
-   "logAgeMin": 121.9,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-09-30 05:00:08Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-10-01 14:23:21Z] another follower is already running (pid 22156) \u2014 exiting",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 3,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -107,13 +107,13 @@
   {
    "name": "Gold agent process",
    "state": "PASS",
-   "detail": "pid 12416",
+   "detail": "pid 26728",
    "why": "No process, no trading."
   },
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.0 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -143,42 +143,42 @@
   {
    "name": "Scheduled tasks",
    "state": "WARN",
-   "detail": "GKO Follower = -2147020576, XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
+   "detail": "XAU Weekly Brief = 1, XAU Sunday Fundamentals = 1",
    "why": "A failed weekly job produces silence, not an error."
   },
   {
    "name": "Min-lot risk within cap",
    "state": "PASS",
-   "detail": "Setup A/B always placed - 3.72% of equity at a typical stop, inside the 10.0% cap. The cap can no longer refuse anything this agent trades.",
+   "detail": "Setup A/B always placed - 3.75% of equity at a typical stop, inside the 10.0% cap. The cap can no longer refuse anything this agent trades.",
    "why": "Minimum lot is a floor - the cap can refuse a trade, never shrink one."
   }
  ],
  "tasks": [
   {
    "name": "XAU Session Agent",
-   "lastRun": "2026/09/30 08:35:00",
-   "nextRun": "2026/10/01 08:35:00",
+   "lastRun": "2026/10/01 16:23:15",
+   "nextRun": "2026/10/02 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Gold Forward-Test",
-   "lastRun": "2026/09/30 08:35:00",
-   "nextRun": "2026/10/01 08:35:00",
+   "lastRun": "2026/10/01 16:23:15",
+   "nextRun": "2026/10/02 08:35:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/09/30 07:30:00",
-   "nextRun": "2026/10/01 07:30:00",
-   "result": -2147020576,
-   "ok": false
+   "lastRun": "2026/10/01 16:23:15",
+   "nextRun": "2026/10/02 07:30:00",
+   "result": 0,
+   "ok": true
   },
   {
    "name": "BTC Trend Agent",
-   "lastRun": "2026/09/30 00:05:01",
-   "nextRun": "2026/10/01 00:05:00",
+   "lastRun": "2026/10/01 16:23:15",
+   "nextRun": "2026/10/02 00:05:00",
    "result": 0,
    "ok": true
   },
@@ -205,15 +205,15 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/09/30 09:02:02",
-   "nextRun": "2026/09/30 09:32:00",
+   "lastRun": "2026/10/01 16:23:14",
+   "nextRun": "2026/10/01 16:32:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/09/29 23:30:01",
-   "nextRun": "2026/09/30 23:30:00",
+   "lastRun": "2026/10/01 16:23:14",
+   "nextRun": "2026/10/01 23:30:00",
    "result": 0,
    "ok": true
   }
@@ -221,7 +221,7 @@
  "canTrade": true,
  "risk": {
   "currency": "USD",
-  "equity": 368.69,
+  "equity": 365.15,
   "minLot": 0.01,
   "perPoint": 1.0,
   "configuredPct": 3.0,
@@ -235,21 +235,21 @@
     "stop": "tight (p10)",
     "points": 6.2,
     "amount": 6.2,
-    "pct": 1.68,
+    "pct": 1.7,
     "skipped": false
    },
    {
     "stop": "typical (median)",
     "points": 13.7,
     "amount": 13.7,
-    "pct": 3.72,
+    "pct": 3.75,
     "skipped": false
    },
    {
     "stop": "wide (p90)",
     "points": 28.7,
     "amount": 28.7,
-    "pct": 7.78,
+    "pct": 7.86,
     "skipped": false
    }
   ],
