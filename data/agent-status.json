@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T07:53:15.387558+00:00",
+ "generatedAt": "2026-10-02T08:02:02.412780+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,9 +8,9 @@
    "pid": 26728,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 17.3,
+   "stateAgeMin": 26.1,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02T07:52:39.768Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "lastLog": "[2026-10-02T08:01:29.631Z] CDP down \u2014 attempting TradingView relaunch...",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 231.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-10-02 07:51:28Z] no new H4 bar (last 10-02 00:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 0.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-10-02 08:01:29Z] bar 10-02 04:00Z close 86,073 | don20 82,727-85,620 | ema20 84,249 | atr 932 | 10-02 04:00Z opened LONG",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 95.4,
+   "logAgeMin": 104.2,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-10-02 06:17:50Z] loop error (1 in a row): float division by zero",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 09:53:15",
-   "nextRun": "2026/10/02 10:02:00",
+   "lastRun": "2026/10/02 10:02:02",
+   "nextRun": "2026/10/02 10:32:00",
    "result": 267009,
    "ok": true
   },
