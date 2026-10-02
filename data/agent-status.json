@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T05:23:15.391912+00:00",
+ "generatedAt": "2026-10-02T05:32:02.424565+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,9 +8,9 @@
    "pid": 26728,
    "running": true,
    "logAgeMin": 0.7,
-   "stateAgeMin": 18.7,
+   "stateAgeMin": 27.4,
    "heartbeatMin": 0.7,
-   "lastLog": "[2026-10-02T05:22:31.391Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "lastLog": "[2026-10-02T05:31:21.308Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 81.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-10-02 05:21:27Z] no new H4 bar (last 10-02 00:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 90.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-10-02 05:31:27Z] no new H4 bar (last 10-02 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 23.0,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-02 05:00:16Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-10-02 05:30:01Z] another follower is already running (pid 22156) \u2014 exiting",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -170,8 +170,8 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/10/01 16:23:15",
-   "nextRun": "2026/10/02 07:30:00",
+   "lastRun": "2026/10/02 07:30:00",
+   "nextRun": "2026/10/05 07:30:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 07:23:15",
-   "nextRun": "2026/10/02 07:32:00",
+   "lastRun": "2026/10/02 07:32:02",
+   "nextRun": "2026/10/02 08:02:00",
    "result": 267009,
    "ok": true
   },
