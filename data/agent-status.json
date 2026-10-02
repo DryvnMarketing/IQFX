@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T06:02:02.418785+00:00",
+ "generatedAt": "2026-10-02T06:23:15.418564+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 27.2,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-02T06:01:38.139Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 18.1,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-10-02T06:23:05.047Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 120.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02 06:01:27Z] no new H4 bar (last 10-02 00:00Z), pos=0",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 141.8,
+   "heartbeatMin": 1.8,
+   "lastLog": "[2026-10-02 06:21:27Z] no new H4 bar (last 10-02 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 32.1,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-02 05:30:01Z] another follower is already running (pid 22156) \u2014 exiting",
+   "logAgeMin": 5.5,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-10-02 06:17:50Z] loop error (1 in a row): float division by zero",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,7 +205,7 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 08:02:02",
+   "lastRun": "2026/10/02 08:23:15",
    "nextRun": "2026/10/02 08:32:00",
    "result": 267009,
    "ok": true
