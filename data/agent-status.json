@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T02:53:15.415918+00:00",
+ "generatedAt": "2026-10-02T03:02:02.454891+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,9 +8,9 @@
    "pid": 26728,
    "running": true,
    "logAgeMin": 0.9,
-   "stateAgeMin": 20.1,
+   "stateAgeMin": 28.9,
    "heartbeatMin": 0.9,
-   "lastLog": "[2026-10-02T02:52:21.314Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "lastLog": "[2026-10-02T03:01:13.100Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 171.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-10-02 02:51:27Z] no new H4 bar (last 10-01 20:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 180.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-10-02 03:01:27Z] no new H4 bar (last 10-01 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 52.9,
+   "logAgeMin": 2.0,
    "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-02 02:00:21Z] idle \u2014 03:00 UK outside 07:00-17:00",
+   "lastLog": "[2026-10-02 03:00:08Z] idle \u2014 04:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 04:53:15",
-   "nextRun": "2026/10/02 05:02:00",
+   "lastRun": "2026/10/02 05:02:02",
+   "nextRun": "2026/10/02 05:32:00",
    "result": 267009,
    "ok": true
   },
