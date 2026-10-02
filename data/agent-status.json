@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T15:32:02.393541+00:00",
+ "generatedAt": "2026-10-02T16:02:02.380924+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 21.8,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-02T15:31:55.367Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 21.6,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-10-02T16:00:56.494Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 210.6,
+   "stateAgeMin": 0.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02 15:31:29Z] no new H4 bar (last 10-02 08:00Z), pos=0",
+   "lastLog": "[2026-10-02 16:01:29Z] bar 10-02 12:00Z close 85,320 | don20 82,857-86,881 | ema20 84,537 | atr 995 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 554.2,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-02 06:17:50Z] loop error (1 in a row): float division by zero",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-10-02 16:00:04Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.1 min",
+   "detail": "1.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 17:32:02",
-   "nextRun": "2026/10/02 18:02:00",
+   "lastRun": "2026/10/02 18:02:02",
+   "nextRun": "2026/10/02 18:32:00",
    "result": 267009,
    "ok": true
   },
