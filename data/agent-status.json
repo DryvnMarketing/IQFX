@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T19:02:02.391524+00:00",
+ "generatedAt": "2026-10-02T19:32:02.381118+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.7,
-   "stateAgeMin": 19.9,
-   "heartbeatMin": 0.7,
-   "lastLog": "[2026-10-02T19:01:21.803Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 19.6,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-10-02T19:31:38.561Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.32,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 180.6,
+   "stateAgeMin": 210.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02 19:01:30Z] no new H4 bar (last 10-02 12:00Z), pos=0",
+   "lastLog": "[2026-10-02 19:31:30Z] no new H4 bar (last 10-02 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-10-02 19:00:02Z] idle \u2014 20:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.7 min",
+   "detail": "0.4 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 21:02:02",
-   "nextRun": "2026/10/02 21:32:00",
+   "lastRun": "2026/10/02 21:32:02",
+   "nextRun": "2026/10/02 22:02:00",
    "result": 267009,
    "ok": true
   },
