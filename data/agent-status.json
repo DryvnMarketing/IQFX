@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T01:32:02.410835+00:00",
+ "generatedAt": "2026-10-02T01:53:15.402332+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 29.7,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-02T01:31:36.522Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 20.7,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-10-02T01:53:03.345Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 0.6,
-   "stateAgeMin": 90.6,
-   "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02 01:31:26Z] no new H4 bar (last 10-01 20:00Z), pos=0",
+   "logAgeMin": 1.8,
+   "stateAgeMin": 111.8,
+   "heartbeatMin": 1.8,
+   "lastLog": "[2026-10-02 01:51:27Z] no new H4 bar (last 10-01 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 32.0,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 53.2,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-10-02 01:00:04Z] idle \u2014 02:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,7 +205,7 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 03:32:02",
+   "lastRun": "2026/10/02 03:53:15",
    "nextRun": "2026/10/02 04:02:00",
    "result": 267009,
    "ok": true
