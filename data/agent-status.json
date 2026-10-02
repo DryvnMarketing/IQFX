@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T09:23:14.952211+00:00",
+ "generatedAt": "2026-10-02T09:32:02.379716+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,9 +8,9 @@
    "pid": 26728,
    "running": true,
    "logAgeMin": 1.0,
-   "stateAgeMin": 16.4,
+   "stateAgeMin": 25.2,
    "heartbeatMin": 1.0,
-   "lastLog": "[2026-10-02T09:22:14.452Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "lastLog": "[2026-10-02T09:31:04.336Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 81.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-10-02 09:21:29Z] no new H4 bar (last 10-02 04:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 90.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-10-02 09:31:29Z] no new H4 bar (last 10-02 04:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,7 +71,7 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 185.4,
+   "logAgeMin": 194.2,
    "stateAgeMin": 0.1,
    "heartbeatMin": 0.1,
    "lastLog": "[2026-10-02 06:17:50Z] loop error (1 in a row): float division by zero",
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 11:23:14",
-   "nextRun": "2026/10/02 11:32:00",
+   "lastRun": "2026/10/02 11:32:02",
+   "nextRun": "2026/10/02 12:02:00",
    "result": 267009,
    "ok": true
   },
