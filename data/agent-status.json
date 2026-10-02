@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T12:23:15.359849+00:00",
+ "generatedAt": "2026-10-02T12:32:02.420073+00:00",
  "agents": [
   {
    "key": "gold",
@@ -8,9 +8,9 @@
    "pid": 26728,
    "running": true,
    "logAgeMin": 0.6,
-   "stateAgeMin": 14.8,
+   "stateAgeMin": 23.6,
    "heartbeatMin": 0.6,
-   "lastLog": "[2026-10-02T12:22:38.689Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "lastLog": "[2026-10-02T12:31:28.631Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.34,
+    "spread": 1.04,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 21.8,
-   "heartbeatMin": 1.8,
-   "lastLog": "[2026-10-02 12:21:29Z] no new H4 bar (last 10-02 08:00Z), pos=0",
+   "logAgeMin": 0.6,
+   "stateAgeMin": 30.6,
+   "heartbeatMin": 0.6,
+   "lastLog": "[2026-10-02 12:31:29Z] no new H4 bar (last 10-02 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 365.4,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 374.2,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-10-02 06:17:50Z] loop error (1 in a row): float division by zero",
    "account": {
     "equity": 0.0,
@@ -83,8 +83,8 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 436786587,
-    "spread": 0.168,
-    "tickAgeSec": 1,
+    "spread": 0.182,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/02 14:23:15",
-   "nextRun": "2026/10/02 14:32:00",
+   "lastRun": "2026/10/02 14:32:02",
+   "nextRun": "2026/10/02 15:02:00",
    "result": 267009,
    "ok": true
   },
