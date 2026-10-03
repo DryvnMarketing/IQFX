@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T16:02:02.274082+00:00",
+ "generatedAt": "2026-10-03T16:32:02.476587+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 541.7,
-   "stateAgeMin": 1037.6,
-   "heartbeatMin": 541.7,
+   "logAgeMin": 571.7,
+   "stateAgeMin": 1067.6,
+   "heartbeatMin": 571.7,
    "lastLog": "    at Object.<anonymous> (C:\\Users\\info\\tradingview-mcp\\agent\\monitor.cjs:1815:1)",
    "account": {
     "equity": 1.09,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.27,
-    "tickAgeSec": 57724,
-    "serverOffsetHours": -16,
+    "tickAgeSec": 59525,
+    "serverOffsetHours": -17,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.5,
-   "stateAgeMin": 0.5,
+   "stateAgeMin": 30.5,
    "heartbeatMin": 0.5,
-   "lastLog": "[2026-10-03 16:01:33Z] bar 10-03 12:00Z close 84,851 | don20 82,905-87,258 | ema20 84,570 | atr 801 | none",
+   "lastLog": "[2026-10-03 16:31:33Z] no new H4 bar (last 10-03 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 2.0,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
+   "logAgeMin": 32.0,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-10-03 16:00:02Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 68644,
-    "serverOffsetHours": -19,
+    "tickAgeSec": 70446,
+    "serverOffsetHours": -20,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "541.7 min",
+   "detail": "571.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/03 18:02:02",
-   "nextRun": "2026/10/03 18:32:00",
+   "lastRun": "2026/10/03 18:32:02",
+   "nextRun": "2026/10/03 19:02:00",
    "result": 267009,
    "ok": true
   },
