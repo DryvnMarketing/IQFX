@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T19:32:02.415872+00:00",
+ "generatedAt": "2026-10-04T20:02:02.435598+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 61.7,
-   "stateAgeMin": 2687.6,
-   "heartbeatMin": 61.7,
-   "lastLog": "[2026-10-04T18:30:20.044Z]   WhatsApp API status 200",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 2717.6,
+   "heartbeatMin": 1.9,
+   "lastLog": "[2026-10-04T20:00:09.133Z]   WhatsApp API status 200",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -20,7 +20,7 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.27,
-    "tickAgeSec": 156724,
+    "tickAgeSec": 158525,
     "serverOffsetHours": -44,
     "openPositions": 0,
     "week": {
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 210.5,
+   "stateAgeMin": 0.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-04 19:31:37Z] no new H4 bar (last 10-04 12:00Z), pos=0",
+   "lastLog": "[2026-10-04 20:01:37Z] bar 10-04 16:00Z close 85,427 | don20 83,119-87,258 | ema20 84,842 | atr 617 | none",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 31.7,
-   "stateAgeMin": 0.5,
-   "heartbeatMin": 0.5,
-   "lastLog": "[2026-10-04 19:00:20Z] idle \u2014 weekend (Sun)",
+   "logAgeMin": 1.9,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
+   "lastLog": "[2026-10-04 20:00:10Z] idle \u2014 weekend (Sun)",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 167645,
+    "tickAgeSec": 169445,
     "serverOffsetHours": -47,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "61.7 min",
+   "detail": "1.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -198,15 +198,15 @@
   },
   {
    "name": "XAU Weekend Gap Check",
-   "lastRun": "2026/09/27 22:00:00",
-   "nextRun": "2026/10/04 22:00:00",
+   "lastRun": "2026/10/04 22:00:00",
+   "nextRun": "2026/10/11 22:00:00",
    "result": 0,
    "ok": true
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/04 21:32:02",
-   "nextRun": "2026/10/04 22:02:00",
+   "lastRun": "2026/10/04 22:02:02",
+   "nextRun": "2026/10/04 22:32:00",
    "result": 267009,
    "ok": true
   },
