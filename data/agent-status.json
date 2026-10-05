@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-05T22:32:02.438589+00:00",
+ "generatedAt": "2026-10-05T23:02:02.415185+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 18.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-05T22:31:44.048Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.0,
+   "stateAgeMin": 1.6,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-10-05T23:02:00.913Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.41,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 150.4,
+   "stateAgeMin": 180.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-05 22:31:41Z] no new H4 bar (last 10-05 16:00Z), pos=0",
+   "lastLog": "[2026-10-05 23:01:41Z] no new H4 bar (last 10-05 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 7.0,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 31.9,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-05 22:00:10Z] idle \u2014 23:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.5,
+   "heartbeatMin": 0.5,
+   "lastLog": "[2026-10-05 23:00:02Z] idle \u2014 00:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.3 min",
+   "detail": "0.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/06 00:32:02",
-   "nextRun": "2026/10/06 01:02:00",
+   "lastRun": "2026/10/06 01:02:02",
+   "nextRun": "2026/10/06 01:32:00",
    "result": 267009,
    "ok": true
   },
