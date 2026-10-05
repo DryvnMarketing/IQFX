@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-05T00:02:02.452428+00:00",
+ "generatedAt": "2026-10-05T00:32:02.519943+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 0.6,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-05T00:01:40.330Z] CDP down \u2014 attempting TradingView relaunch...",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-10-05T00:31:57.235Z] CDP down \u2014 attempting TradingView relaunch...",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.4,
-   "stateAgeMin": 0.4,
+   "stateAgeMin": 30.4,
    "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-05 00:01:37Z] bar 10-04 20:00Z close 86,499 | don20 83,410-87,258 | ema20 85,000 | atr 674 | none",
+   "lastLog": "[2026-10-05 00:31:38Z] no new H4 bar (last 10-04 20:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.6,
-   "stateAgeMin": 0.1,
-   "heartbeatMin": 0.1,
+   "logAgeMin": 31.6,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-10-05 00:00:27Z] idle \u2014 01:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/05 02:02:02",
-   "nextRun": "2026/10/05 02:32:00",
+   "lastRun": "2026/10/05 02:32:02",
+   "nextRun": "2026/10/05 03:02:00",
    "result": 267009,
    "ok": true
   },
