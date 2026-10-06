@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T14:02:02.439296+00:00",
+ "generatedAt": "2026-10-06T14:32:02.443267+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 23.4,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-06T14:01:36.564Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.2,
+   "stateAgeMin": 23.1,
+   "heartbeatMin": 0.2,
+   "lastLog": "[2026-10-06T14:31:53.549Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -39,10 +39,10 @@
    "live": false,
    "pid": 22292,
    "running": true,
-   "logAgeMin": 0.3,
-   "stateAgeMin": 120.3,
-   "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-06 14:01:42Z] no new H4 bar (last 10-06 08:00Z), pos=0",
+   "logAgeMin": 0.4,
+   "stateAgeMin": 150.3,
+   "heartbeatMin": 0.4,
+   "lastLog": "[2026-10-06 14:31:42Z] no new H4 bar (last 10-06 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 4.48,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 447.3,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 477.4,
+   "stateAgeMin": 0.4,
+   "heartbeatMin": 0.4,
    "lastLog": "[2026-10-06 06:34:43Z] loop error (1 in a row): float division by zero",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/06 16:02:02",
-   "nextRun": "2026/10/06 16:32:00",
+   "lastRun": "2026/10/06 16:32:02",
+   "nextRun": "2026/10/06 17:02:00",
    "result": 267009,
    "ok": true
   },
