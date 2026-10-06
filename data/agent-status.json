@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T21:02:02.486304+00:00",
+ "generatedAt": "2026-10-06T21:32:02.448449+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 19.5,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-10-06T21:01:49.224Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 19.1,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-10-06T21:30:50.390Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -21,7 +21,7 @@
     "login": 63338199,
     "spread": 1.21,
     "tickAgeSec": 0,
-    "serverOffsetHours": 3,
+    "serverOffsetHours": 2,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 60.3,
+   "stateAgeMin": 90.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-06 21:01:44Z] no new H4 bar (last 10-06 16:00Z), pos=0",
+   "lastLog": "[2026-10-06 21:31:44Z] no new H4 bar (last 10-06 16:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-10-06 21:00:14Z] idle \u2014 22:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 246,
-    "serverOffsetHours": 0,
+    "tickAgeSec": 2045,
+    "serverOffsetHours": -1,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.2 min",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,15 +205,15 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/06 23:02:02",
-   "nextRun": "2026/10/06 23:32:00",
+   "lastRun": "2026/10/06 23:32:02",
+   "nextRun": "2026/10/07 00:02:00",
    "result": 267009,
    "ok": true
   },
   {
    "name": "Trading System Backup",
-   "lastRun": "2026/10/05 23:30:01",
-   "nextRun": "2026/10/06 23:30:00",
+   "lastRun": "2026/10/06 23:30:01",
+   "nextRun": "2026/10/07 23:30:00",
    "result": 0,
    "ok": true
   }
