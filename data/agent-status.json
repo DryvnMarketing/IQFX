@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-07T04:02:02.450880+00:00",
+ "generatedAt": "2026-10-07T04:32:02.440558+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.1,
-   "stateAgeMin": 29.4,
-   "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-07T04:01:58.391Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.1,
+   "stateAgeMin": 29.1,
+   "heartbeatMin": 1.1,
+   "lastLog": "[2026-10-07T04:30:59.626Z] CDP down \u2014 attempting TradingView relaunch...",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 0.3,
+   "stateAgeMin": 30.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-07 04:01:46Z] bar 10-07 00:00Z close 84,128 | don20 84,510-86,984 | ema20 85,383 | atr 825 | 10-07 00:00Z opened SHORT",
+   "lastLog": "[2026-10-07 04:31:46Z] no new H4 bar (last 10-07 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-10-07 04:00:14Z] idle \u2014 05:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 1,
+    "tickAgeSec": 2,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.1 min",
+   "detail": "1.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/07 06:02:02",
-   "nextRun": "2026/10/07 06:32:00",
+   "lastRun": "2026/10/07 06:32:02",
+   "nextRun": "2026/10/07 07:02:00",
    "result": 267009,
    "ok": true
   },
