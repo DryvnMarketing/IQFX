@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-07T10:32:02.486701+00:00",
+ "generatedAt": "2026-10-07T11:02:02.501180+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.2,
-   "stateAgeMin": 25.7,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-10-07T10:31:50.668Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.2,
+   "stateAgeMin": 25.4,
+   "heartbeatMin": 1.2,
+   "lastLog": "[2026-10-07T11:00:51.831Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 150.3,
+   "stateAgeMin": 180.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-07 10:31:47Z] no new H4 bar (last 10-07 04:00Z), pos=0",
+   "lastLog": "[2026-10-07 11:01:47Z] no new H4 bar (last 10-07 04:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 238.7,
-   "stateAgeMin": 0.0,
-   "heartbeatMin": 0.0,
+   "logAgeMin": 268.7,
+   "stateAgeMin": 0.3,
+   "heartbeatMin": 0.3,
    "lastLog": "[2026-10-07 06:33:20Z] loop error (1 in a row): float division by zero",
    "account": {
     "equity": 0.0,
@@ -84,7 +84,7 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.168,
-    "tickAgeSec": 2,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.2 min",
+   "detail": "1.2 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/07 12:32:02",
-   "nextRun": "2026/10/07 13:02:00",
+   "lastRun": "2026/10/07 13:02:02",
+   "nextRun": "2026/10/07 13:32:00",
    "result": 267009,
    "ok": true
   },
