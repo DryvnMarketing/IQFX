@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-07T12:32:02.495776+00:00",
+ "generatedAt": "2026-10-07T13:02:02.473141+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.4,
-   "stateAgeMin": 24.6,
-   "heartbeatMin": 0.4,
-   "lastLog": "[2026-10-07T12:31:41.061Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.1,
+   "stateAgeMin": 24.3,
+   "heartbeatMin": 0.1,
+   "lastLog": "[2026-10-07T13:01:57.919Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.3,
-   "stateAgeMin": 30.3,
+   "stateAgeMin": 60.3,
    "heartbeatMin": 0.3,
-   "lastLog": "[2026-10-07 12:31:46Z] no new H4 bar (last 10-07 08:00Z), pos=0",
+   "lastLog": "[2026-10-07 13:01:46Z] no new H4 bar (last 10-07 08:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 4.48,
-    "tickAgeSec": 0,
+    "tickAgeSec": 1,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 358.7,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
+   "logAgeMin": 388.7,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-10-07 06:33:20Z] loop error (1 in a row): float division by zero",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.4 min",
+   "detail": "0.1 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/07 14:32:02",
-   "nextRun": "2026/10/07 15:02:00",
+   "lastRun": "2026/10/07 15:02:02",
+   "nextRun": "2026/10/07 15:32:00",
    "result": 267009,
    "ok": true
   },
