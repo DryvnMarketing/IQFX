@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T05:02:02.531749+00:00",
+ "generatedAt": "2026-10-08T05:32:02.464410+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 1.1,
-   "stateAgeMin": 27.9,
-   "heartbeatMin": 1.1,
-   "lastLog": "[2026-10-08T05:00:54.461Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 0.9,
+   "stateAgeMin": 27.6,
+   "heartbeatMin": 0.9,
+   "lastLog": "[2026-10-08T05:31:11.174Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -19,7 +19,7 @@
     "connected": true,
     "symbol": "XAUUSD",
     "login": 63338199,
-    "spread": 0.33,
+    "spread": 0.34,
     "tickAgeSec": 0,
     "serverOffsetHours": 3,
     "openPositions": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 60.2,
+   "stateAgeMin": 90.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-10-08 05:01:50Z] no new H4 bar (last 10-08 00:00Z), pos=0",
+   "lastLog": "[2026-10-08 05:31:51Z] no new H4 bar (last 10-08 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.2,
-   "heartbeatMin": 0.2,
-   "lastLog": "[2026-10-08 05:00:17Z] idle \u2014 06:00 UK outside 07:00-17:00",
+   "logAgeMin": 2.0,
+   "stateAgeMin": 0.0,
+   "heartbeatMin": 0.0,
+   "lastLog": "[2026-10-08 05:30:01Z] another follower is already running (pid 22156) \u2014 exiting",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "1.1 min",
+   "detail": "0.9 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -170,8 +170,8 @@
   },
   {
    "name": "GKO Follower",
-   "lastRun": "2026/10/07 07:30:00",
-   "nextRun": "2026/10/08 07:30:00",
+   "lastRun": "2026/10/08 07:30:00",
+   "nextRun": "2026/10/09 07:30:00",
    "result": 0,
    "ok": true
   },
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/08 07:02:02",
-   "nextRun": "2026/10/08 07:32:00",
+   "lastRun": "2026/10/08 07:32:02",
+   "nextRun": "2026/10/08 08:02:00",
    "result": 267009,
    "ok": true
   },
