@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T16:02:02.477833+00:00",
+ "generatedAt": "2026-10-08T16:32:02.503740+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,10 +7,10 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 0.0,
-   "stateAgeMin": 21.7,
-   "heartbeatMin": 0.0,
-   "lastLog": "[2026-10-08T16:02:02.376Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
+   "logAgeMin": 1.0,
+   "stateAgeMin": 21.4,
+   "heartbeatMin": 1.0,
+   "lastLog": "[2026-10-08T16:31:03.516Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
     "currency": "USD",
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.2,
-   "stateAgeMin": 0.2,
+   "stateAgeMin": 30.2,
    "heartbeatMin": 0.2,
-   "lastLog": "[2026-10-08 16:01:52Z] bar 10-08 12:00Z close 80,965 | don20 82,139-86,700 | ema20 83,840 | atr 886 | 10-08 12:00Z opened SHORT",
+   "lastLog": "[2026-10-08 16:31:52Z] no new H4 bar (last 10-08 12:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -52,7 +52,7 @@
     "symbol": "BTCUSD",
     "login": 436786587,
     "spread": 4.48,
-    "tickAgeSec": 1,
+    "tickAgeSec": 0,
     "serverOffsetHours": 0,
     "openPositions": 0,
     "week": {
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.8,
-   "stateAgeMin": 0.3,
-   "heartbeatMin": 0.3,
+   "logAgeMin": 31.8,
+   "stateAgeMin": 0.1,
+   "heartbeatMin": 0.1,
    "lastLog": "[2026-10-08 16:00:13Z] idle \u2014 17:00 UK outside 07:00-17:00",
    "account": {
     "equity": 0.0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "PASS",
-   "detail": "0.0 min",
+   "detail": "1.0 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/08 18:02:02",
-   "nextRun": "2026/10/08 18:32:00",
+   "lastRun": "2026/10/08 18:32:02",
+   "nextRun": "2026/10/08 19:02:00",
    "result": 267009,
    "ok": true
   },
