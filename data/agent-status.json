@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T04:02:02.509836+00:00",
+ "generatedAt": "2026-10-10T04:32:02.644264+00:00",
  "agents": [
   {
    "key": "gold",
@@ -7,9 +7,9 @@
    "live": true,
    "pid": 26728,
    "running": true,
-   "logAgeMin": 302.7,
-   "stateAgeMin": 318.1,
-   "heartbeatMin": 302.7,
+   "logAgeMin": 332.7,
+   "stateAgeMin": 348.1,
+   "heartbeatMin": 332.7,
    "lastLog": "[2026-10-09T22:59:23.642Z] CDP unhealthy \u2014 attempting heal, no bar evaluation this tick",
    "account": {
     "equity": 1.09,
@@ -20,8 +20,8 @@
     "symbol": "XAUUSD",
     "login": 63338199,
     "spread": 1.22,
-    "tickAgeSec": 14525,
-    "serverOffsetHours": -4,
+    "tickAgeSec": 16326,
+    "serverOffsetHours": -5,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -40,9 +40,9 @@
    "pid": 22292,
    "running": true,
    "logAgeMin": 0.1,
-   "stateAgeMin": 0.1,
+   "stateAgeMin": 30.1,
    "heartbeatMin": 0.1,
-   "lastLog": "[2026-10-10 04:01:58Z] bar 10-10 00:00Z close 82,516 | don20 80,306-85,849 | ema20 83,019 | atr 792 | none",
+   "lastLog": "[2026-10-10 04:31:58Z] no new H4 bar (last 10-10 00:00Z), pos=0",
    "account": {
     "equity": 0.0,
     "currency": "USD",
@@ -71,9 +71,9 @@
    "live": false,
    "pid": 22156,
    "running": true,
-   "logAgeMin": 1.9,
-   "stateAgeMin": 0.4,
-   "heartbeatMin": 0.4,
+   "logAgeMin": 31.9,
+   "stateAgeMin": 0.2,
+   "heartbeatMin": 0.2,
    "lastLog": "[2026-10-10 04:00:10Z] idle \u2014 weekend (Sat)",
    "account": {
     "equity": 0.0,
@@ -84,8 +84,8 @@
     "symbol": "XAUUSD",
     "login": 436786587,
     "spread": 0.182,
-    "tickAgeSec": 25446,
-    "serverOffsetHours": -7,
+    "tickAgeSec": 27246,
+    "serverOffsetHours": -8,
     "openPositions": 0,
     "week": {
      "closed": 0,
@@ -113,7 +113,7 @@
   {
    "name": "Heartbeat fresh",
    "state": "WARN",
-   "detail": "302.7 min",
+   "detail": "332.7 min",
    "why": "Alive but silent is how a hung agent looks."
   },
   {
@@ -205,8 +205,8 @@
   },
   {
    "name": "Dashboard Publisher",
-   "lastRun": "2026/10/10 06:02:02",
-   "nextRun": "2026/10/10 06:32:00",
+   "lastRun": "2026/10/10 06:32:02",
+   "nextRun": "2026/10/10 07:02:00",
    "result": 267009,
    "ok": true
   },
